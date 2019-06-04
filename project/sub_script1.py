@@ -1,14 +1,25 @@
 #python script for iq_sub
 
 import re
+
 counter = 1
 
+outfile = open ("subparsed.txt", "w")
+iqf = open ("iqtree_sub.txt", "r") 	
 
-with open ("iqtree_sub.txt", "r") as iqf:
-	f_content = iqf.read()
-	iqf.close()
-	print (f_content)
+line = iqf.readline() 
+while line:
+	items = line.split()
+	dataline = (",".join(items))
+	outfile.write(dataline + "\n")
+	line = iqf.readline()
 
+
+finishedo = outfile.read()
+print (finishedo)
+	
+iqf.close()
+outfile.close()
 
 #can't trust line numbers, can trust format and patterns 
 
@@ -21,9 +32,6 @@ print (",".join(list1))
 #join is opposite of split
 #this string is practice but produce script
 #testing out small pieces of code: copy and paste is great, but go to terminal then dir and then type "python 3 script_name"
-
- 
-
 
 #pseudocode:
 #1. remove spaces
