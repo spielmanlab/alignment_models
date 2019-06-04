@@ -3,20 +3,19 @@
 import re
 
 counter = 1
+#added a counter for readline purposes, don't really need it
 
 outfile = open ("subparsed.txt", "w")
 iqf = open ("iqtree_sub.txt", "r") 	
+iqline = iqf.readline() 
 
-line = iqf.readline() 
-while line:
-	items = line.split()
+while iqline:
+	items = iqline.split()
 	dataline = (",".join(items))
 	outfile.write(dataline + "\n")
-	line = iqf.readline()
+	iqline = iqf.readline()
 
 
-finishedo = outfile.read()
-print (finishedo)
 	
 iqf.close()
 outfile.close()
