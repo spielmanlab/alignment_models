@@ -27,7 +27,7 @@ if s1.startswith("Akaike Information Criterion"")
 
 
 
-#if the length is not 7 (list), 
+#if the length is not 7 (list)
 
 
 #if line starts with modelfinder, then begin parsing
