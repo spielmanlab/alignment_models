@@ -11,11 +11,19 @@ iqline = iqf.read()
 while 
 
 
-for line in iqline:
-	items = line.split()
-	if line == "ModelFiner"
+for s1 in iqline:
+	if s1.startswith("ModelFinder"): #questionable-
+		#begin parsing
 
-#line needs to be split, so i can index it
+
+#was going to split string into list, so i can index it, but now just going to use 
+#startswith?
+
+
+
+
+
+
 #if line starts with modelfinder, then begin parsing
 #if line starts with akaike, then end parsing
 #need to do a while statement, to make each line a list, then a for statement 
@@ -23,6 +31,8 @@ for line in iqline:
 
 #make a function from sub_script1.py while statement(?)
 
+
+#startwith
 
 
 for line in iqline: 
