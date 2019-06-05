@@ -13,7 +13,7 @@ if x > 0:
 	print (x, "is greater than", y)
 elif x < 0:
 	print (x, "is less than", y) 
-else x == 0:
+else:
 	print (x, "is equal to", y)
 
 #problem 2
@@ -50,13 +50,13 @@ elif type(a) is str:
 #problem1
 #a
 
-for i in list(11):
+for i in range(11):
 	print (2** (i))
 
 #b
 
 powers = []
-for i in list(11):
+for i in range(11):
 	powers.append(2**i)
 print (powers)
 
@@ -69,6 +69,6 @@ amino_weights = {'A':89.09, 'R':174.20, 'N':132.12, 'D':133.10, 'C':121.15,
                  'S':105.09,'T':119.12,'W':204.23,'Y':181.19,'V':117.15}
 
 weight = 0
-for a in protseq:
+for aa in protseq:
 	weight += amino_weights[aa]
 print (weight)

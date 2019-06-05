@@ -15,7 +15,6 @@ file_handle = open (filename, "r")
 file_lines = file_handle.readlines()
 file_handle.close()
 
-print (file_lines)
 
 counter = 1
 for line in file_lines:
@@ -23,3 +22,19 @@ for line in file_lines:
 	counter += 1
 	
 	
+#1c 
+
+
+
+# count_letters function
+def count_letters(s):
+    counts = {"a", "e", "i", "o", "u"} # vowel dict
+    for c in s:
+        if c in counts: # does letter exist in dict?
+            counts[c]+= 1 # yes, increase count by 1
+        else:
+            counts[c]= 1 # no, set count to 1
+    return counts # return result
+
+# your code goes here
+
