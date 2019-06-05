@@ -11,17 +11,23 @@ iqline = iqf.read()
 while 
 
 
-for s1 in iqline:
+for s1 in iqlinez:
 	if s1.startswith("ModelFinder"): #questionable-
 		#begin parsing
-
+		
+		
+	#index at lines
+	s
 
 #was going to split string into list, so i can index it, but now just going to use 
 #startswith?
 
 
+if s1.startswith("Akaike Information Criterion"")
 
 
+
+#if the length is not 7 (list), 
 
 
 #if line starts with modelfinder, then begin parsing
