@@ -5,29 +5,50 @@ import re
 iqf = open ("iqtree_full.txt", "r")
 outfile = open ("fullparsed.txt", "w")
 
-iqline = iqf.read()
+iqline = iqf.readline()
+#ALWAYS USE READLINE(S) 
 
-
-while 
-
-
-for s1 in iqlinez:
-	if s1.startswith("ModelFinder"): #questionable-
+for line in iqline:
+	if line.startswith("ModelFinder will test 168 protein models (sample size: 815) ..."):
+		items = line.split()
+		dataline = ",".join(items)
+		outfile.write (items + "\n")
+		
+		
+	
+		
+		
+		
+		
+		
+		
+		 #questionable-
 		#begin parsing
 		
 		
 	#index at lines
-	s
+ for x in range (1, 257, 1):
+...     x = " " + str(x)
+...     for line in iqlines:
+...             item = line.startswith(x)
+...             print (item)
+
+
+#while line.startswith(x):
+	
+
 
 #was going to split string into list, so i can index it, but now just going to use 
 #startswith?
 
 
-if s1.startswith("Akaike Information Criterion"")
+# if s2.startswith("Akaike Information Criterion")
 
 
 
 #if the length is not 7 (list)
+
+#just need to focus on where to start and when to stop parsing
 
 
 #if line starts with modelfinder, then begin parsing
@@ -41,11 +62,11 @@ if s1.startswith("Akaike Information Criterion"")
 #startwith
 
 
-for line in iqline: 
-	items = iqline.strip()
-	dataline =  (",".join(items))
-	outfile.write(dataline + "\n")
-	iqline = iqf.readline()
+#for line in iqline: 
+	
+	
+	
+	
 	
 iqf.close()
 outfile.close()
