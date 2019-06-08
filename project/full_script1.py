@@ -27,12 +27,15 @@ for line in iqline:
 		
 		
 	#index at lines
- for x in range (1, 257, 1):
+ for x in range(1, 257, 1):
 ...     x = " " + str(x)
 ...     for line in iqlines:
 ...             item = line.startswith(x)
-...             print (item)
-
+...             if item:
+...                     dataline = (",".join(line))
+...                     outfile.write(dataline + "\n")
+...                     iqlines = infile.readlines()
+... 
 
 #while line.startswith(x):
 	
