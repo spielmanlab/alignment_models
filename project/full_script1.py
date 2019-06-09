@@ -73,7 +73,15 @@ for x in range(1, 169, 1):
 
 #what i'm trying to do is make two variables with two different sets of white space, and print them out at the same time
 
+for x in range(1, 10, 1):
+...     x += 1
+...     for line in iqline:
+...             item = line.startswith(y)
+...             if item:
+...                     print (line)
 
+
+#am i doing anything right HAH
 
 
 
@@ -110,6 +118,7 @@ for x in range(1, 169, 1):
 #for line in iqline: 
 	
 	
+	#ohhhh maybe do in range with startswith
 	
 	
 	
