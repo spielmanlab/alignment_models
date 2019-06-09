@@ -6,6 +6,7 @@ iqf = open ("iqtree_full.txt", "r")
 outfile = open ("fullparsed.txt", "w")
 
 iqline = iqf.readline()
+iqlines = iqf.readlines()
 #ALWAYS USE READLINE(S) 
 
 for line in iqline:
@@ -27,15 +28,56 @@ for line in iqline:
 		
 		
 	#index at lines
- for x in range(1, 257, 1):
+for x in range(1, 10, 1):
+	x = "  " + str(x)
+	for line in iqlines:
+		item = line.startswith(x)
+		if item:
+			dataline = (",".join(line))
+			outfile.write(dataline + "\n")
+			iqlines = iqf.readlines()
+
+
+
+### for x in range(1, 10, 1):
+#...     x = "  " + str(x)
+#...     for line in iqline:
+#...             item = line.startswith(x)
+#...             if item:
+#...                     dataline = line + "\n"
+#...                     print (dataline)
+#... 
+
+
+# fake?
+>>> for x in range (1, 169, 1):
 ...     x = " " + str(x)
 ...     for line in iqlines:
 ...             item = line.startswith(x)
 ...             if item:
 ...                     dataline = (",".join(line))
-...                     outfile.write(dataline + "\n")
+...                     outfile.write(dataline + "/n")
 ...                     iqlines = infile.readlines()
 ... 
+
+#fake????
+for x in range(1, 169, 1):
+...     x = " " + str(x)
+...     for line in iqlines: 
+...             item = line.startswith(x)
+...             if item:
+...                     data = line.split()
+...                     dataline = (",".join(line))
+...                     outfile.write(dataline + "\n")
+...                     iqlines = infile.readlines()
+
+#what i'm trying to do is make two variables with two different sets of white space, and print them out at the same time
+
+
+
+
+
+
 
 #while line.startswith(x):
 	
