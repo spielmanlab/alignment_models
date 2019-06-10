@@ -52,7 +52,8 @@ Alignment has 33 sequences with 815 columns, 774 distinct patterns
 Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.007 seconds
 NOTE: ModelFinder requires 16 MB RAM!
 ModelFinder will test 168 protein models (sample size: 815) ...
-c njn jn56  1  Dayhoff       34598.308    63  69322.616    69333.353    69618.917
+ No. Model         -LnL         df  AIC          AICc         BIC
+  1  Dayhoff       34598.308    63  69322.616    69333.353    69618.917
   2  Dayhoff+I     34598.290    64  69324.581    69335.674    69625.585
   3  Dayhoff+G4    34340.955    64  68809.910    68821.003    69110.914
   4  Dayhoff+I+G4  34340.955    65  68811.911    68823.366    69117.618
