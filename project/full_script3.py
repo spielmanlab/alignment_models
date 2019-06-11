@@ -52,6 +52,7 @@ for line in infile:
 	if line.startswith(sta):
 		parse = True
 		if parse:
+			
 			items = iqline.split()
 			dataline = (",".join(items))
 			outfile.write(dataline + "\n")
