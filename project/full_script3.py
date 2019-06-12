@@ -10,7 +10,7 @@ sta = " No."
 stop = " Akaike"
 
 
-x = """for line in infile:
+for line in infile:
 	if line.startswith(sta):
 		start_parsing = True
 	else:
@@ -24,7 +24,7 @@ x = """for line in infile:
 				dataline = (",".join(items))
 				outfile.write(dataline + "\n")
 				print (dataline)
-		"""
+		
 				
 		## parse
 		#print every line that you're looping over and figure out where to put the parsin
