@@ -1,7 +1,8 @@
 import os
 
 #### Create a list of all the alignment (".fasta") files we want to run through iqtree
-fasta_dir = "fasta_files/"
+
+fasta_dir = "../13PK-A_alnversions/"
 all_files = os.listdir(fasta_dir)
 ## list all files in current directory (".")
 # fasta_files = [x for x in all_files if x.endswith(".fasta")] ## this is called "list comprehension" and is a fancy python way to do lists
@@ -19,7 +20,7 @@ for file in fasta_files:
    
    ### Run through iqtree
    
-    cmd = "iqtree -s " + fasta_dir + file + " -m TESTONLY -st AA -quiet -redo"
+    cmd = "iqtree -s " + fasta_dir + file + " -m TESTONLY -st AA -redo -nt 3"
     iqtree_success = os.system(cmd)
     assert iqtree_success == 0, "ERROR: iqtree did not run properly"
    
