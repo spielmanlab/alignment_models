@@ -16,20 +16,22 @@ for file in all_files:
 # Run iqtree over all files, parse the model information, and save!
 
 for file in fasta_files:
+
+    logfile = fasta_dir + file + ".log"
+    csvfile = fasta_dir + file.replace(".fasta", "_models.csv") # where to save parsing output
+    ## Use the os module to ask if the file has already been made. If so, don't make it again but move on
+    if os.path.exists(csvfile):
+       continue 
+    
     print("Running model selection on", file) 
    
    ### Run through iqtree
    
-    cmd = "iqtree -s " + fasta_dir + file + " -m TESTONLY -st AA -redo -quiet -nt 3"
+    cmd = "iqtree -s " + fasta_dir + file + " -m TESTONLY -st AA -redo -quiet -nt 10"
     iqtree_success = os.system(cmd)
     assert iqtree_success == 0, "ERROR: iqtree did not run properly"
    
-   ### Parse the output "log" file
-    logfile = fasta_dir + file + ".log"
-    csvfile = fasta_dir + file.replace(".fasta", "_models.csv") # where to save parsing output
-    
     ### Create file handles for named files
-    
     infile = open (logfile, "r")
     outfile = open (csvfile, "w")
   
