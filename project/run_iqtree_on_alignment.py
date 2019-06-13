@@ -10,7 +10,7 @@ fasta_files = []
 for file in all_files:
     if file.endswith(".fasta"):
         fasta_files.append(file)
-print(fasta_files)
+#print(fasta_files)
 
 
 # Run iqtree over all files, parse the model information, and save!
@@ -20,7 +20,7 @@ for file in fasta_files:
    
    ### Run through iqtree
    
-    cmd = "iqtree -s " + fasta_dir + file + " -m TESTONLY -st AA -redo -nt 3"
+    cmd = "iqtree -s " + fasta_dir + file + " -m TESTONLY -st AA -redo -quiet -nt 3"
     iqtree_success = os.system(cmd)
     assert iqtree_success == 0, "ERROR: iqtree did not run properly"
    
@@ -50,5 +50,10 @@ for file in fasta_files:
                     dataline = (",".join(items))
                     outfile.write(dataline + "\n")
     
-   ## Remove the vomit
-os.system("rm " + fasta_dir + file + ".*") 
+    ######## Molly: See below this comment for lines that were buggy in your last version, and compare with git history of the file to see the differences.
+    ## Remove the extra files FOR THIS FILE!!
+    os.system("rm " + fasta_dir + file + ".*") 
+    
+    ### CLOSE !!!!!
+    infile.close()
+    outfile.close()
