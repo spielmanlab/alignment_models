@@ -13,39 +13,41 @@ print(fasta_files)
 
 
 # Run iqtree over all files, parse the model information, and save!
+
 for file in fasta_files:
-   print("Running model selection on", file) 
+    print("Running model selection on", file) 
    
    ### Run through iqtree
    
-   cmd = "iqtree -s " + fasta_dir + file + " -m TESTONLY -st AA -quiet -redo"
-   iqtree_success = os.system(cmd)
-   assert iqtree_success == 0, "ERROR: iqtree did not run properly"
+    cmd = "iqtree -s " + fasta_dir + file + " -m TESTONLY -st AA -quiet -redo"
+    iqtree_success = os.system(cmd)
+    assert iqtree_success == 0, "ERROR: iqtree did not run properly"
    
    ### Parse the output "log" file
-   logfile = file + ".log"
-   csvfile = file.replace(".fasta", "_models.csv") # where to save parsing output
- 
- 
-###parsing strategy:
-
-for line in logfile:
-
-    items = line.rsplit()
-    if len(items) == 7:
+    logfile = fasta_dir + file + ".log"
+    csvfile = fasta_dir + file.replace(".fasta", "_models.csv") # where to save parsing output
     
-        try:
-            first_item = int(items[0])
-            #type(items[0]) == "int" :
-            #print(first_item)
-            dataline = (",".join(items))
-            csvfile.write(dataline + "\n")
-        except:
-            if items[0] == "No.":
+    ### Create file handles for named files
+    
+    infile = open (logfile, "r")
+    outfile = open (csvfile, "w")
+  
+    ### Code to parse (indicator method)
+    for line in infile:
+        items = line.rsplit()
+        if len(items) == 7:
+    
+            try:
+                first_item = int(items[0])
+                #type(items[0]) == "int" :
+                #print(first_item)
                 dataline = (",".join(items))
-                csvfile.write(dataline + "\n")
+                outfile.write(dataline + "\n")
+                
+            except:
+                if items[0] == "No.":
+                    dataline = (",".join(items))
+                    outfile.write(dataline + "\n")
     
-
-   
    ## Remove the vomit
-os.system("rm " + file + ".*") 
+os.system("rm " + fasta_dir + file + ".*") 
