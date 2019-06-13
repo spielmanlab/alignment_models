@@ -29,7 +29,7 @@ os.environ["OMP_NUM_THREADS"] = str(numproc)
 prealn_file = 'prealn.fasta' # Will contain the raw (unaligned) sequences in fasta format
 refaln_file = 'refaln.fasta' # Will contain the reference (unmasked!) alignment
 prefix      = unaligned.split(".fasta")[0]
-BootDir     =  prefix + "_bootaln/"
+BootDir     =  prefix + "_alnversions/"
 if (os.path.exists(BootDir)):
 	bootfiles=os.listdir(BootDir)
 	for file in bootfiles:
@@ -55,7 +55,7 @@ print("bp trees, aln")
 bmod.bootstrap()	
 	
 for i in range(1, n+1):
-    os.system("mv bootaln" + str(i) + ".fasta " + prefix + "_" + str(i) + ".fasta")
+    os.system("mv alnversions" + str(i) + ".fasta " + prefix + "_" + str(i) + ".fasta")
 os.system("rm *txt *tre prealn.fasta refaln.BS")
 os.system("mv refaln.fasta " + prefix + "_0.fasta")
 os.chdir('../')  
