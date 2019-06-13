@@ -1,7 +1,7 @@
 import os
 
 #### Create a list of all the alignment (".fasta") files we want to run through iqtree
-all_files = os.listdir(".") ## list all files in current directory (".")
+all_files = os.listdir("fasta_files/") ## list all files in current directory (".")
 # fasta_files = [x for x in all_files if x.endswith(".fasta")] ## this is called "list comprehension" and is a fancy python way to do lists
 fasta_files = []
 for file in all_files:
@@ -20,10 +20,27 @@ for file in fasta_files:
    ### Parse the output "log" file
    logfile = file + ".log"
    csvfile = file.replace(".fasta", "_models.csv") # where to save parsing output
-   ### ......forthcoming code......
-   
-   
-   ### this is a placeholder 
+ 
+ 
+###parsing strategy:
+
+for line in logfile:
+
+    items = line.rsplit()
+    if len(items) == 7:
+    
+        try:
+            first_item = int(items[0])
+            #type(items[0]) == "int" :
+            #print(first_item)
+            dataline = (",".join(items))
+            outfile.write(dataline + "\n")
+        except:
+            if items[0] == "No.":
+                dataline = (",".join(items))
+                csvfile.write(dataline + "\n")
+    
+
    
    ## Remove the vomit
-   os.system("rm " + file + ".*") 
+os.system("rm " + file + ".*") 
