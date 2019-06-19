@@ -1,6 +1,7 @@
 #comment in R!
+PlantGrowth
+attach (PlantGrowth)
 
-
-
-animals <- c("cat", "dog", "cat", "mouse")
-factor(animals)
+plants <- unstack(PlantGrowth)
+head (plants)
+boxplot(plants)

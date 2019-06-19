@@ -20,3 +20,12 @@ Alfalfa
 attach(Alfalfa)
 mod <- lm (Ht4 ~ Acid)
 summary(mod)
+
+acidity <- c(Alfalfa$water, Alfalfa$1.5HCl, Alfalfa$3.0HCl)
+Height
+
+
+
+
+
+
