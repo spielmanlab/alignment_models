@@ -61,7 +61,7 @@ class BootstrapperLight(object):
         self.aligner.processTrees(new_n, self.final_treefile)     
         
         print ("Building bootstrap alignments")
-        self.aligner.multiMakeAlignmentsGT(self.prealn_file, new_n, self.numprocesses)
+        self.aligner.multiMakeAlignmentsGTOP(self.prealn_file, new_n, self.numprocesses)
         
         return numSaveTrees
             

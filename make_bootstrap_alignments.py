@@ -44,7 +44,11 @@ os.system("cp ../" + unaligned + " " + prealn_file)
 
 # Aligner
 amod = MafftAligner("mafft", " --auto --quiet ")
-tmod = builderFastTree("FastTreeMP", " -fastest -nosupport -quiet ") # -nosupport **MUST** be there
+if alphabet == "dna":
+    addarg = " -nt "
+else:
+    addarg = " "
+tmod = builderFastTree("FastTreeMP", " -fastest -nosupport -quiet" + addarg) # -nosupport **MUST** be there
 bmod = BootstrapperLight(bootstraps = n, prealn_file = prealn_file, refaln_file = refaln_file, BootDir = BootDir, 
                            threads = numproc, aligner=amod, tree_builder = tmod, srcdir = source)
                            
@@ -53,9 +57,10 @@ amod.makeAlignment(prealn_file, refaln_file)
 
 print("bp trees, aln")
 bmod.bootstrap()	
-	
+
+
 for i in range(1, n+1):
-    os.system("mv alnversions" + str(i) + ".fasta " + prefix + "_" + str(i) + ".fasta")
+    os.system("mv alnversion" + str(i) + ".fasta " + prefix + "_" + str(i) + ".fasta")
 os.system("rm *txt *tre prealn.fasta refaln.BS")
 os.system("mv refaln.fasta " + prefix + "_0.fasta")
 os.chdir('../')  

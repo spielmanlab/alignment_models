@@ -1,5 +1,6 @@
 import subprocess, os, multiprocessing
 from dendropy import *
+import random
 import re
 from Bio import AlignIO
     
@@ -13,50 +14,30 @@ class Aligner:
     def makeAlignmentGT( self, treefile, prealn_file, alnfile):
         '''Makes an alignment using a provided guide tree.'''
 
-    def multiMakeAlignmentsGT(self, prealn_file, n, numprocesses):
-        '''Makes n bootstrap alignments. Note that this function is rather clunky because multiprocessing.pool() does not work when inside a class in python. The code here is a decent workaround of this unfortunate issue.'''
 
-        pool=multiprocessing.Pool(numprocesses)
-        jobs=[]
+    def multiMakeAlignmentsGTOP(self, prealn_file, n, numprocesses):
+        '''Makes n bootstrap alignments with guide tree and opening penalty var.'''
 
-        if numprocesses>=n:
-            for i in range(n):
-                treefile='tree'+str(i+1)+'.txt'
-                alnfile='bootaln'+str(i+1)+'.fasta'
-                p=multiprocessing.Process(target=self.makeAlignmentGT, args=( treefile, prealn_file, alnfile ))
-                jobs.append(p)
-                p.start()
-            for p in jobs:
-                p.join()
 
-        elif numprocesses<n:
-            nruns=0
-            while (nruns < n):
-                if (n-nruns)>=numprocesses:
-                    jobs=[]
-                    for i in range(nruns, nruns+numprocesses):
-                        treefile='tree'+str(i+1)+'.txt'
-                        alnfile='bootaln'+str(i+1)+'.fasta'
-                        p=multiprocessing.Process(target=self.makeAlignmentGT, args=( treefile, prealn_file, alnfile ))
-                        jobs.append(p)
-                        p.start()
-                    for p in jobs:
-                        p.join()
-                    nruns+=numprocesses ## now increment
-                elif (n-nruns)<numprocesses:
-                    jobs=[]
-                    for i in range(n-nruns, n):
-                        treefile='tree'+str(i+1)+'.txt'
-                        alnfile='bootaln'+str(i+1)+'.fasta'
-                        p=multiprocessing.Process(target=self.makeAlignmentGT, args=( treefile, prealn_file, alnfile ))
-                        jobs.append(p)
-                        p.start()
-                    for p in jobs:
-                        p.join()
-                    break
-        pool.terminate()
+        processes = []
+        running = []    
+    
+        for i in range(n):
+            treefile = 'tree'+str(i+1)+'.txt'
+            alnfile  = 'alnversion'+str(i+1)+'.fasta'
+            p = multiprocessing.Process(target=self.makeAlignmentGTOP, args=( treefile, prealn_file, alnfile ))
+            processes.append(p)
+            p.start()
+            running.append(alnfile)
+    
+            if len(processes) == numprocesses:
+                #print("taking a pause at", running)
+                for p in processes:
+                    p.join()
+                processes = []
+                running = []    
 
-        return 0
+
 
 
 class MafftAligner(Aligner):
@@ -71,8 +52,10 @@ class MafftAligner(Aligner):
 
         return 0
 
-    def makeAlignmentGT( self, treefile, prealn_file, alnfile):
-        align=self.executable+' '+self.options+' --treein '+treefile+' '+prealn_file+' > '+alnfile ## Note that we do not use "--retree 1." Providing an input tree will still capture alignment stochasticity without forcing a poorer alignment, as retree 1 has the potential to do.
+    def makeAlignmentGTOP( self, treefile, prealn_file, alnfile):
+        ### SAMPLE  OPENING PENALTY 1-3 AS IN GUIDANCE2
+        opening_penalty = str(random.uniform(1,3))       
+        align=self.executable+' '+self.options+' --treein '+treefile+' --op '+opening_penalty + " --preservecase " +prealn_file+' > '+alnfile ## Note that we do not use "--retree 1." Providing an input tree will still capture alignment stochasticity without forcing a poorer alignment, as retree 1 has the potential to do.
         print(align)
         runalign=subprocess.call(str(align), shell=True)
         return 0
