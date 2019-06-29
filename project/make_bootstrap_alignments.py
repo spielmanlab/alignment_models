@@ -17,27 +17,29 @@ from treebuilder import *
 from bootstrapper import *
 
 ###################### User input (or derived from user input) ###########################
-assert(len(sys.argv) == 5), "\n USAGE: python3 make_bootstrap_alignments.py <fastafile> <protein/dna> <num bootstraps> <threads>"
+assert(len(sys.argv) == 5), "\n USAGE: python3 make_bootstrap_alignments.py <fastafile> <output directory> <protein/dna> <num bootstraps> <threads>"
 
 
 unaligned   = sys.argv[1]        # infile
-alphabet    = sys.argv[2]        # This should be either "protein" or "dna"
-n           =  int(sys.argv[3])  # bootstraps
-numproc     =  int(sys.argv[4])  # threads
+outpath     = sys.argv[2]        # outpath
+alphabet    = sys.argv[3]        # This should be either "protein" or "dna"
+n           =  int(sys.argv[4])  # bootstraps
+numproc     =  int(sys.argv[5])  # threads
 os.environ["OMP_NUM_THREADS"] = str(numproc)
 
 prealn_file = 'prealn.fasta' # Will contain the raw (unaligned) sequences in fasta format
 refaln_file = 'refaln.fasta' # Will contain the reference (unmasked!) alignment
 prefix      = unaligned.split(".fasta")[0]
-BootDir     =  prefix + "_alnversions/"
-if (os.path.exists(BootDir)):
-	bootfiles=os.listdir(BootDir)
+
+#BootDir     =  prefix + "_alnversions/"
+if (os.path.exists(outpath)):
+	bootfiles=os.listdir(outpath)
 	for file in bootfiles:
-		os.remove(BootDir+file)	
+		os.remove(outpath+file)	
 else:
-	os.mkdir(BootDir)
-	assert(os.path.exists(BootDir))
-os.chdir(BootDir)	
+	os.mkdir(outpath)
+	assert(os.path.exists(outpath))
+os.chdir(outpath)	
 os.system("cp ../" + unaligned + " " + prealn_file)
 
 ############################### Internal variables #######################################
@@ -49,7 +51,7 @@ if alphabet == "dna":
 else:
     addarg = " "
 tmod = builderFastTree("FastTreeMP", " -fastest -nosupport -quiet" + addarg) # -nosupport **MUST** be there
-bmod = BootstrapperLight(bootstraps = n, prealn_file = prealn_file, refaln_file = refaln_file, BootDir = BootDir, 
+bmod = BootstrapperLight(bootstraps = n, prealn_file = prealn_file, refaln_file = refaln_file, BootDir = outpath, 
                            threads = numproc, aligner=amod, tree_builder = tmod, srcdir = source)
                            
 print("making base alignment")
@@ -60,7 +62,6 @@ bmod.bootstrap()
 
 
 for i in range(1, n+1):
-    os.system("mv alnversion" + str(i) + ".fasta " + prefix + "_" + str(i) + ".fasta")
+    os.system("mv alnversion" + str(i) + ".fasta " + prefix + "_alnversion_" + str(i) + ".fasta")
 os.system("rm *txt *tre prealn.fasta refaln.BS")
-os.system("mv refaln.fasta " + prefix + "_0.fasta")
-os.chdir('../')  
+os.system("mv refaln.fasta " + prefix + "_alnversion_" + str(n+1) + ".fasta")
