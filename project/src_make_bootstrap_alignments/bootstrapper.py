@@ -48,7 +48,7 @@ class BootstrapperLight(object):
         self.parseRefAln()
         
         # Create the bootstrapped trees
-        print ("Constructing bootstrap trees")
+        #print ("Constructing bootstrap trees")
         #self.tree_builder.buildBootTrees(self.n, self.refaln_seq, self.numseq, self.alnlen, self.final_treefile)
         numSaveTrees = self.tree_builder.buildBootTreesNoReps(self.n, self.refaln_seq, self.numseq, self.alnlen, self.final_treefile)
         
@@ -57,10 +57,10 @@ class BootstrapperLight(object):
         new_n = len(numSaveTrees)
     
         # Separate into PROCESSED trees for given alignment software
-        print ("Formatting trees")
+        #print ("Formatting trees")
         self.aligner.processTrees(new_n, self.final_treefile)     
         
-        print ("Building bootstrap alignments")
+        #print ("Building bootstrap alignments")
         self.aligner.multiMakeAlignmentsGTOP(self.prealn_file, new_n, self.numprocesses)
         
         return numSaveTrees

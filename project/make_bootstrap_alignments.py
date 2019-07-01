@@ -17,12 +17,12 @@ from treebuilder import *
 from bootstrapper import *
 
 ###################### User input (or derived from user input) ###########################
-assert(len(sys.argv) == 5), "\n USAGE: python3 make_bootstrap_alignments.py <fastafile> <output directory> <protein/dna> <num bootstraps> <threads>"
+assert(len(sys.argv) == 6), "\n USAGE: python3 make_bootstrap_alignments.py <fastafile> <output directory> <protein/dna> <num bootstraps> <threads>"
 
 
 unaligned   = sys.argv[1]        # infile
 outpath     = sys.argv[2]        # outpath
-alphabet    = sys.argv[3]        # This should be either "protein" or "dna"
+alphabet    = sys.argv[3].upper()  # This should be either "AA" or "DNA"
 n           =  int(sys.argv[4])  # bootstraps
 numproc     =  int(sys.argv[5])  # threads
 os.environ["OMP_NUM_THREADS"] = str(numproc)
@@ -33,8 +33,7 @@ prefix      = unaligned.split(".fasta")[0]
 
 #BootDir     =  prefix + "_alnversions/"
 if (os.path.exists(outpath)):
-	bootfiles=os.listdir(outpath)
-	for file in bootfiles:
+	for file in os.listdir(outpath):
 		os.remove(outpath+file)	
 else:
 	os.mkdir(outpath)
@@ -46,22 +45,22 @@ os.system("cp ../" + unaligned + " " + prealn_file)
 
 # Aligner
 amod = MafftAligner("mafft", " --auto --quiet ")
-if alphabet == "dna":
+if alphabet == "DNA":
     addarg = " -nt "
 else:
     addarg = " "
-tmod = builderFastTree("FastTreeMP", " -fastest -nosupport -quiet" + addarg) # -nosupport **MUST** be there
+tmod = builderFastTree("FastTreeMP", " -fastest -nosupport -quiet -nopr" + addarg) # -nosupport **MUST** be there
 bmod = BootstrapperLight(bootstraps = n, prealn_file = prealn_file, refaln_file = refaln_file, BootDir = outpath, 
                            threads = numproc, aligner=amod, tree_builder = tmod, srcdir = source)
                            
-print("making base alignment")
+#print("making base alignment")
 amod.makeAlignment(prealn_file, refaln_file)
 
-print("bp trees, aln")
+#print("bp trees, aln")
 bmod.bootstrap()	
 
-
+ 
 for i in range(1, n+1):
-    os.system("mv alnversion" + str(i) + ".fasta " + prefix + "_alnversion_" + str(i) + ".fasta")
+     os.system("mv alnversion" + str(i) + ".fasta " + prefix + "_alnversion_" + str(i) + ".fasta")
 os.system("rm *txt *tre prealn.fasta refaln.BS")
 os.system("mv refaln.fasta " + prefix + "_alnversion_" + str(n+1) + ".fasta")
