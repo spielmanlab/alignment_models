@@ -1,5 +1,7 @@
+library (ggplot2)
 Alfalfa <- read.csv("http://wilkelab.org/classes/SDS348/data_sets/Alfalfa.csv")
 head(Alfalfa)
+
 
 #background data: This homework uses the Alfalfa data set. 
 #This data set contains the height of alfalfa sprouts after four days (Ht4) grown indoors 
@@ -17,14 +19,31 @@ head(Alfalfa)
 #HINT: You will first need to create a linear model object using the lm() function 
 #before you can use the anova() function.
 Alfalfa
+
+#problem 1
 attach(Alfalfa)
 mod <- lm (Ht4 ~ Acid)
 summary(mod)
-
-acidity <- c(Alfalfa$water, Alfalfa$1.5HCl, Alfalfa$3.0HCl)
-Height
+anova(mod)
 
 
+#problem 2
+#Create a boxplot of the plant growth, separated by acid 
+#amounts. Based on this plot, is the mean height of alfalfa 
+#grown in 3.0HCl the same or different from the mean height 
+#of alfalfa grown in water? Explain your answer.
+
+ggplot(Alfalfa,aes(x= Acid, y= Ht4)) + geom_boxplot()
+#the mean height is different from 3.0HCl and water 
+
+#problem3 
+#Use a t test to determine if the mean height of plants 
+#grown in 3.0HCl is the same or different from the mean 
+#height of plants grown in water. Interperet and explain your results in 1-2 sentences.
+
+mean_w <- mean(Alfalfa$Ht4)
+print(mean_w)
+t.test(mean_w, Alfalfa$Row)
 
 
 

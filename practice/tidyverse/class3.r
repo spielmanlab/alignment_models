@@ -16,5 +16,15 @@ ggplot(dataset, aes(x=Species, y=Sepal.Length)) + geom_boxplot()
 
 sitka <- read.csv("http://wilkelab.org/classes/SDS348/data_sets/sitka.csv")
 head(sitka)
-
+#a
 ggplot(sitka, aes(x=Time, y=size, group=tree)) + geom_line() + facet_wrap(~treat)
+#b
+ggplot(sitka, aes(x=Time, y=size, color=tree, group=tree)) + geom_line() + facet_wrap(~treat)
+#c
+ggplot(sitka, aes(x=Time, y=size, color=size, group=tree)) + geom_line() + facet_wrap(~treat)
+
+
+#3. if that was easy:
+
+
+
