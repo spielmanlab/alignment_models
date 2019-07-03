@@ -34,10 +34,49 @@ ranked_models <- process_all_csv(my_path)
 
 ### baaaad
 ranked_models %>%
-  ggplot(aes(x = Model, fill = Model)) + geom_bar() + theme_classic() + theme(legend.position = "none") + facet_grid(name~ic_type) + panel_border()
+  ggplot(aes(x = Model, fill = Model)) + geom_bar() + theme_classic() + theme(legend.position = "none") + facet_grid(name~ic_type) 
 
+### Finding Different Examples:
 
+#example from tail(ranked_models), also used during lab meeting
 example <- "ENSGT00680000099871.Euteleostomi.009.aa.fas"
+
+head(ranked_models)
+tail(ranked_models)
+
+#finding example
+
+e1 <- ranked_models %>%
+  group_by(name, Model, ic_type) %>% 
+  tally() %>% 
+  ungroup() %>% 
+  select(-n) %>% 
+  group_by(name, ic_type) %>% 
+  tally() %>% 
+  rename(number_models = n ) %>%
+  group_by(name, number_models, ic_type) %>% 
+  tally() %>% 
+  rename(name = n) 
+
+tail(e1)
+head(e1)
+#first result of tail e1, 6 models~
+example2 <- "ENSGT00680000099837.Euteleostomi.009.aa.fas"
+#really pretty! changed legend name, outlined in black, 6 models, w scale_fill_brewer: PuRd(purple red!)
+ranked_models %>%
+  filter(name == example2) %>%
+  ggplot(aes(x = Model, fill = ic_type)) + geom_bar(position = position_dodge(), color = "black") + theme_classic() + scale_fill_brewer(palette= "PuRd") + guides(fill=guide_legend(title = "Criterion"))
+
+#first result of head e1, 3 models 
+example3 <- "ENSGT00530000062896.Euteleostomi.009.aa.fas"
+
+ranked_models %>%
+  filter(name == example3) %>%
+  ggplot(aes(x = Model, fill = ic_type)) + geom_bar(position = position_dodge(), color = "black") + theme_linedraw() + scale_fill_brewer(palette = "Paired")
+
+
+
+
 ### Play with this one. informative legend name: "Criterion". change color scheme get fancy look up function scale_fill_manual OR scale_fill_brewer etc.
 ### Find a couple representative case for possible outcomes. - one with five models! one with four models! three models! one model.. etc. 
 ranked_models %>%
@@ -56,10 +95,11 @@ install.packages("wesanderson")
 # Load
 library(wesanderson)
 
-#different colors, using scale_fill_brewer - spectral, black outline
-ranked_models %>%
+#different colors, using scale_fill_brewer - pastel2, black outline
+plot1 <- ranked_models %>%
     filter (name == example) %>%
-    ggplot(aes(x = Model, fill = ic_type)) + geom_bar(position = position_dodge(), color = "black") + theme_classic() + scale_fill_brewer(palette = "Spectral")
+    ggplot(aes(x = Model, fill = ic_type)) + geom_bar(position = position_dodge(), color = "black") + theme_classic() + scale_fill_brewer(palette = "Pastel2")
+# can't add scale_fill_discrete and scale_fill_brewer in the same code!!!
 
 # wes anderson color :), scale_fill_manual
 ranked_models %>%
@@ -77,8 +117,6 @@ ranked_models %>%
 
 
 
-
-ranked_models %>% group_by(name, Model, ic_type) %>% tally()
 
 
 ranked_models %>% 
