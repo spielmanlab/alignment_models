@@ -1,0 +1,16 @@
+IQ-TREE multicore version 1.6.9 for Linux 64-bit built Dec 20 2018
+Developed by Bui Quang Minh, Nguyen Lam Tung, Olga Chernomor,
+Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
+
+Host:    spielmanlab (AVX512, FMA3, 125 GB RAM)
+Command: iqtree -s ENSGT00390000000227.Euteleostomi.001.aa.fas_alnversions/ENSGT00390000000227.Euteleostomi.001.aa.fas_alnversion_17.fasta -m TESTONLY -st AA -redo -quiet -nt 20
+Seed:    278093 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Thu Jul  4 16:09:14 2019
+Kernel:  AVX+FMA - 20 threads (24 CPU cores detected)
+
+Reading alignment file ENSGT00390000000227.Euteleostomi.001.aa.fas_alnversions/ENSGT00390000000227.Euteleostomi.001.aa.fas_alnversion_17.fasta ... Fasta format detected
+Alignment most likely contains protein sequences
+Alignment has 37 sequences with 266 columns, 198 distinct patterns
+92 parsimony-informative, 65 singleton sites, 109 constant sites
+ERROR: Duplicated sequence name B5G124_TAEGU
+ERROR: Please rename sequences listed above!
