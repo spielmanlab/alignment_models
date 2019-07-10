@@ -30,7 +30,7 @@ for file in fasta_files:
    
    ### Run through iqtree
    
-    cmd = "iqtree -s " + fasta_dir + file + " -m TESTONLY -st " + datatype + " -redo -quiet -nt " + threads
+    cmd = "iqtree -s " + fasta_dir + file + " -m TESTONLY -st " + datatype + " -redo -quiet -nt 20"
     iqtree_success = os.system(cmd)
     assert iqtree_success == 0, "ERROR: iqtree did not run properly"
    

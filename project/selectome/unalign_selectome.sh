@@ -1,17 +1,21 @@
 #!/bin/bash
 
-INPATH=$1
-OUTPATH=$2
+#INPATH=$1
+OUTPATH=$1
 
-mkdir -p $OUTPATH
+#mkdir -p $OUTPATH
 
-FAS=`ls $INPATH`
+FAS=`ls $OUTPATH`
 for FILE in $FAS; do
 
     echo $FILE
-    cp $INPATH/$FILE $OUTPATH
+   # cp $INPATH/$FILE $OUTPATH
     sed -i "s/-//g" $OUTPATH/$FILE
     sed -i 's/^$//g' $OUTPATH/$FILE
+    sed -i 's/ PROTID/PROTID/g' $OUTPATH/$FILE 
+    sed -i 's/ TRANSID/TRANSID/g' $OUTPATH/$FILE
+    sed -i 's/ GENEID/GENEID/g' $OUTPATH/$FILE
+    sed -i 's/ TAXID/TAXID/g' $OUTPATH/$FILE
 
 done
 

@@ -1,8 +1,7 @@
 #!/bin/bash
 
-FASFILE=$1
-DATATYPE=$2
-THREADS=$3
+NAME=$1
+THREADS=$2
 WDIR=/csm_data/spielman_lab/alignment_models/project/
 cd $WDIR
 
@@ -13,47 +12,32 @@ NBOOT=49 #49 ## will be +1 with original, so 50 perturbations
 
 export OMP_NUM_THREADS=$THREADS
 
-if [ $DATATYPE == "DNA" ]; then
-  INPUT_DATA_PATH=selectome/selectome_v06_Euteleostomi-nt_unmasked-UNALIGNED
-  OUTPUT_DIRECTORY=selectome_nt_output
-fi
-if [ $DATATYPE == "AA" ]; then
-  INPUT_DATA_PATH=selectome/selectome_v06_Euteleostomi-aa_unmasked-UNALIGNED
-  OUTPUT_DIRECTORY=selectome_aa_output
-fi
-mkdir -p ${OUTPUT_DIRECTORY}
+for DATATYPE in DNA AA; do
 
-cd ${INPUT_DATA_PATH}
-INPUT_FILES=`ls *001*fas`
-cd $WDIR
+    if [ $DATATYPE == "DNA" ]; then
+        INPUT_DATA_PATH=selectome/selectome_nt_unaligned_200-50
+        OUTPUT_DIRECTORY=selectome_nt_output
+       FASFILE=${NAME}.nt.fas
+    fi
+    if [ $DATATYPE == "AA" ]; then
+      INPUT_DATA_PATH=selectome/selectome_aa_unaligned_200-50
+      OUTPUT_DIRECTORY=selectome_aa_output
+      FASFILE=${NAME}.aa.fas
+    fi
+    #mkdir -p ${OUTPUT_DIRECTORY}
 
-
-MOVEBOOT=0
-MOVECSV=0
-echo $FASFILE
-BOOTDIR=${FASFILE}_alnversions/
-if [ ! -d ${OUTPUT_DIRECTORY}/$BOOTDIR ]; then
-    echo "    Perturbing alignments"
-    cp ${INPUT_DATA_PATH}/$FASFILE .
-    python3 make_bootstrap_alignments.py $FASFILE $BOOTDIR $DATATYPE $NBOOT $THREADS
-    rm $FASFILE
-    MOVEBOOT=1
-fi
+    echo $FASFILE
+    BOOTDIR=${FASFILE}_alnversions/
+     
     
+    if [ ! -f ${OUTPUT_DIRECTORY}/${FASFILE}_alnversion_24_models.csv ]; then
+        echo "    Perturbing alignments"
+        cp ${INPUT_DATA_PATH}/$FASFILE .
+        python3 make_bootstrap_alignments.py $FASFILE $BOOTDIR $DATATYPE $NBOOT $THREADS
 
-if [ ! -f ${OUTPUT_DIRECTORY}/${FASFILE}_alnversion_1_models.csv ]; then
-    echo "    Running model selection"
-    python3 run_iqtree_on_alignment_versions.py $BOOTDIR $DATATYPE $THREADS
-    MOVECSV=1
-fi
-
-if [ $MOVEBOOT -eq 1 ]; then	
-    mv $BOOTDIR $OUTPUT_DIRECTORY
-fi
-
-if [ $MOVECSV -eq 1 ]; then
-    cd $OUTPUT_DIRECTORY
-    mv $BOOTDIR/*csv .
-    cd $WDIR
-fi
-
+       echo "    Running model selection"
+       python3 run_iqtree_on_alignment_versions.py $BOOTDIR $DATATYPE $THREADS
+       mv $BOOTDIR/*csv $OUTPUT_DIRECTORY
+       cp -r $BOOTDIR $OUTPUT_DIRECTORY
+   fi
+done
