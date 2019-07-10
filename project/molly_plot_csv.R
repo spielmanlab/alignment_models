@@ -69,7 +69,7 @@ ranked_models %>%
 
 #first result of head e1, 3 models 
 example3 <- "ENSGT00530000062896.Euteleostomi.009.aa.fas"
-
+#first result of head1
 ranked_models %>%
   filter(name == example3) %>%
   ggplot(aes(x = Model, fill = ic_type)) + geom_bar(position = position_dodge(), color = "black") + theme_linedraw() + scale_fill_brewer(palette = "Paired")
@@ -82,6 +82,14 @@ ranked_models %>%
 ranked_models %>%
   filter(name == example) %>%
   ggplot(aes(x = Model, fill = ic_type)) + geom_bar(position = position_dodge()) + theme_classic()
+
+#1 model, boring
+example4 = "ENSGT00530000063305.Euteleostomi.009.aa.fas"
+
+ranked_models %>%
+  filter(name == example4) %>%
+  ggplot(aes(x = Model, fill = ic_type)) + geom_bar(position = position_dodge(), color = "black") + theme_classic() + scale_fill_brewer(palette= "PuRd") + guides(fill=guide_legend(title = "Criterion"))
+
 
 ### Playground
 
@@ -116,9 +124,6 @@ ranked_models %>%
 #using scale_fill_manual
 
 
-
-
-
 ranked_models %>% 
   filter(ic_type == "BIC") -> ranked_models_bic
 
@@ -140,8 +145,8 @@ ranked_models %>%
     geom_col() + 
     geom_text(aes(x = number_models, y = name + 1, label = name))+
     facet_wrap(~ic_type) + 
-    theme_classic() + panel_border() -> num_models_plot
-#ggsave("output.pdf", num_models_plot) # add args like width = .., height = ..
+    theme_classic() -> num_models_plot
+ #ggsave("output.pdf", num_models_plot) # add args like width = .., height = ..
 
 
   
