@@ -28,18 +28,50 @@ nt_path <- "selectome_nt_output/"
 aa_ranked_models <- process_all_csv(aa_path)
 nt_ranked_models <- process_all_csv(nt_path)
 
-
 aa_ranked_models %>%
-  ggplot(aes(x = Model, fill = Model)) + geom_bar() + theme_classic() + theme(legend.position = "none") + facet_grid(name~ic_type) 
+  group_by(name, Model, ic_type) %>% 
+  tally() %>% 
+  ungroup() %>% 
+  select(-n) %>% 
+  group_by(name, ic_type) %>% 
+  tally() %>% 
+  rename(number_models = n ) %>%
+  group_by(number_models, ic_type) %>% 
+  tally() %>% 
+  rename(name = n) %>%
+  ggplot(aes(x = number_models, y = name)) + 
+  geom_col(color = "black") + 
+  geom_text(aes(x = number_models, y = name + 1, label = name)) +
+  facet_wrap(~ic_type) + 
+  theme_classic() -> num_aa_models_plot
+
 
 nt_ranked_models %>%
-  ggplot(aes(x = Model, fill = Model)) + geom_bar() + theme_classic() + theme(legend.position = "none") + facet_grid(name~ic_type) 
+  group_by(name, Model, ic_type) %>% 
+  tally() %>% 
+  ungroup() %>% 
+  select(-n) %>% 
+  group_by(name, ic_type) %>% 
+  tally() %>% 
+  rename(number_models = n ) %>%
+  group_by(number_models, ic_type) %>% 
+  tally() %>% 
+  rename(name = n) %>%
+  ggplot(aes(x = number_models, y = name)) + 
+  geom_col(color = "black") + 
+  geom_text(aes(x = number_models, y = name + 1, label = name))+
+  facet_wrap(~ic_type) + 
+  theme_classic() -> num_nt_models_plot
+
+i = 0
+for (plot1 in c(num_nt_models_plot, num_aa_models_plot)) {
+  ggsave(str(i) + "output.pdf", plot1)
+         i =+ 1
+}
+     
 
 
-
-
-
-
+ggsave("output.pdf", num_nt_models_plot) # add args like width = .., height = ..
 
 
 
