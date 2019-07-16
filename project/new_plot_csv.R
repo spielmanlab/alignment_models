@@ -43,7 +43,10 @@ aa_ranked_models %>%
   geom_col(color = "black") + 
   geom_text(aes(x = number_models, y = name + 1, label = name)) +
   facet_wrap(~ic_type) + 
-  theme_classic() -> num_aa_models_plot
+  theme_classic() + scale_x_continuous(name = "Number of Models per Dataset") +
+  scale_y_continuous(name = "Number of Datasets")
+
+#-> num_aa_models_plot
 
 
 nt_ranked_models %>%
@@ -61,17 +64,26 @@ nt_ranked_models %>%
   geom_col(color = "black") + 
   geom_text(aes(x = number_models, y = name + 1, label = name))+
   facet_wrap(~ic_type) + 
-  theme_classic() -> num_nt_models_plot
+  theme_classic()  + scale_y_continuous(expand=c(0,0), name = "Number of Datasets", limits = c(0, 125)) +
+  scale_x_continuous(name = "Number of Modles per Dataset") 
 
-i = 0
-for (plot1 in c(num_nt_models_plot, num_aa_models_plot)) {
-  ggsave(str(i) + "output.pdf", plot1)
-         i =+ 1
-}
-     
+# -> num_nt_models_plot
 
+ggsave("num_nt_plot.pdf", num_nt_models_plot) # add args like width = .., height = ..
 
-ggsave("output.pdf", num_nt_models_plot) # add args like width = .., height = ..
-
+# i = 0
+# for (plot1 in c(num_nt_models_plot, num_aa_models_plot)) {
+#   ggsave(str(i) + "output.pdf", plot1)
+#          i = i + 1
+# }
+# i = 0
+# for (plot1 in c(num_nt_models_plot, num_aa_models_plot)) {
+#   ggsave(paste0(i, "output.pdf"), plot1)
+#          i = i + 1
+# }
+# 
+# 
+# ggsave("output.pdf", num_nt_models_plot) # add args like width = .., height = ..
+# 
 
 
