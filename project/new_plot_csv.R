@@ -109,7 +109,7 @@ nt_ranked_models %>%
   geom_text(aes(x = number_models, y = name + 1, label = name))+
   facet_wrap(~ic_type) + 
   theme_classic()  + scale_y_continuous(expand=c(0,0), name = "Number of Datasets", limits = c(0, 125)) +
-  scale_x_continuous(name = "Number of Modles per Dataset") +
+  scale_x_continuous(name = "Number of Models per Dataset") +
   scale_fill_manual(values = cols2) +
   theme(legend.position = "none", plot.title = element_text(hjust = 0.5)) -> num_nt_models_plot
 
