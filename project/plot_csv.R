@@ -20,7 +20,6 @@ process_all_csv <- function(path_to_csv)
         ungroup() %>%
         dplyr::select(name, number, Model, ic_type) -> ranked_models
     ranked_models
-
 }
 
 my_path <- "selectome_aa_subset_output/"
