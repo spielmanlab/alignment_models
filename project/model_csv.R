@@ -1,4 +1,6 @@
 library(tidyverse)
+library(cowplot)
+
 
 ## This function converts a directory of CSV files containing model selection information into a single tibble for all replicates
 ## NOTE: Assumes that the following headers are in each CSV: No.,Model,-LnL,df,AIC,AICc,BIC
@@ -120,7 +122,10 @@ nt_ranked_models %>%
         legend.text = element_text(size = 11)) -> new_nt_six_model
 
 
-
 ggsave("six_nt_model.pdf", new_nt_six_model, width = 7, height = 5, units = "in")
+
+legend <- cowplot::get_legend(new_nt_six_model)
+grid.newpage()
+grid.draw(legend)
 
 
