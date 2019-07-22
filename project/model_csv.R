@@ -112,14 +112,15 @@ six_nt_model = "ENSGT00390000008002.Euteleostomi.001.nt.fas"
 ### 6 models
 nt_ranked_models %>%
   filter(name == six_nt_model) %>%
-  ggplot(aes(x = Model, fill = ic_type)) + geom_bar(position = position_dodge(), color = "black") + theme_classic() +
+  ggplot(aes(x = Model, fill = ic_type)) + geom_bar(position = position_dodge(), color = "black") + 
+  theme_classic() +
   scale_y_continuous(name = "Number of Alignments") + scale_fill_brewer(palette = "Set1") +
   labs(fill = "Information Criterion") +
   theme(legend.position = "top",
         legend.background = element_rect(fill = "lightblue", size = 0.5, linetype = "solid"),
         axis.title = element_text(size = 17), axis.text = element_text(size = 9.3),
         legend.title = element_text(size = 13),
-        legend.text = element_text(size = 11)) -> new_nt_six_model
+        legend.text = element_text(size = 11)) #-> new_nt_six_model
 
 
 ggsave("six_nt_model.pdf", new_nt_six_model, width = 7, height = 5, units = "in")
