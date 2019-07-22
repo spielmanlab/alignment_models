@@ -65,7 +65,7 @@ aa_ranked_models %>%
 
 #color vector i GUESS
 
-cols <- c("AIC" = "gold", "AICc" = "darkgreen", "BIC" = "lightblue4")
+cols <- c("AIC" = "gold", "AICc" = "darkgoldenrod3", "BIC" = "orange3")
 
 aa_ranked_models %>%
   group_by(name, Model, ic_type) %>% 
@@ -79,18 +79,22 @@ aa_ranked_models %>%
   tally() %>% 
   rename(name = n) %>%
   ggplot(aes(x = number_models, y = name, fill = ic_type)) + 
-  geom_col(color = "black") + 
-  ggtitle("Protein Model Selection") +
-  geom_text(aes(x = number_models, y = name + 1, label = name)) +
+  geom_col(color = "black", width = 1) + 
+  #ggtitle("Protein Model Selection") +
+  geom_text(aes(x = number_models, y = name + 1, label = name), size = 5, position = position_dodge(width = 1),
+            vjust = -0.2) +
   facet_wrap(~ic_type)+ 
   theme_classic() + scale_x_continuous(name = "Number of Models per Dataset") +
   scale_y_continuous(name = "Number of Datasets") +
   scale_fill_manual(values = cols) +
-  theme(legend.position = "none", plot.title = element_text(hjust = 0.5)) -> num_aa_models_plot
+  theme(legend.position = "none", plot.title = element_text(hjust = 0.5),
+        axis.text= element_text(size = 15),  axis.title = element_text(size = 20), 
+        text = element_text(size = 23)) -> num_aa_models_plot
 
-ggsave("num_aa_plot.pdf", num_aa_models_plot)
+ggsave("num_aa_plot.pdf", num_aa_models_plot, width = 17, height = 14, units = "in")
 
-cols2 <- c("AIC" = "firebrick2", "AICc" = "darkorchid3", "BIC" = "lightsalmon2")
+cols2 <- c("AIC" = "tomato2", "AICc" = "salmon3", "BIC" = "firebrick4")
+
 
 nt_ranked_models %>%
   group_by(name, Model, ic_type) %>% 
@@ -98,22 +102,27 @@ nt_ranked_models %>%
   ungroup() %>% 
   select(-n) %>% 
   group_by(name, ic_type) %>% 
-  tally() %>% 
+  tally() %>%
   rename(number_models = n ) %>%
   group_by(number_models, ic_type) %>% 
   tally() %>% 
   rename(name = n) %>%
   ggplot(aes(x = number_models, y = name, fill = ic_type)) + 
-  geom_col(color = "black") + 
-  ggtitle("Nucleotide Model Selection") +
-  geom_text(aes(x = number_models, y = name + 1, label = name))+
-  facet_wrap(~ic_type) + 
-  theme_classic()  + scale_y_continuous(expand=c(0,0), name = "Number of Datasets", limits = c(0, 125)) +
-  scale_x_continuous(name = "Number of Models per Dataset") +
+  geom_col(color = "black", width = 1) + 
+  #ggtitle("Protein Model Selection") +
+  geom_text(aes(x = number_models, y = name + 1, label = name), size = 5, position = position_dodge(width = 1),
+            vjust = -0.2) +
+  facet_wrap(~ic_type)+ 
+  theme_classic() + scale_x_continuous(name = "Number of Models per Dataset") +
+  scale_y_continuous(name = "Number of Datasets") +
   scale_fill_manual(values = cols2) +
-  theme(legend.position = "none", plot.title = element_text(hjust = 0.5)) -> num_nt_models_plot
+  theme(legend.position = "none", plot.title = element_text(hjust = 0.5),
+        axis.text= element_text(size = 15),  axis.title = element_text(size = 20), 
+        text = element_text(size = 23)) -> num_nt_models_plot
 
-ggsave("num_nt_plot.pdf", num_nt_models_plot) # add args like width = .., height = ..
+
+
+ggsave("num_nt_plot.pdf", num_nt_models_plot, width = 17, height = 14, units = "in") # add args like width = .., height = ..
 
 # i = 0
 # for (plot1 in c(num_nt_models_plot, num_aa_models_plot)) {

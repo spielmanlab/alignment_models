@@ -74,18 +74,35 @@ one_model = "ENSGT00390000000455.Euteleostomi.001.nt.fas"
 ### one model
 nt_ranked_models %>%
   filter(name == one_model) %>%
-  ggplot(aes(x = Model, fill = ic_type)) + geom_bar(position = position_dodge()) + theme_classic() + 
-  scale_y_continuous(name = "Number of Alignments") -> one_nt_model
-ggsave("one_nt_model.pdf", one_nt_model)
+  ggplot(aes(x = Model, fill = ic_type)) + geom_bar(position = position_dodge(), color = "black") + theme_classic() +
+  scale_y_continuous(name = "Number of Alignments") + scale_fill_brewer(palette = "Set1") +
+  labs(fill = "Information Criterion") +
+  theme(legend.position = "top",
+        legend.background = element_rect(fill = "lightblue", size = 0.5, linetype = "solid"),
+        axis.title = element_text(size = 17), axis.text = element_text(size = 9.3),
+        legend.title = element_text(size = 13),
+        legend.text = element_text(size = 11)) -> new_one_nt_model
+
+ggsave("one_nt_model.pdf", new_one_nt_model, width = 7, height = 5, units = "in")
 
 
 three_model = "ENSGT00410000025793.Euteleostomi.001.nt.fas"
 ### three model
+
 nt_ranked_models %>%
   filter(name == three_model) %>%
-  ggplot(aes(x = Model, fill = ic_type)) + geom_bar(position = position_dodge()) + theme_classic() +
-  scale_y_continuous(name = "Number of Alignments") -> three_nt_model
-ggsave("three_nt_model.pdf", three_nt_model)
+  ggplot(aes(x = Model, fill = ic_type)) + geom_bar(position = position_dodge(), color = "black") + theme_classic() +
+  scale_y_continuous(name = "Number of Alignments") + scale_fill_brewer(palette = "Set1") +
+  labs(fill = "Information Criterion") +
+  theme(legend.position = "top",
+        legend.background = element_rect(fill = "lightblue", size = 0.5, linetype = "solid"),
+        axis.title = element_text(size = 17), axis.text = element_text(size = 9.3),
+        legend.title = element_text(size = 13),
+        legend.text = element_text(size = 11)) -> new_nt_three_model
+
+
+ggsave("three_nt_model.pdf", new_nt_three_model, width = 7, height = 5, units = "in") 
+
 
 
 six_nt_model = "ENSGT00390000008002.Euteleostomi.001.nt.fas"
@@ -93,8 +110,17 @@ six_nt_model = "ENSGT00390000008002.Euteleostomi.001.nt.fas"
 ### 6 models
 nt_ranked_models %>%
   filter(name == six_nt_model) %>%
-  ggplot(aes(x = Model, fill = ic_type)) + geom_bar(position = position_dodge()) + theme_classic() +
-  scale_y_continuous(name = "Number of Alignments") -> nt_six_model
-ggsave("six_nt_model.pdf", nt_six_model)
+  ggplot(aes(x = Model, fill = ic_type)) + geom_bar(position = position_dodge(), color = "black") + theme_classic() +
+  scale_y_continuous(name = "Number of Alignments") + scale_fill_brewer(palette = "Set1") +
+  labs(fill = "Information Criterion") +
+  theme(legend.position = "top",
+        legend.background = element_rect(fill = "lightblue", size = 0.5, linetype = "solid"),
+        axis.title = element_text(size = 17), axis.text = element_text(size = 9.3),
+        legend.title = element_text(size = 13),
+        legend.text = element_text(size = 11)) -> new_nt_six_model
+
+
+
+ggsave("six_nt_model.pdf", new_nt_six_model, width = 7, height = 5, units = "in")
 
 
