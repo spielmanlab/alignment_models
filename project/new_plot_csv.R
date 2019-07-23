@@ -25,8 +25,14 @@ process_all_csv <- function(path_to_csv)
 
 aa_path <- "selectome_aa_output/"
 nt_path <- "selectome_nt_output/"
-aa_ranked_models <- process_all_csv(aa_path)
-nt_ranked_models <- process_all_csv(nt_path)
+#aa_ranked_models <- process_all_csv(aa_path)
+#nt_ranked_models <- process_all_csv(nt_path)
+#write_csv(aa_ranked_models, "aa_ranked_models.csv")
+#write_csv(nt_ranked_models, "nt_ranked_models.csv")
+
+
+aa_ranked_models <- read_csv("aa_ranked_models.csv")
+nt_ranked_models <- read_csv(("nt_ranked_models.csv")
 
 head(aa_ranked_models)
 aa_head()
@@ -88,10 +94,10 @@ aa_ranked_models %>%
   scale_y_continuous(name = "Number of Datasets") +
   scale_fill_manual(values = cols) +
   theme(legend.position = "none", plot.title = element_text(hjust = 0.5),
-        axis.text= element_text(size = 15),  axis.title = element_text(size = 30),
-        text = element_text(size = 35)) -> num_aa_models_plot
+        axis.text= element_text(size = 35),  axis.title = element_text(size = 40),
+        strip.text = element_text(size = 35)) -> num_aa_models_plot
 
-ggsave("num_aa_plot.pdf", num_aa_models_plot, width = 17, height = 12.5, units = "in")
+ggsave("num_aa_plot.pdf", num_aa_models_plot, width = 14, height = 10, units = "in")
 
 cols2 <- c("AIC" = "tomato2", "AICc" = "salmon3", "BIC" = "firebrick4")
 
@@ -117,12 +123,13 @@ nt_ranked_models %>%
   scale_y_continuous(name = "Number of Datasets") +
   scale_fill_manual(values = cols2) +
   theme(legend.position = "none", plot.title = element_text(hjust = 0.5),
-        axis.text= element_text(size = 15),  axis.title = element_text(size = 30),
-        text = element_text(size = 35)) -> num_nt_models_plot
+        axis.text= element_text(size = 35),  axis.title = element_text(size = 40),
+        strip.text = element_text(size = 35)) -> num_nt_models_plot
 
 
 
-ggsave("num_nt_plot.pdf", num_nt_models_plot, width = 17, height = 12.5, units = "in") # add args like width = .., height = ..
+ggsave("num_nt_plot.pdf", num_nt_models_plot, width = 14, height = 10, units = "in")
+
 
 # i = 0
 # for (plot1 in c(num_nt_models_plot, num_aa_models_plot)) {
