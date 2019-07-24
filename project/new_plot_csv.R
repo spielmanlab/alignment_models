@@ -32,7 +32,7 @@ nt_path <- "selectome_nt_output/"
 
 
 aa_ranked_models <- read_csv("aa_ranked_models.csv")
-nt_ranked_models <- read_csv(("nt_ranked_models.csv")
+nt_ranked_models <- read_csv("nt_ranked_models.csv")
 
 head(aa_ranked_models)
 aa_head()
@@ -71,7 +71,7 @@ aa_ranked_models %>%
 
 #color vector i GUESS
 
-cols <- c("AIC" = "darkolivegreen3", "AICc" = "seagreen3", "BIC" = "chartreuse4")
+cols <- c("AIC" = "limegreen", "AICc" = "green3", "BIC" = "darkgreen")
 
 aa_ranked_models %>%
   group_by(name, Model, ic_type) %>% 
@@ -97,9 +97,9 @@ aa_ranked_models %>%
         axis.text= element_text(size = 35),  axis.title = element_text(size = 40),
         strip.text = element_text(size = 35)) -> num_aa_models_plot
 
-ggsave("num_aa_plot.pdf", num_aa_models_plot, width = 14, height = 10, units = "in")
+ggsave("num_aa_plot3.pdf", num_aa_models_plot, width = 14.7, height = 10.36, units = "in")
 
-cols2 <- c("AIC" = "tomato2", "AICc" = "salmon3", "BIC" = "firebrick4")
+cols2 <- c("AIC" = "lightblue1", "AICc" = "deepskyblue1", "BIC" = "dodgerblue3")
 
 
 nt_ranked_models %>%
@@ -128,7 +128,7 @@ nt_ranked_models %>%
 
 
 
-ggsave("num_nt_plot.pdf", num_nt_models_plot, width = 14, height = 10, units = "in")
+ggsave("num_nt_plot2.pdf", num_nt_models_plot, width = 14.7, height = 10.36, units = "in")
 
 
 # i = 0
