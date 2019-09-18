@@ -1,19 +1,75 @@
 from Bio import SeqIO
 import os
 import statistics
+import sys
 
-fasta_dir = "../one_csv/data/"
+
+"""
+This is pseudocode! It is code in HUMAN LANGUAGE syntax, not python (or whatever language) syntax.
+
+get all file names (all_files)
+loop over all file names
+    check: is a fasta?
+    if yes:
+        collect information from the fasta: name, numseq, minlength, maxlength, meanlength, sdlength
+        write information to the output file
+    if no:
+        move on to the next file
+"""
+
+### DATATYPE "nt" or "aa"
+
+fasta_dir = "data/"
 all_files = os.listdir(fasta_dir)
-print(all_files)
 
-all_fasta_files = []
+comma = ","
+csvfile = "data_properties.csv" ## correct extenstion!
+outfile = open(csvfile, "w")
+outfile.write("name,number_of_sequences\n")
+
+#print(all_files)
+
+#all_fasta_files = []
 for file in all_files:
     if file.endswith(".fasta"):
-        all_fasta_files.append(file)
-print (all_fasta_files)
+        # collect information
+        name = file.rstrip(".fasta")
+        #print("name:", name)
+        fasta_records = list(SeqIO.parse(fasta_dir + file, "fasta"))
+        #print(fasta_records)
+        
+        numseq = len(fasta_records)
+        #print(numseq)
+        
+        ##### MORE INFORMATION IS COLLECTED HERE ###
+        
+        # save information
+        output_string = name + comma + str(numseq) + "\n"
+        #print(output_string)
+        
+        outfile.write(output_string)
+        
 
-csvfile = fasta_dir + "one_csv"
-outfile = open(csvfile, "w")
+    else:
+        continue
+    
+
+outfile.close()
+
+sys.exit() ## only for now until you get above code FULLY working.
+
+
+
+
+
+
+
+
+
+
+###########################################################################################
+###########################################################################################
+
 
 comma = ","
 
