@@ -1,7 +1,10 @@
 # alignment_models
 Determining the effect of MSA on selected models
 
-Project coordinated by sjspielman and executed by kittysocks
-This is the Read me file for this project
+Project coordinated by sjspielman (Dr. Stephanie Spielman) and executed by kittysocks (Molly Miraglia, undergradute)
+
+
+
+
 
 

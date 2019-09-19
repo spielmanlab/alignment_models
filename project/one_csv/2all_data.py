@@ -43,9 +43,12 @@ for file in all_files:
         
         ##### MORE INFORMATION IS COLLECTED HERE ###
         
+        
         # save information
         output_string = name + comma + str(numseq) + "\n"
         #print(output_string)
+        
+        
         
         outfile.write(output_string)
         
