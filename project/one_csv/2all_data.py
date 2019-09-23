@@ -41,13 +41,27 @@ for file in all_files:
         numseq = len(fasta_records)
         #print(numseq)
         
+        
         ##### MORE INFORMATION IS COLLECTED HERE ###
+        rec_lens = []
         
-        
+        for rec in fasta_records:
+           x = (len(rec))
+           rec_lens.append(x)
+           #print rec_lens
+           
+        minss = (min(rec_lens))
+        print(minss)
+        maxes = max(rec_lens)
+        #print(maxes)
+        means = statistics.mean(rec_lens)
+        #print(means)
+        standevs = statistics.stdev(rec_lens)
+        #print(standevs)
+         
         # save information
-        output_string = name + comma + str(numseq) + "\n"
-        #print(output_string)
-        
+        output_string = name + comma + str(numseq) + str(minss) + comma + str(maxes) + comma + str(means) + comma + str(standevs) +"\n"
+        print(output_string)
         
         
         outfile.write(output_string)

@@ -14,6 +14,6 @@
 
 7. `run_iqtree_on_alignment.py` and `run_iqtree_on_alignment_versions.py` contains scripts that runs iqtree on all `aln.fasta` and then parses iqtree information into csv, latter is slightly modified
 
-8. `submit_pipeline.sbatch` is written in BASH
+8. `submit_pipeline.sbatch` is written in BASH, 
 
 9. `posterstuff/` contains materials used to create poster for COURI Symposium 2019
