@@ -50,7 +50,7 @@ for file in all_files:
            rec_lens.append(x)
            #print rec_lens
            
-        minss = (min(rec_lens))
+        minss = min(rec_lens)
         print(minss)
         maxes = max(rec_lens)
         #print(maxes)
