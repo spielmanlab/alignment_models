@@ -58,6 +58,14 @@ for file in all_files:
         #print(means)
         standevs = statistics.stdev(rec_lens)
         #print(standevs)
+        
+        
+        
+        
+        
+        
+        
+        
          
         # save information
         output_string = name + comma + str(numseq) + str(minss) + comma + str(maxes) + comma + str(means) + comma + str(standevs) +"\n"
