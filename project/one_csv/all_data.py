@@ -46,12 +46,14 @@ for file in all_files:
         rec_lens = []
         
         for rec in fasta_records:
-           x = (len(rec))
+           #print(rec)
+           #print(rec.seq)
+           x = (len(rec.seq))
            rec_lens.append(x)
-           #print rec_lens
            
+        #print(rec_lens)
         minss = min(rec_lens)
-        print(minss)
+        #print(minss)
         maxes = max(rec_lens)
         #print(maxes)
         means = statistics.mean(rec_lens)
