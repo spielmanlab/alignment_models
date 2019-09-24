@@ -25,7 +25,7 @@ all_files = os.listdir(fasta_dir)
 comma = ","
 csvfile = "data_properties.csv" ## correct extenstion!
 outfile = open(csvfile, "w")
-outfile.write("name,number_of_sequences\n")
+outfile.write("name,number_of_sequences,min,max,mean,standev\n")
 
 #print(all_files)
 
