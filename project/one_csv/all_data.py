@@ -1,160 +1,148 @@
-### ALL DATASETS CSV
-
-
-#Importing all libraries needed!
-
 from Bio import SeqIO
 import os
 import statistics
-import csv
-from itertools import islice
+import sys
 
 
-fasta_dir = "../alldatasets_csv/data/"
-### hypothetical directory where we put everything
+"""
+This is pseudocode! It is code in HUMAN LANGUAGE syntax, not python (or whatever language) syntax.
+
+get all file names (all_files)
+loop over all file names
+    check: is a fasta?
+    if yes:
+        collect information from the fasta: name, numseq, minlength, maxlength, meanlength, sdlength
+        write information to the output file
+    if no:
+        move on to the next file
+"""
+
+### DATATYPE "nt" or "aa"
+
+fasta_dir = "data/"
 all_files = os.listdir(fasta_dir)
-all_fasta_files = []
-#print (all_files)
 
+comma = ","
+csvfile = "data_properties.csv" ## correct extenstion!
+outfile = open(csvfile, "w")
+outfile.write("name,number_of_sequences,min,max,mean,standev\n")
 
-######################################################################
+#print(all_files)
+
+#all_fasta_files = []
 for file in all_files:
     if file.endswith(".fasta"):
-        all_fasta_files.append(file)
-#print (all_fasta_files)
+        # collect information
+        name = file.rstrip(".fasta")
+        #print("name:", name)
+        fasta_records = list(SeqIO.parse(fasta_dir + file, "fasta"))
+        #print(fasta_records)
+        
+        numseq = len(fasta_records)
+        #print(numseq)
+        
+        
+        ##### MORE INFORMATION IS COLLECTED HERE ###
+        rec_lens = []
+        
+        for rec in fasta_records:
+           x = (len(rec))
+           rec_lens.append(x)
+           #print rec_lens
+           
+        minss = min(rec_lens)
+        print(minss)
+        maxes = max(rec_lens)
+        #print(maxes)
+        means = statistics.mean(rec_lens)
+        #print(means)
+        standevs = statistics.stdev(rec_lens)
+        #print(standevs)
+        
+        
+        
+        
+        
+        
+        
+        
+         
+        # save information
+        output_string = name + comma + str(numseq) + str(minss) + comma + str(maxes) + comma + str(means) + comma + str(standevs) +"\n"
+        print(output_string)
+        
+        
+        outfile.write(output_string)
+        
+
+    else:
+        continue
+    
+
+outfile.close()
+
+sys.exit() ## only for now until you get above code FULLY working.
+
+
+
+
+
+
+
+
+
+
+###########################################################################################
+###########################################################################################
+
+
+comma = ","
 
 names = []
-### Prints all the names without extension, puts it into list
-for items in all_fasta_files:
-    x = items.rstrip(".fasta")
-    names.append(x)
-print("Names of all the files:", names)
-###########################################################################
-
-
-### Reading and Writing files to parse!
-
-dummylist = []
-seq_list= []
-number_of_sequences = []
-counter = []
-
-csvfile = "summary_of_fastas.csv" #fasta_dir + file.replace(".fasta", "_adata.csv")
-
+numberseq = []
+recs = []
+mins = []
+maxs = []
+means = []
+stdevs = []
 
 for file in all_fasta_files:
-    print("Running analysis on:",file)
-    records = list(SeqIO.parse(fasta_dir + file, "fasta"))
-    print("List of records:", records)
-    
-    
-    ### opening and creating files to work with
-    f_file = fasta_dir + file 
-    csvfile = fasta_dir + file.replace(".fasta", "_adata.csv")
 
-    infile = open (f_file, "r")
-    outfile = open (csvfile, "w")
+    fastafile = fasta_dir + file
     
-
-    
-### prints number of sequences
-    print ("Numbber of sequences in one file:", len(records))
-    z = len(records)
-    number_of_sequences.append(z)
-    print("Number of sequences in all files:", number_of_sequences)
-    
-    
-###getting different lists for different sequences
-### Want to create separate lists for each file
-
-    for rec in records:
-        x = len(rec)
-        print("length of a sequence:", x)
-        dummylist.append(x)
-        print("dumm", dummylist)
-    
-    for i in range(number_of_sequences[0]):   
-        print("blah", dummylist.append([]))
-        for j in range(number_of_sequences[0]):
-           print(dummylist[i])
-    print (dummylist)
-    
-   
-    
-          
-    
+    fasta_records = list(SeqIO.parse(fastafile, "fasta"))
+    #print(fasta_records)
+    x = file.rstrip(".fasta")
+    names.append(x)
+    z = len(fasta_records)
+    numberseq.append(z)
+    for rec in fasta_records:
+        x = (len(rec))
+        recs.append(x) 
         
-
-#print(min(slist))
-#print(max(slist))
-#print(statistics.stdev(slist))
-#print(statistics.mean(slist))       
+for file in all_fasta_files:       
+    a = min(recs)
+    mins.append(a)
+    b = max(recs)
+    maxs.append(b)
+    c = statistics.mean(recs)
+    means.append(c)
+    d = statistics.stdev(recs)
+    stdevs.append(d)
     
+parsingdict = {"names":names, "numbersequences":numberseq, "min":mins, "max":maxs, "mean":means, "standardev":stdevs}
+
+print(parsingdict.values())
+
+for val in parsingdict.values():
+    dataline = comma.join(map(str, val)) + "\n"
     
-        
-    #### Code to parse:
-    for line in infile:
-        items = []
-        if len(items) == 6:
-            
-            first_item = str(names[0])
-            second_item = number_of_sequences[0]
-            third_item = min_sites[0]
-            fourth_item = max_sites[0]
-            fifth_item = meansite[0]
-            sixth_item = stdevsite[0]
-            
-            ##put in list - save [0[ as str]
-            items.append(first_item+second_item+third_item+fourth_item+fifth_item+sixth_item)
-            items.split(line)
-            dataline = (",".join(items))
-            #outfile.write(dataline + "\n")
-            
-            
+
+outfile.write(dataline)
+
+outfile.close()
 
 
 
 
-# for file in all_fasta_files:
-# 
-#     f_file = fasta_dir + file 
-#     csvfile = fasta_dir + file.replace(".fasta", "_adata.csv")
-# 
-#     #print (f_file)
-#     #print (csvfile)
-# 
-#     infile = open (f_file, "r")
-#     outfile = open (csvfile, "w")
-# 
-#     ### Code to count number of sequences
-#     number_sequences = [] 
-#     seq = []
-#     for line in infile: 
-#         print (line)
-#         if line.startswith(">seq"):
-#             seq.append(line)
-#             print (seq)
-#             z = seq.count(">seq")
-#             number_sequences.append(z)
-#             print (number_sequences)
 
-
-
-
-### Removing extra files
-    #os.system("rm" + fasta_dir + file + ".*")
-
-
-
-# Close files!!!      
-infile.close()
-outfile.close()               
-                
-                
-                
-                
-                
-                
-                
-                
-                
