@@ -53,7 +53,7 @@ for file in all_files:
            
         #print(rec_lens)
         minss = min(rec_lens)
-        #print(minss)
+        print(minss)
         maxes = max(rec_lens)
         #print(maxes)
         means = statistics.mean(rec_lens)
@@ -61,16 +61,9 @@ for file in all_files:
         standevs = statistics.stdev(rec_lens)
         #print(standevs)
         
-        
-        
-        
-        
-        
-        
-        
          
         # save information
-        output_string = name + comma + str(numseq) + str(minss) + comma + str(maxes) + comma + str(means) + comma + str(standevs) +"\n"
+        output_string = name + comma + str(numseq) + comma + str(minss) + comma + str(maxes) + comma + str(means) + comma + str(standevs) +"\n"
         print(output_string)
         
         
