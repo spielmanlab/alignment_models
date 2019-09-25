@@ -8,12 +8,15 @@
 
 4. `selectome_aa_output/` and `selectome_nt_output/` contains over hundreds of thousands of csv files parsed from unaligned aa and nt Euteleostomi fastas 
 
-5. `one_csv/` contains python script that creates data_properties.csv of all fastas and a dummy `data` folder that contains fake `fastas` 
+5. `one_csv/` contains python script `all_data.py` that creates `data_properties.csv` of all fastas and a dummy `data` folder that contains fake `fastas` to test
 
-6. `all_aa_200-50.txt` contains names of files from selectome with no file extensionl
+6. `aa_ranked_models.csv` and `nt_ranked_models.csv` contain models ranked according to information criterion. `all_aa_200-50.txt` contains names of files from selectome with no file extension (don't know if needed or not)
 
-7. `run_iqtree_on_alignment.py` and `run_iqtree_on_alignment_versions.py` contains scripts that runs iqtree on all `aln.fasta` and then parses iqtree information into csv, latter is slightly modified
+7. `run_iqtree_on_alignment.py` and `run_iqtree_on_alignment_versions.py` contains scripts that runs iqtree on all fasta alignments and then parses iqtree information into .csv file
 
-8. `submit_pipeline.sbatch` is written in BASH, 
+8. `submit_pipeline.sbatch` is written in BASH, used to run all alignments+Guidance2 on Rowan Computing Cluster  
 
-9. `posterstuff/` contains materials used to create poster for COURI Symposium 2019
+9. `posterstuff/` contains materials used to create poster for COURI Symposium 2019 (can virtually be ignored)
+
+10. `project` is the current directory where this README lives, contains all that is relevant
+

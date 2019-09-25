@@ -23,6 +23,8 @@ fasta_dir = "data/"
 all_files = os.listdir(fasta_dir)
 
 comma = ","
+amino_var = "aa"
+nuc_var = "nt"
 csvfile = "data_properties.csv" ## correct extenstion!
 outfile = open(csvfile, "w")
 outfile.write("name,number_of_sequences,min,max,mean,standev\n")
@@ -61,6 +63,8 @@ for file in all_files:
         standevs = statistics.stdev(rec_lens)
         #print(standevs)
         
+        if amino_var or nuc_var in file:
+            print("ok")
          
         # save information
         output_string = name + comma + str(numseq) + comma + str(minss) + comma + str(maxes) + comma + str(means) + comma + str(standevs) +"\n"
