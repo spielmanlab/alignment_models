@@ -31,7 +31,7 @@ for fasta in glob.glob("../selectome_aa_output/**/*.fasta"):
     
     
     name = fasta.strip(".fasta" + "/selectome_aa_output")
-    #print(name)
+    print(name)
 
     fasta_records = list(SeqIO.parse(aa_fasta_dir + fasta, "fasta"))
     #print(fasta_records[0])
@@ -42,7 +42,7 @@ for fasta in glob.glob("../selectome_aa_output/**/*.fasta"):
     
     rec_lengths = []
     for rec in fasta_records:
-        print(rec.seq)
+        #print(rec.seq)
         x = len(rec.seq)
         rec_lengths.append(x)
         
