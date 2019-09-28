@@ -19,11 +19,13 @@ loop over all file names
 
 ### DATATYPE "nt" or "aa"
 
-aa_fasta_dir = "../selectome_aa_output/ENSGT00530000063053.Euteleostomi.001.aa.fas_alnversions/"
+aa_fasta_dir = "../selectome/selectome_aa_unaligned_200-50/"
 aa_all_files = os.listdir(aa_fasta_dir)
 
-nt_fasta_dir = "../selectome_nt_output/ENSGT00530000063053.Euteleostomi.001.nt.fas_alnversions/"
+nt_fasta_dir = "../selectome/selectome_nt_unaligned_200-50/"
 nt_all_files = os.listdir(nt_fasta_dir)
+
+print(aa_all_files)
 
 
 comma = ","
@@ -39,9 +41,9 @@ nt_outfile.write("name,number_of_sequences,min,max,mean,standev\n")
 
 #all_fasta_files = []
 for file in aa_all_files:
-    if file.endswith(".fasta"):
+    if file.endswith(".fas"):
         # collect information
-        name = file.rstrip(".fasta")
+        name = file.rstrip(".fas")
         #print("name:", name)
         fasta_records = list(SeqIO.parse(aa_fasta_dir + file, "fasta"))
         #print(fasta_records)
@@ -83,9 +85,9 @@ for file in aa_all_files:
         
 #all_fasta_files = []
 for file in nt_all_files:
-    if file.endswith(".fasta"):
+    if file.endswith(".fas"):
         # collect information
-        name = file.rstrip(".fasta")
+        name = file.rstrip(".fas")
         #print("name:", name)
         fasta_records = list(SeqIO.parse(nt_fasta_dir + file, "fasta"))
         #print(fasta_records)

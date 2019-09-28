@@ -42,9 +42,11 @@ for fasta in glob.glob("../selectome_aa_output/**/*.fasta"):
     
     rec_lengths = []
     for rec in fasta_records:
-        #print(rec.seq)
-        x = len(rec.seq)
+        nogap = rec.ungap("-")
+        seqs = nogap.seq
+        x = len(seqs)
         rec_lengths.append(x)
+    print(rec_lengths)
         
     mins = min(rec_lengths)
     maxes = max(rec_lengths)
