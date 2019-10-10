@@ -2,17 +2,16 @@ library(plyr)
 library(tidyverse)
 library(magrittr)
 
+aa_dataproperties <- read_csv(file ="aa_data_properties.csv")
+nt_dataproperties <- read_csv(file ="nt_data_properties.csv")
 
-aa_csv <- read_csv(file ="aa_data_properties.csv")
-nt_csv <- read_csv(file ="nt_data_properties.csv")
-
-process_percent_csv <- function(path_to_csv)
-{
-files <-dir(path = path_to_csv, pattern = "*.csv")
-tibble(filename = files) %>%
-  mutate(file_contents = map(filename,
-                             ~ read_csv(file.path(path_to_csv, .)))) 
-}
+#process_percent_csv <- function(path_to_csv)
+#{
+#files <-dir(path = path_to_csv, pattern = "*.csv")
+#tibble(filename = files) %>%
+#  mutate(file_contents = map(filename,
+#                            ~ read_csv(file.path(path_to_csv, .)))) 
+#}
 
 aa_mypath = "../selectome_aa_output/"
 #aa_myfiles <- list.files(path=aa_mypath, pattern="*.csv", full.names = TRUE)
@@ -21,8 +20,8 @@ nt_mypath = ("../selectome_nt_output/")
 #nt_myfiles <- list.files(path=nt_mypath, pattern = "*.csv", full.names = TRUE)
 #nt_dat_csv <- ldply(nt_myfiles,read_csv)
 
-aa_percent <- process_percent_csv(aa_mypath)
-nt_percent <- process_percent_csv(nt_mypath)
+#aa_percent <- process_percent_csv(aa_mypath)
+#nt_percent <- process_percent_csv(nt_mypath)
 
 
 #################################################################
@@ -33,17 +32,11 @@ aa_ranked$name <- gsub(".aa.fas","", aa_ranked$name)
 #getting nt_ranked_models
 nt_ranked <- read_csv(file = "../nt_ranked_models.csv")
 nt_ranked$name <- gsub(".fas", "",nt_ranked$name)
-
-#merging aa_ranked_models with aa_csv 
-aa_fullcsv <- merge(aa_csv, aa_ranked, by = "name") ##left_join
-aa_fullcsv
-#merging nt_ranked_models with nt_csv
-nt_fullcsv <- merge(nt_csv, nt_ranked, by = "name")
-nt_fullcsv
+nt_ranked
 ################################################################
 
-
- aa_nummods <-aa_ranked %>%
+### getting number of models
+ aa_num_o_mods <-aa_ranked %>%
   group_by(name, Model, ic_type) %>% 
   tally() %>% 
   ungroup() %>% 
@@ -51,17 +44,26 @@ nt_fullcsv
   group_by(name, ic_type) %>% 
   tally() %>% 
   rename(number_models = n ) %>%
-  group_by(name, number_models, ic_type) %>% 
-  tally() 
+  group_by(name, number_models, ic_type) 
 
-aa_nummods$name <- gsub(".aa.fas","",aa_nummods$name)
-aa_nummods
+aa_datp_num <- inner_join(aa_dataproperties, aa_num_o_mods, by = "name") ##left_join
 
+nt_num_o_mods <-nt_ranked %>%
+  group_by(name, Model, ic_type) %>% 
+  tally() %>% 
+  ungroup() %>% 
+  select(-n) %>% 
+  group_by(name, ic_type) %>% 
+  tally() %>% 
+  rename(number_models = n ) %>%
+  group_by(name, number_models, ic_type) 
 
-aa_fullcsv <- left_join(aa_csv, aa_nummods, by = "name") ##left_join
-aa_fullcsv %>%
-  group_by(name, number_of_sequences, min, max, mean, standev, number_models,ic_type)
+nt_datp_num <- inner_join(nt_dataproperties, nt_num_o_mods, by = "name")
 
+write.csv(aa_datp_num, file = "aanummods.csv")
+write.csv(nt_datp_num, file = "ntnummods.csv")
+
+### IGNORE PLOTS FOR NOW - NEED TO REVIST TO MAKE THEM MAKE SENSE 
 #PLOTS!
 ### AA Full CSV (ranked and csv)
 ##Min seq against model
