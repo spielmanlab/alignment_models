@@ -42,7 +42,7 @@ aa_ranked_models %>%
   filter(name == aa_head) %>%
   ggplot(aes(x = Model, fill = ic_type)) + geom_bar(position = position_dodge()) + theme_classic()
 
-aa_ranked_models %>%
+dummynum <- aa_ranked_models %>%
   group_by(name, Model, ic_type) %>% 
   tally() %>% 
   ungroup() %>% 

@@ -1,4 +1,4 @@
-name,number_of_sequences,min,max,mean,standev
+name,number_of_sequences,min_seq_length,max_seq_length,mean_seq_length,standev_seq_length
 ENSGT00680000099843.Euteleostomi.003,60,953,1360,1186.95,98.3880978401868
 ENSGT00560000076660.Euteleostomi.003,59,726,797,768.7966101694915,15.499476810988735
 ENSGT00550000074356.Euteleostomi.002,60,378,433,399.8333333333333,12.264274514969529

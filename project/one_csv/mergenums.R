@@ -1,5 +1,6 @@
 library(plyr)
 library(tidyverse)
+library(magrittr)
 
 
 aa_csv <- read_csv(file ="aa_data_properties.csv")
@@ -23,25 +24,6 @@ nt_mypath = ("../selectome_nt_output/")
 aa_percent <- process_percent_csv(aa_mypath)
 nt_percent <- process_percent_csv(nt_mypath)
 
-### creating a percent rank of ic_value column in aa_tibble
-aa_percent %>%
-  unnest() %>%
-  separate(filename, c("name", "dummy", "number", "dummy2"), sep="_") %>%
-  dplyr::select(-dummy, -dummy2, -No., -`-LnL`, -df) %>%
-  gather(ic_type, ic_value, AIC, AICc, BIC) %>%
-  group_by(name, number, ic_type) %>%
-  mutate(percent_rank = percent_rank(ic_value)) %>%
-  dplyr::select(name, number, Model, ic_type, percent_rank)
-### creating a percent rank of ic_value column in nt_tibble
-nt_percent %>%
-  unnest() %>%
-  separate(filename, c("name", "dummy", "number", "dummy2"), sep="_") %>%
-  dplyr::select(-dummy, -dummy2, -No., -`-LnL`, -df) %>%
-  gather(ic_type, ic_value, AIC, AICc, BIC) %>%
-  group_by(name, number, ic_type) %>%
-  mutate(percent_rank = percent_rank(ic_value)) %>%
-  dplyr::select(name, number, Model, ic_type, percent_rank)
-
 
 #################################################################
 #getting aa_ranked_models
@@ -53,12 +35,32 @@ nt_ranked <- read_csv(file = "../nt_ranked_models.csv")
 nt_ranked$name <- gsub(".fas", "",nt_ranked$name)
 
 #merging aa_ranked_models with aa_csv 
-aa_fullcsv <- merge(aa_csv, aa_ranked, by = "name")
+aa_fullcsv <- merge(aa_csv, aa_ranked, by = "name") ##left_join
 aa_fullcsv
 #merging nt_ranked_models with nt_csv
 nt_fullcsv <- merge(nt_csv, nt_ranked, by = "name")
 nt_fullcsv
 ################################################################
+
+
+ aa_nummods <-aa_ranked %>%
+  group_by(name, Model, ic_type) %>% 
+  tally() %>% 
+  ungroup() %>% 
+  select(-n) %>% 
+  group_by(name, ic_type) %>% 
+  tally() %>% 
+  rename(number_models = n ) %>%
+  group_by(name, number_models, ic_type) %>% 
+  tally() 
+
+aa_nummods$name <- gsub(".aa.fas","",aa_nummods$name)
+aa_nummods
+
+
+aa_fullcsv <- left_join(aa_csv, aa_nummods, by = "name") ##left_join
+aa_fullcsv %>%
+  group_by(name, number_of_sequences, min, max, mean, standev, number_models,ic_type)
 
 #PLOTS!
 ### AA Full CSV (ranked and csv)

@@ -33,8 +33,8 @@ aa_csvfile = "aa_data_properties.csv" ## correct extenstion!
 nt_csvfile = "nt_data_properties.csv"
 aa_outfile = open(aa_csvfile, "w")
 nt_outfile = open(nt_csvfile, "w")
-aa_outfile.write("name,number_of_sequences,min,max,mean,standev\n")
-nt_outfile.write("name,number_of_sequences,min,max,mean,standev\n")
+aa_outfile.write("name,number_of_sequences,min_seq_length,max_seq_length,mean_seq_length,standev_seq_length\n")
+nt_outfile.write("name,number_of_sequences,min_seq_lengt,max_seq_lengt,mean_seq_length,standev_seq_length\n")
 
 
 #print(all_files)
