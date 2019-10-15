@@ -40,7 +40,7 @@ for path in aa_paths:
 
     aa_output_tree_file = aa_path_to_alignments + str(aa_paths[counter]) + str(aa_aln_1[counter]) + ".tree"
     counter += 1
-    print(aa_output_tree_file)
+    #print(aa_output_tree_file)
     
     #print("FastTree <> -nosupport -quiet" + aa_path_to_alignments + aa_paths[counter2] + aa_aln_1[counter2] + " > " + aa_output_tree_file)
     #os.system("FastTree <> -nosupport -quiet " + aa_path_to_alignments + aa_paths[counter2] + aa_aln_1[counter2] + " > " + aa_output_tree_file)
@@ -69,7 +69,7 @@ for path in nt_paths:
     
     
     #print("FastTree -nt -gtr -nosupport -quiet" + nt_path_to_alignments + nt_paths[counter4] + nt_aln_1[counter4] + " > " + nt_output_tree_file)
-    os.system("FastTree -nt -gtr -nosupport -quiet" + nt_path_to_alignments + nt_paths[counter2] + nt_aln_1[counter2] + " > " + nt_output_tree_file)
+    os.system("FastTree -nt -gtr -nosupport -quiet " + nt_path_to_alignments + nt_paths[counter4] + nt_aln_1[counter4] + " > " + nt_output_tree_file)
     counter4 += 1
     
 
