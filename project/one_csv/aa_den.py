@@ -17,12 +17,7 @@ nt_paths = []
 nt_aln_1 = []
 counter = 0
 counter2 = 0
-counter3 = 0
-counter4 = 0
 
-# cmd = os.system("FastTree -nt -gtr -nosupport -quiet " + path_to_alignments + path2 + file + " > " + output_tree_file)
-
-#aa files for fast tree
 for file in aa_all:
     name = str(file)
     x = name.endswith(file_ending)
@@ -40,41 +35,20 @@ for path in aa_paths:
 
     aa_output_tree_file = aa_path_to_alignments + str(aa_paths[counter]) + str(aa_aln_1[counter]) + ".tree"
     counter += 1
-    print(aa_output_tree_file)
+    #print(aa_output_tree_file)
     
     #print("FastTree <> -nosupport -quiet" + aa_path_to_alignments + aa_paths[counter2] + aa_aln_1[counter2] + " > " + aa_output_tree_file)
     #os.system("FastTree <> -nosupport -quiet " + aa_path_to_alignments + aa_paths[counter2] + aa_aln_1[counter2] + " > " + aa_output_tree_file)
     counter2 += 1
     
-#nt files for fast tree
+    tree = dendropy.Tree.get(
+    path= aa_output_tree_file,
+    schema="newick")
+    
 
-for file in nt_all:
-    name = str(file)
-    x = name.endswith(file_ending)
-    if x:
-        nt_paths.append(file + "/")
         
-#print(aa_paths)
-    
-for path in nt_paths:    
-    nt_files = os.listdir(nt_path_to_alignments + path)
-    for n1 in nt_files:
-        nt_file_ending = n1.endswith(file_a1ending)
-        if nt_file_ending:
-            nt_aln_1.append(n1)
-
-    nt_output_tree_file = nt_path_to_alignments + str(nt_paths[counter3]) + str(nt_aln_1[counter3]) + ".tree"
-    counter3 += 1
-    #print(nt_output_tree_file)
-    
-    
-    #print("FastTree -nt -gtr -nosupport -quiet" + nt_path_to_alignments + nt_paths[counter4] + nt_aln_1[counter4] + " > " + nt_output_tree_file)
-    os.system("FastTree -nt -gtr -nosupport -quiet" + nt_path_to_alignments + nt_paths[counter2] + nt_aln_1[counter2] + " > " + nt_output_tree_file)
-    counter4 += 1
-    
-
-    
-    
-    
-    
+        #aa_output_tree_file = aa_path_to_alignments + str(path)
+        #print(aa_output_tree_file)
+                
+                
     
