@@ -41,10 +41,25 @@ for path in aa_paths:
     aa_output_tree_file = aa_path_to_alignments + str(aa_paths[counter]) + str(aa_aln_1[counter]) + ".tree"
     counter += 1
     #print(aa_output_tree_file)
-    
+
     #print("FastTree <> -nosupport -quiet" + aa_path_to_alignments + aa_paths[counter2] + aa_aln_1[counter2] + " > " + aa_output_tree_file)
-    #os.system("FastTree <> -nosupport -quiet " + aa_path_to_alignments + aa_paths[counter2] + aa_aln_1[counter2] + " > " + aa_output_tree_file)
+    os.system("FastTree <> -nosupport -quiet " + aa_path_to_alignments + aa_paths[counter2] + aa_aln_1[counter2] + " > " + aa_output_tree_file)
     counter2 += 1
+    
+    #aa_tree = dendropy.Tree.get(
+    #    path=aa_output_tree_file,
+    #    schema="newick")  
+    
+    
+    
+    
+    #print(aa_tree.length())
+
+
+    #aa_pdc = aa_tree.phylogenetic_distance_matrix()
+#print(pdc.mean_pairwise_distance())
+    
+######################################################################  
     
 #nt files for fast tree
 
@@ -66,12 +81,25 @@ for path in nt_paths:
     nt_output_tree_file = nt_path_to_alignments + str(nt_paths[counter3]) + str(nt_aln_1[counter3]) + ".tree"
     counter3 += 1
     #print(nt_output_tree_file)
-    
-    
+   
+   
     #print("FastTree -nt -gtr -nosupport -quiet" + nt_path_to_alignments + nt_paths[counter4] + nt_aln_1[counter4] + " > " + nt_output_tree_file)
-    #os.system("FastTree -nt -gtr -nosupport -quiet " + nt_path_to_alignments + nt_paths[counter4] + nt_aln_1[counter4] + " > " + nt_output_tree_file)
+    os.system("FastTree -nt -gtr -nosupport -quiet " + nt_path_to_alignments + nt_paths[counter4] + nt_aln_1[counter4] + " > " + nt_output_tree_file)
     counter4 += 1
     
+    
+    #nt_tree = dendropy.Tree.get(
+    #    path = nt_output_tree_file,
+    #    schema ="newick")
+    
+    #print(nt_tree.length())
+
+
+    #nt_pdc = nt_tree.phylogenetic_distance_matrix()
+
+#print(pdc.mean_pairwise_distance())
+
+
 
     
     
