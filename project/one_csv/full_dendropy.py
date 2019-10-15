@@ -69,7 +69,7 @@ for path in nt_paths:
     
     
     #print("FastTree -nt -gtr -nosupport -quiet" + nt_path_to_alignments + nt_paths[counter4] + nt_aln_1[counter4] + " > " + nt_output_tree_file)
-    os.system("FastTree -nt -gtr -nosupport -quiet " + nt_path_to_alignments + nt_paths[counter4] + nt_aln_1[counter4] + " > " + nt_output_tree_file)
+    #os.system("FastTree -nt -gtr -nosupport -quiet " + nt_path_to_alignments + nt_paths[counter4] + nt_aln_1[counter4] + " > " + nt_output_tree_file)
     counter4 += 1
     
 
