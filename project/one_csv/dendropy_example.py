@@ -11,7 +11,7 @@ output_tree_file = path_to_alignments + path2 + file + ".tree"
 print(path_to_alignments + path2 + file)
 
 ### make a tree with FastTree
-## args for aa:   <>
+## args for aa:   blank 
 ## args for nt:   -nt -gtr
 os.system("FastTree -nt -gtr -nosupport -quiet " + path_to_alignments + path2 + file + " > " + output_tree_file)
 

@@ -3,22 +3,32 @@ import numpy as np
 import os
 import sys
 
+
+####### notes for writing this into a function
+"""
+arguments the function needs:
+- path to alignment
+- path to output file
+"""
+
 nt_path_to_alignments = "../selectome_nt_output/"
 aa_path_to_alignments = "../selectome_aa_output/"
+
+
+
+path_to_aa_output_trees = aa_path_to_alignments + "alnversion1_trees/"
+os.system("mkdir -p " + path_to_aa_output_trees)
 
 aa_all = os.listdir(aa_path_to_alignments)
 nt_all = os.listdir(nt_path_to_alignments)
 
 file_ending = ".fas_alnversions"
-aa_paths = []
-aa_aln_1 = []
 file_a1ending = "alnversion_1.fasta"
-nt_paths = []
-nt_aln_1 = []
-counter = 0
-counter2 = 0
-counter3 = 0
-counter4 = 0
+
+
+
+
+
 
 # cmd = os.system("FastTree -nt -gtr -nosupport -quiet " + path_to_alignments + path2 + file + " > " + output_tree_file)
 
@@ -26,21 +36,17 @@ counter4 = 0
 for file in aa_all:
     name = str(file)
     x = name.endswith(file_ending)
-    if x:
-        aa_paths.append(file + "/")
-        
-#print(aa_paths)
-    
-for path in aa_paths:    
-    aa_files = os.listdir(aa_path_to_alignments + path)
-    for a1 in aa_files:
-        aa_file_ending = a1.endswith(file_a1ending)
-        if aa_file_ending:
-            aa_aln_1.append(a1)
+    #### If variable `file` is a DIRECTORY, head into here:
+    if x: 
+        aa_files = os.listdir(aa_path_to_alignments + path)
+        for a1 in aa_files:
+            aa_file_ending = a1.endswith(file_a1ending)
+            if aa_file_ending:
+                aa_output_tree_file = path_to_aa_output_trees + a1 + ".tree"
+                
+                ### run the tree
 
-    aa_output_tree_file = aa_path_to_alignments + str(aa_paths[counter]) + str(aa_aln_1[counter]) + ".tree"
-    counter += 1
-    #print(aa_output_tree_file)
+        #print(aa_output_tree_file)
 
     #print("FastTree <> -nosupport -quiet" + aa_path_to_alignments + aa_paths[counter2] + aa_aln_1[counter2] + " > " + aa_output_tree_file)
     #os.system("FastTree <> -nosupport -quiet " + aa_path_to_alignments + aa_paths[counter2] + aa_aln_1[counter2] + " > " + aa_output_tree_file)
