@@ -43,8 +43,8 @@ for path in aa_paths:
     #print(aa_output_tree_file)
 
     #print("FastTree <> -nosupport -quiet" + aa_path_to_alignments + aa_paths[counter2] + aa_aln_1[counter2] + " > " + aa_output_tree_file)
-    os.system("FastTree <> -nosupport -quiet " + aa_path_to_alignments + aa_paths[counter2] + aa_aln_1[counter2] + " > " + aa_output_tree_file)
-    counter2 += 1
+    #os.system("FastTree <> -nosupport -quiet " + aa_path_to_alignments + aa_paths[counter2] + aa_aln_1[counter2] + " > " + aa_output_tree_file)
+    #counter2 += 1
     
     #aa_tree = dendropy.Tree.get(
     #    path=aa_output_tree_file,
@@ -84,13 +84,13 @@ for path in nt_paths:
    
    
     #print("FastTree -nt -gtr -nosupport -quiet" + nt_path_to_alignments + nt_paths[counter4] + nt_aln_1[counter4] + " > " + nt_output_tree_file)
-    os.system("FastTree -nt -gtr -nosupport -quiet " + nt_path_to_alignments + nt_paths[counter4] + nt_aln_1[counter4] + " > " + nt_output_tree_file)
-    counter4 += 1
+    #os.system("FastTree -nt -gtr -nosupport -quiet " + nt_path_to_alignments + nt_paths[counter4] + nt_aln_1[counter4] + " > " + nt_output_tree_file)
+    #counter4 += 1
     
     
     #nt_tree = dendropy.Tree.get(
-    #    path = nt_output_tree_file,
-    #    schema ="newick")
+     #   path = nt_output_tree_file,
+      #  schema ="newick")
     
     #print(nt_tree.length())
 
