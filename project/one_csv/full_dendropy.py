@@ -47,8 +47,8 @@ for path in aa_paths:
     #counter2 += 1
     
     #aa_tree = dendropy.Tree.get(
-    #    path=aa_output_tree_file,
-    #    schema="newick")  
+     #   path=aa_output_tree_file,
+      #  schema="newick")  
     
     
     
@@ -89,8 +89,8 @@ for path in nt_paths:
     
     
     #nt_tree = dendropy.Tree.get(
-     #   path = nt_output_tree_file,
-      #  schema ="newick")
+        #path = nt_output_tree_file,
+        #schema ="newick")
     
     #print(nt_tree.length())
 
