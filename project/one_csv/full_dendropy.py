@@ -42,7 +42,7 @@ for file in aa_all:
                 #print(aa_output_tree_file)
                 
                 ### run the tree
-                os.system("FastTree -nosupport -quiet " + aa_path_to_alignments + name + "/" + str(a1) + " > " + aa_output_tree_file)   
+                #os.system("FastTree -nosupport -quiet " + aa_path_to_alignments + name + "/" + str(a1) + " > " + aa_output_tree_file)   
                 #aa_tree = dendropy.Tree.get(
                     #path=aa_output_tree_file,
                     #schema="newick")  
