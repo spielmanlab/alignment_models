@@ -1,4 +1,4 @@
->FAM57B_MICMU PROTID=ENSMICP00000008298 TRANSID=ENSMICT00000009113 GENEID=ENSMICG00000009118 TAXID=30608
+>FAM57B_MICMU PROTIDENSMICP00000008298 TRANSIDENSMICT00000009113 GENEIDENSMICG00000009118 TAXID30608
 AT----------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -19,7 +19,7 @@ GCGCTGCTCCTGGCTCCCCAGCTCTACTGGTTCTTCCTCATCTGCCGCGGGGCCTGCCGC
 CTCTTCCAGCCCC---GCTCCCCGCCGCCCTCCCCCTTCCAGGCCCAGGAC---------
 ------------------------------------------------------------
 ------------------------------
->FAM57B_OTOGA PROTID=ENSOGAP00000003313 TRANSID=ENSOGAT00000003732 GENEID=ENSOGAG00000003730 TAXID=30611
+>FAM57B_OTOGA PROTIDENSOGAP00000003313 TRANSIDENSOGAT00000003732 GENEIDENSOGAG00000003730 TAXID30611
 AT----------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -40,7 +40,7 @@ GCACTGCTCCTGGCCCCCCAGCTCTACTGGTTCTTCCTCATCTGCCGTGGGGCCTGCCGT
 CTCTTCCGGCCCC---GCTCCCCGCCACCCTCTCCCTGCCAGACCCAGGAC---------
 ------------------------------------------------------------
 ------------------------------
->FAM57B_HUMAN PROTID=ENSP00000369863 TRANSID=ENST00000380495 GENEID=ENSG00000149926 TAXID=9606
+>FAM57B_HUMAN PROTIDENSP00000369863 TRANSIDENST00000380495 GENEIDENSG00000149926 TAXID9606
 AT----------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -61,7 +61,7 @@ GCGCTGCTCCTGGCCCCTCAGCTCTACTGGTTCTTCCTCATCTGCCGTGGGGCCTGCCGC
 CTCTTCTGGCCCC---GCTCCCGGCCGCCCCCGGCCTGCCAGGCCCAGGAC---------
 ------------------------------------------------------------
 ------------------------------
->LOC739018_PANTR PROTID=ENSPTRP00000013647 TRANSID=ENSPTRT00000014732 GENEID=ENSPTRG00000007982 TAXID=9598
+>LOC739018_PANTR PROTIDENSPTRP00000013647 TRANSIDENSPTRT00000014732 GENEIDENSPTRG00000007982 TAXID9598
 AT----------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -82,7 +82,7 @@ GCGCTGCTCCTGGCCCCTCAGCTCTACTGGTTCTTCCTCATCTGCCGTGGGGCCTGCCGC
 CTCTTCTGGCCCC---GCTCCCGGCCGCCCCCGGCCTGCCAGGCCCAGGAC---------
 ------------------------------------------------------------
 ------------------------------
->FAM57B_Ggor PROTID=ENSGGOP00000011738 TRANSID=ENSGGOT00000012078 GENEID=ENSGGOG00000012035 TAXID=9593
+>FAM57B_Ggor PROTIDENSGGOP00000011738 TRANSIDENSGGOT00000012078 GENEIDENSGGOG00000012035 TAXID9593
 AT----------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -103,7 +103,7 @@ GCGCTGCTCCTGGCCCCTCAGCTCTACTGGTTCTTCCTCATCTGCCGTGGGGCCTGCCGC
 CTCTTCTGGCCCC---GCTCCAGGCCACCCCCGGCCTGCCAGGCCCAGGAC---------
 ------------------------------------------------------------
 ------------------------------
->LOC100437596_PONAB PROTID=ENSPPYP00000008192 TRANSID=ENSPPYT00000008529 GENEID=ENSPPYG00000007246 TAXID=9601
+>LOC100437596_PONAB PROTIDENSPPYP00000008192 TRANSIDENSPPYT00000008529 GENEIDENSPPYG00000007246 TAXID9601
 AT----------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -124,7 +124,7 @@ GCGCTGCTCCTGGCCCCTCAGCTCTACTGGTTCTTCCTCATCTGCCGCGGGGCCTGCCGC
 CTCTTCTGGCCCC---GCTCCCGGCCGCCCCCGGCCTGCCAGGCCCAGGAC---------
 ------------------------------------------------------------
 ------------------------------
->FAM57B_MACMU PROTID=ENSMMUP00000016058 TRANSID=ENSMMUT00000017146 GENEID=ENSMMUG00000012246 TAXID=9544
+>FAM57B_MACMU PROTIDENSMMUP00000016058 TRANSIDENSMMUT00000017146 GENEIDENSMMUG00000012246 TAXID9544
 AT----------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -145,7 +145,7 @@ GCGCTGCTCCTGGCCCCTCAGCTCTACTGGTTCTTCCTCATCTGCCGCGGGGCCTGCCGC
 CTCTTCTGGCCCC---GCTCCCGGCCACCCCCGGCCTGCCAGGCCCAGGAC---------
 ------------------------------------------------------------
 ------------------------------
->LOC100394892_CALJA PROTID=ENSCJAP00000012775 TRANSID=ENSCJAT00000013460 GENEID=ENSCJAG00000006890 TAXID=9483
+>LOC100394892_CALJA PROTIDENSCJAP00000012775 TRANSIDENSCJAT00000013460 GENEIDENSCJAG00000006890 TAXID9483
 AT----------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -166,7 +166,7 @@ GCGCTGCTCCTTGCCCCCCAGCTCTACTGGTTCTTCCTCATCTGCCGTGGGGCCTGCCGG
 CTCTTCTGGCCCC---GCTCCCGGCCACCCCCGGCCTGCCAGACCCAGGAC---------
 ------------------------------------------------------------
 ------------------------------
->FAM57B_OCHPR PROTID=ENSOPRP00000008900 TRANSID=ENSOPRT00000009735 GENEID=ENSOPRG00000009748 TAXID=9978
+>FAM57B_OCHPR PROTIDENSOPRP00000008900 TRANSIDENSOPRT00000009735 GENEIDENSOPRG00000009748 TAXID9978
 AT----------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -187,7 +187,7 @@ GCGCTGCTGCTGGCCCCCCAGCTCTACTGGTTCTTCCTCATCTGCCGCGGGGCCTGCCGC
 CTCTTCCGGCCCCGGGGCTGCCCGCCGCCCTCGCCCTGCCAGACCCGCGAC---------
 ------------------------------------------------------------
 ------------------------------
->FAM57B_FELCA PROTID=ENSFCAP00000013144 TRANSID=ENSFCAT00000014173 GENEID=ENSFCAG00000014169 TAXID=9685
+>FAM57B_FELCA PROTIDENSFCAP00000013144 TRANSIDENSFCAT00000014173 GENEIDENSFCAG00000014169 TAXID9685
 AT----------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -208,7 +208,7 @@ GCGCTGCTGCTGGCCCCCCAGCTCTACTGGTTCTTCCTCATCTGCCGCGGGGCCTGCCGC
 CTCTTCAGGCCCCGGGGCTCCCCTCCGCCCTCCCCTTGTCAGACCCAGGAC---------
 ------------------------------------------------------------
 ------------------------------
->FAM57B_AILME PROTID=ENSAMEP00000015998 TRANSID=ENSAMET00000016665 GENEID=ENSAMEG00000015171 TAXID=9646
+>FAM57B_AILME PROTIDENSAMEP00000015998 TRANSIDENSAMET00000016665 GENEIDENSAMEG00000015171 TAXID9646
 AT----------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -229,7 +229,7 @@ GCGCTGCTCCTGGCCCCCCAGCTCTACTGGTTCTTCCTTATCTGCCGCGGGGCCTGCCGC
 CTCTTCCGGCCCCGGGGCTCCCCGCCGCCCTCTCCCTGTCAGATCCAGGAC---------
 ------------------------------------------------------------
 ------------------------------
->FAM57B_HORSE PROTID=ENSECAP00000021321 TRANSID=ENSECAT00000025621 GENEID=ENSECAG00000023852 TAXID=9796
+>FAM57B_HORSE PROTIDENSECAP00000021321 TRANSIDENSECAT00000025621 GENEIDENSECAG00000023852 TAXID9796
 AT----------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -250,7 +250,7 @@ GCGCTGCTGCTCGCCCCTCAGCTCTACTGGTTCTTCCTCATCTGCCGCGGGGCCTGCCGC
 CTCTTCCGGCCCCGGGGCACCCCGCCGCCCTCTCCTTGCCAGACCAAGGAC---------
 ------------------------------------------------------------
 ------------------------------
->FAM57B_PROCA PROTID=ENSPCAP00000000048 TRANSID=ENSPCAT00000000051 GENEID=ENSPCAG00000000056 TAXID=9813
+>FAM57B_PROCA PROTIDENSPCAP00000000048 TRANSIDENSPCAT00000000051 GENEIDENSPCAG00000000056 TAXID9813
 AT----------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -271,7 +271,7 @@ GCCTTGCTGCTTGCCCCCCAGCTCTACTGGTTCTTCCTCATCTGCCGCGGGGCCTGCCGC
 CTCTTCCGGCCCCGGGGCTCCCCGCCGCCCTCCCCGTGTCAAACCCAGGAC---------
 ------------------------------------------------------------
 ------------------------------
->FAM57B_MACEU PROTID=ENSMEUP00000011898 TRANSID=ENSMEUT00000013086 GENEID=ENSMEUG00000013048 TAXID=9315
+>FAM57B_MACEU PROTIDENSMEUP00000011898 TRANSIDENSMEUT00000013086 GENEIDENSMEUG00000013048 TAXID9315
 AT----------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -292,7 +292,7 @@ GCCCTGCTGCTTGCTCCACAGCTCTACTGGTTCTTCCTCATCTGCCGGGGGGCATGTCGC
 CTCTTCAGGCCTC---GTTCCCGACAGCCCCCGGACTGCACGACCCAGGAC---------
 ------------------------------------------------------------
 ------------------------------
->Fam57b_MOUSE PROTID=ENSMUSP00000095640 TRANSID=ENSMUST00000098032 GENEID=ENSMUSG00000058966 TAXID=10090
+>Fam57b_MOUSE PROTIDENSMUSP00000095640 TRANSIDENSMUST00000098032 GENEIDENSMUSG00000058966 TAXID10090
 AT----------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -313,7 +313,7 @@ GCACTGCTCCTCGCACCCCAGCTCTACTGGTTCTTCCTCATTTGCCGCGGGGCCTGCCGC
 CTCTTCCGACCCCGAGGCTCCCCACCACCCTCTCCTTGTCAGACCCAGGAC---------
 ------------------------------------------------------------
 ------------------------------
->Fam57b_RAT PROTID=ENSRNOP00000060832 TRANSID=ENSRNOT00000064144 GENEID=ENSRNOG00000019914 TAXID=10116
+>Fam57b_RAT PROTIDENSRNOP00000060832 TRANSIDENSRNOT00000064144 GENEIDENSRNOG00000019914 TAXID10116
 AT----------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -334,7 +334,7 @@ GCGCTACTCCTCGCACCCCAGCTCTACTGGTTCTTCCTCATTTGCCGCGGGGCCTGCCGC
 CTCTTCCGACCCCGAGGTTCCCCACCACGCTCTCCTTGTCAGACCCAGGAC---------
 ------------------------------------------------------------
 ------------------------------
->FAM57B_SPETR PROTID=ENSSTOP00000013442 TRANSID=ENSSTOT00000015001 GENEID=ENSSTOG00000015004 TAXID=43179
+>FAM57B_SPETR PROTIDENSSTOP00000013442 TRANSIDENSSTOT00000015001 GENEIDENSSTOG00000015004 TAXID43179
 AT----------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -355,7 +355,7 @@ GCGCTGCTGCTCGCCCCCCAGCTCTACTGGTTCTTCCTCATCTGCCGCGGGGCTTGCCGC
 CTCTTCCGGCCCCGAGGCTCCCCGCCACCTTCTCCCTGTCAGACCCAGGAT---------
 ------------------------------------------------------------
 ------------------------------
->FAM57B_CAVPO PROTID=ENSCPOP00000003806 TRANSID=ENSCPOT00000004265 GENEID=ENSCPOG00000004220 TAXID=10141
+>FAM57B_CAVPO PROTIDENSCPOP00000003806 TRANSIDENSCPOT00000004265 GENEIDENSCPOG00000004220 TAXID10141
 AT----------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -376,7 +376,7 @@ GCGCTGCTCCTCGCCCCGCAGCTCTACTGGTTCTTCCTCATCTGCCGTGGGGCCTGCCGC
 CTCTTCTGGCCCCGAGGCTCCCGGCCGCCCTCTCCCTACCAGACCCAGGAC---------
 ------------------------------------------------------------
 ------------------------------
->FAM57B_SARHA PROTID=ENSSHAP00000012309 TRANSID=ENSSHAT00000012409 GENEID=ENSSHAG00000010545 TAXID=9305
+>FAM57B_SARHA PROTIDENSSHAP00000012309 TRANSIDENSSHAT00000012409 GENEIDENSSHAG00000010545 TAXID9305
 AT----------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -397,7 +397,7 @@ GCCCTGCTGCTTGCTCCACAGCTCTACTGGTTTTTCCTCATCTGTCGGGGAGCGTGCCGT
 CTCTTTAGGCCTCGGGGATCTGCCCCTCCAGCCCCCCGCCAGCCCCCAGGGCTGCATGAT
 GGGCCCCGGGAC------------------------------------------------
 ------------------------------
->FAM57B_MONDO PROTID=ENSMODP00000019594 TRANSID=ENSMODT00000019943 GENEID=ENSMODG00000015702 TAXID=13616
+>FAM57B_MONDO PROTIDENSMODP00000019594 TRANSIDENSMODT00000019943 GENEIDENSMODG00000015702 TAXID13616
 AT----------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -418,7 +418,7 @@ GCCCTGCTGCTCGCTCCACAGCTCTACTGGTTCTTCCTCATCTGCCGGGGAGCATGCCGC
 CTCTTCAGGCCTCGGGGCCCTGCCCCTCCAGCCCCACGGCAGCCCCCAGGG---------
 ------------------------------------------------------------
 ------------------------------
->FAM57B_ANOCA PROTID=ENSACAP00000014623 TRANSID=ENSACAT00000014919 GENEID=ENSACAG00000014874 TAXID=28377
+>FAM57B_ANOCA PROTIDENSACAP00000014623 TRANSIDENSACAT00000014919 GENEIDENSACAG00000014874 TAXID28377
 AT----------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -439,7 +439,7 @@ GCCATCCTCATGGCTCCCCAGGTTTATTGGTTTGGCCTCATCTGCCGGGGAGCTTTCCGC
 GTATTCCGTGCTCGGGGTGCCACCAAGGAACAGGTGTTGCGGAATGGGCAC---------
 ------------------------------------------------------------
 ------------------------------
->FAM57B_1_of_3_GASAC PROTID=ENSGACP00000010040 TRANSID=ENSGACT00000010062 GENEID=ENSGACG00000007558 TAXID=69293
+>FAM57B_1_of_3_GASAC PROTIDENSGACP00000010040 TRANSIDENSGACT00000010062 GENEIDENSGACG00000007558 TAXID69293
 AT----------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -460,7 +460,7 @@ GCGCTGCTCATGGCTCCCCAGCTCTATTGGTTCTCCCTCATTTTCAGGGGCGCCGTGCGA
 CTTTTCACGGGCT---CCTCCCGCTCTCGGAGACCGGGCGCCACCAAGGAG---------
 ------------------------------------------------------------
 ------------------------------
->FAM57B_2_of_2_ORYLA PROTID=ENSORLP00000007772 TRANSID=ENSORLT00000007773 GENEID=ENSORLG00000006178 TAXID=8090
+>FAM57B_2_of_2_ORYLA PROTIDENSORLP00000007772 TRANSIDENSORLT00000007773 GENEIDENSORLG00000006178 TAXID8090
 AT----------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -481,7 +481,7 @@ GCGCTGCTCATGGCGCCCCAGCTCTACTGGTTCTCCCTGATTTGCCGGGGAGCCCTGCGG
 CTTTTCCGAGGCA---CCTCCCGCTCCCAGAGGCCGCCCCCATCCGGCGAC------AAG
 GAGCTCCAG---------------------------------------------------
 ------------------------------
->FAM57B_ORENI PROTID=ENSONIP00000014431 TRANSID=ENSONIT00000014442 GENEID=ENSONIG00000011466 TAXID=8128
+>FAM57B_ORENI PROTIDENSONIP00000014431 TRANSIDENSONIT00000014442 GENEIDENSONIG00000011466 TAXID8128
 AT----------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -502,7 +502,7 @@ GCTCTGCTCATGGCGCCCCAGCTCTACTGGTTCTCCCTCATTTGCAGGGGCGCCCTGCGA
 CTGTTCACGGGCA---CCTCCCGTTCGCAGAGGCCGCACCCGACCGCCGCCGCCGCTAAG
 GAGCTCCAGAGGGATGGCAACGCTCTGCCCCAGCCCGCCAACGGCTACAGCACGCTCCCC
 ACAGAGCCCGAGCTGGCCACG------CAC
->Q4SUJ5_TETNG PROTID=ENSTNIP00000009303 TRANSID=ENSTNIT00000009474 GENEID=ENSTNIG00000006532 TAXID=99883
+>Q4SUJ5_TETNG PROTIDENSTNIP00000009303 TRANSIDENSTNIT00000009474 GENEIDENSTNIG00000006532 TAXID99883
 AT----------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -523,7 +523,7 @@ GGCATGCTCATGGCTCCTCAGCTCTACTGGTTCTTTCTAATATGCAGGGGGGCCCTGCGA
 CTGTTCACCGGCC---CCTCCCGCGCTCAGAGACCGCACGCAAGTACAGCCGCAGCC---
 ------------------------------------------------------------
 ------------------------------
->FAM57B_2_of_2_GADMO PROTID=ENSGMOP00000018018 TRANSID=ENSGMOT00000018462 GENEID=ENSGMOG00000016786 TAXID=8049
+>FAM57B_2_of_2_GADMO PROTIDENSGMOP00000018018 TRANSIDENSGMOT00000018462 GENEIDENSGMOG00000016786 TAXID8049
 AT----------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -544,7 +544,7 @@ GCCCTGCTCATGGCGCCCCAGCTCTACTGGTTCAGCCTCATCTGCCGGGGGGCCTTCCGC
 CTCTTCACCCGCT---CCTCCCGC------------------------------------
 ------------------------------------------------------------
 ------------------------------
->fam57ba_DANRE PROTID=ENSDARP00000098496 TRANSID=ENSDART00000111731 GENEID=ENSDARG00000026875 TAXID=7955
+>fam57ba_DANRE PROTIDENSDARP00000098496 TRANSIDENSDART00000111731 GENEIDENSDARG00000026875 TAXID7955
 AT----------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -565,7 +565,7 @@ GCTTTGCTGATGGCCCCGCAGGTCTACTGGTTTTCCCTCATCTGCAGAGGCGCCTTCCGC
 CTCTTCACCGGAG---CCTCGCGGCACAAAGCACCCATTAGCAACACAGACTCT------
 GAGCCCAAATC------CTCCCTCCTGCCC---CCCGCCAACGGATACAGCCCAAGAGAG
 ACCGACTCGCAC------------------
->fam57bb_DANRE PROTID=ENSDARP00000125223 TRANSID=ENSDART00000150839 GENEID=ENSDARG00000074564 TAXID=7955
+>fam57bb_DANRE PROTIDENSDARP00000125223 TRANSIDENSDART00000150839 GENEIDENSDARG00000074564 TAXID7955
 AT----------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -586,7 +586,7 @@ TCGCTCCTCATGGCTCCACAGGTCTACTGGTTCTCTCTGATCTGCAGAGGAGCTCTGCGC
 CTGTTCACCGGCAGGTCCTCGCACTCCCGCAAACCTC---CGGTTAAGCCTGACTGTGAA
 GGACACGAGA------------------------CAGCCAATGGATACAGCACACGGATG
 GTGGGTCGGGACACGCCCACAATGGCACAC
->FAM57B_1_of_2_ORYLA PROTID=ENSORLP00000000243 TRANSID=ENSORLT00000000243 GENEID=ENSORLG00000000200 TAXID=8090
+>FAM57B_1_of_2_ORYLA PROTIDENSORLP00000000243 TRANSIDENSORLT00000000243 GENEIDENSORLG00000000200 TAXID8090
 AT----------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -607,7 +607,7 @@ GCTCTGCTGTGGCCCCTGCAGCTCTATTGGTTCTCTCTGATCTGCAGGGGGGCCCTGCGG
 CAGATGAGGCCAC---GCCCACACACAGACGAGGCAGCGACCAATCAAGCA---------
 ------------------------------------------------------------
 ------------------------------
->FAM57B_2_of_2_TETNG PROTID=ENSTNIP00000005802 TRANSID=ENSTNIT00000005950 GENEID=ENSTNIG00000003220 TAXID=99883
+>FAM57B_2_of_2_TETNG PROTIDENSTNIP00000005802 TRANSIDENSTNIT00000005950 GENEIDENSTNIG00000003220 TAXID99883
 AT----------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -628,7 +628,7 @@ GCGCTGCTCTGGCCCCTGCAGCTCTACTGGTTCGCGCTGATCTGCCGGCGAGCTCTTCGG
 CAGCTGGTCTCGG---CACCACCGGCCGACGGC---------------------------
 ------------------------------------------------------------
 ------------------------------
->FAM57A_PTEVA PROTID=ENSPVAP00000011035 TRANSID=ENSPVAT00000011705 GENEID=ENSPVAG00000011705 TAXID=132908
+>FAM57A_PTEVA PROTIDENSPVAP00000011035 TRANSIDENSPVAT00000011705 GENEIDENSPVAG00000011705 TAXID132908
 AT----------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -649,7 +649,7 @@ GCCTTCCTCGTGGCTCCCCAGATCTACTGGTTCTCTCTGCTGTGCAAGAAGGCAGCCCGG
 CTCTTTGACACTC---CCCCAGCTGAAAAGGATGGA------------------------
 ------------------------------------------------------------
 ------------------------------
->FAM57A_MYOLU PROTID=ENSMLUP00000001369 TRANSID=ENSMLUT00000001491 GENEID=ENSMLUG00000001491 TAXID=59463
+>FAM57A_MYOLU PROTIDENSMLUP00000001369 TRANSIDENSMLUT00000001491 GENEIDENSMLUG00000001491 TAXID59463
 ------------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -670,7 +670,7 @@ GCCTTCCTCATCGCTCCCCAGCTCTACTGGTTCTCTCTGCTGTGCAAGAAGGCAGTCGGG
 CTCTTTGACACTC---CCCCAGCCGAAAAGGATGGA------------------------
 ------------------------------------------------------------
 ------------------------------
->FAM57A_CANFA PROTID=ENSCAFP00000028226 TRANSID=ENSCAFT00000030379 GENEID=ENSCAFG00000019129 TAXID=9615
+>FAM57A_CANFA PROTIDENSCAFP00000028226 TRANSIDENSCAFT00000030379 GENEIDENSCAFG00000019129 TAXID9615
 AT----------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -691,7 +691,7 @@ GCCTTCCTCATCGCTCCCCAGATCTACTGGTTCTCTCTGCTGTGCAAGAAAGCAACCCGG
 CTCTTTGACACCG---CCCCAGCCAAAAAGGATGGC------------------------
 ------------------------------------------------------------
 ------------------------------
->CT120_PIG PROTID=ENSSSCP00000018869 TRANSID=ENSSSCT00000019383 GENEID=ENSSSCG00000017810 TAXID=9823
+>CT120_PIG PROTIDENSSSCP00000018869 TRANSIDENSSSCT00000019383 GENEIDENSSSCG00000017810 TAXID9823
 AT----------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -712,7 +712,7 @@ GCCTTCCTGGTCGCTCCCCAGATCTACTGGTTCTCTCTGCTGTGCAAGAAGGCAGCCCGG
 CTCTTCAGTGCTC---CCTCGGCCAAAAAGGATGGT------------------------
 ------------------------------------------------------------
 ------------------------------
->A2VDS3_BOVIN PROTID=ENSBTAP00000056027 TRANSID=ENSBTAT00000063495 GENEID=ENSBTAG00000046273 TAXID=9913
+>A2VDS3_BOVIN PROTIDENSBTAP00000056027 TRANSIDENSBTAT00000063495 GENEIDENSBTAG00000046273 TAXID9913
 AT----------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -733,7 +733,7 @@ GCTTTCCTCATCGCGCCACAGATCTACTGGTTCTCTCTGCTGTGCAAAAAGGCAGCCCGG
 CTCTTTGATGTTC---CTCCAGCCAAAAAGGACAGT------------------------
 ------------------------------------------------------------
 ------------------------------
->FAM57A_TURTR PROTID=ENSTTRP00000002876 TRANSID=ENSTTRT00000003063 GENEID=ENSTTRG00000003064 TAXID=9739
+>FAM57A_TURTR PROTIDENSTTRP00000002876 TRANSIDENSTTRT00000003063 GENEIDENSTTRG00000003064 TAXID9739
 ------------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -754,7 +754,7 @@ GCCTTCCTCATCGCTCCCCAGATCTACTGGTTCTCTCTGCTGTGCAAGAAGGCAGTCCGG
 CTCTTTGATGCTC---CCCCAGCCAAAAAGGATGGT------------------------
 ------------------------------------------------------------
 ------------------------------
->Fam57a_MOUSE PROTID=ENSMUSP00000091553 TRANSID=ENSMUST00000094014 GENEID=ENSMUSG00000069808 TAXID=10090
+>Fam57a_MOUSE PROTIDENSMUSP00000091553 TRANSIDENSMUST00000094014 GENEIDENSMUSG00000069808 TAXID10090
 AT----------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -775,7 +775,7 @@ GCCGTCCTCATCTCTCCCCAGCTCTACTGGTTCTCACTGCTGTGCAAGAAGGCGGCCCGG
 CTCTTTGACACTG---CCAAAGCCAAAAAGGATGGT------------------------
 ------------------------------------------------------------
 ------------------------------
->D3ZKW7_RAT PROTID=ENSRNOP00000010168 TRANSID=ENSRNOT00000010168 GENEID=ENSRNOG00000007722 TAXID=10116
+>D3ZKW7_RAT PROTIDENSRNOP00000010168 TRANSIDENSRNOT00000010168 GENEIDENSRNOG00000007722 TAXID10116
 AT----------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -796,7 +796,7 @@ GCCATCCTCATCTCTCCCCAGCTCTACTGGTTCTCACTGTTGTGCAAGAAGGCAGCCAGG
 CTCTTTGACACGG---CCAAAGCCAAAAAGGATGGT------------------------
 ------------------------------------------------------------
 ------------------------------
->FAM57A_CAVPO PROTID=ENSCPOP00000003883 TRANSID=ENSCPOT00000004351 GENEID=ENSCPOG00000004305 TAXID=10141
+>FAM57A_CAVPO PROTIDENSCPOP00000003883 TRANSIDENSCPOT00000004351 GENEIDENSCPOG00000004305 TAXID10141
 AT----------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -817,7 +817,7 @@ GCCCTCCTCATCGCTCCCCAGATTTACTGGTTCTCTCTGCTGTGCAAGAAGGCACTCCGG
 CTTTTTAACACTC---CCCAAGACAAAAAGGATAGC------------------------
 ------------------------------------------------------------
 ------------------------------
->FAM57A_SPETR PROTID=ENSSTOP00000014701 TRANSID=ENSSTOT00000016425 GENEID=ENSSTOG00000016422 TAXID=43179
+>FAM57A_SPETR PROTIDENSSTOP00000014701 TRANSIDENSSTOT00000016425 GENEIDENSSTOG00000016422 TAXID43179
 AT----------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -838,7 +838,7 @@ GCCTTCCTCATCGCTCCCCAGCTCTACTGGTTCGCTCTGCTGTGCAAGAAGGCAATCCGG
 CTCTTTGGTG------CCCGAGCCAAAAAGGATAGT------------------------
 ------------------------------------------------------------
 ------------------------------
->FAM57A_RABIT PROTID=ENSOCUP00000001899 TRANSID=ENSOCUT00000002201 GENEID=ENSOCUG00000002202 TAXID=9986
+>FAM57A_RABIT PROTIDENSOCUP00000001899 TRANSIDENSOCUT00000002201 GENEIDENSOCUG00000002202 TAXID9986
 AT----------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -859,7 +859,7 @@ GCCTTCCTCATCGCTCCCCAGATCTACTGGTTCTCTCTGCTGTGCAAGAAAGCAGCTCGG
 CTCTTTGACGTTC---CCGAGGTCAAAAAGGAGGGG------------------------
 ------------------------------------------------------------
 ------------------------------
->FAM57A_OCHPR PROTID=ENSOPRP00000002260 TRANSID=ENSOPRT00000002442 GENEID=ENSOPRG00000002451 TAXID=9978
+>FAM57A_OCHPR PROTIDENSOPRP00000002260 TRANSIDENSOPRT00000002442 GENEIDENSOPRG00000002451 TAXID9978
 AT----------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -880,7 +880,7 @@ GCCTTCCTCATCGCTCCCCAGATCTACTGGTTCTCTCTGCTCTGCAGAAAAGCAGCCCGA
 CTCTTTGATGTTC---CCGAGGTCAAAAAGGATGGC------------------------
 ------------------------------------------------------------
 ------------------------------
->FAM57A_HUMAN PROTID=ENSP00000312017 TRANSID=ENST00000308278 GENEID=ENSG00000167695 TAXID=9606
+>FAM57A_HUMAN PROTIDENSP00000312017 TRANSIDENST00000308278 GENEIDENSG00000167695 TAXID9606
 AT----------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -901,7 +901,7 @@ GCCTTCCTCGTAGCTCCTCAGATCTACTGGTTCTGTCTGCTGTGCAGGAAGGCAGTCCGG
 CTCTTTGACACTC---CCCAAGCCAAAAAGGATGGC------------------------
 ------------------------------------------------------------
 ------------------------------
->FAM57A_Ggor PROTID=ENSGGOP00000015126 TRANSID=ENSGGOT00000015559 GENEID=ENSGGOG00000015506 TAXID=9593
+>FAM57A_Ggor PROTIDENSGGOP00000015126 TRANSIDENSGGOT00000015559 GENEIDENSGGOG00000015506 TAXID9593
 AT----------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -922,7 +922,7 @@ GCCTTCCTCATAGCTCCTCAGATCTACTGGTTCTGTCTGCTGTGCAGGAAGGCAGTCCGG
 CTCTTTGACACTC---CCCAAGCCAAAAAGGATGGC------------------------
 ------------------------------------------------------------
 ------------------------------
->FAM57A_NOMLE PROTID=ENSNLEP00000000611 TRANSID=ENSNLET00000000651 GENEID=ENSNLEG00000000513 TAXID=61853
+>FAM57A_NOMLE PROTIDENSNLEP00000000611 TRANSIDENSNLET00000000651 GENEIDENSNLEG00000000513 TAXID61853
 ATGATCAGCACCAGGTACCCGCGCCGCCGAGACGCCCCCCGAGGCCCAGGGCGCTGCCCA
 CACCACCCCACCCGGCTGCGGGGCCCAGGGCGGAAAAGGGGGGCGGCAGGAAGCCAGGGG
 GCTGCTCCCTCCGGGTCCCGGCGGCCCGAGTTTCCGAAGCGCCTCCGCGTCCTCCCCTGG
@@ -943,7 +943,7 @@ GCCTTCCTCATAGCTCCTCAGATCTACTGGTTCTGTCTGCTGTGCAGGAAGGCAGCCCGG
 CTCTTTGACACTC---CCCAAGCCAAAAAGGATGAC------------------------
 ------------------------------------------------------------
 ------------------------------
->LOC100414025_CALJA PROTID=ENSCJAP00000040417 TRANSID=ENSCJAT00000042689 GENEID=ENSCJAG00000021704 TAXID=9483
+>LOC100414025_CALJA PROTIDENSCJAP00000040417 TRANSIDENSCJAT00000042689 GENEIDENSCJAG00000021704 TAXID9483
 AT----------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -964,7 +964,7 @@ GCCTTTCTCATCGCCCCTCAGATCTACTGGTTCTCTCTGCTGTGCAGGAAGGCACTCCGG
 CTCTTTGACACTC---CCCAAGCCAAAAAGAATCATCCTGTGACCCCCCCCCCCCCGG--
 -------------------------------CACCTGCCACCGAC---------------
 ------------------------------
->FAM57A_LOXAF PROTID=ENSLAFP00000014731 TRANSID=ENSLAFT00000017560 GENEID=ENSLAFG00000017562 TAXID=9785
+>FAM57A_LOXAF PROTIDENSLAFP00000014731 TRANSIDENSLAFT00000017560 GENEIDENSLAFG00000017562 TAXID9785
 AT----------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -985,7 +985,7 @@ GCCTTCCTCATCGCTCCCCAGATCTACTGGTTCTCCTTGCTGTGCAGGAAGGCAGCCCGG
 CTCTTTGGTGCTC---CCCAAGCCAAAAAATCCTGT---CAGACCTCGACT---------
 ------------------------------------------------------------
 ------------------------------
->FAM57A_MONDO PROTID=ENSMODP00000012584 TRANSID=ENSMODT00000012812 GENEID=ENSMODG00000010047 TAXID=13616
+>FAM57A_MONDO PROTIDENSMODP00000012584 TRANSIDENSMODT00000012812 GENEIDENSMODG00000010047 TAXID13616
 AT----------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -1006,7 +1006,7 @@ GCTGTCCTCATCGCGCCCCAACTCTACTGGTTTTCTCTGCTCTGCAGGAAGGCAGCCCAG
 ATGTTTGACAATT---CCCAAGCCAAAAAGGACAGT------------------------
 ------------------------------------------------------------
 ------------------------------
->FAM57A_SARHA PROTID=ENSSHAP00000013813 TRANSID=ENSSHAT00000013930 GENEID=ENSSHAG00000011813 TAXID=9305
+>FAM57A_SARHA PROTIDENSSHAP00000013813 TRANSIDENSSHAT00000013930 GENEIDENSSHAG00000011813 TAXID9305
 AT----------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -1027,7 +1027,7 @@ GCCTTCCTCATTGCGCCCCAACTTTACTGGTTCGCTCTGCTCTGCAGGAAGGCGGCCCAG
 ATGTTCAACACTT---CCCAGGCCAAAAAAGACAGT------------------------
 ------------------------------------------------------------
 ------------------------------
->FAM57A_TAEGU PROTID=ENSTGUP00000007487 TRANSID=ENSTGUT00000007564 GENEID=ENSTGUG00000007263 TAXID=59729
+>FAM57A_TAEGU PROTIDENSTGUP00000007487 TRANSIDENSTGUT00000007564 GENEIDENSTGUG00000007263 TAXID59729
 AT----------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -1048,7 +1048,7 @@ GCGTCCCTCATCGCCCCTCAGCTCTACTGGTTCCGCCTCCTCTGCCGCAAGGCCGCCCGG
 CTCTAC------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------
->fam57a_XENTR PROTID=ENSXETP00000048626 TRANSID=ENSXETT00000048626 GENEID=ENSXETG00000022464 TAXID=8364
+>fam57a_XENTR PROTIDENSXETP00000048626 TRANSIDENSXETT00000048626 GENEIDENSXETG00000022464 TAXID8364
 AT----------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -1069,7 +1069,7 @@ GCATCCATCATGGCTCCACAGATATACTGGTTCTGGCTTATTTGCAAAAAAGCTTTAAGA
 CTTTATCGGGGCCCAGCTAGATCTGGAAAAGACAGA------------------------
 ------------------------------------------------------------
 ------------------------------
->FAM57A_GASAC PROTID=ENSGACP00000007075 TRANSID=ENSGACT00000007093 GENEID=ENSGACG00000005337 TAXID=69293
+>FAM57A_GASAC PROTIDENSGACP00000007075 TRANSIDENSGACT00000007093 GENEIDENSGACG00000005337 TAXID69293
 AT----------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -1090,7 +1090,7 @@ CTGGCCGTCCTGGCCCCCCAGGTGTACTGGCTCCTCCTGCTGCTGAAGAAAGCCTACCGG
 CTGTACCGGAGAG---GGAGGGGCAGGCCGAAGACGAGTTGTGCAGGTCACACA------
 ------------------------------------------------------------
 ------------------------------
->FAM57A_2_of_2_ORYLA PROTID=ENSORLP00000012385 TRANSID=ENSORLT00000012386 GENEID=ENSORLG00000009873 TAXID=8090
+>FAM57A_2_of_2_ORYLA PROTIDENSORLP00000012385 TRANSIDENSORLT00000012386 GENEIDENSORLG00000009873 TAXID8090
 GT----------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -1111,7 +1111,7 @@ CTGCTGATTCTGGCTCCACAGATCTACTGGTTTCTCCTGCTTTTGAGGAAAGCCAACAGA
 CTCTACCTGAGAG---GGAGGACGGCGCCAGACAAGGCCCGGCTGAGGACGGAC------
 ------------------------------------------------------------
 ------------------------------
->Q4RZ22_TETNG PROTID=ENSTNIP00000017295 TRANSID=ENSTNIT00000017513 GENEID=ENSTNIG00000014281 TAXID=99883
+>Q4RZ22_TETNG PROTIDENSTNIP00000017295 TRANSIDENSTNIT00000017513 GENEIDENSTNIG00000014281 TAXID99883
 AT----------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -1132,7 +1132,7 @@ CTGGCCATTCTGGCCCCGCAGATATACTGGTTCATCCTGCTGCTGAAGAAAGCCAACAGG
 CTGTACCAGAGAC---AGAGGAGAACCGACGGAGGGGGACGCGTAAGCAGCCAAAGG---
 ------------------------------------------------------------
 ------------------------------
->FAM57A_2_of_2_TAKRU PROTID=ENSTRUP00000026919 TRANSID=ENSTRUT00000027028 GENEID=ENSTRUG00000010663 TAXID=31033
+>FAM57A_2_of_2_TAKRU PROTIDENSTRUP00000026919 TRANSIDENSTRUT00000027028 GENEIDENSTRUG00000010663 TAXID31033
 AT----------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -1153,7 +1153,7 @@ CTGGCGATTCTGGCGCCACAGGTTTACTGGTTTATCCTGCTGCTGAAGAAAGCTAACAGA
 CTGTACCAGAGAC---AGAAGAAAACAAAGGGAGGCGGATGCATAAGCAACCAA------
 ------------------------------------------------------------
 ------------------------------
->FAM57A_2_of_2_GADMO PROTID=ENSGMOP00000017884 TRANSID=ENSGMOT00000018323 GENEID=ENSGMOG00000016664 TAXID=8049
+>FAM57A_2_of_2_GADMO PROTIDENSGMOP00000017884 TRANSIDENSGMOT00000018323 GENEIDENSGMOG00000016664 TAXID8049
 AT----------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -1174,7 +1174,7 @@ CTTTCTATCATGGTCCCCCAGGTCTACTGGTTCATATTGCTGGTGAAGAAGGCACACAGA
 CTCTACCGGGGAA---GGTTAAAG------------------------------------
 ------------------------------------------------------------
 ------------------------------
->FAM57A_ORENI PROTID=ENSONIP00000011950 TRANSID=ENSONIT00000011959 GENEID=ENSONIG00000009512 TAXID=8128
+>FAM57A_ORENI PROTIDENSONIP00000011950 TRANSIDENSONIT00000011959 GENEIDENSONIG00000009512 TAXID8128
 AT----------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -1195,7 +1195,7 @@ TCGTGCATCTTGGCGCCGCAGGTCTACTGGTTCGTTCTGCTGTGCCGAAAGGGCTACCGT
 CTTTACCAGCGCA---GCCGCAGCCCGGCCTCATCTCCCACGGCCGACACCGCCGCC---
 ---------------------------------ATCACTGACAGT---------------
 ------------------------------
->FAM57A_1_of_2_ORYLA PROTID=ENSORLP00000018575 TRANSID=ENSORLT00000018576 GENEID=ENSORLG00000014818 TAXID=8090
+>FAM57A_1_of_2_ORYLA PROTIDENSORLP00000018575 TRANSIDENSORLT00000018576 GENEIDENSORLG00000014818 TAXID8090
 AT----------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -1216,7 +1216,7 @@ TCCTGCATCCTGGCGCCGCAGGTGTACTGGTTCGTGCTGCTCTGCCGAAAGGGCTACCGT
 CTGTACCGGAGGA---GCCGCGGTGCGCCGTCGCCCGTGGCGACGGCCCCC---------
 ------------------------------------------------------------
 ------------------------------
->FAM57A_1_of_2_TAKRU PROTID=ENSTRUP00000030538 TRANSID=ENSTRUT00000030655 GENEID=ENSTRUG00000012071 TAXID=31033
+>FAM57A_1_of_2_TAKRU PROTIDENSTRUP00000030538 TRANSIDENSTRUT00000030655 GENEIDENSTRUG00000012071 TAXID31033
 AT----------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------

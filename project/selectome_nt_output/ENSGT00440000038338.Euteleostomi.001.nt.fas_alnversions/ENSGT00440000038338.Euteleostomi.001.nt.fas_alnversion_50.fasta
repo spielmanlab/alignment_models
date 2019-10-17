@@ -1,4 +1,4 @@
->R3HDM2_HORSE PROTID=ENSECAP00000003821 TRANSID=ENSECAT00000005429 GENEID=ENSECAG00000003157 TAXID=9796
+>R3HDM2_HORSE PROTIDENSECAP00000003821 TRANSIDENSECAT00000005429 GENEIDENSECAG00000003157 TAXID9796
 ------atgtctaacagtaacactactcaagagaccctggaaataatgaaagaatcagaa
 aaaaaactggtggaagaatctgtaaacaaaaacaagtttatatctaagactccaagtaaa
 gaagaaattgagaaagagagtgaagatac--cactttgcgtcaggagaca----cagagg
@@ -69,7 +69,7 @@ cctggtgggggtgggggggacaacggtgggactgccgagaac------------------
 atcgtggctgtgttccccagccccctggctgcccaaaatgcctcccttcgcctcaacaa-
 --ctctgtgagtcgcttcaaacttcgagtggccaaaaagaactatgacctgaggatcctg
 gagcgagccagctcccaa
->R3HDM2_PTEVA PROTID=ENSPVAP00000003753 TRANSID=ENSPVAT00000003967 GENEID=ENSPVAG00000003967 TAXID=132908
+>R3HDM2_PTEVA PROTIDENSPVAP00000003753 TRANSIDENSPVAT00000003967 GENEIDENSPVAG00000003967 TAXID132908
 ------atgtctaacagtaacactactcaagagactctggaaataatgaaagaatcagaa
 aaaaaactggtggaagaatctgtaaacaaaaacaagtttatatctaagactacaagtaag
 gaagaaattgagaaagagagtgaagatac--cagttcacgtcaggagaca----cagaga
@@ -140,7 +140,7 @@ cctggcgggggtggaggggacaacagtgggactgcggagaat------------------
 atcgtggctgtgttcccaagccctctggctgctcagaatgcctcccttcgcctcaacaa-
 --ctctgtgagtcgcttcaaacttcgagtggccaaaaagaactatgacctgaggatcctg
 gagcgagccagctctcaa
->R3HDM2_AILME PROTID=ENSAMEP00000005135 TRANSID=ENSAMET00000005346 GENEID=ENSAMEG00000004812 TAXID=9646
+>R3HDM2_AILME PROTIDENSAMEP00000005135 TRANSIDENSAMET00000005346 GENEIDENSAMEG00000004812 TAXID9646
 ------atgtctaacagtaacactactcaagagaccctggaaataatgaaagagtcagaa
 aaaaaactggtggaagaatctgtaaacaaaaacaagtttatatctaagactccaagtaag
 gaagaaactgagaaagagagcgaagatac--tggtttgcgtcaggagaca----cagagg
@@ -211,7 +211,7 @@ cctggcgggggcgggggggacaac---gggactgctgagaac------------------
 atcgtggctgtgtttcccagccccctggctgcccagaatgcctctcttcgcctcaacaa-
 --ctctgtgagtcgcttcaaacttcgagtggccaaaaagaactatgacctgaggatcctg
 gagcgagccagctcccaa
->R3HDM2_CANFA PROTID=ENSCAFP00000000311 TRANSID=ENSCAFT00000000344 GENEID=ENSCAFG00000000215 TAXID=9615
+>R3HDM2_CANFA PROTIDENSCAFP00000000311 TRANSIDENSCAFT00000000344 GENEIDENSCAFG00000000215 TAXID9615
 ------atgtctaacagtaacactactcaagagaccctggaaataatgaaagaatcagaa
 aaaaaactggtggaagaatctgtaaacaaaaacaagtttatttctaagaccccaagtaag
 gaagaaactgagaaagagagcgaagatac--tgttttgcgtcaagagaca----cagagg
@@ -282,7 +282,7 @@ cctggcgggggcgggggggacaacggtgggactgctgagaac------------------
 atcgtggctgtgtttcccagccccctggctgcccagaatgcctcccttcgcctcaacaa-
 --ctctgtgagtcgcttcaaacttcgagtggccaaaaagaactatgacctgaggatcctg
 gagcgagccagctcccaa
->R3hdm2_MOUSE PROTID=ENSMUSP00000128659 TRANSID=ENSMUST00000170336 GENEID=ENSMUSG00000025404 TAXID=10090
+>R3hdm2_MOUSE PROTIDENSMUSP00000128659 TRANSIDENSMUST00000170336 GENEIDENSMUSG00000025404 TAXID10090
 ------atgtctaacagtaacactactcaggagactctggaaataatgaaagaatcagaa
 aaaaaactggtggaagaatctgtaaacaaaaataaatttatatccaaaactccaagtaag
 gaagacgtcgagaaggagggtgaagagaa--tggtctgcgtcaggagaca----cagaga
@@ -353,7 +353,7 @@ cctggtgcaggcgggggggacaacagtgggactgctgagaac------------------
 atagtggctgtgttccccagccccctggccgcccagaacgcctcccttcgcctcaacaa-
 --ctctgtgagtcgcttcaaactccgagtggctaaaaagaactacgacctgaggatcctg
 gaacgagctagctctcaa
->R3hdm2_RAT PROTID=ENSRNOP00000031193 TRANSID=ENSRNOT00000033146 GENEID=ENSRNOG00000007801 TAXID=10116
+>R3hdm2_RAT PROTIDENSRNOP00000031193 TRANSIDENSRNOT00000033146 GENEIDENSRNOG00000007801 TAXID10116
 ------atgtctaacagtaacactactcaggagactctggaaataatgaaagaatcagaa
 aaaaaactggtggaagaatctgtaaacaaaaataaatttatatccaaaactccaagtaaa
 gaagaagttgagaaggagggtgaagagaa--tggtctgcgtcaggagaca----cagaga
@@ -424,7 +424,7 @@ cctggtgcaggtgggggggacaacagtgggactgctgagaat------------------
 atagtggctgtgttccccagtcccctggctgcccacaatgcctcccttcgcctcaacaa-
 --ctctgtgagtcgcttcaaacttcgagtagctaaaaagaactacgacctgaggatcctg
 gagcgagctagctctcaa
->R3HDM2_CAVPO PROTID=ENSCPOP00000008276 TRANSID=ENSCPOT00000009302 GENEID=ENSCPOG00000009217 TAXID=10141
+>R3HDM2_CAVPO PROTIDENSCPOP00000008276 TRANSIDENSCPOT00000009302 GENEIDENSCPOG00000009217 TAXID10141
 ------atgtctaacagtaacactacgcaagagacccttgaaataatgaaagaat-----
 -------tggtggaagaatctgtaagcaaaaacaagtttatatctaagacttcaagtaag
 gaagaagttgagaaagaaggtgaagagac--cagtgtgcgtcaagagaca----cagagg
@@ -495,7 +495,7 @@ cctggtgggggtggtggggacaacagtgggactaccgagaat------------------
 atcgtggctgtgttccccagccccctggctgcccaaaatgcctcccttcgcctcaacaa-
 --ctccgtgagtcgcttcaaactgcgagtggccaaaaagaactatgacttgagaatcctg
 gagcgagccagctcccaa
->R3HDM2_RABIT PROTID=ENSOCUP00000011418 TRANSID=ENSOCUT00000013268 GENEID=ENSOCUG00000013258 TAXID=9986
+>R3HDM2_RABIT PROTIDENSOCUP00000011418 TRANSIDENSOCUT00000013268 GENEIDENSOCUG00000013258 TAXID9986
 ------atgtctaacagtaacactactcaagagaccctggaaataatgaaagaatcagaa
 aaaaaactggtagaagaatctgtaaacaaaaacaagtttatatccaagactccaagtaag
 gaagaaattgaaaaagaaggtgaagatac--cagtttgcgtcaggagaca----cagagg
@@ -566,7 +566,7 @@ cctggcgggggcagcggggacagtggtgggaccaccgagaat------------------
 atcgtggccgtgttccccagccccctggctgcccagaacgcctcccttcgcctgaataa-
 --ctccgtcagtcgcttcaaactacgagtggccaaaaagaactatgacctgaggatcctg
 gagcgagccagctcccaa
->ENSOGAP00000010789 PROTID=ENSOGAP00000010789 TRANSID=ENSOGAT00000012061 GENEID=ENSOGAG00000012055 TAXID=30611
+>ENSOGAP00000010789 PROTIDENSOGAP00000010789 TRANSIDENSOGAT00000012061 GENEIDENSOGAG00000012055 TAXID30611
 ------atgtctaacagtaacactactcaagagaccctggaaataatgaaagaatcagaa
 aaaaaactcgtggaagaatctgtaaacaaaaacaagtttatagctaagactccaagtaag
 gaagaaattgaaaaagaaagtgaagatac--cagtttgcgtcaggagaca----cagagg
@@ -637,7 +637,7 @@ cctggtgggggagggggggacaacagtgggactgccgagaac------------------
 atcgtggctgtgttccccagccctctggctgcccaaaatgcctctcttcgcctcaacaa-
 --ctctgtgagtcgcttcaaacttcgaatggccaaaaagaactatgacctgaggatcctg
 gagcgagccagctcccaa
->R3HDM2_Ggor PROTID=ENSGGOP00000024066 TRANSID=ENSGGOT00000028801 GENEID=ENSGGOG00000015007 TAXID=9593
+>R3HDM2_Ggor PROTIDENSGGOP00000024066 TRANSIDENSGGOT00000028801 GENEIDENSGGOG00000015007 TAXID9593
 ------atgtctaacagtaacactactcaagagaccctggaaataatgaaagaatcagaa
 aaaaaactggtggaagaatctgtaaacaaaaacaagtttatatctaagactccaagtaag
 gaagaaattgagaaagaatgtgaagatac--cagtttgcgtcaggagaca----cagagg
@@ -708,7 +708,7 @@ cctggagggggtgggggggacaacagtgggactgctgagaat------------------
 attgtggctgtgttccccagccccctggctgcccaaaatgcctcccttcgtctcaacaa-
 --ctccgtgagtcgcttcaaacttcgaatggccaaaaagaactatgacctgaggatcctg
 gagcgagccagctcccaa
->R3HDM2_NOMLE PROTID=ENSNLEP00000021068 TRANSID=ENSNLET00000022133 GENEID=ENSNLEG00000017351 TAXID=61853
+>R3HDM2_NOMLE PROTIDENSNLEP00000021068 TRANSIDENSNLET00000022133 GENEIDENSNLEG00000017351 TAXID61853
 ------atgtctaacagtaacactactcaagagaccctggaaataatgaaagaatcagaa
 aaaaaactggtggaagaatctgtaaacaaaaacaagtttatgtctaagactccaagtaag
 gaagaaattgagaaagaatgtgaagatac--cagtttgcgtcaggagaca----cagagg
@@ -779,7 +779,7 @@ cctggagggggtgggggggacaacagtggaactgctgagaat------------------
 atcgtggctgtgttccccagccccctggctgcccaaaatgcctcccttcgtctcaacaa-
 --ctccgtgagtcgcttcaaacttcgaatggccaaaaagaactatgacctgaggatcctg
 gagcgagccagctcccaa
->LOC100399700_CALJA PROTID=ENSCJAP00000047351 TRANSID=ENSCJAT00000053266 GENEID=ENSCJAG00000007365 TAXID=9483
+>LOC100399700_CALJA PROTIDENSCJAP00000047351 TRANSIDENSCJAT00000053266 GENEIDENSCJAG00000007365 TAXID9483
 ------atgtctaacagtaacactactcaagagaccctggaaataatgaaagaatcagaa
 aaaaacctggtggaagaatctgtaaacaaaaacaagtttatgtctaagactccaagtaag
 gaagaaattgagaaagaatgtgaagatac--tggtttgcgtcaggaaaca----cagagg
@@ -850,7 +850,7 @@ cctggagggggtgggggggacaacagtgggactgctgagaat------------------
 attgtggctgtgttccccagccctctggctgcccagaatgcctcccttcgtctcaacaa-
 --ctccgtgagtcgcttcaaacttcgaatggccaaaaagaactatgacctgaggatcctg
 gagcgagccagctcccaa
->ENSCJAP00000025178 PROTID=ENSCJAP00000025178 TRANSID=ENSCJAT00000026610 GENEID=ENSCJAG00000013690 TAXID=9483
+>ENSCJAP00000025178 PROTIDENSCJAP00000025178 TRANSIDENSCJAT00000026610 GENEIDENSCJAG00000013690 TAXID9483
 ------atgtctaacaataacactactcaagagaccctggaaataatgaaagaatcagaa
 aaaaacctggtggaagaatctgtaaacaaaaacaagtttatatctaagactccaagtaag
 gaagaaattgagaaagaatgtgaagatac--cagtttgcgtcaggagaca----cagagg
@@ -921,7 +921,7 @@ cctggagggggtgggggggacaacggtgggactgctgagaat------------------
 gttgtggctgtgttccccagccccctggctgcccagaatgcttcccttcatctcaacaa-
 --ctctgtgagtcgcttcaaacttcgaatggccaaaaagaactatgacctgaggatcctg
 gagcaagccagctcccaa
->R3HDM2_LOXAF PROTID=ENSLAFP00000005467 TRANSID=ENSLAFT00000006514 GENEID=ENSLAFG00000006510 TAXID=9785
+>R3HDM2_LOXAF PROTIDENSLAFP00000005467 TRANSIDENSLAFT00000006514 GENEIDENSLAFG00000006510 TAXID9785
 ------atgtctaacagtaacactactcaggagaccctggaaataatgaaagaatcagaa
 aaaaaactagtggaggaatctgtaaacagaaacaagtttatgtctaaggctccaagtaag
 gaagaaattgagaaagagggagaagatac--cattttgcgccacgaaaca----cagagg
@@ -992,7 +992,7 @@ cccagcggggccgggggggataacggtgggactgctgagaat------------------
 atcgtggctgtgttcccgagcccgctggctgcccaaaatgcctcccttcgtctcaacaa-
 --ctccgtgagtcgcttcaaacttcgagtggccaaaaagaactatgacctgaggatcctg
 gagcgagccagctcccaa
->R3HDM2_BOVIN PROTID=ENSBTAP00000024431 TRANSID=ENSBTAT00000024431 GENEID=ENSBTAG00000018361 TAXID=9913
+>R3HDM2_BOVIN PROTIDENSBTAP00000024431 TRANSIDENSBTAT00000024431 GENEIDENSBTAG00000018361 TAXID9913
 ------atgtctaacagcaacactactcaagagaccctggaaataatgaaagaatcggaa
 aaaaagctggtggaagaatctgtaaacaaaaacaagtttatatctaagactccaagcaaa
 gaagaaattgagaaagagagtgaagatac--cagtttgcgtcaggagaca----cagagg
@@ -1063,7 +1063,7 @@ cctggtgggggtgggggggacaacggtgggactgctgagaat------------------
 attgtggctgtgttccccagccccctggctgctcagaatgcctcccttcgcctcaacaa-
 --ctctgtgagtcgcttcaaacttcgagtggccaaaaagaactatgacctgaggatcctg
 gagcgagccagctcccaa
->R3HDM2_MYOLU PROTID=ENSMLUP00000004546 TRANSID=ENSMLUT00000004985 GENEID=ENSMLUG00000004980 TAXID=59463
+>R3HDM2_MYOLU PROTIDENSMLUP00000004546 TRANSIDENSMLUT00000004985 GENEIDENSMLUG00000004980 TAXID59463
 ------atgtctaatagtaacactactcaagagaccctggaaataatgaaagaatcagaa
 aaaaaactggtagaagaatctgtaagcaaaaacaagtttatatctaagactccaagtaaa
 gaagaaattgagaaagagagtgaagatac--cagtttgcgtcaggagaca----cagagg
@@ -1134,7 +1134,7 @@ cctgctgggggcgggggggacagtagtgggactgctgagaat------------------
 atcgtggctgtgtttcccagccccctggctgcccaaaatgcctcccttcgcctcaacaa-
 --ctccgtgagtcgcttcaaacttcgagtggccaaaaagaactatgacctgaggatcctg
 gagcgagccagctcccag
->R3HDM2_SARHA PROTID=ENSSHAP00000003986 TRANSID=ENSSHAT00000004026 GENEID=ENSSHAG00000003511 TAXID=9305
+>R3HDM2_SARHA PROTIDENSSHAP00000003986 TRANSIDENSSHAT00000004026 GENEIDENSSHAG00000003511 TAXID9305
 ------atgtctaacagtaacactactcaagagaccctggaaataatgaaagaatcagaa
 aaaaagctggtggaagagtctgtaagcaagaataagtttgtatccaagtcaccaagtaag
 gaagagattgagaaggagggtgaggatac--tagtgttcggcaggagacaca-gcagaga
@@ -1205,7 +1205,7 @@ ccccctccgcatgaaagggaaggagaggggcctggagaagat------------------
 atcgtggctgtgttccccagccccctggcggcccagaacgcctccctccgcctcaacaa-
 --ctccgtgagtcgcttcaaacttcgagtggccaaaaagaactatgacctgaggatcctg
 gagcgggccagctcccaa
->R3HDM2_ANOCA PROTID=ENSACAP00000006381 TRANSID=ENSACAT00000006524 GENEID=ENSACAG00000006388 TAXID=28377
+>R3HDM2_ANOCA PROTIDENSACAP00000006381 TRANSIDENSACAT00000006524 GENEIDENSACAG00000006388 TAXID28377
 ------atgtctaacagcaacacaacacaagagacactggaaataatgaaagagtcggaa
 aagaagctggttgaggaatctgtgaacaaaaccaagtttgtatccagatcactaagcaaa
 gaagaacttgagaaggatggggaggagag--tagcctacggcaggaatctca-gcagagg
@@ -1276,7 +1276,7 @@ cctgggggcggcggtgacaacaaccacgggactgcagagaac------------------
 atcgtggccgtcttccccagccccttggcagcccagaacgcctccctgcgtctcaacaa-
 --ctcccttagttgcttcaaattgcgtatggccaaaaagaactatgacctgcgtgtcctg
 gagcgtgccagctcccaa
->r3hdm2_XENTR PROTID=ENSXETP00000037400 TRANSID=ENSXETT00000037400 GENEID=ENSXETG00000017153 TAXID=8364
+>r3hdm2_XENTR PROTIDENSXETP00000037400 TRANSIDENSXETT00000037400 GENEIDENSXETG00000017153 TAXID8364
 ------atgtcccatggccacaccacccaggaagctctagagattatgaaggagtctgaa
 aagtgtctggttgaggaatctttaaacagaagcaaggctgtgtcaagatcccctagtaaa
 gaggatc------aggaatccgatgagcc--aaactcacgccaggaacca----cagagg
@@ -1347,7 +1347,7 @@ aatcaagggcccaatggcaacaacaatggacctacagaaaatggccgcc-----------
 attgtggcagtcttcccaagcaccacagcagcacagaatgcctcagtacagcttaataa-
 --cccaatcagccgcttcaaactgcgcagcatcaagaagaactatgatttgcgcatacta
 gaacgtgccagctctcaa
->R3HDM2_GASAC PROTID=ENSGACP00000008526 TRANSID=ENSGACT00000008545 GENEID=ENSGACG00000006442 TAXID=69293
+>R3HDM2_GASAC PROTIDENSGACP00000008526 TRANSIDENSGACT00000008545 GENEIDENSGACG00000006442 TAXID69293
 ------------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------cagaaa
@@ -1418,7 +1418,7 @@ gccaagatccagtggctgaaggagccccagggagg-------------------------
 gtagtggctgtgttccccagcaccatggccgcccagagtgcttccttcaaactgaacaac
 agcggggccggcctcttcaagctgagggccgccaaaaagaactacgacctgcgagtgctg
 gagagagccagctctcag
->R3HDM2_ORYLA PROTID=ENSORLP00000006928 TRANSID=ENSORLT00000006929 GENEID=ENSORLG00000005502 TAXID=8090
+>R3HDM2_ORYLA PROTIDENSORLP00000006928 TRANSIDENSORLT00000006929 GENEIDENSORLG00000005502 TAXID8090
 ------------------------------------------------------------
 ------------------------------------------------------------
 ---------------------------------------------------------aaa
@@ -1489,7 +1489,7 @@ gcctctatggccagcatgagaatgaagggggacagccatgacccggcgcacctctacaca
 gtggtggcagtgttccccagcaccatggctgcccagagtgcttccttcaaacttaacaac
 agtggggccagcctcttcaaactgagggcggcgaaaaagaactatgacctgcgtgtgctg
 gagagagccagttcccag
->R3HDM2_ORENI PROTID=ENSONIP00000006382 TRANSID=ENSONIT00000006387 GENEID=ENSONIG00000005075 TAXID=8128
+>R3HDM2_ORENI PROTIDENSONIP00000006382 TRANSIDENSONIT00000006387 GENEIDENSONIG00000005075 TAXID8128
 ------atgtcagtgagcctgacaac------------ggacatccagcaggagggagag
 agtgggccacttattgagccctgcagtcgaggcaagacctcccctcaaccacagggcacc
 aaagaaggaactggagagagcctggagccggacgatagctctccacaggatgcacagaag
@@ -1560,7 +1560,7 @@ gccaagatccagtggctgaaggagccccaaggagg-------------------------
 gtagtggcagtgttccccaacaccatggctgcccagagtgcttccttcaaacttaacaac
 agtggggccagcctcttcaaactgagggccgccaaaaagaactatgacctacgcgtgctg
 gagagagccagttctcag
->R3HDM2_TAKRU PROTID=ENSTRUP00000038521 TRANSID=ENSTRUT00000038660 GENEID=ENSTRUG00000015075 TAXID=31033
+>R3HDM2_TAKRU PROTIDENSTRUP00000038521 TRANSIDENSTRUT00000038660 GENEIDENSTRUG00000015075 TAXID31033
 ------acgtttga----------------------------------------------
 -------------------------------acaaaatcttcatttggctgtaaatagca
 ca-------------------------------------tttgtatttgtcttgcagaaa
@@ -1631,7 +1631,7 @@ gccaagattcagtggctgaaggaaccccagggagg-------------------------
 gtagtggcagtgttccccagcaccacggctgcccagagtgcttccttcaaactcaacaac
 agcggggccagcctcttcaaactgagggccgccaaaaagaactatgacctgcgtgtgttg
 gagagagccagttctcag
->R3HDM2_TETNG PROTID=ENSTNIP00000002221 TRANSID=ENSTNIT00000003236 GENEID=ENSTNIG00000007057 TAXID=99883
+>R3HDM2_TETNG PROTIDENSTNIP00000002221 TRANSIDENSTNIT00000003236 GENEIDENSTNIG00000007057 TAXID99883
 ------------------------------------------------------------
 ----------------------------------------cctttttgtctaaaattata
 taggcattgtttaaaaa-----------------------ccatcattgtcctgcagaaa
@@ -1702,7 +1702,7 @@ gggccaggagccatcatgggagcgaagggcgacagcagcgaccctgctcacctctacacc
 gtagtggcagtgttccccagcaccacggctgcccagagtgcttccttcaaacttaacaac
 agcggggccagcctcttcaaactgagggccgccaaaaagaactatgacctgcgcgtgctg
 gagagagccagttctcag
->R3HDM1_MELGA PROTID=ENSMGAP00000013142 TRANSID=ENSMGAT00000014044 GENEID=ENSMGAG00000012461 TAXID=9103
+>R3HDM1_MELGA PROTIDENSMGAP00000013142 TRANSIDENSMGAT00000014044 GENEIDENSMGAG00000012461 TAXID9103
 atgaggatgtctgatattcttactgtaaaagatgaaactgatgcaatgaagggttcagaa
 gctgaatttaaaga------tacagatccagttgaaaaccttataaaatcaggaagtcaa
 gagcagattcaagtggaaaaggatgaaaattgccctgatagcaaaaacaatatgccgcgg
@@ -1773,7 +1773,7 @@ cgttactgtggcagcggagatagtaatgtgaacactgagccttgc---------------
 gttctagctatgttccctacaatgtcggctgctcagaacgcattgaagaaacaaagtagt
 acctcagttaacaagttcaggctgagaacaagcaagaagcactacgactttcatatcctg
 gaaagggctagttctcag
->Q5ZK66_CHICK PROTID=ENSGALP00000019969 TRANSID=ENSGALT00000019996 GENEID=ENSGALG00000012246 TAXID=9031
+>Q5ZK66_CHICK PROTIDENSGALP00000019969 TRANSIDENSGALT00000019996 GENEIDENSGALG00000012246 TAXID9031
 atgaggatgtctgatattcttactgtaaaagatgaaactgatgcaatgaagggttcagaa
 gctgaatttaaaga------tacagacccagttgaaaaccttataaaatcaggaagtcag
 gagcagattcaagtggaaaaggatgaaaattgtcctgatagcaaaaacaatatgccgcgg
@@ -1844,7 +1844,7 @@ cgttactgtggcagcggagatagtaatgtgaacactgagccatgc---------------
 gttctagctatgttccctacaatgtcggctgctcagaacgcattgaagaaacaaagtagt
 acctcagttaacaagttcaggctgagaacaagcaagaagcactacgattttcatatcctg
 gaaagggctagttctcag
->R3HDM1_TAEGU PROTID=ENSTGUP00000012127 TRANSID=ENSTGUT00000012261 GENEID=ENSTGUG00000011750 TAXID=59729
+>R3HDM1_TAEGU PROTIDENSTGUP00000012127 TRANSIDENSTGUT00000012261 GENEIDENSTGUG00000011750 TAXID59729
 atgaggatgtctgatattcttactgtaaaagatgaaactgatgcaatgaagggttccgaa
 gctgaatttaaaga------tacagacccagttgaaaacctaaaaaaatcaggaagtcag
 gaagagattcaagtggaaaaggatgaaaattgtcctgataacaaaaacaatatgccgcgg
@@ -1915,7 +1915,7 @@ gccaagatccggtggctgagggattcgcagtgcctgcaggcgcagcagcggcggctct--
 gttctggccaccttccccagcatggcggccgcgcagagcgcgctcaagaggcagagcggc
 gccgcgctcagcaagttccgcctgagaaccagcaagaagcactacgacctccacgtgctg
 gagagggccagctctcag
->R3HDM1_PELSI PROTID=ENSPSIP00000014646 TRANSID=ENSPSIT00000014715 GENEID=ENSPSIG00000012915 TAXID=13735
+>R3HDM1_PELSI PROTIDENSPSIP00000014646 TRANSIDENSPSIT00000014715 GENEIDENSPSIG00000012915 TAXID13735
 atgaggatgtctgatactcttactctaaaggatgaaattgatacaatgaatggttcagag
 acagaatttaaaga------cacaaccacagtcgaaaaccttatcaaatcaaggagccat
 gagaaaattcaagtagaagacgatgaaagttgtactgacaacaaaaatgatatgctgcgg
@@ -1986,7 +1986,7 @@ cgttattgtggcagtggagataataatgtgaacattgaaccctcc---------------
 gttctagctacgttccctacaatgtcagcagcccaaaatgcactgaagaaacaaagtaa-
 --ctcagttaacaaattcaggctgagaacaagcaagaagcactatgagtttcatattctg
 gaaagggctagttctcag
->R3HDM1_ANOCA PROTID=ENSACAP00000001818 TRANSID=ENSACAT00000001862 GENEID=ENSACAG00000001676 TAXID=28377
+>R3HDM1_ANOCA PROTIDENSACAP00000001818 TRANSIDENSACAT00000001862 GENEIDENSACAG00000001676 TAXID28377
 atgaggatgactgatactgttactgtaaaggaggaaagtgatacaatgaaaggttcagaa
 gcagatgtaaaaga------------caatggggaagacttcataaaatcagaaagccat
 gagcaaactcaagcaggaaaagatgaaagatgtactgatcataaaaatgatattcagcgg
@@ -2057,7 +2057,7 @@ cattattgtggtagcggagatggcaatgtgaatgctgaatcttcc---------------
 gttctagctacctttccaaccatgtctgcagcccaaaacgcgttgaagaaacaaagtaa-
 --ctcactgaacaagtttaggctgagaacaagcaagaagcactacgactttcacattctg
 gaaagggctagttctcag
->R3HDM1_SARHA PROTID=ENSSHAP00000020038 TRANSID=ENSSHAT00000020197 GENEID=ENSSHAG00000016999 TAXID=9305
+>R3HDM1_SARHA PROTIDENSSHAP00000020038 TRANSIDENSSHAT00000020197 GENEIDENSSHAG00000016999 TAXID9305
 atgaggatgtctgatactgttactgtaaaagatggaactgatacaatgaagggtttggag
 gcagaaatgaaaga------tgcaaccagagtcgaaaatcttatcaaatcagaaaactat
 gagaagatttcagcagaaaagaatgaacgttgtattgacagcaaaattgatttacagcgt
@@ -2128,7 +2128,7 @@ ctctactgtggcagtggagatggcacggtgaagacagaacaaact---------------
 gttctagcaacattcccctccatttcagctgcccaaaatgcgttgaagaaacaaattaa-
 --ttcagttaacaagtttaagctgaggacaagcaagaagcactatgactttcatatccta
 gaaagggcaagttctcag
->R3HDM1_MONDO PROTID=ENSMODP00000001101 TRANSID=ENSMODT00000001123 GENEID=ENSMODG00000000923 TAXID=13616
+>R3HDM1_MONDO PROTIDENSMODP00000001101 TRANSIDENSMODT00000001123 GENEIDENSMODG00000000923 TAXID13616
 atgaggatgtctgatactattactgtaaaagatggaactgatacaatgaagggtttggag
 gtagaaatgaaaga------tgcaaccagagttgaaaatctcatcaaatcagaaaactat
 gagaacatctcatcagacaagaatgaacgttgtattgacagcaaaattgatttacagcgg
@@ -2199,7 +2199,7 @@ ctctactgtggcagtggagatggtgccatgaagacagaacaatct---------------
 gttatagcaacattcccctccatttcagctgcccaaaacgcattgaagaaacaaattaa-
 --ctcagttaacaagtttaagctgaggtcaagcaagaagcactatgactttcatatccta
 gaaagggcaagttctcag
->R3HDM1_Ggor PROTID=ENSGGOP00000007982 TRANSID=ENSGGOT00000008201 GENEID=ENSGGOG00000008156 TAXID=9593
+>R3HDM1_Ggor PROTIDENSGGOP00000007982 TRANSIDENSGGOT00000008201 GENEIDENSGGOG00000008156 TAXID9593
 atgaggatgtctgatactgttactgtaaaagatgaaactgcaacaatgaaggatttggag
 gcagaagtgaaaga------tacaaccagagttgaaaatcttatcaaatcagaaaactat
 gggaagattttggtagagaagaatgaacattgtattgagaacaatatagatttgcagcgg
@@ -2270,7 +2270,7 @@ ctctgctgtggcagtggggacaacactgtcaaccctgaacgctct---------------
 gtcttagccacattcccctccatttcagctgcacagaatgcactgaagaaacaaattaa-
 --ctcagttaacaagtttaagctgagaacaagcaagaagcactatgactttcacattttg
 gaaagggcaagttctcag
->R3HDM1_PANTR PROTID=ENSPTRP00000021375 TRANSID=ENSPTRT00000023182 GENEID=ENSPTRG00000012494 TAXID=9598
+>R3HDM1_PANTR PROTIDENSPTRP00000021375 TRANSIDENSPTRT00000023182 GENEIDENSPTRG00000012494 TAXID9598
 atgaggatgtctgatactgttactgtaaaagatgaaactgcaacaatgaaggatttggag
 gcagaagtgaaaga------tacaaccagagttgaaaatcttataaaatcagaaaactat
 gggaagattttggtagagaagaatgaacattgtattgagaacaatatagatttgcagcgg
@@ -2341,7 +2341,7 @@ ctctgctgtggcagtggggacaacactgccaaccctgaacgctct---------------
 gtcttagccacattcccctccatttcagctgcacagaatgcactgaagaaacaaattaa-
 --ctcagttaacaagtttaagctgagaacaagcaagaagcactatgactttcacattttg
 gaaagggcaagttctcag
->R3HDM1_PONAB PROTID=ENSPPYP00000014300 TRANSID=ENSPPYT00000014882 GENEID=ENSPPYG00000012815 TAXID=9601
+>R3HDM1_PONAB PROTIDENSPPYP00000014300 TRANSIDENSPPYT00000014882 GENEIDENSPPYG00000012815 TAXID9601
 atgaggatgtctgatactgttactgtaaaagatgaaactgcaacaatgaaggatttggag
 gcagaagtgaaaga------tacaaccagagttgaaaatcttatcaaatcagaaaactat
 gggaagattttggtagagaagaatgaacattgtattgagaacaatatagatttgcagcgg
@@ -2412,7 +2412,7 @@ ctctgctgtggcagcggggacaacactgtcaaccctgaacactct---------------
 gtcttagccacattcccctccatttcagctgcacagaatgcactgaagaaacaaattaa-
 --ctcagttaacaagtttaagctgagaacaagcaagaagcactatgactttcacattttg
 gaaagggcaagttctcag
->R3HDM1_NOMLE PROTID=ENSNLEP00000010571 TRANSID=ENSNLET00000011087 GENEID=ENSNLEG00000008622 TAXID=61853
+>R3HDM1_NOMLE PROTIDENSNLEP00000010571 TRANSIDENSNLET00000011087 GENEIDENSNLEG00000008622 TAXID61853
 atgaggatgtctgatactgttactgtaaaagatgaaactgcaacaatgaaggatttggag
 gcagaagtgaaaga------gacaaccagagttgaaaatcttatcaaatcagaaaactat
 gggaagattttggtagagaagaatgaacattgtattgagaacaatatagatttgcagcgg
@@ -2483,7 +2483,7 @@ ctctgctgtggcagcggggacaacactgtcaaccctgaacgctct---------------
 gtcttagccacattcccctccatttcagctgcacagaatgcactgaagaaacaaattaa-
 --ctcagttaacaagtttaagctgagaacaagcaagaagcactatgactttcacattttg
 gaaagggcaagttctcag
->R3HDM1_MACMU PROTID=ENSMMUP00000012885 TRANSID=ENSMMUT00000013751 GENEID=ENSMMUG00000009844 TAXID=9544
+>R3HDM1_MACMU PROTIDENSMMUP00000012885 TRANSIDENSMMUT00000013751 GENEIDENSMMUG00000009844 TAXID9544
 ------------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------cagcgg
@@ -2554,7 +2554,7 @@ ctctgctgtggcagcggggacaacactgtcaaccctgaacgctct---------------
 gtcttagccacattcccctccatttcagctgcacagaatgcattgaagaaacaaattaa-
 --ctcagttaacaagtttaagctgagaacaagcaagaagcactatgactttcacattttg
 gaaagggcaagttctcag
->R3HDM1_CALJA PROTID=ENSCJAP00000021713 TRANSID=ENSCJAT00000022952 GENEID=ENSCJAG00000011718 TAXID=9483
+>R3HDM1_CALJA PROTIDENSCJAP00000021713 TRANSIDENSCJAT00000022952 GENEIDENSCJAG00000011718 TAXID9483
 atgaggatgtctgatactgttactgtaaaagatgaaactgctacaatgaaggatttggag
 gcagaagtaaaaga------tacaaccagagttgaaaatcttatcaaagcagaaaactat
 gggaagattttggtagagaagaatgaacattgtattgagaacaatattgatttgcagcgg
@@ -2625,7 +2625,7 @@ ctctgctgcggcagcagggacaacactgtcaaccccgaacgctct---------------
 gtcttagccacattcccctccatttcagctgcacagaatgcattgaagaaacaaattaa-
 --ctcagttaacaagtttaaactgagaacaagcaagaagcactatgactttcacattttg
 gaaagggcaagttctcag
->R3HDM1_OTOGA PROTID=ENSOGAP00000002808 TRANSID=ENSOGAT00000003140 GENEID=ENSOGAG00000003136 TAXID=30611
+>R3HDM1_OTOGA PROTIDENSOGAP00000002808 TRANSIDENSOGAT00000003140 GENEIDENSOGAG00000003136 TAXID30611
 atgaggatgtctgatactgttattgtaaaagatgaaactgaaacaatgaaggatttggag
 gcagaagcaaaaga------tacaaccagagttgaaaatattatcaaatcagaaaactat
 ggaaagattttggcagagaagaatgaacgttgtagtgac------attgatttgcagcgg
@@ -2696,7 +2696,7 @@ ctctgctgtggcagtggggacaacactgtaaaccctgaacgctct---------------
 gtcttagccacattcccctccatttcagctgcacagaatgcgttgaagaagcaaattaa-
 --ttcagttaacaagtttaagctgagaacaagcaagaagcactatgactttcacattttg
 gaaagggcaagttctcag
->R3hdm1_MOUSE PROTID=ENSMUSP00000043103 TRANSID=ENSMUST00000036288 GENEID=ENSMUSG00000056211 TAXID=10090
+>R3hdm1_MOUSE PROTIDENSMUSP00000043103 TRANSIDENSMUST00000036288 GENEIDENSMUSG00000056211 TAXID10090
 atgaggatgtctgatattgttattataaaagatgaaactgaaacaatgaaggatttggag
 gcagaaatgagaga------tacaaccagagttgaaaatcttatcaaatcagaaaactat
 gggaagatttcggcagagaagaatgaacattgtattgacaacaatattgatttgcagcgg
@@ -2767,7 +2767,7 @@ ctctgctgtggtagtggggataacactgtcaaccctgagcactct---------------
 gtcctagctacgttcccctccatttcagctgcacagagtgcactgaagaagcagatcca-
 --ttcagtgaacaagtttaagctgagaatgagcaagaagcactacgatttccacattttg
 gaaagggcaagttctcag
->R3hdm1_RAT PROTID=ENSRNOP00000005372 TRANSID=ENSRNOT00000005372 GENEID=ENSRNOG00000004099 TAXID=10116
+>R3hdm1_RAT PROTIDENSRNOP00000005372 TRANSIDENSRNOT00000005372 GENEIDENSRNOG00000004099 TAXID10116
 atgaggatgtctgatattgttattataaaagatgaaactgaaacaatgaaggatttggag
 gcagaaatgagaga------tacaaccagagttgaaaatcttatcaaatcagaaaactat
 gggaagatttcggcagagaagaatgaacattgtattgacaacaatattgatttgcagcgg
@@ -2838,7 +2838,7 @@ ctttgctgtggtagtggggataacactgtcaaccccgagcgctct---------------
 gtcctagccacgttcccctccatttcagctgcacagagtgcactgaagaagcagatcca-
 --ttcagtgaacaagtttaagctgagaatgagcaagaagcactacgacttccacattttg
 gaaagggcaagttctcag
->R3HDM1_SPETR PROTID=ENSSTOP00000006799 TRANSID=ENSSTOT00000007604 GENEID=ENSSTOG00000007572 TAXID=43179
+>R3HDM1_SPETR PROTIDENSSTOP00000006799 TRANSIDENSSTOT00000007604 GENEIDENSSTOG00000007572 TAXID43179
 atgaggatgtctgatactgttactgtaaaagatgaaactgaaacaatgaaggatttggag
 gcagaaatgaaaga------tacaaccagagttgaaaatcttatcaaatcagaaaactat
 gggaagattttggcagaaaagaatgaacattgtattgacaacagtattgatttgcagcga
@@ -2909,7 +2909,7 @@ ctttgttgtggcagcggggacagcactgtcaaccctgagcgctct---------------
 gtcttagccacgtttccctccatttcagctgcacagaatgcattgaagaaacaaattaa-
 --ttcagttaacaagtttaagctgagaacaagcaagaagcattatgactttcacattttg
 gaaagggcaagttctcag
->R3HDM1_CAVPO PROTID=ENSCPOP00000011504 TRANSID=ENSCPOT00000012909 GENEID=ENSCPOG00000012784 TAXID=10141
+>R3HDM1_CAVPO PROTIDENSCPOP00000011504 TRANSIDENSCPOT00000012909 GENEIDENSCPOG00000012784 TAXID10141
 atgaggatgtctgatactattgctataaaagatgaaactgaaacaatgaaggatttggag
 gcagaaatgaaaga------tacaaccacagttgaaaatcttaacaaatcagaaaactat
 gggaagattttggcagagaagaatgaacggtatatcgacaacaatattgatttgcagcgg
@@ -2980,7 +2980,7 @@ ctctgctgtggcagtggggacagcactgtcaaccctgaacgctct---------------
 gtcttagccacattcccctccatttcagctgcacaaaatgcactgaagaaacaaattaa-
 --ctcagttaacaagtttaagctgagaacaagcaagaagcactatgactttcacattttg
 gagagggcaagttctcag
->R3HDM1_RABIT PROTID=ENSOCUP00000016271 TRANSID=ENSOCUT00000026966 GENEID=ENSOCUG00000017366 TAXID=9986
+>R3HDM1_RABIT PROTIDENSOCUP00000016271 TRANSIDENSOCUT00000026966 GENEIDENSOCUG00000017366 TAXID9986
 atgaggatgtctgatactgttactgtaaaagatgaaactgaaacaatgaaggatttggag
 gcagatatgaaaga------tacaaccagagttgaaaatcatatcaaatcagaagcctat
 gggaagattttggcggagaagaatgaacgttgtattgacaacaatattgatttgcagcga
@@ -3051,7 +3051,7 @@ ctctgctgtggcagtggggacaataccgtcaatcctgaacgctct---------------
 gtcttagccacattcccctccatttcagctgcacagaatgcattgaagaaacagattaa-
 --ctcagttaacaagtttaagctgagaacaagcaagaaacactatgactttcacattttg
 gaaagggcaagttctcag
->R3HDM1_BOVIN PROTID=ENSBTAP00000017695 TRANSID=ENSBTAT00000017695 GENEID=ENSBTAG00000013302 TAXID=9913
+>R3HDM1_BOVIN PROTIDENSBTAP00000017695 TRANSIDENSBTAT00000017695 GENEIDENSBTAG00000013302 TAXID9913
 atgaggatgtctgatactgttactataaaaaatgatactgaaacaatgaaggatttggag
 gcagaagtgaaaga------tacaactggagttgaaaatcttaccaaatcagaaaactat
 gggaagattctggcagagaagaatgaacgttgtattgacaacaatattgatttgcagcgg
@@ -3122,7 +3122,7 @@ ctctgctgtggcagtggtgacagcactgtcaaccccgaacgctcg---------------
 gtcctagccacattcccctccatctccgctgcgcagaatgcattgaagaaacaaattaa-
 --ctcggttaacaagtttaagctgagaacaagcaagaagcactatgactttcacattttg
 gaaagggcaagttctcag
->R3HDM1_HORSE PROTID=ENSECAP00000017268 TRANSID=ENSECAT00000020996 GENEID=ENSECAG00000019114 TAXID=9796
+>R3HDM1_HORSE PROTIDENSECAP00000017268 TRANSIDENSECAT00000020996 GENEIDENSECAG00000019114 TAXID9796
 atgaggatgtctgatactgttactgtaaaaaatgaaactgaaacaatgaaggatttggag
 gcagaagtgaaaga------tacaaccagagttgaaaatcttatcaaatcagaaaactac
 gggaagattttggcagagaagaatgaacgttgtattgacaacaacattgatttgcagcgg
@@ -3193,7 +3193,7 @@ ctctgctgtggcagcggggacaacgctgtcaaccctgaacgctct---------------
 gtcttagccacattcccctccatttcagctgcgcagaacgcactgaagaaacaaattaa-
 --ctcggttaacaagtttaagctgagaacaagcaagaagcactatgacttccacattttg
 gaaagggcaagttctcag
->R3HDM1_MYOLU PROTID=ENSMLUP00000012586 TRANSID=ENSMLUT00000013833 GENEID=ENSMLUG00000013824 TAXID=59463
+>R3HDM1_MYOLU PROTIDENSMLUP00000012586 TRANSIDENSMLUT00000013833 GENEIDENSMLUG00000013824 TAXID59463
 atgaggatgtctgatattgttactgtaaaaaatgaaactgaaacaatgaaggatttggag
 gccgaagtgaaaga------tacaaccagagttgaaaatcttaccaaatcagagaactat
 gggaagattttagcagagaagaatgaacattgtattgacaacaatattgattttcagcgg
@@ -3264,7 +3264,7 @@ ctctgctgtggcagcggggacggcactatcaattctgaacgctct---------------
 gtcctagccacattcccctccatctcagctgcacagaatgcattgaagaaacaaattaa-
 --ctcagttaacaaatttaagctgagaacaagcaagaagcactatgactttcacattttg
 gaaagggcaagttctcag
->R3HDM1_CANFA PROTID=ENSCAFP00000007596 TRANSID=ENSCAFT00000008201 GENEID=ENSCAFG00000005075 TAXID=9615
+>R3HDM1_CANFA PROTIDENSCAFP00000007596 TRANSIDENSCAFT00000008201 GENEIDENSCAFG00000005075 TAXID9615
 atgaggatgtctgatactgttactgtaaaaaatgaaactgaaacaatgaaggatttggag
 gcagaagtgaaaga------tacaactagagttgaaaatcttatcaaatcagaaaactat
 gggaagattttggcagagaagaatgaacgttgtattgacaacaatattgatttgcagcgg
@@ -3335,7 +3335,7 @@ ctctgctgtggcagcggggacaacgccgtcaaccctgaacgctct---------------
 gtcttagccacattcccctccatttcagctgcacagaatgcattgaagaaacaaattaa-
 --ctcggttaacaagtttaagctgagaacaagcaagaagcactatgactttcacattctg
 gaaagggcaagttctcag
->R3HDM1_AILME PROTID=ENSAMEP00000015742 TRANSID=ENSAMET00000016396 GENEID=ENSAMEG00000014886 TAXID=9646
+>R3HDM1_AILME PROTIDENSAMEP00000015742 TRANSIDENSAMET00000016396 GENEIDENSAMEG00000014886 TAXID9646
 atgaggatgtctgatactgttactgtaaaaaatgaaactgaaacaatgaaggatttggag
 gcagaagtgaaaga------tacaaccagagttgaaaatcttatcaaatcagaaaactat
 gggaagattttggcagagaagaatgaacgttgtattgacaacaatattgatttgcagcgg
@@ -3406,7 +3406,7 @@ ctctgctgtggcagcggggacaacactgtcaaccctgaacgctct---------------
 gtcttagccacattcccctccatttcagctgcacagagtgcattgaagaaacaaattaa-
 --ctcagttaacaagtttaagctgagaacgagcaagaagcactatgactttcacattctg
 gaaagggcaagttctcag
->R3HDM1_LOXAF PROTID=ENSLAFP00000007603 TRANSID=ENSLAFT00000009067 GENEID=ENSLAFG00000009065 TAXID=9785
+>R3HDM1_LOXAF PROTIDENSLAFP00000007603 TRANSIDENSLAFT00000009067 GENEIDENSLAFG00000009065 TAXID9785
 atgaggatgtctgatattgttactgtaaaagatgaatctgaaacaatgaaggatttggag
 gcagaagtgaaaga------taaaaccacagttgaaaatcttatcaaatcagaaaactat
 gggaagattttggccgagaagaatgaacgttgtattgacaacaatattgatttgcagcgg
@@ -3477,7 +3477,7 @@ ctctgctgtggcagtggggacagcactgtcaaccctgaacgctct---------------
 gtcttagccacattcccgtccatttcagctgcgcagaacgcattgaagaaacaagttaa-
 --ctcagtgaacaagtttaagctgagaacaagcaggaagcactatgacttccacattttg
 gaaagggcaagttctcag
->R3HDM1_ORNAN PROTID=ENSOANP00000012705 TRANSID=ENSOANT00000012707 GENEID=ENSOANG00000007987 TAXID=9258
+>R3HDM1_ORNAN PROTIDENSOANP00000012705 TRANSIDENSOANT00000012707 GENEIDENSOANG00000007987 TAXID9258
 atgaggatgtctgatactgtgcctgggaaagatgcaactgctacaatgaagggtttggag
 gcagaagtgaaaga------tgcaaccagagtggtaaatcttatcaaatcagagagcttt
 gaaaagattctggtggagaagaatgaacagtgtattgacaacaaaatcgatttgcagcgg
@@ -3548,7 +3548,7 @@ ctctactgtggcagtggagacagcaatgtgaacccagaaccctcc---------------
 atcttagccaccttcccttctatctccgctgctcagaacgcattgaagaaacagagtca-
 --ctcggtgaacaaattcaagctgagaatgagcaagaagcactacgacttccgtatcctg
 gaacgggccagttctcag
->R3HDM1_LATCH PROTID=ENSLACP00000006008 TRANSID=ENSLACT00000006060 GENEID=ENSLACG00000005334 TAXID=7897
+>R3HDM1_LATCH PROTIDENSLACP00000006008 TRANSIDENSLACT00000006060 GENEIDENSLACG00000005334 TAXID7897
 atgaggatgtctgatactgttattgtaaaagaagaaaccaaaacgatgaaaggttcagag
 gcagtagtgcaaga------atcaataccatccgaaaacctgacaaaatcagaaagccgt
 gagctcaccgaggcagaaaaggaagaaagtcacagtgacaacaaaaacgaatcgcagcag

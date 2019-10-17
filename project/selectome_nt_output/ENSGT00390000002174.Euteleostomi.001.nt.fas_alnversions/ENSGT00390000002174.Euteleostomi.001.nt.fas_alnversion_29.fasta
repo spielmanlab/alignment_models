@@ -1,4 +1,4 @@
->TMEM194A_GASAC PROTID=ENSGACP00000014222 TRANSID=ENSGACT00000014247 GENEID=ENSGACG00000010747 TAXID=69293
+>TMEM194A_GASAC PROTIDENSGACP00000014222 TRANSIDENSGACT00000014247 GENEIDENSGACG00000010747 TAXID69293
 ------------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -27,7 +27,7 @@ AGTTTTTCGACACAGACGACGACGATGA------GGAACAAGTCAACATAAAGCCCATGG
 TGATACCCGA---GCTTAGA----------------------------------------
 ------------------------------------------------------------
 --------------------------------------
->TMEM194A_ORYLA PROTID=ENSORLP00000019060 TRANSID=ENSORLT00000019061 GENEID=ENSORLG00000015214 TAXID=8090
+>TMEM194A_ORYLA PROTIDENSORLP00000019060 TRANSIDENSORLT00000019061 GENEIDENSORLG00000015214 TAXID8090
 A-----------------------------------------------------------
 ------------------------------------------------------------
 ----------TGACAAACGGTTTTGTCTCAGAGAGTTCCAAATGTCTC------------
@@ -56,7 +56,7 @@ ACTTTTTCGACACAGATGATGAAGAAGA------GCCTGAGTTTGTATCAAAACAGCATG
 CAAAATCAAA---TACTAATTTTATATTG-------------------------------
 ------------------------------------------------------------
 --------------------------------------
->TMEM194A_ORENI PROTID=ENSONIP00000021070 TRANSID=ENSONIT00000021089 GENEID=ENSONIG00000016727 TAXID=8128
+>TMEM194A_ORENI PROTIDENSONIP00000021070 TRANSIDENSONIT00000021089 GENEIDENSONIG00000016727 TAXID8128
 A-----------------------------------------------------------
 ----------------------------------------------------TGGCGGGA
 TGCATGAAAATTATAAACGGTTTTATCTCAGCAAATGCTAGATTAATG------------
@@ -85,7 +85,7 @@ AACTCTTTGATACGGACGACGAAGATGA------CGACGATATTGTACCTGTGACGAAAC
 CAGAG-------------------------------------------------------
 ------------------------------------------------------------
 --------------------------------------
->TMEM194A_GADMO PROTID=ENSGMOP00000007763 TRANSID=ENSGMOT00000007986 GENEID=ENSGMOG00000007268 TAXID=8049
+>TMEM194A_GADMO PROTIDENSGMOP00000007763 TRANSIDENSGMOT00000007986 GENEIDENSGMOG00000007268 TAXID8049
 ------------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -114,7 +114,7 @@ AGTTATTTGACAGTGATGAAGAGGAGGA------AGATCCA-------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
 --------------------------------------
->tmem194a_DANRE PROTID=ENSDARP00000083040 TRANSID=ENSDART00000088607 GENEID=ENSDARG00000073899 TAXID=7955
+>tmem194a_DANRE PROTIDENSDARP00000083040 TRANSIDENSDART00000088607 GENEIDENSDARG00000073899 TAXID7955
 A-----------------------------------------------------------
 ----------------------------------------------------TGGCGGGA
 TTCATGAAATACAAAAGTGTCTCAACAACAATCGAAACTGTCAGATTG------------
@@ -143,7 +143,7 @@ AGCTCTTCTCCACTGATGAGGAAGATAA------GGAGGAGGAGGAGGACGGCTGGGAAA
 CAGAAGATGA---TATCAAGCCAGAGGTGACC-----------------------TCTCC
 ACGAATGAACAACACACGGGGGAAA-----------------------------------
 --------------------------------------
->TMEM194A_CHICK PROTID=ENSGALP00000000663 TRANSID=ENSGALT00000000664 GENEID=ENSGALG00000000484 TAXID=9031
+>TMEM194A_CHICK PROTIDENSGALP00000000663 TRANSIDENSGALT00000000664 GENEIDENSGALG00000000484 TAXID9031
 ------------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -172,7 +172,7 @@ AGCTCTTTGAGGAGGACGAGGAGGAAGA------------CTTTCTCCATGAAGAGACGG
 CCCGAGCTGC---TCGTGGTCCCACAACC-------------------------------
 ------------------------------------------------------------
 --------------------------------------
->TMEM194A_MELGA PROTID=ENSMGAP00000001330 TRANSID=ENSMGAT00000001983 GENEID=ENSMGAG00000001825 TAXID=9103
+>TMEM194A_MELGA PROTIDENSMGAP00000001330 TRANSIDENSMGAT00000001983 GENEIDENSMGAG00000001825 TAXID9103
 A-----------------------------------------------------------
 ----------------------------------------------------TGGCGGGA
 GGGATGAAA----GCGGTCCCGGGGCGGCGGCGGATCCTGGGC-----------------
@@ -201,7 +201,7 @@ AGCTTTTTGAGGAGGATGAGGAG-------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
 --------------------------------------
->TMEM194A_ANOCA PROTID=ENSACAP00000009419 TRANSID=ENSACAT00000009615 GENEID=ENSACAG00000009604 TAXID=28377
+>TMEM194A_ANOCA PROTIDENSACAP00000009419 TRANSIDENSACAT00000009615 GENEIDENSACAG00000009604 TAXID28377
 ------------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -230,7 +230,7 @@ AATTGTTTGAAGAGGAAGGTGAGGAAAG------AGATTACAGCTTTGACGATGAGGACT
 TCTTGGAT----------------------------------------------------
 ------------------------------------------------------------
 --------------------------------------
->TMEM194A_MONDO PROTID=ENSMODP00000024210 TRANSID=ENSMODT00000024639 GENEID=ENSMODG00000019409 TAXID=13616
+>TMEM194A_MONDO PROTIDENSMODP00000024210 TRANSIDENSMODT00000024639 GENEIDENSMODG00000019409 TAXID13616
 ------------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -259,7 +259,7 @@ AGATCTTTGCGGACATGTCCTTCGAGGA---CGAGGAGGAGGAGGACGTCCTGTGTCCCC
 CGGTGCTACA---GAACCATTTAGTGTCT-------------------------------
 ------------------------------------------------------------
 --------------------------------------
->TMEM194A_SARHA PROTID=ENSSHAP00000006596 TRANSID=ENSSHAT00000006654 GENEID=ENSSHAG00000005742 TAXID=9305
+>TMEM194A_SARHA PROTIDENSSHAP00000006596 TRANSIDENSSHAT00000006654 GENEIDENSSHAG00000005742 TAXID9305
 A-----------------------------------------------------------
 ----------------------------------------------------TGGCGGGA
 GGAATGAAA---ATGGTGCCGGCGCCGCCGCTAGCTTCCCGGCCCTCGAGCTGGGGGCCC
@@ -288,7 +288,7 @@ AAATCTTTGAGGATATGTCACTGGAGGA---TGAGGATGAGGAGGAATTTGTGTGTCCCA
 CAGTCCTACA---GAACCATTTAATGTCT-------------------------------
 ------------------------------------------------------------
 --------------------------------------
->TMEM194A_LOXAF PROTID=ENSLAFP00000015088 TRANSID=ENSLAFT00000017996 GENEID=ENSLAFG00000017999 TAXID=9785
+>TMEM194A_LOXAF PROTIDENSLAFP00000015088 TRANSIDENSLAFT00000017996 GENEIDENSLAFG00000017999 TAXID9785
 A-----------------------------------------------------------
 ----------------------------------------------------TGGCGGGA
 GGAATGAAA---GTGGCGGTCTCGCCGGCAGTTGGTCCCGGGCTCAGGGGATGGGGGTCC
@@ -317,7 +317,7 @@ AACTCTATGAGGACACATCCTCTGAGGA------GGAGAACTCAGATCCTTGCCACCCCT
 CTATCACACA---GAACAGCTTCCTGTCT-------------------------------
 ------------------------------------------------------------
 --------------------------------------
->TMEM194A_ECHTE PROTID=ENSETEP00000012115 TRANSID=ENSETET00000014949 GENEID=ENSETEG00000014949 TAXID=9371
+>TMEM194A_ECHTE PROTIDENSETEP00000012115 TRANSIDENSETET00000014949 GENEIDENSETEG00000014949 TAXID9371
 A-----------------------------------------------------------
 ----------------------------------------------------TGGCGGGA
 GGAATGAAA---GTGGCGGTCTCCCCGACAGTTGGTCCCGGGCCCTGGCGCTGGGGGTCC
@@ -346,7 +346,7 @@ AGCTCTTCGAGGACACGTCTTCGGAGGA------GGAGAACTCAGGCCCTTTGTGCCCTG
 CGATCACACA---GAACAACTTCCTGTCT-------------------------------
 ------------------------------------------------------------
 --------------------------------------
->Tmem194_MOUSE PROTID=ENSMUSP00000045988 TRANSID=ENSMUST00000048099 GENEID=ENSMUSG00000040195 TAXID=10090
+>Tmem194_MOUSE PROTIDENSMUSP00000045988 TRANSIDENSMUST00000048099 GENEIDENSMUSG00000040195 TAXID10090
 A-----------------------------------------------------------
 ----------------------------------------------------TGGCGGGA
 GGAATCAAA---GTGTCGGTGTGGTCGGCGGTTGGTCCAGGGCCCCGGTGCTGGGGGGCC
@@ -375,7 +375,7 @@ CAAATGAAGTTTCTGTTCACGAACAGGAGTATGGATTAGGGAGCATCTTTACCCAGGAT-
 CTTTCACACA---GAACAATTTCTTGACT-------------------------------
 ------------------------------------------------------------
 --------------------------------------
->TMEM194A_CAVPO PROTID=ENSCPOP00000011647 TRANSID=ENSCPOT00000013063 GENEID=ENSCPOG00000012938 TAXID=10141
+>TMEM194A_CAVPO PROTIDENSCPOP00000011647 TRANSIDENSCPOT00000013063 GENEIDENSCPOG00000012938 TAXID10141
 A-----------------------------------------------------------
 ----------------------------------------------------TGGCGGGA
 GGAATCAAA---GTGGCGGTGTCACCGGCAGTTAGTTCTTTGCTCGGGGGCTGGGGAGAC
@@ -404,7 +404,7 @@ CAAATGAAGTTTCTGTCCATGAGCAGGAGTATGGATTAGGGAGCATTATTGCCCTGGAT-
 CTGCCACACA---AAATGACTTCCTCCCT-------------------------------
 ------------------------------------------------------------
 --------------------------------------
->TMEM194A_SPETR PROTID=ENSSTOP00000011057 TRANSID=ENSSTOT00000012339 GENEID=ENSSTOG00000012331 TAXID=43179
+>TMEM194A_SPETR PROTIDENSSTOP00000011057 TRANSIDENSSTOT00000012339 GENEIDENSSTOG00000012331 TAXID43179
 A-----------------------------------------------------------
 ----------------------------------------------------TGGCGGGA
 GGAATCAAA---GTAGCGGTGTCGCCGGCTGTTGGTCCCGGGTCCTGGGGCTGGGGGGCC
@@ -433,7 +433,7 @@ CAAATGAAGTTTCTGTCCATGAACAGGAATATGGATTAGGGAGCATTATTGCCCAGGAT-
 TTGCCACACA---GAACAATTTCCTGACT-------------------------------
 ------------------------------------------------------------
 --------------------------------------
->TMEM194A_RABIT PROTID=ENSOCUP00000011349 TRANSID=ENSOCUT00000013180 GENEID=ENSOCUG00000013180 TAXID=9986
+>TMEM194A_RABIT PROTIDENSOCUP00000011349 TRANSIDENSOCUT00000013180 GENEIDENSOCUG00000013180 TAXID9986
 T-----------------------------------------------------------
 ----------------------------------------------------CGGCGGGA
 GGAATGAAA---GTGGCGGTCGCGCTGGCAGTTGGTCCCGGGTTCTGGGACTGGAGGGCT
@@ -462,7 +462,7 @@ CAAATGAAGTGTCCGTGCACGAGCAGGAGTACGGATTGGGGAGCATCATTGCCCAGGAT-
 CTCTCACACA---GAACAGCTTCCTGACC-------------------------------
 ------------------------------------------------------------
 --------------------------------------
->TMEM194A_PANTR PROTID=ENSPTRP00000008698 TRANSID=ENSPTRT00000009400 GENEID=ENSPTRG00000005119 TAXID=9598
+>TMEM194A_PANTR PROTIDENSPTRP00000008698 TRANSIDENSPTRT00000009400 GENEIDENSPTRG00000005119 TAXID9598
 A-----------------------------------------------------------
 ----------------------------------------------------TGGCGGGA
 GGAATGAAA---GTGGCGGTCTCGCCGGCAGTTGGTCCCGGGCCCTGGGGCTCGGGAGTC
@@ -491,7 +491,7 @@ AAATCTATGAGGAAGCATCCTCTGAGGA------GGAGGACTCATATTCTCGGTGTCCTG
 CTATCACACA---GAACAGCTTTCTAACC-------------------------------
 ------------------------------------------------------------
 --------------------------------------
->TMEM194A_HUMAN PROTID=ENSP00000300128 TRANSID=ENST00000300128 GENEID=ENSG00000166881 TAXID=9606
+>TMEM194A_HUMAN PROTIDENSP00000300128 TRANSIDENST00000300128 GENEIDENSG00000166881 TAXID9606
 A-----------------------------------------------------------
 ----------------------------------------------------TGGCGGGA
 GGAATGAAA---GTGGCGGTCTCGCCGGCAGTTGGTCCCGGGCCCTGGGGCTCGGGAGTC
@@ -520,7 +520,7 @@ AAATCTATGAGGAAGCATCCTCTGAGGA------GGAGGACTCATATTCTCGGTGTCCTG
 CTATCACACA---GAACAACTTTCTAACC-------------------------------
 ------------------------------------------------------------
 --------------------------------------
->TMEM194A_Ggor PROTID=ENSGGOP00000017062 TRANSID=ENSGGOT00000033360 GENEID=ENSGGOG00000013143 TAXID=9593
+>TMEM194A_Ggor PROTIDENSGGOP00000017062 TRANSIDENSGGOT00000033360 GENEIDENSGGOG00000013143 TAXID9593
 A-----------------------------------------------------------
 ----------------------------------------------------TGGCGGGA
 GGAATGAAA---GTGGCGGTCTCGCCGGCAGTTGGTCCCGGGCCCTGGGGCTCGGGAGTC
@@ -549,7 +549,7 @@ AAATCTATGAGGAAGCATCCTCTGAGGA------GGAGGACTCATATTCTCGGTGTCCTG
 CTATCACACA---GAACAACTTTCTAACC-------------------------------
 ------------------------------------------------------------
 --------------------------------------
->TMEM194A_PONAB PROTID=ENSPPYP00000005329 TRANSID=ENSPPYT00000005538 GENEID=ENSPPYG00000004678 TAXID=9601
+>TMEM194A_PONAB PROTIDENSPPYP00000005329 TRANSIDENSPPYT00000005538 GENEIDENSPPYG00000004678 TAXID9601
 A-----------------------------------------------------------
 ----------------------------------------------------TGGCGGGA
 GGAATGAAA---GTGGCGGTCTCGCCGGCAGTTGGTCCCGGGCCCTGGGGCTCGGGTGTC
@@ -578,7 +578,7 @@ AAATCTATGAGGAAGCATCCTCTGAGGA------GGAGGACTCATATTCTCGGTGTCCTG
 CTATCACACA---AAACAACTTTCTAACC-------------------------------
 ------------------------------------------------------------
 --------------------------------------
->TMEM194A_NOMLE PROTID=ENSNLEP00000021149 TRANSID=ENSNLET00000022224 GENEID=ENSNLEG00000017426 TAXID=61853
+>TMEM194A_NOMLE PROTIDENSNLEP00000021149 TRANSIDENSNLET00000022224 GENEIDENSNLEG00000017426 TAXID61853
 A-----------------------------------------------------------
 ----------------------------------------------------TGGCGGGA
 GGAATGAAA---GTGGCGGTCTCGCCGGCGGTTGGTCCCGGGCCCTGGGGCTCGGGTGTC
@@ -607,7 +607,7 @@ AAATCTATGAGGAAGCATCCTCTGAGGA------GGAGGACTCATATTCTCGGTGTCCTG
 CTATCACACA---GAACAACTTTCTAGCC-------------------------------
 ------------------------------------------------------------
 --------------------------------------
->LOC710700_MACMU PROTID=ENSMMUP00000026015 TRANSID=ENSMMUT00000027808 GENEID=ENSMMUG00000019783 TAXID=9544
+>LOC710700_MACMU PROTIDENSMMUP00000026015 TRANSIDENSMMUT00000027808 GENEIDENSMMUG00000019783 TAXID9544
 A-----------------------------------------------------------
 ----------------------------------------------------TGGCGGGA
 GGAATGAAA---GTGGCGGTCTCGCCGGCAGTTGGTCCCGGGCCCTGGGGCTGGGGTGTC
@@ -636,7 +636,7 @@ AAATCTATGAGGAAGCATCCTCTGAGGA------GGAGGACTCATATTCTCGGTGTCCTG
 CTATCACACA---GAACAACTTTCTAACC-------------------------------
 ------------------------------------------------------------
 --------------------------------------
->LOC100389564_CALJA PROTID=ENSCJAP00000019346 TRANSID=ENSCJAT00000020433 GENEID=ENSCJAG00000010449 TAXID=9483
+>LOC100389564_CALJA PROTIDENSCJAP00000019346 TRANSIDENSCJAT00000020433 GENEIDENSCJAG00000010449 TAXID9483
 A-----------------------------------------------------------
 ----------------------------------------------------TGGCGGGA
 GGAATGAAA---GTGGCGGTCTCGCCGGCAGTGGGTCCCGGGCCTTTGGGCTGGGGGGTC
@@ -665,7 +665,7 @@ AAATCTATGAGGAAGCGTCCTCTGAGGA------GGAAGACTCATATTCTCAGTGTCCTG
 CTATCACACA---GAACAACTTTCTAACC-------------------------------
 ------------------------------------------------------------
 --------------------------------------
->TMEM194A_MICMU PROTID=ENSMICP00000008261 TRANSID=ENSMICT00000009073 GENEID=ENSMICG00000009074 TAXID=30608
+>TMEM194A_MICMU PROTIDENSMICP00000008261 TRANSIDENSMICT00000009073 GENEIDENSMICG00000009074 TAXID30608
 A-----------------------------------------------------------
 ----------------------------------------------------TGGCGGGA
 GGAATGAAA---GTGGCGGTCTCGCAGGCAGTTGGTCGCGGGTCCTGGGGCTGGGGCGTC
@@ -694,7 +694,7 @@ AAATCTATGAGGAAACATCGTCTGAGGA------AGAAGACTCGTATTCCCGGTGCCTTA
 CTATCACACA---AAACAACTCCTTGACT-------------------------------
 ------------------------------------------------------------
 --------------------------------------
->TMEM194A_TUPBE PROTID=ENSTBEP00000011716 TRANSID=ENSTBET00000013527 GENEID=ENSTBEG00000013532 TAXID=37347
+>TMEM194A_TUPBE PROTIDENSTBEP00000011716 TRANSIDENSTBET00000013527 GENEIDENSTBEG00000013532 TAXID37347
 ------------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -723,7 +723,7 @@ AACTCTTCGAGGAAACATCCTCTGTGGA------GGAGGACTCAGATTCTCAGTGCCCCG
 CTATCACACA---GAACAACATCCTGACT-------------------------------
 ------------------------------------------------------------
 --------------------------------------
->TMEM194A_CANFA PROTID=ENSCAFP00000000231 TRANSID=ENSCAFT00000000256 GENEID=ENSCAFG00000000159 TAXID=9615
+>TMEM194A_CANFA PROTIDENSCAFP00000000231 TRANSIDENSCAFT00000000256 GENEIDENSCAFG00000000159 TAXID9615
 ATGCGATTGGTCGGCGCGGGGCAGGTCTTGCAGCGGATAGGCTGCTGGCCCTGCCTGTTC
 CGGTTAGTTGCTGGGGAGAGGCACGTGAGGAGGCGGCGGCGTGAGGCGATCGCGGCGGGA
 GGAATGAAA---GTGGCGGTGTCGCCGGCAGTTGGTGCCGGGCCCTGGGGCTGGGGGACC
@@ -752,7 +752,7 @@ AAATCTATGAAGAAACATCCACTGAAGA------GGAGGACTCAGATCCTCAGTATCCTG
 CTATCACACA---ACAGATCAACTCC----------------------------------
 ------------------------------------------------------------
 --------------------------------------
->TMEM194A_AILME PROTID=ENSAMEP00000004686 TRANSID=ENSAMET00000004876 GENEID=ENSAMEG00000004429 TAXID=9646
+>TMEM194A_AILME PROTIDENSAMEP00000004686 TRANSIDENSAMET00000004876 GENEIDENSAMEG00000004429 TAXID9646
 A-----------------------------------------------------------
 ----------------------------------------------------CGGCGGGA
 GGAATGAAA---GTGGCGGTCTCACCGGCAGTTGATGCCGGGCCCTGGGGCTGGGGGGCT
@@ -781,7 +781,7 @@ AAGTCTATGAGGAAACATCCACTGAGGA------GGAGGACGCGGATTCTCGGTATCCCG
 CTATCACACG---ACAGATCCCC-------------------------------------
 ------------------------------------------------------------
 --------------------------------------
->TMEM194A_MYOLU PROTID=ENSMLUP00000000381 TRANSID=ENSMLUT00000000422 GENEID=ENSMLUG00000000419 TAXID=59463
+>TMEM194A_MYOLU PROTIDENSMLUP00000000381 TRANSIDENSMLUT00000000422 GENEIDENSMLUG00000000419 TAXID59463
 A-----------------------------------------------------------
 ----------------------------------------------------TGGCGGGA
 GGCATGAAA---GTGGCGGTCTCTCCTGCAGTGGATGCCCGGCCCTGGGGCGGAGGGCCC
@@ -810,7 +810,7 @@ AAATCTATGAAGAAACATCCTCTGAGGA------GGAGGACGCAGATTCTTGGTATCCCA
 CTGCCATGCG---GAACAACTTTTTGACT-------------------------------
 ------------------------------------------------------------
 --------------------------------------
->TMEM194A_TURTR PROTID=ENSTTRP00000012391 TRANSID=ENSTTRT00000013059 GENEID=ENSTTRG00000013060 TAXID=9739
+>TMEM194A_TURTR PROTIDENSTTRP00000012391 TRANSIDENSTTRT00000013059 GENEIDENSTTRG00000013060 TAXID9739
 A-----------------------------------------------------------
 ----------------------------------------------------TGGCGGGA
 GGAATGAAA---GTGGCGGTCTTATCTGCAGTTGGTGCCGGGCCCTGGAGCTGGGGGGCC
@@ -839,7 +839,7 @@ AACTCTATGAAGAAACATCCTCTGAAGA------GGAGGACTTAGATTCTCGGTACCCCC
 CCATCACACAACAGAACAGCTTCTTGACT-------------------------------
 ------------------------------------------------------------
 --------------------------------------
->T194A_BOVIN PROTID=ENSBTAP00000019519 TRANSID=ENSBTAT00000019519 GENEID=ENSBTAG00000014659 TAXID=9913
+>T194A_BOVIN PROTIDENSBTAP00000019519 TRANSIDENSBTAT00000019519 GENEIDENSBTAG00000014659 TAXID9913
 ------------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -868,7 +868,7 @@ AACTCTCTGAAGAAACATCCTCTGAGGA------GGAGGACTCAGATTCTCGGTACCCCC
 TTGTCGTACAACAGAACAGCTTCCTGACT-------------------------------
 ------------------------------------------------------------
 --------------------------------------
->ENSSSCP00000000453 PROTID=ENSSSCP00000000453 TRANSID=ENSSSCT00000000459 GENEID=ENSSSCG00000026378 TAXID=9823
+>ENSSSCP00000000453 PROTIDENSSSCP00000000453 TRANSIDENSSSCT00000000459 GENEIDENSSSCG00000026378 TAXID9823
 A-----------------------------------------------------------
 ----------------------------------------------------TGGCGGGA
 GGAATGAAA---GTGGCGGTCTTGCCGGCAGTTGGTTCCGGGCCCTGGAGTTGGCGGTCC
@@ -897,7 +897,7 @@ AACTCTATGAAGAAACATCCTCTGAGGA------AGGGGACACAGATTCTCGGTACCCTG
 CTATCACACAACAGAACAACTTCCTGACT-------------------------------
 ------------------------------------------------------------
 --------------------------------------
->ENSSSCP00000000440 PROTID=ENSSSCP00000000440 TRANSID=ENSSSCT00000000446 GENEID=ENSSSCG00000025542 TAXID=9823
+>ENSSSCP00000000440 PROTIDENSSSCP00000000440 TRANSIDENSSSCT00000000446 GENEIDENSSSCG00000025542 TAXID9823
 A-----------------------------------------------------------
 ----------------------------------------------------TGGCGGGA
 GGAATGAAA---GTGGCGGTCTTGCCGGCAGTTGGTTCCGGGCCCTGGAGTTGGCGGTCC
@@ -926,7 +926,7 @@ AACTCTATGAAGAAACATCCTCTGAGGA------AGGGGACACAGATTCTCGGTACCCTG
 CTATCACACAACAGAACAACTTCCTGACT-------------------------------
 ------------------------------------------------------------
 --------------------------------------
->ENSSSCP00000025956 PROTID=ENSSSCP00000025956 TRANSID=ENSSSCT00000023466 GENEID=ENSSSCG00000029842 TAXID=9823
+>ENSSSCP00000025956 PROTIDENSSSCP00000025956 TRANSIDENSSSCT00000023466 GENEIDENSSSCG00000029842 TAXID9823
 T-----------------------------------------------------------
 ----------------------------------------------------TAAGGGGT
 GGGATCTTC---CTGTCGCCATTACCGGCAGTTGGTTCCGGGCCCTGGAGTTGGCGGTCC
@@ -955,7 +955,7 @@ AACTCTATGAAGAAACATCCTCTGAGGA------AGGGGACACAGATTCTCGGTACCCTG
 CTATCACACAACAGAACAACTTCCTGACT-------------------------------
 ------------------------------------------------------------
 --------------------------------------
->TMEM194A_LAMPA PROTID=ENSVPAP00000008532 TRANSID=ENSVPAT00000009166 GENEID=ENSVPAG00000009165 TAXID=30538
+>TMEM194A_LAMPA PROTIDENSVPAP00000008532 TRANSIDENSVPAT00000009166 GENEIDENSVPAG00000009165 TAXID30538
 ------------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -984,7 +984,7 @@ AACTCTATGAACAGACATCCTCTGAGGA------GGAGGACGCGGATCCTCGGTACCCCA
 TTGTCGCACAACAGAACAACTTCCTGACC-------------------------------
 ------------------------------------------------------------
 --------------------------------------
->TMEM194A_HORSE PROTID=ENSECAP00000021487 TRANSID=ENSECAT00000025809 GENEID=ENSECAG00000023977 TAXID=9796
+>TMEM194A_HORSE PROTIDENSECAP00000021487 TRANSIDENSECAT00000025809 GENEIDENSECAG00000023977 TAXID9796
 A-----------------------------------------------------------
 ----------------------------------------------------TGGCGGGA
 GGAATGAAA---GTGGCGGTCTCGCCGGCAGTTGGTGCCGGGCCCTGGGGCTGGGGGACG
@@ -1013,7 +1013,7 @@ AGATCTATGAAGAAACATCCTCTGAGGA------GGAAGACTCGGATTCCCAGTACCCCA
 CTGTCACACA---GAACAACTTCCTGACT-------------------------------
 ------------------------------------------------------------
 --------------------------------------
->tmem194a_XENTR PROTID=ENSXETP00000009646 TRANSID=ENSXETT00000009646 GENEID=ENSXETG00000004426 TAXID=8364
+>tmem194a_XENTR PROTIDENSXETP00000009646 TRANSIDENSXETT00000009646 GENEIDENSXETG00000004426 TAXID8364
 A-----------------------------------------------------------
 ----------------------------------------------------TGGCGGGA
 GAAGTGGAAGG---------------------------------AGAAGGCTGTAGAGTT
@@ -1042,7 +1042,7 @@ AATTGTTTGGAGAGGACAGTGACGTTGA------GGAAGAAATGGAAATTGAACCTGTGC
 TTTATCAAGA-----------------------------------TCTAAGA--------
 ------------------------------------------------------------
 --------------------------------------
->TMEM194B_MELGA PROTID=ENSMGAP00000006336 TRANSID=ENSMGAT00000007084 GENEID=ENSMGAG00000006321 TAXID=9103
+>TMEM194B_MELGA PROTIDENSMGAP00000006336 TRANSIDENSMGAT00000007084 GENEIDENSMGAG00000006321 TAXID9103
 ------------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -1071,7 +1071,7 @@ AGCTCTTTGAGACAAGGACAGAATCTGA------CCAAGATGAGACAACCAGCTACATCC
 ACGAAGAAGA---CGATGAGAATGAAGATGAAATA-------------------------
 -----------------------------------------------------------C
 ATGAGCAGATTACATTTCCATATGCTACTGAGCTGCTC
->TMEM194B_CHICK PROTID=ENSGALP00000003553 TRANSID=ENSGALT00000003560 GENEID=ENSGALG00000002268 TAXID=9031
+>TMEM194B_CHICK PROTIDENSGALP00000003553 TRANSIDENSGALT00000003560 GENEIDENSGALG00000002268 TAXID9031
 ------------------------------------------------------------
 ------------------------------------------------------------
 --------------------------ATGGGCCCGCGGCGGCTGCCC-------------
@@ -1100,7 +1100,7 @@ AGCTCTTTGAGACAAGGACAGAGTCTGA------GCAAGATGAGACAACCAGCTACATCC
 ACGAAGGAGA---CGATGAGAATGAAGACGAAATA-------------------------
 -----------------------------------------------------------C
 ATGAACCAATCTCATTTCCATATGCTACTGAGCTGCTC
->TMEM194B_TAEGU PROTID=ENSTGUP00000011183 TRANSID=ENSTGUT00000011303 GENEID=ENSTGUG00000010843 TAXID=59729
+>TMEM194B_TAEGU PROTIDENSTGUP00000011183 TRANSIDENSTGUT00000011303 GENEIDENSTGUG00000010843 TAXID59729
 ------------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -1129,7 +1129,7 @@ AGCTGTTTGAGACAAGGGCACAGTCTGA------GCAAGATGAGCCAGCCAATTCTGTCC
 ATGAAGAAGA---TGAGGAGAATGAAAATGAAACG-------------------------
 -----------------------------------------------------------C
 ATACACAAATTCCATTTCCATATGCTAATGAGCTGCTC
->TMEM194B_PELSI PROTID=ENSPSIP00000012887 TRANSID=ENSPSIT00000012949 GENEID=ENSPSIG00000011542 TAXID=13735
+>TMEM194B_PELSI PROTIDENSPSIP00000012887 TRANSIDENSPSIT00000012949 GENEIDENSPSIG00000011542 TAXID13735
 ------------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -1158,7 +1158,7 @@ AACTCTTTAGCACAGAGATAGAGCCAGT------GCAGTACCCATTAGCCAATACCATTC
 AGGAGGAAAA---TTATGAAGATGATGAAATG----------------------------
 -----------------------------------------------------------C
 AGGAACAAAACGAAATGCCAGATGGAGAGGAAGTCATT
->TMEM194B_ANOCA PROTID=ENSACAP00000000762 TRANSID=ENSACAT00000000786 GENEID=ENSACAG00000000840 TAXID=28377
+>TMEM194B_ANOCA PROTIDENSACAP00000000762 TRANSIDENSACAT00000000786 GENEIDENSACAG00000000840 TAXID28377
 ------------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -1187,7 +1187,7 @@ AGCTTTTTCATACAGGGACAGAGGCAGA------ACCAGACCCACAAGCTGGTTCCACAA
 GCAGAGAGGA---GAACCAGCAAGAGGAGGAAGAAAGGCGGAAG----------------
 -----------------------------------------------------------C
 AGCCAAACAATCTGCACTGTTGTACCAGAGAAGTTCTT
->TMEM194B_LOXAF PROTID=ENSLAFP00000023113 TRANSID=ENSLAFT00000030126 GENEID=ENSLAFG00000014709 TAXID=9785
+>TMEM194B_LOXAF PROTIDENSLAFP00000023113 TRANSIDENSLAFT00000030126 GENEIDENSLAFG00000014709 TAXID9785
 ------------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -1216,7 +1216,7 @@ AGCTCTTTGACCTGAGGACTGCA-------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
 --------------------------------------
->TMEM194B_MYOLU PROTID=ENSMLUP00000009961 TRANSID=ENSMLUT00000010929 GENEID=ENSMLUG00000010935 TAXID=59463
+>TMEM194B_MYOLU PROTIDENSMLUP00000009961 TRANSIDENSMLUT00000010929 GENEIDENSMLUG00000010935 TAXID59463
 ------------------------------------------------------------
 ------------------------------------------------------------
 --------------------------ATGCACACGAGACGGCTGTTG-TGGTGG------
@@ -1245,7 +1245,7 @@ AGCTCTTTAACCAGGGGCAGGGG-------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
 --------------------------------------
->TMEM194B_BOVIN PROTID=ENSBTAP00000020811 TRANSID=ENSBTAT00000020811 GENEID=ENSBTAG00000015678 TAXID=9913
+>TMEM194B_BOVIN PROTIDENSBTAP00000020811 TRANSIDENSBTAT00000020811 GENEIDENSBTAG00000015678 TAXID9913
 ------------------------------------------------------------
 ------------------------------------------------------------
 --------------------CTGACCCCCGAGACGTGCTGGCTGCTG-CTCTGG------
@@ -1274,7 +1274,7 @@ AGCTCTTTCACCTGAGGACTCCTG-------------------------ACAGTCTGCCT
 GCACAG------------------------------------------------------
 ------------------------------------------------------------
 --------------------------------------
->TMEM194B_CANFA PROTID=ENSCAFP00000013956 TRANSID=ENSCAFT00000015083 GENEID=ENSCAFG00000009493 TAXID=9615
+>TMEM194B_CANFA PROTIDENSCAFP00000013956 TRANSIDENSCAFT00000015083 GENEIDENSCAFG00000009493 TAXID9615
 ------------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -1303,7 +1303,7 @@ AGCTGTTTAACCCGACGACCGCG-------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
 --------------------------------------
->TMEM194B_HORSE PROTID=ENSECAP00000006497 TRANSID=ENSECAT00000008646 GENEID=ENSECAG00000008498 TAXID=9796
+>TMEM194B_HORSE PROTIDENSECAP00000006497 TRANSIDENSECAT00000008646 GENEIDENSECAG00000008498 TAXID9796
 ------------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -1332,7 +1332,7 @@ AGCTCTTTAACTTGAGGACTGAC----------------------------AGTCTACCT
 GCGCAC------------------------------------------------------
 ------------------------------------------------------------
 --------------------------------------
->TMEM194B_HUMAN PROTID=ENSP00000386292 TRANSID=ENST00000409150 GENEID=ENSG00000189362 TAXID=9606
+>TMEM194B_HUMAN PROTIDENSP00000386292 TRANSIDENST00000409150 GENEIDENSG00000189362 TAXID9606
 ATGG--------------------------------------------------------
 ------------------------------------------------------------
 ------------------GGCCGCGCCAAGGGCGGTGGTGGCTGCTG-CTCTGG------
@@ -1361,7 +1361,7 @@ AGCTCTTTAACCCGAGTACTGCC-------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
 --------------------------------------
->TMEM194B_PANTR PROTID=ENSPTRP00000021787 TRANSID=ENSPTRT00000023621 GENEID=ENSPTRG00000012745 TAXID=9598
+>TMEM194B_PANTR PROTIDENSPTRP00000021787 TRANSIDENSPTRT00000023621 GENEIDENSPTRG00000012745 TAXID9598
 ATGC--------------------------------------------------------
 ------------------------------------------------------------
 ------------------GGCCGCGCCAGGGGCGGTGGTGGCTGCTG-CTCTGG------
@@ -1390,7 +1390,7 @@ AGCTCTTTAACCCGAGTACTGCC-------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
 --------------------------------------
->TMEM194B_Ggor PROTID=ENSGGOP00000015483 TRANSID=ENSGGOT00000015928 GENEID=ENSGGOG00000015874 TAXID=9593
+>TMEM194B_Ggor PROTIDENSGGOP00000015483 TRANSIDENSGGOT00000015928 GENEIDENSGGOG00000015874 TAXID9593
 ------------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -1419,7 +1419,7 @@ AGCTCTTTAACCCGAGTACTGCC-------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
 --------------------------------------
->LOC100400652_CALJA PROTID=ENSCJAP00000010536 TRANSID=ENSCJAT00000011134 GENEID=ENSCJAG00000005743 TAXID=9483
+>LOC100400652_CALJA PROTIDENSCJAP00000010536 TRANSIDENSCJAT00000011134 GENEIDENSCJAG00000005743 TAXID9483
 ATGC--------------------------------------------------------
 ------------------------------------------------------------
 ------------------GGCCGCGCCAGGGGCGGTGGTGGCTGCTG-TTCTGG------
@@ -1448,7 +1448,7 @@ AGCTCTTTAACCCAAGTACTTCC-------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
 --------------------------------------
->TMEM194B_OTOGA PROTID=ENSOGAP00000005861 TRANSID=ENSOGAT00000006557 GENEID=ENSOGAG00000006553 TAXID=30611
+>TMEM194B_OTOGA PROTIDENSOGAP00000005861 TRANSIDENSOGAT00000006557 GENEIDENSOGAG00000006553 TAXID30611
 ATGC--------------------------------------------------------
 ------------------------------------------------------------
 ------------------GGCCTCGCCCGGGGCGGTGGTGGCTGCTG-CTCTGG------
@@ -1477,7 +1477,7 @@ AGCTTTTTAACCTGAGGACTGAC----------------------------ACTCTACCT
 GCAAGT------------------------------------------------------
 ------------------------------------------------------------
 --------------------------------------
->Tmem194b_MOUSE PROTID=ENSMUSP00000129351 TRANSID=ENSMUST00000165859 GENEID=ENSMUSG00000043015 TAXID=10090
+>Tmem194b_MOUSE PROTIDENSMUSP00000129351 TRANSIDENSMUST00000165859 GENEIDENSMUSG00000043015 TAXID10090
 ATGC--------------------------------------------------------
 ------------------------------------------------------------
 ------------------------TGCCTAGGTTGTGGTGGCTGGTG-CTCTGG------
@@ -1506,7 +1506,7 @@ AGCTCTTTAGCCTGCAGACTGAC----------------------------AGTCTACCT
 GCAAGT------------------------------------------------------
 ------------------------------------------------------------
 --------------------------------------
->Tmem194b_RAT PROTID=ENSRNOP00000032860 TRANSID=ENSRNOT00000029204 GENEID=ENSRNOG00000012924 TAXID=10116
+>Tmem194b_RAT PROTIDENSRNOP00000032860 TRANSIDENSRNOT00000029204 GENEIDENSRNOG00000012924 TAXID10116
 ATGC--------------------------------------------------------
 ------------------------------------------------------------
 ------------------------CCCCCGGGTCGTGGTGGCTGGTG-CTTTGG------
@@ -1535,7 +1535,7 @@ AGCTCTTTAGCCTGCAGACTGAG----------------------------AGTCTACCT
 GCAAGC------------------------------------------------------
 ------------------------------------------------------------
 --------------------------------------
->TMEM194B_SPETR PROTID=ENSSTOP00000016626 TRANSID=ENSSTOT00000029003 GENEID=ENSSTOG00000028788 TAXID=43179
+>TMEM194B_SPETR PROTIDENSSTOP00000016626 TRANSIDENSSTOT00000029003 GENEIDENSSTOG00000028788 TAXID43179
 ------------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -1564,7 +1564,7 @@ AGCTCTTTAACCTACAGACTGAC----------------------------AGTCTACCT
 GCAAGT------------------------------------------------------
 ------------------------------------------------------------
 --------------------------------------
->TMEM194B_MONDO PROTID=ENSMODP00000014509 TRANSID=ENSMODT00000014777 GENEID=ENSMODG00000011595 TAXID=13616
+>TMEM194B_MONDO PROTIDENSMODP00000014509 TRANSIDENSMODT00000014777 GENEIDENSMODG00000011595 TAXID13616
 ------------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -1593,7 +1593,7 @@ AGCTCTTC----------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
 --------------------------------------
->TMEM194B_LATCH PROTID=ENSLACP00000018138 TRANSID=ENSLACT00000018270 GENEID=ENSLACG00000015979 TAXID=7897
+>TMEM194B_LATCH PROTIDENSLACP00000018138 TRANSIDENSLACT00000018270 GENEIDENSLACG00000015979 TAXID7897
 ------------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -1622,7 +1622,7 @@ AACTTTTTGCCTCAGAAAGGGATGGTGA------ACCCCAGCAGGAAGAAGAGCTACTTT
 CCAGTGAACA---TGAAGAACAGTTTGAAGCC----------------------------
 ------------------------------------------------------------
 --------------------------------------
->tmem194b_DANRE PROTID=ENSDARP00000091038 TRANSID=ENSDART00000100265 GENEID=ENSDARG00000061062 TAXID=7955
+>tmem194b_DANRE PROTIDENSDARP00000091038 TRANSIDENSDART00000100265 GENEIDENSDARG00000061062 TAXID7955
 ------------------------------------------------------------
 ------------------------------------------------------------
 ----------------------------ATGGAGAAACTGGCTGCTT-TTATAC------

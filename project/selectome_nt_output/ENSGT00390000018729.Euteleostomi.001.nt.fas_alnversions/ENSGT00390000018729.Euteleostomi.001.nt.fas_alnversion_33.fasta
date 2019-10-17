@@ -1,4 +1,4 @@
->ENSORLP00000011043 PROTID=ENSORLP00000011043 TRANSID=ENSORLT00000011044 GENEID=ENSORLG00000008797 TAXID=8090
+>ENSORLP00000011043 PROTIDENSORLP00000011043 TRANSIDENSORLT00000011044 GENEIDENSORLG00000008797 TAXID8090
 ------------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -52,7 +52,7 @@ AACAATTAAAAGCCATTGAGAGAGACATGATACTAAATGAGAAAGAAAAAACAAGGTTAG
 AGCTTGAAAGAATGGAAGAGGGAAGAGTTGAAGGTCAAATT-------------------
 ------------------------------------------------------------
 -----------------------------------------------------
->ENSGACP00000012975 PROTID=ENSGACP00000012975 TRANSID=ENSGACT00000012999 GENEID=ENSGACG00000009816 TAXID=69293
+>ENSGACP00000012975 PROTIDENSGACP00000012975 TRANSIDENSGACT00000012999 GENEIDENSGACG00000009816 TAXID69293
 ------------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -106,7 +106,7 @@ AGCTGAAG---AAAGCAGAAAGTGAGGAGGAG----------------------------
 AACTTGAGAGGTTGGAAGAGAGGAGAGGCGAAGGTGAGGCGTCGGACGATAAAGATGA--
 -------------AGAGGTGGAACAGC------------AGGGTA------CTGAAGATG
 TCAGACAC------GACGATCTAACCGAGGTCGCTGTTGCTGAT---------
->ENSONIP00000017246 PROTID=ENSONIP00000017246 TRANSID=ENSONIT00000017261 GENEID=ENSONIG00000013706 TAXID=8128
+>ENSONIP00000017246 PROTIDENSONIP00000017246 TRANSIDENSONIT00000017261 GENEIDENSONIG00000013706 TAXID8128
 ------------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -160,7 +160,7 @@ AGCAGCAGAGAGCTGTTGAGGAAGAAGTGATACTAAATGAGAAAGAGCAACTTAAGGTAG
 AGCTAGAAAGAATGGAGCAAGGGAAAACAGAAAATGAGGCTCAAGAGGTTAAAAGTGACT
 CGAC---------AGAAGTTGAAGTACCTCAGACAGCCGAGGGTC------CCGGAGAGG
 AAAGAAACACGGAAAATGATTTGATCGAGGTCACGCTCACTGATT---ATGTT
->slc14a2_TAKRU PROTID=ENSTRUP00000026150 TRANSID=ENSTRUT00000026257 GENEID=ENSTRUG00000010387 TAXID=31033
+>slc14a2_TAKRU PROTIDENSTRUP00000026150 TRANSIDENSTRUT00000026257 GENEIDENSTRUG00000010387 TAXID31033
 ------------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -214,7 +214,7 @@ AGATAAAG---AGGCAGGAAAAGGCGGAGAAGGAGCGGCTGGAGAAGGAGAAA-------
 AGCTCGAACTCATGGAGGAGGGCAAAGTGCAAAACAAGGCG-------------------
 ------------------------------------------------------------
 -----------------------------------------------------
->ENSTNIP00000018473 PROTID=ENSTNIP00000018473 TRANSID=ENSTNIT00000018699 GENEID=ENSTNIG00000015405 TAXID=99883
+>ENSTNIP00000018473 PROTIDENSTNIP00000018473 TRANSIDENSTNIT00000018699 GENEIDENSTNIG00000015405 TAXID99883
 ------------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -268,7 +268,7 @@ GCCCTTCTGTCTGTCTGCCCTCACCTTCCTGCTCTTGACCACGGAGACCAACAAGATCTA
 AGCTTCAGCTCATGGAGGAAGGCAAACTGCAAAACCAGGCGCCGGAGATGAAAAACCAGG
 TCACAGAGGGTTCAGAAGAGCAAAGGC------------AGGACACCGACCCTGAGACAG
 TCAGCAGC------CATGACGGAGACACGCCCGATGCTGCTGGACTGAGCGAA
->ENSGACP00000021320 PROTID=ENSGACP00000021320 TRANSID=ENSGACT00000021361 GENEID=ENSGACG00000016160 TAXID=69293
+>ENSGACP00000021320 PROTIDENSGACP00000021320 TRANSIDENSGACT00000021361 GENEIDENSGACG00000016160 TAXID69293
 ------------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -322,7 +322,7 @@ TCCAGTTTGGGCC-------------------------GGACAGCAGCTGCAGAGA----
 AGCTCTGTGTCAT-----------------------------------------------
 ------------------------------------------------------------
 -----------------------------------------------------
->ENSGACP00000026274 PROTID=ENSGACP00000026274 TRANSID=ENSGACT00000026325 GENEID=ENSGACG00000019886 TAXID=69293
+>ENSGACP00000026274 PROTIDENSGACP00000026274 TRANSIDENSGACT00000026325 GENEIDENSGACG00000019886 TAXID69293
 ------------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -376,7 +376,7 @@ AATGGGAA---GCCGGAAACACTGCAGACATGGA--------------------------
 -------GAGCACAGATGTA----------------------------------------
 ------------------------------------------------------------
 -----------------------------------------------------
->ENSORLP00000005116 PROTID=ENSORLP00000005116 TRANSID=ENSORLT00000005117 GENEID=ENSORLG00000004084 TAXID=8090
+>ENSORLP00000005116 PROTIDENSORLP00000005116 TRANSIDENSORLT00000005117 GENEIDENSORLG00000004084 TAXID8090
 ------------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -430,7 +430,7 @@ AATGGGAA---GCCGGCAACACAGTGGATGGAGA--------------------------
 -------GAGCACAGATGTG----------------------------------------
 ------------------------------------------------------------
 -----------------------------------------------------
->ENSTNIP00000003172 PROTID=ENSTNIP00000003172 TRANSID=ENSTNIT00000002598 GENEID=ENSTNIG00000000744 TAXID=99883
+>ENSTNIP00000003172 PROTIDENSTNIP00000003172 TRANSIDENSTNIT00000002598 GENEIDENSTNIG00000000744 TAXID99883
 ------------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -484,7 +484,7 @@ AGTGTGAC---ACCGAGGAAGCGCTGGGAGGCGT--------------------------
 -------AAACACGGTGATG----------------------------------------
 ------------------------------------------------------------
 -----------------------------------------------------
->utc_TAKRU PROTID=ENSTRUP00000019396 TRANSID=ENSTRUT00000019474 GENEID=ENSTRUG00000007805 TAXID=31033
+>utc_TAKRU PROTIDENSTRUP00000019396 TRANSIDENSTRUT00000019474 GENEIDENSTRUG00000007805 TAXID31033
 ------------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -538,7 +538,7 @@ AACGGGAG---GCCAAGAATGCATCGGAAAGCGT--------------------------
 ---TTGCCTTCACAAATGT-----------------------------------------
 ------------------------------------------------------------
 -----------------------------------------------------
->ENSONIP00000011541 PROTID=ENSONIP00000011541 TRANSID=ENSONIT00000011550 GENEID=ENSONIG00000009181 TAXID=8128
+>ENSONIP00000011541 PROTIDENSONIP00000011541 TRANSIDENSONIT00000011550 GENEIDENSONIG00000009181 TAXID8128
 ------------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -592,7 +592,7 @@ AATGGGAA---GCTGGAAACACCGAAGAAAGGGA--------------------------
 -------GAGCACAGATGTG----------------------------------------
 ------------------------------------------------------------
 -----------------------------------------------------
->SLC14A1_PELSI PROTID=ENSPSIP00000013054 TRANSID=ENSPSIT00000013117 GENEID=ENSPSIG00000011549 TAXID=13735
+>SLC14A1_PELSI PROTIDENSPSIP00000013054 TRANSIDENSPSIT00000013117 GENEIDENSPSIG00000011549 TAXID13735
 A-----------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -646,7 +646,7 @@ CAACAAGA---AAGCATCTGGCCAGCTGCT------------------------------
 ---CTACAAGCAGCATCCTGAATGGATACGAACG------------------------G-
 ------------------------------------------------------------
 -----------------------GACAAGATTACA------------------
->SLC14A1_ANOCA PROTID=ENSACAP00000012788 TRANSID=ENSACAT00000013044 GENEID=ENSACAG00000012956 TAXID=28377
+>SLC14A1_ANOCA PROTIDENSACAP00000012788 TRANSIDENSACAT00000013044 GENEIDENSACAG00000012956 TAXID28377
 ------------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -700,7 +700,7 @@ CACGAAAG---AAAAATATGGAAAGACTTG------------------------------
 ---GAATCAGAAAGAGGAACA---------------------------------------
 ---------------------------------------------------TC-------
 -----------------------AAGGATATTCTT------------------
->SLC14A1_SPETR PROTID=ENSSTOP00000002269 TRANSID=ENSSTOT00000002536 GENEID=ENSSTOG00000002535 TAXID=43179
+>SLC14A1_SPETR PROTIDENSSTOP00000002269 TRANSIDENSSTOT00000002536 GENEIDENSSTOG00000002535 TAXID43179
 ------------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -754,7 +754,7 @@ AGAGCAAG---AGAAGGATGGTTGAGAGCCC-----------------------------
 --TTTG------------------------------------------------------
 ------------------------------------------------------------
 -----------------------------------------------------
->SLC14A1_CAVPO PROTID=ENSCPOP00000007181 TRANSID=ENSCPOT00000008054 GENEID=ENSCPOG00000007979 TAXID=10141
+>SLC14A1_CAVPO PROTIDENSCPOP00000007181 TRANSIDENSCPOT00000008054 GENEIDENSCPOG00000007979 TAXID10141
 ------------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -808,7 +808,7 @@ AAACCAAG---AAACCGATGCTTGAAGGCCC-----------------------------
 --TTTG------------------------------------------------------
 ------------------------------------------------------------
 -----------------------------------------------------
->SLC14A1_RABIT PROTID=ENSOCUP00000005841 TRANSID=ENSOCUT00000006756 GENEID=ENSOCUG00000006758 TAXID=9986
+>SLC14A1_RABIT PROTIDENSOCUP00000005841 TRANSIDENSOCUT00000006756 GENEIDENSOCUG00000006758 TAXID9986
 ------------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -862,7 +862,7 @@ AAACCAAG---AAAAGGATGGTGGACAGCCC-----------------------------
 --TCTG------------------------------------------------------
 ------------------------------------------------------------
 -----------------------------------------------------
->Slc14a1_MOUSE PROTID=ENSMUSP00000125114 TRANSID=ENSMUST00000160292 GENEID=ENSMUSG00000059336 TAXID=10090
+>Slc14a1_MOUSE PROTIDENSMUSP00000125114 TRANSIDENSMUST00000160292 GENEIDENSMUSG00000059336 TAXID10090
 ------------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -916,7 +916,7 @@ AAAACAAG---AAAAGGATGGTTGAAAGCCC-----------------------------
 --CCTG------------------------------------------------------
 ------------------------------------------------------------
 -----------------------------------------------------
->Slc14a1_RAT PROTID=ENSRNOP00000022598 TRANSID=ENSRNOT00000022598 GENEID=ENSRNOG00000016753 TAXID=10116
+>Slc14a1_RAT PROTIDENSRNOP00000022598 TRANSIDENSRNOT00000022598 GENEIDENSRNOG00000016753 TAXID10116
 ------------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -970,7 +970,7 @@ AAAACAAG---AAAAGGGTGGTCGACAGCCC-----------------------------
 --GCTG------------------------------------------------------
 ------------------------------------------------------------
 -----------------------------------------------------
->SLC14A1_Ggor PROTID=ENSGGOP00000007971 TRANSID=ENSGGOT00000008189 GENEID=ENSGGOG00000008152 TAXID=9593
+>SLC14A1_Ggor PROTIDENSGGOP00000007971 TRANSIDENSGGOT00000008189 GENEIDENSGGOG00000008152 TAXID9593
 ------------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -1024,7 +1024,7 @@ AAGCCAAG---AAAAGAATGGTGGAAAGCCC-----------------------------
 --TTTG------------------------------------------------------
 ------------------------------------------------------------
 -----------------------------------------------------
->SLC14A1_HUMAN PROTID=ENSP00000412309 TRANSID=ENST00000415427 GENEID=ENSG00000141469 TAXID=9606
+>SLC14A1_HUMAN PROTIDENSP00000412309 TRANSIDENST00000415427 GENEIDENSG00000141469 TAXID9606
 ------------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -1078,7 +1078,7 @@ AAGCCAAG---AAAAGAATGGTGGAAAGCCC-----------------------------
 --TTTG------------------------------------------------------
 ------------------------------------------------------------
 -----------------------------------------------------
->SLC14A1_PONAB PROTID=ENSPPYP00000010252 TRANSID=ENSPPYT00000010657 GENEID=ENSPPYG00000009125 TAXID=9601
+>SLC14A1_PONAB PROTIDENSPPYP00000010252 TRANSIDENSPPYT00000010657 GENEIDENSPPYG00000009125 TAXID9601
 ------------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -1132,7 +1132,7 @@ AAGCCAAG---AAAAGAATGGTGGAAAGCCC-----------------------------
 --TTTG------------------------------------------------------
 ------------------------------------------------------------
 -----------------------------------------------------
->SLC14A1_NOMLE PROTID=ENSNLEP00000013238 TRANSID=ENSNLET00000013891 GENEID=ENSNLEG00000010845 TAXID=61853
+>SLC14A1_NOMLE PROTIDENSNLEP00000013238 TRANSIDENSNLET00000013891 GENEIDENSNLEG00000010845 TAXID61853
 ------------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -1186,7 +1186,7 @@ AAGCCAAG---AAAAGAATGGTGGAAAGCCC-----------------------------
 --TTTG------------------------------------------------------
 ------------------------------------------------------------
 -----------------------------------------------------
->SLC14A1_TARSY PROTID=ENSTSYP00000007260 TRANSID=ENSTSYT00000007922 GENEID=ENSTSYG00000007930 TAXID=9478
+>SLC14A1_TARSY PROTIDENSTSYP00000007260 TRANSIDENSTSYT00000007922 GENEIDENSTSYG00000007930 TAXID9478
 ------------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -1240,7 +1240,7 @@ AAGCCAAG---AAAAGAATGGACGAGAGCCC-----------------------------
 --CTTG------------------------------------------------------
 ------------------------------------------------------------
 -----------------------------------------------------
->SLC14A1_OTOGA PROTID=ENSOGAP00000014683 TRANSID=ENSOGAT00000016410 GENEID=ENSOGAG00000016407 TAXID=30611
+>SLC14A1_OTOGA PROTIDENSOGAP00000014683 TRANSIDENSOGAT00000016410 GENEIDENSOGAG00000016407 TAXID30611
 ------------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -1294,7 +1294,7 @@ AAGCCAGG---AAAAGGACGGCTGAAAGCCC-----------------------------
 --TTTG------------------------------------------------------
 ------------------------------------------------------------
 -----------------------------------------------------
->SLC14A1_PIG PROTID=ENSSSCP00000004846 TRANSID=ENSSSCT00000004963 GENEID=ENSSSCG00000004492 TAXID=9823
+>SLC14A1_PIG PROTIDENSSSCP00000004846 TRANSIDENSSSCT00000004963 GENEIDENSSSCG00000004492 TAXID9823
 ------------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -1348,7 +1348,7 @@ AAACCAAG---AAAAGGACGATGGAAAGCCC-----------------------------
 --TTTG------------------------------------------------------
 ------------------------------------------------------------
 -----------------------------------------------------
->UT1_BOVIN PROTID=ENSBTAP00000044109 TRANSID=ENSBTAT00000046861 GENEID=ENSBTAG00000019870 TAXID=9913
+>UT1_BOVIN PROTIDENSBTAP00000044109 TRANSIDENSBTAT00000046861 GENEIDENSBTAG00000019870 TAXID9913
 ------------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -1402,7 +1402,7 @@ AATCCAGG---AAAAGGACGGTTCAAGGGCC-----------------------------
 --TTTG------------------------------------------------------
 ------------------------------------------------------------
 -----------------------------------------------------
->SLC14A1_TURTR PROTID=ENSTTRP00000007017 TRANSID=ENSTTRT00000007416 GENEID=ENSTTRG00000007416 TAXID=9739
+>SLC14A1_TURTR PROTIDENSTTRP00000007017 TRANSIDENSTTRT00000007416 GENEIDENSTTRG00000007416 TAXID9739
 ------------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -1456,7 +1456,7 @@ AAGCCAAG---AAAAGGCTGGTTGAAAGCCC-----------------------------
 --TTTG------------------------------------------------------
 ------------------------------------------------------------
 -----------------------------------------------------
->SLC14A1_LAMPA PROTID=ENSVPAP00000009148 TRANSID=ENSVPAT00000009831 GENEID=ENSVPAG00000009831 TAXID=30538
+>SLC14A1_LAMPA PROTIDENSVPAP00000009148 TRANSIDENSVPAT00000009831 GENEIDENSVPAG00000009831 TAXID30538
 ------------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -1510,7 +1510,7 @@ AAGCCAAG---GAGAGGATGGTTGAAAGCCC-----------------------------
 --TTTG------------------------------------------------------
 ------------------------------------------------------------
 -----------------------------------------------------
->SLC14A1_HORSE PROTID=ENSECAP00000012284 TRANSID=ENSECAT00000015300 GENEID=ENSECAG00000014487 TAXID=9796
+>SLC14A1_HORSE PROTIDENSECAP00000012284 TRANSIDENSECAT00000015300 GENEIDENSECAG00000014487 TAXID9796
 ------------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -1564,7 +1564,7 @@ AAGCCAAG---AAAAAGATGGTTCAAAGCCC-----------------------------
 --TTTG------------------------------------------------------
 ------------------------------------------------------------
 -----------------------------------------------------
->SLC14A1_CANFA PROTID=ENSCAFP00000033649 TRANSID=ENSCAFT00000037992 GENEID=ENSCAFG00000017664 TAXID=9615
+>SLC14A1_CANFA PROTIDENSCAFP00000033649 TRANSIDENSCAFT00000037992 GENEIDENSCAFG00000017664 TAXID9615
 ------------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -1618,7 +1618,7 @@ AAGTCAAGAAAAAAAGGATGGTTGAAAGCCC-----------------------------
 --TTTG------------------------------------------------------
 ------------------------------------------------------------
 -----------------------------------------------------
->SLC14A1_AILME PROTID=ENSAMEP00000013181 TRANSID=ENSAMET00000013736 GENEID=ENSAMEG00000012521 TAXID=9646
+>SLC14A1_AILME PROTIDENSAMEP00000013181 TRANSIDENSAMET00000013736 GENEIDENSAMEG00000012521 TAXID9646
 ------------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -1672,7 +1672,7 @@ AGGCCAAGAAAAAAAGGATGGTTGAAAGCCC-----------------------------
 --TTTG------------------------------------------------------
 ------------------------------------------------------------
 -----------------------------------------------------
->SLC14A1_PTEVA PROTID=ENSPVAP00000013847 TRANSID=ENSPVAT00000014689 GENEID=ENSPVAG00000014690 TAXID=132908
+>SLC14A1_PTEVA PROTIDENSPVAP00000013847 TRANSIDENSPVAT00000014689 GENEIDENSPVAG00000014690 TAXID132908
 ------------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -1726,7 +1726,7 @@ AAGTCAAG---AAAGGGATAGTTGAAAGCCC-----------------------------
 --TCTG------------------------------------------------------
 ------------------------------------------------------------
 -----------------------------------------------------
->SLC14A1_MYOLU PROTID=ENSMLUP00000004451 TRANSID=ENSMLUT00000004885 GENEID=ENSMLUG00000004885 TAXID=59463
+>SLC14A1_MYOLU PROTIDENSMLUP00000004451 TRANSIDENSMLUT00000004885 GENEIDENSMLUG00000004885 TAXID59463
 ------------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -1780,7 +1780,7 @@ AAGCCAAG---AAAATGTTGGTGGAAAGCCC-----------------------------
 --TCTG------------------------------------------------------
 ------------------------------------------------------------
 -----------------------------------------------------
->SLC14A1_CHOHO PROTID=ENSCHOP00000010221 TRANSID=ENSCHOT00000011594 GENEID=ENSCHOG00000011565 TAXID=9358
+>SLC14A1_CHOHO PROTIDENSCHOP00000010221 TRANSIDENSCHOT00000011594 GENEIDENSCHOG00000011565 TAXID9358
 ------------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -1834,7 +1834,7 @@ AAGCTAAG---AAAAAGATGTTTGAGAGCCC-----------------------------
 --TTTG------------------------------------------------------
 ------------------------------------------------------------
 -----------------------------------------------------
->SLC14A1_LOXAF PROTID=ENSLAFP00000007729 TRANSID=ENSLAFT00000009224 GENEID=ENSLAFG00000009224 TAXID=9785
+>SLC14A1_LOXAF PROTIDENSLAFP00000007729 TRANSIDENSLAFT00000009224 GENEIDENSLAFG00000009224 TAXID9785
 ------------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -1888,7 +1888,7 @@ AAGCCAAG---AGAAAGATGGTTGAAAGCCC-----------------------------
 --TTTA------------------------------------------------------
 ------------------------------------------------------------
 -----------------------------------------------------
->SLC14A2_MONDO PROTID=ENSMODP00000037253 TRANSID=ENSMODT00000038852 GENEID=ENSMODG00000003115 TAXID=13616
+>SLC14A2_MONDO PROTIDENSMODP00000037253 TRANSIDENSMODT00000038852 GENEIDENSMODG00000003115 TAXID13616
 -------ATG---AGCGGCCGGCCTCGAAAGGACATGCCTG------AGAC---CCACAG
 CAGTCCCCTCTTGGTAGACTCTCTCTCTGACAGATGCAGACTTTATGAGTCAGAGTTCAT
 GTGCCCAACATGGACCCCACGCTCCCCAGACAGCCACCCAGGTCTTCCTCTCCTGGAAAT
@@ -1942,7 +1942,7 @@ TGAC--------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
 -----------------------------------------------------
->SLC14A2_MACEU PROTID=ENSMEUP00000006925 TRANSID=ENSMEUT00000007602 GENEID=ENSMEUG00000007577 TAXID=9315
+>SLC14A2_MACEU PROTIDENSMEUP00000006925 TRANSIDENSMEUT00000007602 GENEIDENSMEUG00000007577 TAXID9315
 ------------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -1996,7 +1996,7 @@ CTCAGAAA---AGGAACCGGAGA-------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
 -----------------------------------------------------
->SLC14A2_HUMAN PROTID=ENSP00000255226 TRANSID=ENST00000255226 GENEID=ENSG00000132874 TAXID=9606
+>SLC14A2_HUMAN PROTIDENSP00000255226 TRANSIDENST00000255226 GENEIDENSG00000132874 TAXID9606
 ----------------------------------ATGTCTG------ACCC---CCACAG
 CAGTCCTCTCCTGCCAGAGCCACTTTCCAGCAGATACAAACTCTACGAGGCAGAGTTTAC
 CAGCCCGAGCTGGCCCTCGACATCCCCGGATACTCACCCAGCTCTGCCCCTCCTGGAAAT
@@ -2050,7 +2050,7 @@ CCCAGGAG---AGAAACAGAAGGGCATCAA------------------------------
 ---TCATAACAAAGTATCAGG---------------------------------------
 ---------------------------------------------------CC-------
 -----------------------TACGATGTCTCC------------------
->SLC14A2_Ggor PROTID=ENSGGOP00000001032 TRANSID=ENSGGOT00000001056 GENEID=ENSGGOG00000001047 TAXID=9593
+>SLC14A2_Ggor PROTIDENSGGOP00000001032 TRANSIDENSGGOT00000001056 GENEIDENSGGOG00000001047 TAXID9593
 ----------------------------------ATGTCTG------ACCC---CCACAG
 CAGTCCTCTCCTGCCAGAGCCACTTTCCAGCAGATACAAACTCTACGAGGCAGAGTTTAC
 CAGCCCGAGCTGGCCCTCGACATCCCCGGATACTCACCCAGCTCTGCCCCTCCTGGAAAT
@@ -2104,7 +2104,7 @@ CCCAGGAG---AGAAACAGAAGGGCATCAA------------------------------
 ---TCATAACAAAGTATCAGG---------------------------------------
 ---------------------------------------------------CC-------
 -----------------------TACGATGTCTCC------------------
->SLC14A2_PANTR PROTID=ENSPTRP00000016979 TRANSID=ENSPTRT00000018332 GENEID=ENSPTRG00000009987 TAXID=9598
+>SLC14A2_PANTR PROTIDENSPTRP00000016979 TRANSIDENSPTRT00000018332 GENEIDENSPTRG00000009987 TAXID9598
 ----------------------------------ATGTCTG------ACCC---CCACAG
 CAGTCCTCTCCTGCCAGAGCCACTTTCCAGCAGATACAAACTCTACGAGGCAGAGTTTAC
 CAGCCCGAGCTGGTCCTCGACATCCCCGGATACTCACCCAGCTCTGCCCCTCCTGGAAAT
@@ -2158,7 +2158,7 @@ CCCAGGAG---AGAAACAGAAGGGCATCAA------------------------------
 ---TCATAACAAAGTATCAGG---------------------------------------
 ---------------------------------------------------CC-------
 -----------------------TACGACGTCTCC------------------
->SLC14A2_PONAB PROTID=ENSPPYP00000010251 TRANSID=ENSPPYT00000010656 GENEID=ENSPPYG00000009124 TAXID=9601
+>SLC14A2_PONAB PROTIDENSPPYP00000010251 TRANSIDENSPPYT00000010656 GENEIDENSPPYG00000009124 TAXID9601
 ----------------------------------ATGTCTG------ACCC---CCACAG
 CAGTCCTCTCCTGCCAGAGCCACTTTCCAGCAGATACAAACTCTACGAGGCAGAGTTTAC
 CAGCCCGAGCTGGCCCTCGACATCCCCAGATACTCACCCAGCTCTGCCCCTCCTGGAAAT
@@ -2212,7 +2212,7 @@ CCCAGGAG---AGAAACAGAAGGGCATCAA------------------------------
 ---TCATAACAAAGTATCAGG---------------------------------------
 ---------------------------------------------------CC-------
 -----------------------TACGATGTCTCC------------------
->SLC14A2_NOMLE PROTID=ENSNLEP00000013165 TRANSID=ENSNLET00000013809 GENEID=ENSNLEG00000010799 TAXID=61853
+>SLC14A2_NOMLE PROTIDENSNLEP00000013165 TRANSIDENSNLET00000013809 GENEIDENSNLEG00000010799 TAXID61853
 ----------------------------------ATGTCTG------ACCC---CCACAG
 CAGTCCTCTCCTGCCGGAGCCACTTTCCAGCAGATACAAACTCTACGAGGCAGAGTTTAC
 CAGCCCGAGCTGGCCCTCAACATCCCCGGATACTCACCCAGCTCTGCCCCTCCTGGAAAT
@@ -2266,7 +2266,7 @@ CCCAGGAG---AGAGACAGAAGGGCATCAA------------------------------
 ---TCATAACCAAGTATCAGG---------------------------------------
 ---------------------------------------------------CC-------
 -----------------------TACGACGTCTCC------------------
->SLC14A2_MACMU PROTID=ENSMMUP00000005349 TRANSID=ENSMMUT00000005682 GENEID=ENSMMUG00000004010 TAXID=9544
+>SLC14A2_MACMU PROTIDENSMMUP00000005349 TRANSIDENSMMUT00000005682 GENEIDENSMMUG00000004010 TAXID9544
 ----------------------------------ATGTCTG------ACCC---CCACAG
 CAGCCCTCTCCTGCCAGAGCCACTTTCCAGCAGATACAAACTCTACGAGGCAGAGTTTAC
 CAGCCCGAGCTGGCCCTCGACATCCCCGGATACTCACCCAGCTCTGCCCCTCCTGGAAAT
@@ -2320,7 +2320,7 @@ CCCAGGAG---AGAAACAGAAGGGCATCAA------------------------------
 ---TCATAACAAAGTACCAGG---------------------------------------
 ---------------------------------------------------CC-------
 -----------------------TACGACATCTCC------------------
->SLC14A2_CALJA PROTID=ENSCJAP00000007408 TRANSID=ENSCJAT00000007828 GENEID=ENSCJAG00000004051 TAXID=9483
+>SLC14A2_CALJA PROTIDENSCJAP00000007408 TRANSIDENSCJAT00000007828 GENEIDENSCJAG00000004051 TAXID9483
 ----------------------------------ATGTCTG------ACAC---CCACAG
 CAGCCCTCTCCTGCCAGAGCCACTTTCCAGCAGATACAAACTCTATGAGGCAGAGTTCAC
 CAGCCCAAGC------------TCCCCGGATACTCACCCAGCTCTGCCTCTCCTGGAAAT
@@ -2374,7 +2374,7 @@ CCCAGGAG---AGAAACAGAAGGGCATCAA------------------------------
 ---CCATAACAAAGTACCAGG---------------------------------------
 ---------------------------------------------------CC-------
 -----------------------TATGACATCTCC------------------
->SLC14A2_OTOGA PROTID=ENSOGAP00000014676 TRANSID=ENSOGAT00000016402 GENEID=ENSOGAG00000016395 TAXID=30611
+>SLC14A2_OTOGA PROTIDENSOGAP00000014676 TRANSIDENSOGAT00000016402 GENEIDENSOGAG00000016395 TAXID30611
 ----------------------------------ATGTCTG------ACAG---CCACAG
 CAGCCCTCTCCTGCCAGGGCCTCTGTCCAGCAGATACCAACTCTATGAGGCTGAGCTGAC
 CAGCCCTACCTGGTCCTCAGCCTCCCAGGACACTCATCCAGCTCTGCCCCTCCTGGAAAT
@@ -2428,7 +2428,7 @@ CCCAGGAG---AGAAACAGAAGGGCATCAA------------------------------
 ---CCATAACGAAGTACCAAG---------------------------------------
 ---------------------------------------------------CC-------
 -----------------------TACGATGTCTCC------------------
->SLC14A2_SPETR PROTID=ENSSTOP00000002259 TRANSID=ENSSTOT00000002526 GENEID=ENSSTOG00000002511 TAXID=43179
+>SLC14A2_SPETR PROTIDENSSTOP00000002259 TRANSIDENSSTOT00000002526 GENEIDENSSTOG00000002511 TAXID43179
 ATGACCGATG---AGCAGCTG-CCCCTCAAGGAGATGTCTG------ACAA---CCACAA
 CAGCCCTCTCCTGCCAGGGCCTCTTTCCAGCAGACACAAACTCTACGAGTCAGAGCCGAG
 CAGCCCTACCTGGCCGTCTAGCCCCCAGGATACACACCCAGCCCTGCCCCTGCTGGAAAT
@@ -2482,7 +2482,7 @@ CCCAGGAG---AGAAACAGAAGAGTATCCA------------------------------
 ---CCACAACCAAGTACCAGG---------------------------------------
 ---------------------------------------------------CC-------
 -----------------------TACGATGTCTCC------------------
->SLC14A2_CAVPO PROTID=ENSCPOP00000007178 TRANSID=ENSCPOT00000008051 GENEID=ENSCPOG00000007976 TAXID=10141
+>SLC14A2_CAVPO PROTIDENSCPOP00000007178 TRANSIDENSCPOT00000008051 GENEIDENSCPOG00000007976 TAXID10141
 ----------------------------------ATGTCTG------ACAA---CCACAG
 CAGTCCTCTTCTGCCAGAGACCCTTTCAAACAGAAGCAGCCTCTACGACTCAGAGCCAAG
 CAGCCCTACCTGGCCCTCAGGCTCTCAGGACACACAATCAGCCCTGCCCTTGCTGGAAAT
@@ -2536,7 +2536,7 @@ CACAGGAG---AAGAACAGAAGGGCATCAA------------------------------
 ---CCGTCACAAAATACCAGG---------------------------------------
 ---------------------------------------------------CT-------
 -----------------------TATGATGTCTCC------------------
->Slc14a2_MOUSE PROTID=ENSMUSP00000025434 TRANSID=ENSMUST00000025434 GENEID=ENSMUSG00000024552 TAXID=10090
+>Slc14a2_MOUSE PROTIDENSMUSP00000025434 TRANSIDENSMUST00000025434 GENEIDENSMUSG00000024552 TAXID10090
 -------ATGAGTGACCACCACCCCCTGAAGGAGATGTCTG------ACAG---CAACAG
 CAGCCCTCTCTTGCCAGAGCCTCTTTCCAGCAGATACAAATTGTATGAGTCAGAGCTAAG
 CAGCCCTACCTGGCCTTCAAGCTCCCAGGATACACACCCAGCCCTTCCCCTGCTGGAAAT
@@ -2590,7 +2590,7 @@ CCCAGGAA---AAAAACAGAAGGGCATCAA------------------------------
 ---CGATAACTAAGTACCAGG---------------------------------------
 ---------------------------------------------------CC-------
 -----------------------TACGACGTCTCC------------------
->UT2_RAT PROTID=ENSRNOP00000022417 TRANSID=ENSRNOT00000022417 GENEID=ENSRNOG00000016393 TAXID=10116
+>UT2_RAT PROTIDENSRNOP00000022417 TRANSIDENSRNOT00000022417 GENEIDENSRNOG00000016393 TAXID10116
 -------ATG---AGCGACCATCCCCTGAAGGAGATGTCTG------ACAA---CAACCG
 CAGCCCCCTCTTGCCAGAGCCTCTTTCCAGCAGATACAAGTTGTATGAGTCAGAGCTAAG
 CAGCCCTACCTGGCCTTCAAGCTCCCAGGATACACACCCAGCCCTTCCCCTGCTGGAAAT
@@ -2644,7 +2644,7 @@ CCCAGGAG---AAAAACAGAAGGGCATCGA------------------------------
 ---TGATAACAAAGTACCAGG---------------------------------------
 ---------------------------------------------------CC-------
 -----------------------TACGACGTCTCC------------------
->SLC14A2_CANFA PROTID=ENSCAFP00000026068 TRANSID=ENSCAFT00000028026 GENEID=ENSCAFG00000017672 TAXID=9615
+>SLC14A2_CANFA PROTIDENSCAFP00000026068 TRANSIDENSCAFT00000028026 GENEIDENSCAFG00000017672 TAXID9615
 -------ATG---AGCGACCACGCCCTGAGGGAAATGTCCC------ACAC---TCACCG
 CAGCCCTCTCCTCCCGGAGCCTCTTTCCAGCAGATACAAACTCTATGAGTCGGAGTTTAC
 CAACCCTAGCTGGCCCTCAAGCCCCCAGGACACACACCCGGCCCTGCCCCTCCTGGAGAT
@@ -2698,7 +2698,7 @@ CCCAGGAG---AAAAACAGAAGAGCATCAA------------------------------
 ---CCATAACAAAGTACCAGG---------------------------------------
 ---------------------------------------------------CC-------
 -----------------------TATGATGTCTCC------------------
->SLC14A2_AILME PROTID=ENSAMEP00000005634 TRANSID=ENSAMET00000005869 GENEID=ENSAMEG00000005289 TAXID=9646
+>SLC14A2_AILME PROTIDENSAMEP00000005634 TRANSIDENSAMET00000005869 GENEIDENSAMEG00000005289 TAXID9646
 -------CTG---AGTGACCGCCCCCCAAGGGAAATGTCTG------ACAC---TCACAA
 CAGCCCTCTCCTGGCAGAGCCTCTTTCCAGCAGATACAAACTCTATGAGTCAGAGTTTAC
 CAGCCCGAGCTGGCCCTCAAGCCCCCAGGATACACACCCGGCCCTACCCCTCCTGGAGAT
@@ -2752,7 +2752,7 @@ CCCAGGAG---AAAAACAGAAGAGCATCAA------------------------------
 ---CCATAACAAAGTACCAGG---------------------------------------
 ---------------------------------------------------CC-------
 -----------------------TATGATGTCTCC------------------
->SLC14A2_FELCA PROTID=ENSFCAP00000009908 TRANSID=ENSFCAT00000010673 GENEID=ENSFCAG00000010670 TAXID=9685
+>SLC14A2_FELCA PROTIDENSFCAP00000009908 TRANSIDENSFCAT00000010673 GENEIDENSFCAG00000010670 TAXID9685
 ----------------------------------ATGTCTG------ACACTCATCACAG
 CAGCCCTCTCCTGACAGAGCCTCTTTCCAGCAGATACAAACTGTATGAGTCAGAGTTTAC
 CAGCCCTAGCTGGCCCTCAAGCCCCCAGGATACACACCCAGCCCTGCCCCTCCTGGAAAT
@@ -2806,7 +2806,7 @@ CCCAGGAG---AAAAACAGAAGAGCATCAA------------------------------
 ---CCATAACAAAGTACCAGG---------------------------------------
 ---------------------------------------------------CC-------
 -----------------------TATGATGTCTCC------------------
->SLC14A2_PIG PROTID=ENSSSCP00000004845 TRANSID=ENSSSCT00000004962 GENEID=ENSSSCG00000004491 TAXID=9823
+>SLC14A2_PIG PROTIDENSSSCP00000004845 TRANSIDENSSSCT00000004962 GENEIDENSSSCG00000004491 TAXID9823
 -------ATG---AGCAGCCGCCATCGGAAGGACATGTCTGACGCTCACAC---TCACAG
 CAGCCCCCTCCTGGCAAAGCCTCTTTCCAGCAGATACAAACTCAACGAGTCAGAGTTTAC
 CAGTCCCAGCTGGCCCTCAAACCCCCAGGATACCCACCTCGCCCTGCCTCTTCTGGAAAT
@@ -2860,7 +2860,7 @@ CTCAGGAG---AAAAACAGAAGAGCATCGT------------------------------
 ---CCGTCACAAAGTACCAGG---------------------------------------
 ---------------------------------------------------CC-------
 -----------------------TACGATGTCTCC------------------
->SLC14A2_BOVIN PROTID=ENSBTAP00000002712 TRANSID=ENSBTAT00000002712 GENEID=ENSBTAG00000002099 TAXID=9913
+>SLC14A2_BOVIN PROTIDENSBTAP00000002712 TRANSIDENSBTAT00000002712 GENEIDENSBTAG00000002099 TAXID9913
 ------------------------------------------------------------
 ------------------------------------------------------------
 ----------------------------------------------------------AT
@@ -2914,7 +2914,7 @@ CCCAGGAG---AAAAACAGAAGAGCATCGA------------------------------
 ---CCATCACAAAGTACCAGG---------------------------------------
 ---------------------------------------------------CC-------
 -----------------------TACGATGTCTCC------------------
->SLC14A2_MYOLU PROTID=ENSMLUP00000000901 TRANSID=ENSMLUT00000000988 GENEID=ENSMLUG00000000990 TAXID=59463
+>SLC14A2_MYOLU PROTIDENSMLUP00000000901 TRANSIDENSMLUT00000000988 GENEIDENSMLUG00000000990 TAXID59463
 -------ATG---AGTGGCCGCCCCCTGAAGGAGATGTCTG------AAAC---TCACAG
 CAGTCCTCTCCTGGCAGAGCCTCTTTCCAGCAGATACAAACTCTATGAGTCTGAGTTACC
 CAGCCCTACCTGGCCCTCCAGCCCTCAGGATACATACCCGGCCCTGCCCCTCCTGGAAAT
@@ -2968,7 +2968,7 @@ CCCAGGAG---AAGAACAGAAGACCATCAA------------------------------
 ---CCATAACAAAGTACCAGG---------------------------------------
 ---------------------------------------------------CC-------
 -----------------------TATGATGTCTCC------------------
->SLC14A2_PTEVA PROTID=ENSPVAP00000013846 TRANSID=ENSPVAT00000014688 GENEID=ENSPVAG00000014689 TAXID=132908
+>SLC14A2_PTEVA PROTIDENSPVAP00000013846 TRANSIDENSPVAT00000014688 GENEIDENSPVAG00000014689 TAXID132908
 ----------------------------------ATGTCTG------ACAC---TCACAG
 CAGCCCGCTCCTGGCAGAGCCTCTCTCCAGCAGATACAAACTCTATGAGTCAGAGTTTAC
 CAGCCCTAGCTGGCCTTCCAGCTCCCAGGATACACACCCAGCCCTGCCCCTCCTGGAAAT
@@ -3022,7 +3022,7 @@ CCCAGGAG---AAAAATAGAAGACCATCAA------------------------------
 ---CCATAACAAAGTACCAGG---------------------------------------
 ---------------------------------------------------CC-------
 -----------------------TACGATGTCTCC------------------
->SLC14A2_HORSE PROTID=ENSECAP00000018769 TRANSID=ENSECAT00000022693 GENEID=ENSECAG00000021006 TAXID=9796
+>SLC14A2_HORSE PROTIDENSECAP00000018769 TRANSIDENSECAT00000022693 GENEIDENSECAG00000021006 TAXID9796
 -------ATG---AACGACTACCCGCTGAAGGAGATGTCTG------ACAC---TCACAG
 CAGCCCTCTGCTGGGAGAGCCTCTTTCCAGCAGATACAAACTCTACGAGTCAGAGTTTAC
 CAGCACTAGCTGTCCCTCAAGCCCCCAGGATACACACCCAGCCCTGCCCCTCCTGGAAAT
@@ -3076,7 +3076,7 @@ CCCAGGAG---AAAAACAGAAGACCATCGA------------------------------
 ---CCATAGCGAAGTACCAGG---------------------------------------
 ---------------------------------------------------CC-------
 -----------------------TACGATGTCTCC------------------
->SLC14A2_CHOHO PROTID=ENSCHOP00000007323 TRANSID=ENSCHOT00000008301 GENEID=ENSCHOG00000008280 TAXID=9358
+>SLC14A2_CHOHO PROTIDENSCHOP00000007323 TRANSIDENSCHOT00000008301 GENEIDENSCHOG00000008280 TAXID9358
 ------------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -3130,7 +3130,7 @@ CCCAGGAG---AGAAGCAGAAGGGCATCCT------------------------------
 ---CCATAACCAAGTACCAGG---------------------------------------
 ---------------------------------------------------CC-------
 -----------------------TATGATGTCTCC------------------
->SLC14A2_LOXAF PROTID=ENSLAFP00000019980 TRANSID=ENSLAFT00000034636 GENEID=ENSLAFG00000026942 TAXID=9785
+>SLC14A2_LOXAF PROTIDENSLAFP00000019980 TRANSIDENSLAFT00000034636 GENEIDENSLAFG00000026942 TAXID9785
 ----CAAATG---AGCAGCCACTCCCTGAAAGAGATGTCTG------ACAC---CCACAG
 CAGCCCTCTCCTGGCAGAGCCTCTTTCCAGCGGATACAAATTCTATGAGTCAGAGTTTAC
 CAGCCCTACCTGGCCCTCAAGCTCCCAGGACACACACCCAGGCTTGCCCCTCCTGGAAAT
@@ -3184,7 +3184,7 @@ CCCAGGAG---AGAAACAGAAGGGCATCCA------------------------------
 ---CCATAACCAAGTACCAGG---------------------------------------
 ---------------------------------------------------CC-------
 -----------------------TACGACGCCTCC------------------
->SLC14A2_ECHTE PROTID=ENSETEP00000006132 TRANSID=ENSETET00000007545 GENEID=ENSETEG00000007544 TAXID=9371
+>SLC14A2_ECHTE PROTIDENSETEP00000006132 TRANSIDENSETET00000007545 GENEIDENSETEG00000007544 TAXID9371
 ----------------------------------ATGCCTG------ACAC---CCACAG
 CAGC---------------TCCCTGTCCAGCAGATACAAATTCTACGAGTCTGAGTTCAC
 CAGCCCTAGCTGGCCTTCAAGCCCCCAGGACACACACCCAGCCTTGCCCCTCCTGGAAAT
@@ -3238,7 +3238,7 @@ CCCAAGAG---AGAAACCGAAGGGCGTCTA------------------------------
 ---CCATAACCAAGTACCAGG---------------------------------------
 ---------------------------------------------------CC-------
 -----------------------TACGACGTCTCC------------------
->SLC14A2_CHICK PROTID=ENSGALP00000002617 TRANSID=ENSGALT00000002620 GENEID=ENSGALG00000001705 TAXID=9031
+>SLC14A2_CHICK PROTIDENSGALP00000002617 TRANSIDENSGALT00000002620 GENEIDENSGALG00000001705 TAXID9031
 ------------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -3292,7 +3292,7 @@ GGATGAAG---AAACAGCACACGTCTTGTT------------------------------
 ---GTGACATTGTAAGGCAAGA------------------------------------G-
 ------------------------------------------------------------
 -----------------------TACAAGGTTCCC------------------
->ENSXETP00000059453 PROTID=ENSXETP00000059453 TRANSID=ENSXETT00000062124 GENEID=ENSXETG00000030216 TAXID=8364
+>ENSXETP00000059453 PROTIDENSXETP00000059453 TRANSIDENSXETT00000062124 GENEIDENSXETG00000030216 TAXID8364
 ------------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
