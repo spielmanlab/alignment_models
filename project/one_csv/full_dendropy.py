@@ -43,9 +43,9 @@ for file in aa_all:
                 
                 ### run the tree
                 #os.system("FastTree -nosupport -quiet " + aa_path_to_alignments + name + "/" + str(a1) + " > " + aa_output_tree_file)   
-                aa_tree = dendropy.Tree.get(
-                    path=aa_output_tree_file,
-                    schema="newick")  
+                #aa_tree = dendropy.Tree.get(
+                 #   path=aa_output_tree_file,
+                  #  schema="newick")  
     #print(aa_tree.length())
     #aa_pdc = aa_tree.phylogenetic_distance_matrix()
 #print(pdc.mean_pairwise_distance())
@@ -62,7 +62,7 @@ for file in nt_all:
             if nt_file_ending:
                 nt_output_tree_file = path_to_nt_output_trees + n1 + ".tree"
                 #print(nt_output_tree_file)
-                #os.system("FastTree -nt -gtr -nosupport -quiet " + nt_path_to_alignments + name + "/" + str(n1) + " > " + nt_output_tree_file)
+                print("FastTree -nt -gtr -nosupport -quiet " + nt_path_to_alignments + name + "/" + str(n1) + " > " + nt_output_tree_file)
                 #nt_tree = dendropy.Tree.get(
                  #   path = nt_output_tree_file,
                   #  schema ="newick")
