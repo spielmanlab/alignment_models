@@ -45,9 +45,12 @@ for file in aa_all:
                 exit_code = os.system(cmd)
                 assert(exit_code == 0), "bad fasttree"
                 try:   
-                #aa_tree = dendropy.Tree.get(
-                 #   path=aa_output_tree_file,
-                  #  schema="newick")  
+                    aa_tree = dendropy.Tree.get(
+                      path=aa_output_tree_file,
+                      schema="newick")  
+                    print(aa_tree.length())
+                    aa_pdc = aa_tree.phylogenetic_distance_matrix()
+                    print(pdc.mean_pairwise_distance())
                 except:
                     #pass
                     continue
