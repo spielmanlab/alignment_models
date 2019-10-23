@@ -15,7 +15,7 @@ nt_path_to_alignments = "../selectome_nt_output/"
 aa_path_to_alignments = "../selectome_aa_output/"
 
 path_to_aa_output_trees = aa_path_to_alignments + "alnversion1_trees/"
-#os.system("mkdir -p " + path_to_aa_output_trees)
+os.system("mkdir -p " + path_to_aa_output_trees)
 path_to_nt_output_trees = nt_path_to_alignments + "alnvers1_trees/"
 os.system("mkdir -p " + path_to_nt_output_trees)
 
@@ -46,39 +46,40 @@ for file in aa_all:
                 assert(exit_code == 0), "bad fasttree"
                 try:   
                     aa_tree = dendropy.Tree.get(
-                      path=aa_output_tree_file,
-                      schema="newick")  
-                    print(aa_tree.length())
-                    aa_pdc = aa_tree.phylogenetic_distance_matrix()
-                    print(pdc.mean_pairwise_distance())
+                        path=aa_output_tree_file,
+                        schema="newick")  
                 except:
                     #pass
                     continue
-    #print(aa_tree.length())
-    #aa_pdc = aa_tree.phylogenetic_distance_matrix()
-#print(pdc.mean_pairwise_distance())
-    
-sys.exit()
+
+
 #nt files for fast tree
+
 for file in nt_all:
     name = str(file)
     x = name.endswith(file_ending)
-    if x:   
+    #### If variable `file` is a DIRECTORY, head into here:
+    if x: 
         nt_files = os.listdir(nt_path_to_alignments + file)
+       #print(aa_files)
         for n1 in nt_files:
             nt_file_ending = n1.endswith(file_a1ending)
             if nt_file_ending:
                 nt_output_tree_file = path_to_nt_output_trees + n1 + ".tree"
-                #print(nt_output_tree_file)
-                print("FastTree -nt -gtr -nosupport -quiet " + nt_path_to_alignments + name + "/" + str(n1) + " > " + nt_output_tree_file)
-                #nt_tree = dendropy.Tree.get(
-                 #   path = nt_output_tree_file,
-                  #  schema ="newick")
-    #print(nt_tree.length())
-    #nt_pdc = nt_tree.phylogenetic_distance_matrix()
-#print(pdc.mean_pairwise_distance())
-
-
+                if os.path.exists(nt_output_tree_file):
+                    continue
+                print(nt_output_tree_file)
+                cmd = "FastTree -nosupport -quiet " + nt_path_to_alignments + name + "/" + str(n1) + " > " + nt_output_tree_file
+                ### run the tree
+                exit_code = os.system(cmd)
+                assert(exit_code == 0), "bad fasttree"
+                try:   
+                    nt_tree = dendropy.Tree.get(
+                        path=nt_output_tree_file,
+                        schema="newick")  
+                except:
+                    #pass
+                    continue
 
     
     
