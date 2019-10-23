@@ -69,7 +69,7 @@ for file in nt_all:
                 if os.path.exists(nt_output_tree_file):
                     continue
                 print(nt_output_tree_file)
-                cmd = "FastTree -nosupport -quiet " + nt_path_to_alignments + name + "/" + str(n1) + " > " + nt_output_tree_file
+                cmd = "FastTree -nt -gtr -nosupport -quiet " + nt_path_to_alignments + name + "/" + str(n1) + " > " + nt_output_tree_file
                 ### run the tree
                 exit_code = os.system(cmd)
                 assert(exit_code == 0), "bad fasttree"
