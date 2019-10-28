@@ -10,6 +10,11 @@ arguments the function needs:
 - path to alignment
 - path to output file
 """
+# def make_trees():
+#     
+# 
+# 
+#     return 0
 
 nt_path_to_alignments = "../selectome_nt_output/"
 aa_path_to_alignments = "../selectome_aa_output/"
@@ -38,12 +43,15 @@ for file in aa_all:
             if aa_file_ending:
                 aa_output_tree_file = path_to_aa_output_trees + a1 + ".tree"
                 if os.path.exists(aa_output_tree_file):
-                    continue
+                    if os.path.getsize(aa_output_tree_file) > 0:
+                        continue
                 print(aa_output_tree_file)
                 cmd = "FastTree -nosupport -quiet " + aa_path_to_alignments + name + "/" + str(a1) + " > " + aa_output_tree_file
+                # FAST TREE MP
                 ### run the tree
                 exit_code = os.system(cmd)
                 assert(exit_code == 0), "bad fasttree"
+                assert(os.path.getsize(aa_output_tree_file) > 0), "tree file size is 0"
                 try:   
                     aa_tree = dendropy.Tree.get(
                         path=aa_output_tree_file,
