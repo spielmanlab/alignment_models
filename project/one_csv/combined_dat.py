@@ -36,6 +36,10 @@ nt_outfile.write("name,number_of_sequences,min_seq_lengt,max_seq_lengt,mean_seq_
 
 ####################
 ### AA DATA
+
+### loop over alignment output (names, first grab the tree associated with that, then loop for the other files)
+
+
 for tree in aa_trees:
     aa_path = path_to_aa_output_trees + tree
     if os.path.exists(aa_path):

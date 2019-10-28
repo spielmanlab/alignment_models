@@ -60,6 +60,8 @@ for file in aa_all_files:
            #print(rec.seq)
            x = (len(rec.seq))
            rec_lens.append(x)
+        
+        # rec_lens = [len(rec.seq) for rec in fasta_records]
            
         #print(rec_lens)
         minss = min(rec_lens)
