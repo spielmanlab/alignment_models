@@ -10,9 +10,9 @@
 
 5. `one_csv/` contains python script `all_data.py` that creates `aa_data_properties.csv` and `nt_data_properties.csv` of unaligned .fasta files from `selectome/`. `mergenums.R` is currently being used to merge 'aa' and 'nt' csv files into one master .csv. `aanummods.csv` and `ntnummods.csv` contain data properties and number of models selected of aa and nt data.
 
-6. `full_dendropy.py` is a python script that lives in `one_csv/` and parses the `alnversion_1.fasta` of aa and nt data into FastTree
+6. `function_create_all_trees.py` is a python script that lives in `one_csv/` and parses the `alnversion_1.fasta` of aa and nt data into FastTree
 
-7. `combined_dat.py` creates a csv file with all data including evolutionary data of selectome aa and nt data
+7. `function_combined_dat.py` creates a csv file with all data including evolutionary data (treelength and patristic distance) of selectome aa and nt data
 
 8. `aa_ranked_models.csv` and `nt_ranked_models.csv` contain models ranked according to information criterion. `all_aa_200-50.txt` contains names of files from selectome with no file extension (don't know if needed or not)
 
