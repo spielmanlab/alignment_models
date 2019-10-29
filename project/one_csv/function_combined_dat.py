@@ -68,15 +68,20 @@ def combine_data(csv_file,path_to_data,data_type,path_to_trees):
             
     outfile.close()
 
-    
 aa_path_to_alignments = "../selectome_aa_output/"
 path_to_aa_output_trees = aa_path_to_alignments + "alnversion1_trees/"
 aa_csv_file = "test_aa.csv"
 aa_path_to_data = "../selectome/selectome_aa_unaligned_200-50/" 
 aa_data_type = "aa"   
 
-        
+nt_path_to_data = "../selectome/selectome_nt_unaligned_200-50/"
+nt_csv_file = "test_nt.csv"
+nt_data_type = "nt"
+nt_path_to_alignments = "../selectome_nt_output/"
+path_to_nt_output_trees = nt_path_to_alignments + "alnvers1_trees/"  
+      
 combine_data(aa_csv_file,aa_path_to_data,aa_data_type,path_to_aa_output_trees)
+combine_data(nt_csv_file,nt_path_to_data,nt_data_type,path_to_nt_output_trees)
         
         
         

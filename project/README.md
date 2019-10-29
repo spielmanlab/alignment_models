@@ -12,7 +12,7 @@
 
 6. `function_create_all_trees.py` is a python script that lives in `one_csv/` and parses the `alnversion_1.fasta` of aa and nt data into FastTree
 
-7. `function_combined_dat.py` creates a csv file with all data including evolutionary data (treelength and patristic distance) of selectome aa and nt data
+7. `function_combined_dat.py` creates a csv file with all data including evolutionary data (treelength and patristic distance) of selectome aa and nt data in `test_aa.csv` and `test_nt.csv`
 
 8. `aa_ranked_models.csv` and `nt_ranked_models.csv` contain models ranked according to information criterion. `all_aa_200-50.txt` contains names of files from selectome with no file extension (don't know if needed or not)
 
