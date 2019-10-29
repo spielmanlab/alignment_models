@@ -43,19 +43,17 @@ def make_trees(path_to_alignment, path_to_output_file, data_type):
                     #print(output_tree_file)
                     if data_type == "nt":
                         cmd = "FastTree -nt -gtr -nosupport -quiet " + path_to_alignment + str(name) + "/" + str(alnversion_1) + " > " + output_tree_file             
+                        print(name)
                         print(cmd)
-                        
-                        try:
-                            exit_code = os.system(cmd)
-                            assert(exit_code == 0), "Bad FastTree for nt"
+                        exit_code = os.system(cmd)
+                        assert(exit_code == 0), "Bad FastTree for nt"
                             
                     elif data_type == "aa":
-                        cmd2 = "FastTree -nosupport -quiet " + path_to_alignment + "/" + str(name) + " > " + output_tree_file
-                     
+                        cmd2 = "FastTree -nosupport -quiet " + path_to_alignment + str(name) + "/" + str(alnversion_1) + " > " + output_tree_file
+                        print(cmd2)
                         exit_code2 = os.system(cmd2)
                         assert(exit_code2 == 0), "Bad FastTree for aa"  
-                    
-                            
+                      
                     else:
                         raise AssertionError("data_type arg must be either nt or aa")
                         assert(os.path.getsize(output_tree_file) > 0), "tree file size is 0"
