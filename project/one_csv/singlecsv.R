@@ -2,7 +2,6 @@ library(plyr)
 library(tidyverse)
 library(magrittr)
 
-
 aa_dataproperties <- read_csv(file = "test_aa.csv")
 #head(aa_dataproperties)
 nt_dataproperties <- read_csv(file ="test_nt.csv")
@@ -35,6 +34,33 @@ nt_num_o_mods <-nt_ranked %>%
   group_by(name, ic_type) %>% 
   tally() %>% 
   rename(number_models = n ) %>%
-  group_by(name, number_models, ic_type) 
+  group_by(name, number_models, ic_type)   
 
+aanewframe <- aa_num_o_mods %>%
+  spread(ic_type,number_models)
+aanewframe
 
+ntnewframe <- nt_num_o_mods %>%
+  spread(ic_type,number_models)
+ntnewframe
+
+  
+aa_csv <- read_csv(file = "test_aa.csv")
+nt_csv <- read_csv(file = "test_nt.csv")
+
+#joining csv withh no spread
+aa_combined <- left_join(aa_num_o_mods, aa_csv, by="name")
+aa_combined
+nt_combined <- left_join(nt_num_o_mods, nt_csv, by="name")
+
+write_csv(aa_combined,"aanumtest.csv")
+write_csv(nt_combined,"ntnumtest.csv")
+
+#joining csv with csv that has spread info criterion
+aa2_com <- left_join(aanewframe,aa_csv,by="name")
+nt2_com <- left_join(ntnewframe,nt_csv,by="name")
+
+write_csv(aa2_com,"aa2numtest.csv")
+write_csv(nt2_com,"nt2numtest.csv")
+
+          
