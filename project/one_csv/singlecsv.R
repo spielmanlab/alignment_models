@@ -53,14 +53,19 @@ aa_combined <- left_join(aa_num_o_mods, aa_csv, by="name")
 aa_combined
 nt_combined <- left_join(nt_num_o_mods, nt_csv, by="name")
 
-write_csv(aa_combined,"aanumtest.csv")
-write_csv(nt_combined,"ntnumtest.csv")
+#write_csv(aa_combined,"aanumtest.csv")
+#write_csv(nt_combined,"ntnumtest.csv")
 
 #joining csv with csv that has spread info criterion
 aa2_com <- left_join(aanewframe,aa_csv,by="name")
 nt2_com <- left_join(ntnewframe,nt_csv,by="name")
 
+one_csv <- bind_rows(aa_combined,nt_combined)
+
+
 write_csv(aa2_com,"aa2numtest.csv")
 write_csv(nt2_com,"nt2numtest.csv")
+
+write_csv(one_csv,"one_csv.csv")
 
           
