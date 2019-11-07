@@ -1,5 +1,13 @@
 ---
 title: "Plots Pertaining to Data Properties of Alignments"
 author: "Molly Miraglia"
-
 ---
+
+```{r setup, include = FALSE}
+library(tidyverse)
+one_csv <- read_csv(file="one_csv.csv")
+```
+
+```{r one_csv}
+summary(one_csv)
+```

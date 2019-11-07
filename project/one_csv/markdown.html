@@ -183,9 +183,31 @@ summary {
 </div>
 
 
-<p>library(tidyverse)</p>
-<pre><code>
-</code></pre>
+<pre class="r"><code>summary(one_csv)</code></pre>
+<pre><code>##      name             ic_type          number_models    data_type        
+##  Length:1200        Length:1200        Min.   :1.000   Length:1200       
+##  Class :character   Class :character   1st Qu.:1.000   Class :character  
+##  Mode  :character   Mode  :character   Median :1.000   Mode  :character  
+##                                        Mean   :1.461                     
+##                                        3rd Qu.:2.000                     
+##                                        Max.   :7.000                     
+##                                                                          
+##     num_seq      min_seq_length max_seq_length  mean_seq_length 
+##  Min.   :50.00   Min.   : 202   Min.   :  218   Min.   : 204.7  
+##  1st Qu.:53.00   1st Qu.: 423   1st Qu.:  579   1st Qu.: 503.9  
+##  Median :57.00   Median : 799   Median : 1016   Median : 899.6  
+##  Mean   :56.59   Mean   :1027   Mean   : 1412   Mean   :1182.3  
+##  3rd Qu.:60.00   3rd Qu.:1287   3rd Qu.: 1803   3rd Qu.:1538.4  
+##  Max.   :63.00   Max.   :6600   Max.   :13863   Max.   :7078.2  
+##  NA's   :6       NA's   :6      NA's   :6       NA's   :6       
+##  stdev_seq_length    tree_length     mean_pairwise_distance
+##  Min.   :   2.818   Min.   : 0.595   Min.   :0.05597       
+##  1st Qu.:  22.249   1st Qu.: 4.959   1st Qu.:0.62950       
+##  Median :  48.410   Median : 6.689   Median :0.82811       
+##  Mean   :  97.543   Mean   : 7.022   Mean   :0.84967       
+##  3rd Qu.: 103.227   3rd Qu.: 8.789   3rd Qu.:1.04487       
+##  Max.   :2099.143   Max.   :18.385   Max.   :2.11284       
+##  NA's   :6          NA's   :6        NA's   :6</code></pre>
 
 
 
