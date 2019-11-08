@@ -67,5 +67,4 @@ write_csv(aa2_com,"aa2numtest.csv")
 write_csv(nt2_com,"nt2numtest.csv")
 
 write_csv(one_csv,"one_csv.csv")
-
           

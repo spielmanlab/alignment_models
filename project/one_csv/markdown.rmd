@@ -9,7 +9,7 @@ Hello, welcome to my R markdown file, this is example text.
 library(tidyverse)
 ```
 ## Analysis of Data
-Below, I have my csv file, called "one_csv" read by R, and imported into the markdown. I will be using the file to create plots!
+Below, I have my csv file, named "one_csv.csv" read by R, and imported into the markdown. I will be using the file to create plots!
 
 ```{r, include = FALSE}
 one_csv <- read_csv(file="one_csv.csv")
@@ -18,16 +18,57 @@ one_csv <- read_csv(file="one_csv.csv")
 ```{r}
 one_csv
 ```
-I will be running one_csv through the function, ggplot, to create plots, from the tidyverse package.
+I will be running one_csv.csv through the function, ggplot, to create plots, from the tidyverse package.
 
-Disclaimer: In my data, there is missing data, as there were errors creating trees.
+Disclaimer: In my data, there is missing data, as there were errors creating trees.Therefore, the tidyverse function 'drop_na' has been used to remove "NA" from my plots.
 
-#Plot One!
+#Plot One! - A Test!
 ```{r}
 one_csv %>%
+  drop_na %>%
   ggplot(aes(x =mean_seq_length, y = number_models)) + 
   geom_point(aes(color = data_type)) +
-  scale_color_manual(labels=c("aa","nt"),values=c('red','blue')) +
-  theme(legend.key=element_rect(color="pink"),legend.title=element_text("Data Type"))
+  scale_color_manual("Data Type",labels=c("aa","nt"),values=c('pink2','lightskyblue')) +
+  theme(legend.key=element_rect(color="goldenrod", fill = "ivory1"),legend.background = element_rect(fill="pink", color = "grey")) +
+  scale_x_continuous(name= "Mean Sequence Length") +
+  scale_y_continuous(name="Number of Models per Dataset")
+```
+
+This plot can virtually be ignored, it was meant to be a test. I enjoyed picking out the colors though. Time for the real deal (faceting!)
+
+
+#Plot Two - Starting to Facet!
+
+The following plot will be beautiful.
+
+```{r}
+one_csv %>%
+  drop_na() %>%
+  ggplot(aes(x=mean_seq_length,y=number_models)) +
+  geom_point() + 
+  facet_grid(ic_type ~data_type)
+```
+Alright, so that plot has all the faceting it needs, but it's boring! Let's add colors and change around the axis titles and maybe even the legend! Perhaps I will even give the plot a title ohohhoh.
+
+
+```{r}
+
+one_csv %>%
+  drop_na() %>%
+  ggplot(aes(x=mean_seq_length,y=number_models)) +
+  geom_point(aes(color=data_type)) + 
+  facet_grid(ic_type ~data_type) +
+  scale_x_continuous(name="Mean Sequence Length") +
+  scale_y_continuous(name="Number of Models per Dataset") +
+  scale_color_manual(labels=c("aa","nt"),values=c("palevioletred","cornflowerblue")) +
+  theme(legend.key=element_rect(fill="ivory3")) +
+  scale_fill_discrete(name="Data Type",breaks=c("aa","nt"),labels=c("Amino Acid Data","Nucleotide Data"))
+  
   
 ```
+
+Ok I've been trying to change the faceting labels, was using `labeller` function, but to no avail. Will be giving up now.
+
+
+
+
