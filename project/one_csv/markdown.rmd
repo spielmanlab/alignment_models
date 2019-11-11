@@ -84,7 +84,7 @@ one_csv %>%
   scale_x_continuous(name="Mean Sequence Length") +
   scale_y_continuous(name="Number of Models per Dataset") +
   scale_color_manual("Data Type",labels=c("aa","nt"),values=c("palevioletred","cornflowerblue")) +
-  theme(legend.key=element_rect(fill="ivory3")) +
+  theme(legend.key=element_rect(fill="ivory3"), plot.title=element_text(hjust=0.5)) +
   scale_fill_discrete(labels=c("Amino Acid Data","Nucleotide Data")) +
   ggtitle("Mean Sequence Lengthh and Number of Models per Dataset of Selectome Data")
   
@@ -109,7 +109,9 @@ one_csv %>%
 one_csv %>%
   drop_na() %>%
   ggplot(aes(x=tree_length,y=number_models)) +
-  geom_point()
+  geom_point()+
+  scale_colour_brewer(palette="Set1") +
+  facet_grid(ic_type~data_type)
 ```
 
 So the above is the normal, boring scatterpot we've been plotting. Going to explore different plots down under. All plots are not final, but will always need work and editing on them!
@@ -118,5 +120,11 @@ So the above is the normal, boring scatterpot we've been plotting. Going to expl
 one_csv%>%
   drop_na() %>%
   ggplot(aes(y=tree_length,x=number_models)) +
-  geom_col()
+  geom_col() +
+  ggtitle("Tree Length and Number of Models") +
+  scale_x_continuous(name="Number of Models per Dataset") +
+  scale_y_continuous(name="Tree Length") +
+  theme(plot.title=element_text(hjust=0.5)) +
+  scale_fill_brewer(palette="Greens") +
+  facet_grid(ic_type~data_type)
 ```
