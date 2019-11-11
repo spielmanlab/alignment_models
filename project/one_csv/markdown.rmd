@@ -7,6 +7,7 @@ Hello, welcome to my R markdown file, this is example text.
 
 ```{r setup, include = FALSE}
 library(tidyverse)
+library(magrittr)
 ```
 ## Analysis of Data
 Below, I have my csv file, named "one_csv.csv" read by R, and imported into the markdown. I will be using the file to create plots!
@@ -27,7 +28,7 @@ Disclaimer: In my data, there is missing data, as there were errors creating tre
 one_csv %>%
   drop_na %>%
   ggplot(aes(x =mean_seq_length, y = number_models)) + 
-  geom_point(aes(color = data_type)) +
+  geom_point(alpha = 0.6, aes(color = data_type)) +
   scale_color_manual("Data Type",labels=c("aa","nt"),values=c('pink2','lightskyblue')) +
   theme(legend.key=element_rect(color="goldenrod", fill = "ivory1"),legend.background = element_rect(fill="pink", color = "grey")) +
   scale_x_continuous(name= "Mean Sequence Length") +
@@ -119,12 +120,65 @@ So the above is the normal, boring scatterpot we've been plotting. Going to expl
 ```{r}
 one_csv%>%
   drop_na() %>%
-  ggplot(aes(y=tree_length,x=number_models)) +
-  geom_col() +
+  ggplot(aes(y=stdev_seq_length,x=number_models, group=number_models)) +
+  geom_violin() +
   ggtitle("Tree Length and Number of Models") +
   scale_x_continuous(name="Number of Models per Dataset") +
   scale_y_continuous(name="Tree Length") +
   theme(plot.title=element_text(hjust=0.5)) +
   scale_fill_brewer(palette="Greens") +
-  facet_grid(ic_type~data_type)
+  facet_wrap(ic_type~data_type, scales='free_y')
 ```
+
+#Plot Five - Amino Acid and Nucleotide Number of Models
+
+##Here is an example why we can't just use spread, the plot will not be plotted!
+
+```{r}
+#amino acids vs nucleotides - number of models
+#change dimensions of the data, aa = x, nt = y
+
+test_one_csv <- one_csv %>%
+  drop_na() %>%
+  spread(data_type,number_models)
+
+  #separate(name,c("ic_type","data_type"),sep="/")
+
+test_one_csv %>%
+  ggplot(aes(x=aa,y=nt)) +
+  geom_point()
+
+```
+
+
+
+## Nothing was plotted!
+
+###Now we will try to use `separate()` 
+
+
+
+``` {r}
+
+test_2 <- one_csv %>%
+  drop_na() %>%
+  pivot_wider(names_from = data_type,values_from = number_models) %>%
+  mutate(dummyvar=name) %>% 
+  separate(name,into=c("name1","name2"),sep=".nt")
+  
+  
+  filter() 
+  separate(name,into=c("name1","name2"),sep=".") 
+  
+
+  
+  #str_replace_all(test_2$name,".nt","") %>%
+  #separate(name,into=c("name1","name2"), sep=".")
+
+```
+
+
+
+
+
+
