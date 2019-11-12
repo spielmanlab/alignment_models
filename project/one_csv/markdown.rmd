@@ -65,7 +65,6 @@ one_csv %>%
   theme(legend.key=element_rect(fill="ivory3")) +
   scale_fill_discrete(name="Data Type",breaks=c("aa","nt"),labels=c("Amino Acid Data","Nucleotide Data"))
   
-  
 ```
 
 Ok I've been trying to change the faceting labels, was using `labeller` function, but to no avail. Will be giving up now.
@@ -158,22 +157,47 @@ test_one_csv %>%
 
 
 
-``` {r}
-
-test_2 <- one_csv %>%
+``` {r, include = FALSE}
+one_csv %>%
   drop_na() %>%
-  pivot_wider(names_from = data_type,values_from = number_models) %>%
-  mutate(dummyvar=name) %>% 
-  separate(name,into=c("name1","name2"),sep=".nt")
-  
-  
-  filter() 
-  separate(name,into=c("name1","name2"),sep=".") 
+  mutate(new_name= ifelse(data_type=="aa",paste0(name,".aa"),name)) %>%
+  filter(ic_type == "AIC") %>%
+  select(new_name, data_type, number_models) %>%
+  separate(new_name, into = c("keep1", "keep2", "keep3", "bye1"), sep = "\\.") %>%
+  select(-bye1) %>%
+  unite(new_name, c("keep1", "keep2", "keep3")) %>%
+  pivot_wider(names_from = data_type, values_from = number_models)
   
 
-  
+#pseudocode
+#goal is to spread data_type with number_models by name of file
+  #spread by data_type with number_models
+  #separate by name of file
+  # move around vars then merge via name after work is done 
   #str_replace_all(test_2$name,".nt","") %>%
   #separate(name,into=c("name1","name2"), sep=".")
+
+```
+
+```{r}
+
+spread_csv <- one_csv %>%
+  drop_na() %>%
+  mutate(new_name= ifelse(data_type=="aa",paste0(name,".aa"),name)) %>%
+  filter(ic_type == "AIC") %>%
+  select(new_name, data_type, number_models) %>%
+  separate(new_name, into = c("keep1", "keep2", "keep3", "bye1"), sep = "\\.") %>%
+  select(-bye1) %>%
+  unite(new_name, c("keep1", "keep2", "keep3")) %>%
+  pivot_wider(names_from = data_type, values_from = number_models)
+
+#change color
+spread_csv %>%
+  ggplot(aes(x=aa,y=nt)) +
+  geom_hex(color="black") +
+  scale_fill_gradientn(colours=c("maroon","blue"))
+
+#fiddle make it look good !
 
 ```
 
