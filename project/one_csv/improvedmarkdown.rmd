@@ -56,6 +56,18 @@ nt_model_per <- nt_ranked %>%
   mutate(percent=number_of_models/total) %>%
   ungroup() %>%
   select(-total)
+
+# nt_ranked %>%
+#     count(name, ic_type) %>%
+#     rename(total=n) %>%
+#     left_join(nt_ranked) %>%
+#     select(-number) %>%
+#     count(name,total,Model, ic_type) %>%
+#     group_by(name, ic_type) %>%
+#     mutate(percent_most_common = max(n) / total) %>%
+#     select(-n, -Model) %>%
+#     distinct()
+
 ```
 
 
