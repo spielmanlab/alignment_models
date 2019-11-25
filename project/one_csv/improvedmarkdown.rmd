@@ -1,0 +1,77 @@
+---
+title: "Plots Pertaining to Data Properties of Alignments, Specifically Percentage of Most Common Model"
+author: "Molly Miraglia"
+---
+
+```{r, include=FALSE}
+library(tidyverse)
+library(magrittr)
+```
+
+This is a new markdown file with plots pertaining to model common model percentage. 
+
+Here I will be reading in a csv files that contains the data properties collected and then will be reading in code that collects most common model percentage.
+
+```{r}
+one_csv <- read_csv(file="one_csv.csv")
+```
+
+Most common model percentage is the most chosen model out of the 50 alignments based on a certain information criterion. For example, for the AIC information criterion, if there are 48 models that are JTT+WAG but then 2 models are JTT+WAG+G, then the most common model percentage would be 96%. 
+
+Below is code that will transform the `ranked_models.csv` files into most common model percentage. 
+
+First I'll read in the two files (based on aa and nt data) that will be transformed. 
+
+
+```{r}
+aa_ranked <- read_csv(file="../aa_ranked_models.csv")
+nt_ranked <- read_csv(file="../nt_ranked_models.csv")
+```
+
+#Time to transform!
+
+```{r}
+total_per <- 50
+
+aa_modelper <- aa_ranked %>%
+  group_by(name, Model, ic_type) %>% 
+  tally() %>%
+  ungroup() %>% 
+  rename(number_of_models = n) %>% 
+  drop_na() %>%
+  group_by(name,Model) %>%
+  mutate(per=total_per) %>%
+  mutate(percent=number_of_models/per) %>%
+  select(-per) %>%
+  ungroup() 
+
+nt_model_per <- nt_ranked %>% 
+  count(name, ic_type) %>%
+  rename(total=n) %>%
+  left_join(nt_ranked) %>%
+  select(-number) %>%
+  group_by(name,ic_type,total,Model) %>%
+  tally() %>%
+  rename(number_of_models=n) %>%
+  mutate(percent=number_of_models/total) %>%
+  ungroup() %>%
+  select(-total)
+```
+
+
+As you can see, there are two different methods to transform the tidy data. There are usually a lot of different ways to wrangle data. 
+
+Understandably concerned about the amount of chunks I create in these R Markdown files. I just like separating them a lot because of organization. Hopefully doesn't screw too much with the memory. 
+
+I'm now going to combine the most common model percentage with `one_csv` so I can plot it.
+
+```{r}
+aa_onecsv <- full_join(one_csv,aa_modelper)
+
+```
+
+
+
+
+
+
