@@ -76,11 +76,54 @@ As you can see, there are two different methods to transform the tidy data. Ther
 Understandably concerned about the amount of chunks I create in these R Markdown files. I just like separating them a lot because of organization. Hopefully doesn't screw too much with the memory. 
 
 I'm now going to combine the most common model percentage with `one_csv` so I can plot it.
+---------------------------------------------------------------
+
+
+Nevermind, not gonna join one_csv w two. Need to group by data type don't forget!
+
+
+#New Data Wrangling
 
 ```{r}
-aa_onecsv <- full_join(one_csv,aa_modelper)
+aa_ranked %>%
+  separate(name,into=c("ensembl","taxonomy","transcript","datatype","fasta")) %>%
+  select(-fasta) %>%
+  unite("name",c(ensembl,taxonomy,transcript)) -> aa_ranked_clean
+
+nt_ranked %>% 
+  separate(name,into=c("ensembl","taxonomy","transcript","datatype","fasta")) %>%
+  select(-fasta) %>%
+  unite("name",ensembl,taxonomy,transcript) -> nt_ranked_clean
+
+all_ranked <- bind_rows(nt_ranked_clean,aa_ranked_clean)
 
 ```
+
+Now going to get most common model
+
+#Part 2 of MCM
+
+```{r}
+
+all_ranked %>%
+  count(name,ic_type,datatype) %>%
+  rename(total=n) %>%
+  left_join(all_ranked) %>%
+  select(-number) %>%
+  count(name,total,Model,ic_type,datatype) %>%
+  group_by(name,ic_type,datatype) %>%
+  mutate(percentm = max(n)/total) %>%
+  mutate(topmodelnum=max(n)) %>%
+  select(-total,-Model,-n) %>%
+  distinct() %>%
+  ungroup() 
+
+```
+
+#Now need to link up with data properties `one_csv`
+
+
+
 
 
 

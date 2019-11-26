@@ -194,8 +194,11 @@ spread_csv <- one_csv %>%
 #change color
 spread_csv %>%
   ggplot(aes(x=aa,y=nt)) +
-  geom_hex(color="black") +
-  scale_fill_gradientn(colours=c("maroon","blue"))
+  geom_hex(color="black",bins=5) +
+  scale_fill_gradientn(colours=c("goldenrod","skyblue")) +
+  scale_x_continuous(name="Number of AA Models") +
+  scale_y_continuous(name="Number of NT Models") 
+
 
 #fiddle make it look good !
 
