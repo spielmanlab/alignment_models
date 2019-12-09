@@ -120,8 +120,9 @@ most_common_model <- all_ranked %>%
 
 ```
 
-Alright, so each dataset should have 6 names each, because of the 3 information criterion for each dataset(2).
 
+
+Alright, so each dataset should have 6 names each, because of the 3 information criterion for each dataset(2).
 
 #Now need to link up with data properties `one_csv`
 
@@ -147,7 +148,6 @@ all_one_csv %>%
   ggplot(aes(x=mean_seq_length,y=percentm)) +
   geom_point() +
   facet_grid(ic_type ~datatype)
-
 ```
 So this plot above shows the correlation of mean sequence length with model percent.
 
@@ -178,7 +178,17 @@ This is the same graph, but withh the axis's switched.
 ```{r}
 all_one_csv %>%
   drop_na() %>%
-  ggplot(aes(y= percentm,x=stdev_seq_length)) + 
+  ggplot(aes(x= percentm,y=stdev_seq_length)) + 
   geom_point() +
   facet_grid(ic_type ~datatype)
 ```
+
+
+
+What I'm currently doing is trying to plot the most common model percentage against a variable, suchh as a data property of the datasets, to see the correlation. 
+
+#Shiny App Progress Graphs
+
+
+Ok, so I'm going to be making graphs for ShinyApp. 
+

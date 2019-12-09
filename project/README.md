@@ -15,7 +15,7 @@
 7. `function_combined_dat.py` creates a csv file with all data including evolutionary data (treelength and patristic distance) of selectome aa and nt data in `test_aa.csv` and `test_nt.csv` `singlcsv.R` creates a csv file `one_csv.csv` containing both aa and nt data. 
 
 8. `aa_ranked_models.csv` and `nt_ranked_models.csv` contain models ranked according to information criterion. `all_aa_200-50.txt` contains names of files from selectome with no file extension (don't know if needed or not)
-
+9. `markdown/` contains all markdown files for files created from `one_csv/`
 9. `run_iqtree_on_alignment.py` and `run_iqtree_on_alignment_versions.py` contains scripts that runs iqtree on all fasta alignments and then parses iqtree information into .csv file
 
 10. `submit_pipeline.sbatch` is written in BASH, used to run all alignments+Guidance2 on Rowan Computing Cluster  
