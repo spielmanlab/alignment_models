@@ -17,12 +17,12 @@ from treebuilder import *
 from bootstrapper import *
 
 ###################### User input (or derived from user input) ###########################
-assert(len(sys.argv) == 6), "\n USAGE: python3 make_bootstrap_alignments.py <fastafile> <output directory> <protein/dna> <num bootstraps> <threads>"
+assert(len(sys.argv) == 6), "\n USAGE: python3 make_bootstrap_alignments.py <fastafile> <output directory> <AA/NT> <num bootstraps> <threads>"
 
 
 unaligned   = sys.argv[1]        # infile
 outpath     = sys.argv[2]        # outpath
-alphabet    = sys.argv[3].upper()  # This should be either "AA" or "DNA"
+alphabet    = sys.argv[3].upper()  # This should be either "AA" or "NT"
 n           =  int(sys.argv[4])  # bootstraps
 numproc     =  int(sys.argv[5])  # threads
 os.environ["OMP_NUM_THREADS"] = str(numproc)
@@ -45,7 +45,7 @@ os.system("cp ../" + unaligned + " " + prealn_file)
 
 # Aligner
 amod = MafftAligner("mafft", " --auto --quiet ")
-if alphabet == "DNA":
+if alphabet == "NT":
     addarg = " -nt "
 else:
     addarg = " "

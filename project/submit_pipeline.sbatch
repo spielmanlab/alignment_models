@@ -4,15 +4,15 @@
 #SBATCH --ntasks-per-node=1
 #SBATCH --mem-per-cpu=1000
 #SBATCH -p csm
-#SBATCH --array=1-200
+#SBATCH --array=1-1000
 
 
 LINE=${SLURM_ARRAY_TASK_ID}
 
-INLINE=$(sed "${LINE}q;d" all_aa_200-50.txt)
+INLINE=$(sed "${LINE}q;d" all_001_eutel.txt)
 IFS=',' read -r NAME <<< "$INLINE"
 
 TOPPATH=/csm_data/spielman_lab/alignment_models/project
 cd $TOPPATH
 
-bash pipeline_rucc.sh ${NAME} 45
+bash pipeline_rucc.sh ${NAME} 40
