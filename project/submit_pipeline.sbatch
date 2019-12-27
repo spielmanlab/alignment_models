@@ -4,7 +4,7 @@
 #SBATCH --ntasks-per-node=1
 #SBATCH --mem-per-cpu=1000
 #SBATCH -p csm
-#SBATCH --array=1-100
+#SBATCH --array=3-1000
 
 ADDON=0
 RAWLINE=${SLURM_ARRAY_TASK_ID}
@@ -16,7 +16,7 @@ IFS=',' read -r NAME <<< "$INLINE"
 TOPPATH=/csm_data/spielman_lab/alignment_models/project
 cd $TOPPATH
 
-OUTPUT_PATH=selectome_001_output
+OUTPUT_PATH=output_selectome
 mkdir -p ${OUTPUT_PATH}
 
 BADLOG=names_with_duplicates.txt

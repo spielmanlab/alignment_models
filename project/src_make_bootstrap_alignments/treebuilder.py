@@ -41,7 +41,7 @@ class builderFastTree(TreeBuilder):
         bootseq = 'refaln.BS'
         self.makeBootAlignment(refaln_seq, numseq, alnlen, bootseq)
         BuildTree=self.executable+' '+self.options+' -nosupport '+bootseq+' > '+outfile
-        print(BuildTree)
+        #print(BuildTree)
         os.system(BuildTree)
         # Double-check that FastTree worked. (It has been throwing some floating point exceptions.) If not, make a new bootstrap alignment and try again.
         #numReps = 0
