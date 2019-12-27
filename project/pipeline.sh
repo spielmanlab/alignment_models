@@ -64,7 +64,6 @@ if [ -f ${INPUT_NT_PATH}/${NT_FAS} ] && [ -f ${INPUT_AA_PATH}/${AA_FAS} ]; then
             if [ -f ${BOOTDIR}/${BADFILE} ]; then
                 NODUPLICATES=false
                 COMPLETED=false
-                rm $FASFILE
                 rm -r $BOOTDIR
                 break
             fi          
