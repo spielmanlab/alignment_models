@@ -4,9 +4,9 @@
 #SBATCH --ntasks-per-node=1
 #SBATCH --mem-per-cpu=1000
 #SBATCH -p csm
-#SBATCH --array=3-1000
+#SBATCH --array=1-1000
 
-ADDON=0
+ADDON=1000
 RAWLINE=${SLURM_ARRAY_TASK_ID}
 LINE=$((ADDON + RAWLINE)) 
 NAMEFILE=Euteleostomi.txt 
