@@ -1149,3 +1149,746 @@ ENSGT00390000008616.Euteleostomi.001 has duplicate perturbed alignments
 ENSGT00390000008645.Euteleostomi.001 has duplicate perturbed alignments
 ENSGT00390000008657.Euteleostomi.001 has duplicate perturbed alignments
 ENSGT00390000008662.Euteleostomi.001 has duplicate perturbed alignments
+EMGT00050000000001.Drosophila.001 does not have AA and NT versions
+EMGT00050000000026.Drosophila.001 does not have AA and NT versions
+EMGT00050000000005.Drosophila.001 does not have AA and NT versions
+EMGT00050000000034.Drosophila.001 does not have AA and NT versions
+EMGT00050000000032.Drosophila.001 does not have AA and NT versions
+EMGT00050000000018.Drosophila.001 does not have AA and NT versions
+EMGT00050000000031.Drosophila.001 does not have AA and NT versions
+EMGT00050000000014.Drosophila.001 does not have AA and NT versions
+EMGT00050000000052.Drosophila.001 does not have AA and NT versions
+EMGT00050000000042.Drosophila.001 does not have AA and NT versions
+EMGT00050000000059.Drosophila.001 does not have AA and NT versions
+EMGT00050000000076.Drosophila.001 does not have AA and NT versions
+EMGT00050000000064.Drosophila.001 does not have AA and NT versions
+EMGT00050000000048.Drosophila.001 does not have AA and NT versions
+EMGT00050000000025.Drosophila.001 does not have AA and NT versions
+EMGT00050000000022.Drosophila.001 does not have AA and NT versions
+EMGT00050000000079.Drosophila.001 does not have AA and NT versions
+EMGT00050000000081.Drosophila.001 does not have AA and NT versions
+EMGT00050000000080.Drosophila.001 does not have AA and NT versions
+EMGT00050000000012.Drosophila.001 does not have AA and NT versions
+EMGT00050000000085.Drosophila.001 does not have AA and NT versions
+EMGT00050000000089.Drosophila.001 does not have AA and NT versions
+EMGT00050000000090.Drosophila.001 does not have AA and NT versions
+EMGT00050000000054.Drosophila.001 does not have AA and NT versions
+EMGT00050000000053.Drosophila.001 does not have AA and NT versions
+EMGT00050000000093.Drosophila.001 does not have AA and NT versions
+EMGT00050000000094.Drosophila.001 does not have AA and NT versions
+EMGT00050000000095.Drosophila.001 does not have AA and NT versions
+EMGT00050000000097.Drosophila.001 does not have AA and NT versions
+EMGT00050000000058.Drosophila.001 does not have AA and NT versions
+EMGT00050000000100.Drosophila.001 does not have AA and NT versions
+EMGT00050000000099.Drosophila.001 does not have AA and NT versions
+EMGT00050000000104.Drosophila.001 does not have AA and NT versions
+EMGT00050000000109.Drosophila.001 does not have AA and NT versions
+EMGT00050000000125.Drosophila.001 does not have AA and NT versions
+EMGT00050000000126.Drosophila.001 does not have AA and NT versions
+EMGT00050000000083.Drosophila.001 does not have AA and NT versions
+EMGT00050000000087.Drosophila.001 does not have AA and NT versions
+EMGT00050000000136.Drosophila.001 does not have AA and NT versions
+EMGT00050000000133.Drosophila.001 does not have AA and NT versions
+EMGT00050000000140.Drosophila.001 does not have AA and NT versions
+EMGT00050000000143.Drosophila.001 does not have AA and NT versions
+EMGT00050000000145.Drosophila.001 does not have AA and NT versions
+EMGT00050000000043.Drosophila.001 does not have AA and NT versions
+EMGT00050000000148.Drosophila.001 does not have AA and NT versions
+EMGT00050000000146.Drosophila.001 does not have AA and NT versions
+EMGT00050000000150.Drosophila.001 does not have AA and NT versions
+EMGT00050000000149.Drosophila.001 does not have AA and NT versions
+EMGT00050000000096.Drosophila.001 does not have AA and NT versions
+EMGT00050000000154.Drosophila.001 does not have AA and NT versions
+EMGT00050000000151.Drosophila.001 does not have AA and NT versions
+EMGT00050000000152.Drosophila.001 does not have AA and NT versions
+EMGT00050000000155.Drosophila.001 does not have AA and NT versions
+EMGT00050000000160.Drosophila.001 does not have AA and NT versions
+EMGT00050000000164.Drosophila.001 does not have AA and NT versions
+EMGT00050000000156.Drosophila.001 does not have AA and NT versions
+EMGT00050000000162.Drosophila.001 does not have AA and NT versions
+EMGT00050000000169.Drosophila.001 does not have AA and NT versions
+EMGT00050000000168.Drosophila.001 does not have AA and NT versions
+EMGT00050000000171.Drosophila.001 does not have AA and NT versions
+EMGT00050000000170.Drosophila.001 does not have AA and NT versions
+EMGT00050000000174.Drosophila.001 does not have AA and NT versions
+EMGT00050000000172.Drosophila.001 does not have AA and NT versions
+EMGT00050000000173.Drosophila.001 does not have AA and NT versions
+EMGT00050000000182.Drosophila.001 does not have AA and NT versions
+EMGT00050000000185.Drosophila.001 does not have AA and NT versions
+EMGT00050000000186.Drosophila.001 does not have AA and NT versions
+EMGT00050000000184.Drosophila.001 does not have AA and NT versions
+EMGT00050000000196.Drosophila.001 does not have AA and NT versions
+EMGT00050000000187.Drosophila.001 does not have AA and NT versions
+EMGT00050000000189.Drosophila.001 does not have AA and NT versions
+EMGT00050000000197.Drosophila.001 does not have AA and NT versions
+EMGT00050000000206.Drosophila.001 does not have AA and NT versions
+EMGT00050000000209.Drosophila.001 does not have AA and NT versions
+EMGT00050000000207.Drosophila.001 does not have AA and NT versions
+EMGT00050000000211.Drosophila.001 does not have AA and NT versions
+EMGT00050000000215.Drosophila.001 does not have AA and NT versions
+EMGT00050000000213.Drosophila.001 does not have AA and NT versions
+EMGT00050000000214.Drosophila.001 does not have AA and NT versions
+EMGT00050000000234.Drosophila.001 does not have AA and NT versions
+EMGT00050000000220.Drosophila.001 does not have AA and NT versions
+EMGT00050000000254.Drosophila.001 does not have AA and NT versions
+EMGT00050000000239.Drosophila.001 does not have AA and NT versions
+EMGT00050000000255.Drosophila.001 does not have AA and NT versions
+EMGT00050000000270.Drosophila.001 does not have AA and NT versions
+EMGT00050000000265.Drosophila.001 does not have AA and NT versions
+EMGT00050000000269.Drosophila.001 does not have AA and NT versions
+EMGT00050000000271.Drosophila.001 does not have AA and NT versions
+EMGT00050000000273.Drosophila.001 does not have AA and NT versions
+EMGT00050000000272.Drosophila.001 does not have AA and NT versions
+EMGT00050000000276.Drosophila.001 does not have AA and NT versions
+EMGT00050000000274.Drosophila.001 does not have AA and NT versions
+EMGT00050000000287.Drosophila.001 does not have AA and NT versions
+EMGT00050000000289.Drosophila.001 does not have AA and NT versions
+EMGT00050000000290.Drosophila.001 does not have AA and NT versions
+EMGT00050000000296.Drosophila.001 does not have AA and NT versions
+EMGT00050000000301.Drosophila.001 does not have AA and NT versions
+EMGT00050000000300.Drosophila.001 does not have AA and NT versions
+EMGT00050000000302.Drosophila.001 does not have AA and NT versions
+EMGT00050000000303.Drosophila.001 does not have AA and NT versions
+EMGT00050000000311.Drosophila.001 does not have AA and NT versions
+EMGT00050000000315.Drosophila.001 does not have AA and NT versions
+EMGT00050000000321.Drosophila.001 does not have AA and NT versions
+EMGT00050000000308.Drosophila.001 does not have AA and NT versions
+EMGT00050000000307.Drosophila.001 does not have AA and NT versions
+EMGT00050000000324.Drosophila.001 does not have AA and NT versions
+EMGT00050000000320.Drosophila.001 does not have AA and NT versions
+EMGT00050000000329.Drosophila.001 does not have AA and NT versions
+EMGT00050000000331.Drosophila.001 does not have AA and NT versions
+EMGT00050000000326.Drosophila.001 does not have AA and NT versions
+EMGT00050000000332.Drosophila.001 does not have AA and NT versions
+EMGT00050000000354.Drosophila.001 does not have AA and NT versions
+EMGT00050000000337.Drosophila.001 does not have AA and NT versions
+EMGT00050000000360.Drosophila.001 does not have AA and NT versions
+EMGT00050000000361.Drosophila.001 does not have AA and NT versions
+EMGT00050000000356.Drosophila.001 does not have AA and NT versions
+EMGT00050000000363.Drosophila.001 does not have AA and NT versions
+EMGT00050000000362.Drosophila.001 does not have AA and NT versions
+EMGT00050000000365.Drosophila.001 does not have AA and NT versions
+EMGT00050000000364.Drosophila.001 does not have AA and NT versions
+EMGT00050000000366.Drosophila.001 does not have AA and NT versions
+EMGT00050000000367.Drosophila.001 does not have AA and NT versions
+EMGT00050000000368.Drosophila.001 does not have AA and NT versions
+EMGT00050000000373.Drosophila.001 does not have AA and NT versions
+EMGT00050000000370.Drosophila.001 does not have AA and NT versions
+EMGT00050000000374.Drosophila.001 does not have AA and NT versions
+EMGT00050000000371.Drosophila.001 does not have AA and NT versions
+EMGT00050000000377.Drosophila.001 does not have AA and NT versions
+EMGT00050000000378.Drosophila.001 does not have AA and NT versions
+EMGT00050000000375.Drosophila.001 does not have AA and NT versions
+EMGT00050000000376.Drosophila.001 does not have AA and NT versions
+EMGT00050000000379.Drosophila.001 does not have AA and NT versions
+EMGT00050000000380.Drosophila.001 does not have AA and NT versions
+EMGT00050000000383.Drosophila.001 does not have AA and NT versions
+EMGT00050000000390.Drosophila.001 does not have AA and NT versions
+EMGT00050000000389.Drosophila.001 does not have AA and NT versions
+EMGT00050000000386.Drosophila.001 does not have AA and NT versions
+EMGT00050000000392.Drosophila.001 does not have AA and NT versions
+EMGT00050000000394.Drosophila.001 does not have AA and NT versions
+EMGT00050000000391.Drosophila.001 does not have AA and NT versions
+EMGT00050000000387.Drosophila.001 does not have AA and NT versions
+EMGT00050000000401.Drosophila.001 does not have AA and NT versions
+EMGT00050000000399.Drosophila.001 does not have AA and NT versions
+EMGT00050000000395.Drosophila.001 does not have AA and NT versions
+EMGT00050000000410.Drosophila.001 does not have AA and NT versions
+EMGT00050000000403.Drosophila.001 does not have AA and NT versions
+EMGT00050000000411.Drosophila.001 does not have AA and NT versions
+EMGT00050000000406.Drosophila.001 does not have AA and NT versions
+EMGT00050000000414.Drosophila.001 does not have AA and NT versions
+EMGT00050000000413.Drosophila.001 does not have AA and NT versions
+EMGT00050000000423.Drosophila.001 does not have AA and NT versions
+EMGT00050000000441.Drosophila.001 does not have AA and NT versions
+EMGT00050000000415.Drosophila.001 does not have AA and NT versions
+EMGT00050000000449.Drosophila.001 does not have AA and NT versions
+EMGT00050000000442.Drosophila.001 does not have AA and NT versions
+EMGT00050000000447.Drosophila.001 does not have AA and NT versions
+EMGT00050000000445.Drosophila.001 does not have AA and NT versions
+EMGT00050000000451.Drosophila.001 does not have AA and NT versions
+EMGT00050000000450.Drosophila.001 does not have AA and NT versions
+EMGT00050000000452.Drosophila.001 does not have AA and NT versions
+EMGT00050000000453.Drosophila.001 does not have AA and NT versions
+EMGT00050000000457.Drosophila.001 does not have AA and NT versions
+EMGT00050000000459.Drosophila.001 does not have AA and NT versions
+EMGT00050000000462.Drosophila.001 does not have AA and NT versions
+EMGT00050000000454.Drosophila.001 does not have AA and NT versions
+EMGT00050000000479.Drosophila.001 does not have AA and NT versions
+EMGT00050000000474.Drosophila.001 does not have AA and NT versions
+EMGT00050000000481.Drosophila.001 does not have AA and NT versions
+EMGT00050000000470.Drosophila.001 does not have AA and NT versions
+EMGT00050000000478.Drosophila.001 does not have AA and NT versions
+EMGT00050000000484.Drosophila.001 does not have AA and NT versions
+EMGT00050000000486.Drosophila.001 does not have AA and NT versions
+EMGT00050000000487.Drosophila.001 does not have AA and NT versions
+EMGT00050000000488.Drosophila.001 does not have AA and NT versions
+EMGT00050000000497.Drosophila.001 does not have AA and NT versions
+EMGT00050000000496.Drosophila.001 does not have AA and NT versions
+EMGT00050000000498.Drosophila.001 does not have AA and NT versions
+EMGT00050000000490.Drosophila.001 does not have AA and NT versions
+EMGT00050000000501.Drosophila.001 does not have AA and NT versions
+EMGT00050000000502.Drosophila.001 does not have AA and NT versions
+EMGT00050000000499.Drosophila.001 does not have AA and NT versions
+EMGT00050000000500.Drosophila.001 does not have AA and NT versions
+EMGT00050000000505.Drosophila.001 does not have AA and NT versions
+EMGT00050000000503.Drosophila.001 does not have AA and NT versions
+EMGT00050000000504.Drosophila.001 does not have AA and NT versions
+EMGT00050000000506.Drosophila.001 does not have AA and NT versions
+EMGT00050000000507.Drosophila.001 does not have AA and NT versions
+EMGT00050000000508.Drosophila.001 does not have AA and NT versions
+EMGT00050000000512.Drosophila.001 does not have AA and NT versions
+EMGT00050000000509.Drosophila.001 does not have AA and NT versions
+EMGT00050000000514.Drosophila.001 does not have AA and NT versions
+EMGT00050000000522.Drosophila.001 does not have AA and NT versions
+EMGT00050000000513.Drosophila.001 does not have AA and NT versions
+EMGT00050000000515.Drosophila.001 does not have AA and NT versions
+EMGT00050000000524.Drosophila.001 does not have AA and NT versions
+EMGT00050000000520.Drosophila.001 does not have AA and NT versions
+EMGT00050000000523.Drosophila.001 does not have AA and NT versions
+EMGT00050000000525.Drosophila.001 does not have AA and NT versions
+EMGT00050000000527.Drosophila.001 does not have AA and NT versions
+EMGT00050000000556.Drosophila.001 does not have AA and NT versions
+EMGT00050000000528.Drosophila.001 does not have AA and NT versions
+EMGT00050000000537.Drosophila.001 does not have AA and NT versions
+EMGT00050000000568.Drosophila.001 does not have AA and NT versions
+EMGT00050000000567.Drosophila.001 does not have AA and NT versions
+EMGT00050000000557.Drosophila.001 does not have AA and NT versions
+EMGT00050000000580.Drosophila.001 does not have AA and NT versions
+EMGT00050000000570.Drosophila.001 does not have AA and NT versions
+EMGT00050000000572.Drosophila.001 does not have AA and NT versions
+EMGT00050000000581.Drosophila.001 does not have AA and NT versions
+EMGT00050000000583.Drosophila.001 does not have AA and NT versions
+EMGT00050000000584.Drosophila.001 does not have AA and NT versions
+EMGT00050000000586.Drosophila.001 does not have AA and NT versions
+EMGT00050000000587.Drosophila.001 does not have AA and NT versions
+EMGT00050000000588.Drosophila.001 does not have AA and NT versions
+EMGT00050000000589.Drosophila.001 does not have AA and NT versions
+EMGT00050000000607.Drosophila.001 does not have AA and NT versions
+EMGT00050000000602.Drosophila.001 does not have AA and NT versions
+EMGT00050000000596.Drosophila.001 does not have AA and NT versions
+EMGT00050000000618.Drosophila.001 does not have AA and NT versions
+EMGT00050000000619.Drosophila.001 does not have AA and NT versions
+EMGT00050000000626.Drosophila.001 does not have AA and NT versions
+EMGT00050000000630.Drosophila.001 does not have AA and NT versions
+EMGT00050000000627.Drosophila.001 does not have AA and NT versions
+EMGT00050000000631.Drosophila.001 does not have AA and NT versions
+EMGT00050000000636.Drosophila.001 does not have AA and NT versions
+EMGT00050000000632.Drosophila.001 does not have AA and NT versions
+EMGT00050000000638.Drosophila.001 does not have AA and NT versions
+EMGT00050000000634.Drosophila.001 does not have AA and NT versions
+EMGT00050000000639.Drosophila.001 does not have AA and NT versions
+EMGT00050000000640.Drosophila.001 does not have AA and NT versions
+EMGT00050000000643.Drosophila.001 does not have AA and NT versions
+EMGT00050000000645.Drosophila.001 does not have AA and NT versions
+EMGT00050000000641.Drosophila.001 does not have AA and NT versions
+EMGT00050000000642.Drosophila.001 does not have AA and NT versions
+EMGT00050000000644.Drosophila.001 does not have AA and NT versions
+EMGT00050000000651.Drosophila.001 does not have AA and NT versions
+EMGT00050000000649.Drosophila.001 does not have AA and NT versions
+EMGT00050000000654.Drosophila.001 does not have AA and NT versions
+EMGT00050000000647.Drosophila.001 does not have AA and NT versions
+EMGT00050000000652.Drosophila.001 does not have AA and NT versions
+EMGT00050000000659.Drosophila.001 does not have AA and NT versions
+EMGT00050000000657.Drosophila.001 does not have AA and NT versions
+EMGT00050000000658.Drosophila.001 does not have AA and NT versions
+EMGT00050000000663.Drosophila.001 does not have AA and NT versions
+EMGT00050000000660.Drosophila.001 does not have AA and NT versions
+EMGT00050000000662.Drosophila.001 does not have AA and NT versions
+EMGT00050000000664.Drosophila.001 does not have AA and NT versions
+EMGT00050000000667.Drosophila.001 does not have AA and NT versions
+EMGT00050000000677.Drosophila.001 does not have AA and NT versions
+EMGT00050000000680.Drosophila.001 does not have AA and NT versions
+EMGT00050000000666.Drosophila.001 does not have AA and NT versions
+EMGT00050000000672.Drosophila.001 does not have AA and NT versions
+EMGT00050000000683.Drosophila.001 does not have AA and NT versions
+EMGT00050000000687.Drosophila.001 does not have AA and NT versions
+EMGT00050000000681.Drosophila.001 does not have AA and NT versions
+EMGT00050000000689.Drosophila.001 does not have AA and NT versions
+EMGT00050000000692.Drosophila.001 does not have AA and NT versions
+EMGT00050000000685.Drosophila.001 does not have AA and NT versions
+EMGT00050000000690.Drosophila.001 does not have AA and NT versions
+EMGT00050000000694.Drosophila.001 does not have AA and NT versions
+EMGT00050000000699.Drosophila.001 does not have AA and NT versions
+EMGT00050000000702.Drosophila.001 does not have AA and NT versions
+EMGT00050000000705.Drosophila.001 does not have AA and NT versions
+EMGT00050000000700.Drosophila.001 does not have AA and NT versions
+EMGT00050000000715.Drosophila.001 does not have AA and NT versions
+EMGT00050000000706.Drosophila.001 does not have AA and NT versions
+EMGT00050000000711.Drosophila.001 does not have AA and NT versions
+EMGT00050000000717.Drosophila.001 does not have AA and NT versions
+EMGT00050000000721.Drosophila.001 does not have AA and NT versions
+EMGT00050000000718.Drosophila.001 does not have AA and NT versions
+EMGT00050000000719.Drosophila.001 does not have AA and NT versions
+EMGT00050000000725.Drosophila.001 does not have AA and NT versions
+EMGT00050000000745.Drosophila.001 does not have AA and NT versions
+EMGT00050000000744.Drosophila.001 does not have AA and NT versions
+EMGT00050000000747.Drosophila.001 does not have AA and NT versions
+EMGT00050000000757.Drosophila.001 does not have AA and NT versions
+EMGT00050000000761.Drosophila.001 does not have AA and NT versions
+EMGT00050000000759.Drosophila.001 does not have AA and NT versions
+EMGT00050000000768.Drosophila.001 does not have AA and NT versions
+EMGT00050000000760.Drosophila.001 does not have AA and NT versions
+EMGT00050000000785.Drosophila.001 does not have AA and NT versions
+EMGT00050000000763.Drosophila.001 does not have AA and NT versions
+EMGT00050000000793.Drosophila.001 does not have AA and NT versions
+EMGT00050000000796.Drosophila.001 does not have AA and NT versions
+EMGT00050000000806.Drosophila.001 does not have AA and NT versions
+EMGT00050000000807.Drosophila.001 does not have AA and NT versions
+EMGT00050000000797.Drosophila.001 does not have AA and NT versions
+EMGT00050000000811.Drosophila.001 does not have AA and NT versions
+EMGT00050000000803.Drosophila.001 does not have AA and NT versions
+EMGT00050000000808.Drosophila.001 does not have AA and NT versions
+EMGT00050000000818.Drosophila.001 does not have AA and NT versions
+EMGT00050000000829.Drosophila.001 does not have AA and NT versions
+EMGT00050000000840.Drosophila.001 does not have AA and NT versions
+EMGT00050000000831.Drosophila.001 does not have AA and NT versions
+EMGT00050000000819.Drosophila.001 does not have AA and NT versions
+EMGT00050000000845.Drosophila.001 does not have AA and NT versions
+EMGT00050000000846.Drosophila.001 does not have AA and NT versions
+EMGT00050000000841.Drosophila.001 does not have AA and NT versions
+EMGT00050000000850.Drosophila.001 does not have AA and NT versions
+EMGT00050000000847.Drosophila.001 does not have AA and NT versions
+EMGT00050000000848.Drosophila.001 does not have AA and NT versions
+EMGT00050000000851.Drosophila.001 does not have AA and NT versions
+EMGT00050000000852.Drosophila.001 does not have AA and NT versions
+EMGT00050000000853.Drosophila.001 does not have AA and NT versions
+EMGT00050000000855.Drosophila.001 does not have AA and NT versions
+EMGT00050000000859.Drosophila.001 does not have AA and NT versions
+EMGT00050000000857.Drosophila.001 does not have AA and NT versions
+EMGT00050000000858.Drosophila.001 does not have AA and NT versions
+EMGT00050000000864.Drosophila.001 does not have AA and NT versions
+EMGT00050000000860.Drosophila.001 does not have AA and NT versions
+EMGT00050000000863.Drosophila.001 does not have AA and NT versions
+EMGT00050000000873.Drosophila.001 does not have AA and NT versions
+EMGT00050000000870.Drosophila.001 does not have AA and NT versions
+EMGT00050000000875.Drosophila.001 does not have AA and NT versions
+EMGT00050000000877.Drosophila.001 does not have AA and NT versions
+EMGT00050000000878.Drosophila.001 does not have AA and NT versions
+EMGT00050000000879.Drosophila.001 does not have AA and NT versions
+EMGT00050000000883.Drosophila.001 does not have AA and NT versions
+EMGT00050000000880.Drosophila.001 does not have AA and NT versions
+EMGT00050000000884.Drosophila.001 does not have AA and NT versions
+EMGT00050000000891.Drosophila.001 does not have AA and NT versions
+EMGT00050000000892.Drosophila.001 does not have AA and NT versions
+EMGT00050000000881.Drosophila.001 does not have AA and NT versions
+EMGT00050000000887.Drosophila.001 does not have AA and NT versions
+EMGT00050000000894.Drosophila.001 does not have AA and NT versions
+EMGT00050000000897.Drosophila.001 does not have AA and NT versions
+EMGT00050000000898.Drosophila.001 does not have AA and NT versions
+EMGT00050000000900.Drosophila.001 does not have AA and NT versions
+EMGT00050000000901.Drosophila.001 does not have AA and NT versions
+EMGT00050000000904.Drosophila.001 does not have AA and NT versions
+EMGT00050000000906.Drosophila.001 does not have AA and NT versions
+EMGT00050000000902.Drosophila.001 does not have AA and NT versions
+EMGT00050000000905.Drosophila.001 does not have AA and NT versions
+EMGT00050000000912.Drosophila.001 does not have AA and NT versions
+EMGT00050000000907.Drosophila.001 does not have AA and NT versions
+EMGT00050000000917.Drosophila.001 does not have AA and NT versions
+EMGT00050000000919.Drosophila.001 does not have AA and NT versions
+EMGT00050000000909.Drosophila.001 does not have AA and NT versions
+EMGT00050000000913.Drosophila.001 does not have AA and NT versions
+EMGT00050000000922.Drosophila.001 does not have AA and NT versions
+EMGT00050000000920.Drosophila.001 does not have AA and NT versions
+EMGT00050000000937.Drosophila.001 does not have AA and NT versions
+EMGT00050000001009.Drosophila.001 does not have AA and NT versions
+EMGT00050000000970.Drosophila.001 does not have AA and NT versions
+EMGT00050000000959.Drosophila.001 does not have AA and NT versions
+EMGT00050000000986.Drosophila.001 does not have AA and NT versions
+EMGT00050000001016.Drosophila.001 does not have AA and NT versions
+EMGT00050000001013.Drosophila.001 does not have AA and NT versions
+EMGT00050000001014.Drosophila.001 does not have AA and NT versions
+EMGT00050000001020.Drosophila.001 does not have AA and NT versions
+EMGT00050000001019.Drosophila.001 does not have AA and NT versions
+EMGT00050000001018.Drosophila.001 does not have AA and NT versions
+EMGT00050000001021.Drosophila.001 does not have AA and NT versions
+EMGT00050000001025.Drosophila.001 does not have AA and NT versions
+EMGT00050000001028.Drosophila.001 does not have AA and NT versions
+EMGT00050000001030.Drosophila.001 does not have AA and NT versions
+EMGT00050000000032.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000022.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000001.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000012.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000043.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000014.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000005.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000042.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000025.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000034.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000064.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000080.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000048.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000085.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000083.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000093.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000094.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000096.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000099.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000100.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000104.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000125.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000097.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000140.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000133.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000126.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000149.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000143.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000151.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000155.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000154.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000168.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000187.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000189.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000206.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000213.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000211.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000215.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000207.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000239.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000220.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000234.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000255.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000276.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000290.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000296.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000308.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000287.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000311.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000321.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000326.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000329.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000337.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000373.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000377.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000379.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000386.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000392.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000387.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000399.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000390.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000413.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000414.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000411.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000441.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000445.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000447.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000442.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000450.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000451.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000453.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000457.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000474.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000470.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000452.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000454.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000479.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000481.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000497.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000496.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000498.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000502.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000503.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000488.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000507.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000512.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000513.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000501.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000524.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000525.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000527.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000520.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000567.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000596.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000641.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000651.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000654.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000647.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000645.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000662.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000666.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000672.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000699.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000700.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000690.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000702.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000705.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000725.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000721.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000747.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000757.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000768.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000796.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000793.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000803.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000808.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000818.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000819.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000831.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000829.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000841.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000840.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000811.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000851.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000846.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000852.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000859.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000864.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000870.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000875.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000878.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000879.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000883.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000881.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000863.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000892.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000894.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000897.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000900.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000884.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000901.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000906.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000905.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000913.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000912.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000918.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000922.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000937.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000959.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001009.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001016.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000000920.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001019.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001028.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001029.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001036.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001035.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001034.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001054.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001057.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001046.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001061.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001071.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001069.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001089.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001067.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001068.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001106.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001116.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001119.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001126.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001127.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001132.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001072.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001141.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001143.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001173.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001172.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001125.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001176.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001136.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001194.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001251.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001294.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001303.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001277.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001144.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001318.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001325.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001329.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001327.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001331.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001322.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001338.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001328.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001340.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001358.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001367.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001372.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001379.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001402.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001389.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001411.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001414.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001393.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001399.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001427.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001430.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001417.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001441.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001449.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001461.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001462.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001476.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001474.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001483.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001497.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001490.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001494.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001509.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001514.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001506.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001517.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001520.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001526.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001523.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001535.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001554.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001553.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001559.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001571.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001573.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001586.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001591.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001581.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001603.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001596.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001610.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001612.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001614.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001619.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001617.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001629.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001633.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001642.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001649.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001644.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001654.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001662.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001682.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001679.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001687.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001673.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001689.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001677.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001694.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001701.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001698.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001702.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001713.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001716.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001722.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001737.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001709.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001751.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001735.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001766.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001760.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001742.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001739.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001741.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001755.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001848.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001851.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001846.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001816.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001861.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001903.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001887.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001934.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001935.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001936.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001947.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001959.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001960.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001966.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001962.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001969.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001972.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001980.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001968.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001997.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001981.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001998.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001983.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000002005.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000001985.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000002015.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000002017.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000002016.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000002020.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000002019.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000002023.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000002043.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000002014.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000002047.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000002057.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000002060.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000002072.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000002074.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000002076.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000002075.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000002068.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000002093.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000002092.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000002103.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000002096.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000002113.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000002112.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000002097.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000002102.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000002116.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000002121.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000002119.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000002115.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000002134.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000002132.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000002133.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000002142.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000002143.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000002144.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000002152.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000002155.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000002183.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000002178.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000002188.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000002191.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000002221.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000002225.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000002229.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000002231.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000002224.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000002228.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000002260.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000002305.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000002307.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000002316.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000002317.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000002330.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000002320.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000002331.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000002335.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000002336.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000002344.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000002347.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000002348.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000002360.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000002381.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000002379.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000002403.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000002415.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000002421.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000002392.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000002434.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000002417.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000002441.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000002416.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000002443.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000002423.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000002451.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000002483.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000002477.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000002499.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000002551.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000002557.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000002558.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000002565.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000002559.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000002568.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000002575.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000002589.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000002590.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000002591.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000002614.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000002616.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000002621.Drosophila.001 has duplicate perturbed alignments
+EMGT00050000002625.Drosophila.001 has duplicate perturbed alignments
