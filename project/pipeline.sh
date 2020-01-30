@@ -17,6 +17,7 @@ INPUT_AA_PATH=$5
 OUTPUT_PATH=$6
 #############################################################
 WDIR=/csm_data/spielman_lab/alignment_models/project/
+SCRIPTDIR=$WDIR/scripts/
 export OMP_NUM_THREADS=$THREADS
 NBOOT=49
 BOOT_START=1
@@ -27,7 +28,6 @@ AA_FAS=${NAME}.aa.fas
 
 
 cd $WDIR
-
 
 NODUPLICATES=true
 BADFILE=bad.out
@@ -58,7 +58,7 @@ if [ -f ${INPUT_NT_PATH}/${NT_FAS} ] && [ -f ${INPUT_AA_PATH}/${AA_FAS} ]; then
         else     
             ############### Run the pipeline ###########
             echo "====================== PERTURBING ${DATATYPE} ALIGNMENTS =========================="
-            python3 make_bootstrap_alignments.py ${INPUT_DATA_PATH}/$FASFILE $OUTNAME $BOOTDIR $DATATYPE $NBOOT $THREADS $BADFILE
+            python3 scripts/make_bootstrap_alignments.py ${INPUT_DATA_PATH}/$FASFILE $OUTNAME $BOOTDIR $DATATYPE $NBOOT $THREADS $BADFILE
 
             ### If the perturbation failed due to duplicates, a file will have been created and we stop analyzing this $NAME
             if [ -f ${BOOTDIR}/${BADFILE} ]; then
@@ -69,7 +69,7 @@ if [ -f ${INPUT_NT_PATH}/${NT_FAS} ] && [ -f ${INPUT_AA_PATH}/${AA_FAS} ]; then
             fi          
             
             echo "====================== RUNNING ${DATATYPE} MODEL SELECTION ========================"
-            python3 run_iqtree_on_alignment_versions.py $NAME $BOOTDIR ${BOOT_START} ${BOOT_END} $DATATYPE $THREADS
+            python3 scripts/run_iqtree_on_alignment_versions.py $NAME $BOOTDIR ${BOOT_START} ${BOOT_END} $DATATYPE $THREADS
             
             ###### If the type is AA, we also need to run CODON
             ### THIS TAKES FOREVERRRRRR. May come back to it later.

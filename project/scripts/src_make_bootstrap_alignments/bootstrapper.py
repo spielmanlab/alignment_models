@@ -1,7 +1,7 @@
 import shutil
 import os
 from Bio import AlignIO
-from numpy import *
+import numpy as np
 
 class BootstrapperLight(object): 
     def __init__(self, **kwargs):
