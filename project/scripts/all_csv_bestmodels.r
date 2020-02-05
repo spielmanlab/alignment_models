@@ -1,10 +1,17 @@
 library (tidyverse)
 library(plyr)
 
-csv_directory <- "../output_selectome"
-all_csv_files <- list.files(path=csv_directory,pattern="*.csv",full.names = TRUE)
-#all_csv_files
 
-#ldlpy - For each element of a list, apply function then combine results into a data frame.
-data_all_csv <- ldply(all_csv_files,read_csv)
-data_all_csv
+csv_directory <- "../output_selectome"
+#dir() - lists all the files in a directory 
+csv_files <- dir(path=csv_directory,pattern="*.csv")
+file_tibble <- tibble(filename=csv_files) 
+ranked <- file_tibble %>%
+  mutate(file_contents=map(filename,
+                            ~ read_csv(file.path(csv_directory, .)))) %>%
+  unnest() 
+ranked %>%
+  separate(name,c("name","species","no"),sep="[.]") %>%
+  select(-filename,-no)
+  
+#ranked
