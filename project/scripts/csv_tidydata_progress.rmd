@@ -1,0 +1,47 @@
+---
+title: "Tidying and Modeling Euteleostomi and Drosophila AA and NT Data"
+output: html_document
+theme: united
+---
+
+```{r setup, include=FALSE}
+library(tidyverse)
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+###Let's Try to Tidy `output_selectome/` Data!
+
+So, what we're trying to do first is to merge all the .csv files in `output_selectome/` into one big .csv file. 
+Then we're going to tidy that data, by tidying it by species, name, data type, and number of models. Maybe we'll add tidying parameters as we go along, but let's see!
+
+Below will be some R code that's in the works, as of February 4th, 2020.
+
+```{r,include=TRUE}
+csv_directory = "../output_selectome"
+csv_files <- dir(path=csv_directory,pattern="*.csv")
+# Reading in all the .csv files from `output_selectome/` directory
+```
+
+After reading in the data, we need to read the actual files. The code below is to read what's in the files and merge them into one data frame.
+
+```{r,include=FALSE,echo=FALSE}
+
+file_tibble <- tibble(filename=csv_files) 
+csv_dataframe <- file_tibble %>%
+  mutate(file_contents=map(filename,
+                            ~ read_csv(file.path(csv_directory, .)))) %>%
+  unnest() 
+
+```
+
+I'm unsure of how to add the code without showing all the .csv files being processed, so I'm going to not include it, but know that it's there and is visible in the actual .rmd code.
+
+So I created a variable called `csv_dataframe` which includes all the csv files in one data frame. From here, I will be manipulating that data frame in the code below.
+
+
+``` {r, include =TRUE}
+csv_dataframe %>%
+  separate (name,c("name","species","STOP"),sep="[.]") %>%
+  select(-filename,STOP)
+
+```
