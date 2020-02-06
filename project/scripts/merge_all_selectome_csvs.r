@@ -9,7 +9,7 @@ csvdf <- afile_tibble %>%
                            ~ read_csv(file.path(csv_directory, .)))) %>%
   unnest() 
 
-write_csv(csvdf,"allcsvs.csv")
+write_csv(csvdf,path="../results/all_selectome_output_csvs.csv")
 
 
 

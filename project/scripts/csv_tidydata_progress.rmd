@@ -26,7 +26,7 @@ After reading in the data, we need to read the actual files. The code below is t
 
 ```{r,include=FALSE,echo=FALSE}
 
-csv_dataframe <- read_csv("allcsvs.csv")
+csv_dataframe <- read_csv("../results/all_selectome_output_csvs.csv")
 
 ```
 
@@ -34,6 +34,7 @@ I'm unsure of how to add the code without showing all the .csv files being proce
 
 So I created a variable called `csv_dataframe` which includes all the csv files in one data frame. From here, I will be manipulating that data frame in the code below.
 
+## Wrangle the Hell Out of this Data
 
 ``` {r, include =TRUE}
 csv_dataframe %>%
@@ -43,27 +44,65 @@ csv_dataframe %>%
 
 So far, as of February 6th, 2020, I cleaned up the .csv by removing the variables `filename` and separating the `name` variable into `name` and `species` and deleting the transcription number that isn't needed. The ultimate goal for this .rmd is to create four separate .csv files separated by species and data type, so two Euteleostomi AA and NT and two Drosohpila AA and NT.
 
-Let's try to separate the .csv files into species now!
-
-### Specific Species CSV Files
+Let's try to gather the ic_type data now!
 
 ```{r,include=TRUE}
+
 csv_dataframe %>%
   separate (name,c("name","species","STOP"),sep="[.]") %>%
   select(-filename,-STOP) %>%
-  group_by(species) %>%
-  extract(species,c("species1","species2"), "(^D), (^E)") %>%
-  ungroup()
+  pivot_longer(AIC:BIC, names_to = "ic_type", values_to = "model") 
 
 ```
 
-So what I'm currently stuck on is regular expressions! I have been learning regular expressions in my Unix class, so I have been trying to apply what I've been learning, but I haven't been able to separate my species yet.
+Ok, the ic_type data is now wrangled, with one column for the ic_type and and one column as the model. Time to rank the models, so then we can start plotting!
 
-I've tried using two functions to separate the `species` column into two columns, by the two species specified. The function from dplyr `separate()` is being used to try to separate and then I tried using `extract()`. I think the main problem I'm having is using regular expressions.
 
-So, after I figure out the regular expressions, I will try to separate the .csv by the data type.
+```{r,include=TRUE}
 
-Maybe I'll try this in Python? Probably not because that would be too complicated.
+csv_dataframe %>%
+  separate (name,c("name","species","STOP"),sep="[.]") %>%
+  dplyr::select(-filename,-STOP) %>%
+  pivot_longer(AIC:BIC, names_to = "ic_type", values_to = "model") -> selected_models
+
+selected_models %>%
+  group_by(name,species,datatype,ic_type) %>%
+  mutate(total = n() )%>%
+  ungroup()  %>%
+  group_by(name,species,datatype,ic_type, model) %>%
+  mutate(n = n()) %>%
+  mutate(percent_top_model = n/total) -> percent_selected_momdels 
+percent_selected_momdels
+  
+### another tibble with total number of models per ictype/datatype/name/species
+selected_models %>%
+  group_by(name,species,datatype,ic_type) %>%
+  mutate(total = n() ) %>%
+  group_by(ic_type,model) %>%
+  tally() %>%
+  ungroup()
+  mutate(percent_ic_type = ic_type/total)
+  
+
+  dplyr::select(-n) %>%
+  rename(most_common_model = model)
+  
+
+
+  #group_by(name, number, ic_type) %>%
+  #mutate(ic_rank = rank(ic_value)) %>%
+  #filter(ic_rank == 1) %>%
+  #ungroup() %>%
+  #dplyr::select(name, number, Model, ic_type) 
+
+
+
+
+```
+
+
+
+
 
 
 

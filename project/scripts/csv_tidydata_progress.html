@@ -188,7 +188,47 @@ summary {
 <pre class="r"><code>csv_directory = &quot;../output_selectome&quot;
 csv_files &lt;- dir(path=csv_directory,pattern=&quot;*.csv&quot;)
 # Reading in all the .csv files from `output_selectome/` directory</code></pre>
-<p>After reading in the data, we need to read the actual files. The he code below is to read what’s in the files and merge them into one data frame.</p>
+<p>After reading in the data, we need to read the actual files. The code below is to read what’s in the files and merge them into one data frame.</p>
+<p>I’m unsure of how to add the code without showing all the .csv files being processed, so I’m going to not include it, but know that it’s there and is visible in the actual .rmd code.</p>
+<p>So I created a variable called <code>csv_dataframe</code> which includes all the csv files in one data frame. From here, I will be manipulating that data frame in the code below.</p>
+<pre class="r"><code>csv_dataframe %&gt;%
+  separate (name,c(&quot;name&quot;,&quot;species&quot;,&quot;STOP&quot;),sep=&quot;[.]&quot;) %&gt;%
+  select(-filename,-STOP) </code></pre>
+<pre><code>## # A tibble: 141,750 x 6
+##    name             species   datatype AIC          AICc         BIC       
+##    &lt;chr&gt;            &lt;chr&gt;     &lt;chr&gt;    &lt;chr&gt;        &lt;chr&gt;        &lt;chr&gt;     
+##  1 EMGT00050000000… Drosophi… AA       Dayhoff+F+I… Dayhoff+F+I… Dayhoff+F…
+##  2 EMGT00050000000… Drosophi… AA       Dayhoff+F+I… Dayhoff+F+I… Dayhoff+F…
+##  3 EMGT00050000000… Drosophi… AA       JTT+F+I+G4   JTT+F+I+G4   JTT+F+G4  
+##  4 EMGT00050000000… Drosophi… AA       DCMut+F+G4   DCMut+F+G4   DCMut+F+G4
+##  5 EMGT00050000000… Drosophi… AA       JTT+F+G4     JTT+F+G4     JTT+F+G4  
+##  6 EMGT00050000000… Drosophi… AA       DCMut+F+I+G4 DCMut+F+I+G4 Dayhoff+F…
+##  7 EMGT00050000000… Drosophi… AA       JTT+F+I+G4   JTT+F+I+G4   JTT+F+G4  
+##  8 EMGT00050000000… Drosophi… AA       JTT+F+I+G4   JTT+F+I+G4   JTT+F+G4  
+##  9 EMGT00050000000… Drosophi… AA       JTT+F+I+G4   JTT+F+I+G4   JTT+F+G4  
+## 10 EMGT00050000000… Drosophi… AA       Dayhoff+F+I… Dayhoff+F+I… Dayhoff+F…
+## # … with 141,740 more rows</code></pre>
+<p>So far, as of February 6th, 2020, I cleaned up the .csv by removing the variables <code>filename</code> and separating the <code>name</code> variable into <code>name</code> and <code>species</code> and deleting the transcription number that isn’t needed. The ultimate goal for this .rmd is to create four separate .csv files separated by species and data type, so two Euteleostomi AA and NT and two Drosohpila AA and NT.</p>
+<p>Let’s try to gather the ic_type data now!</p>
+<pre class="r"><code>csv_dataframe %&gt;%
+  separate (name,c(&quot;name&quot;,&quot;species&quot;,&quot;STOP&quot;),sep=&quot;[.]&quot;) %&gt;%
+  select(-filename,-STOP) %&gt;%
+  pivot_longer(AIC:BIC, names_to = &quot;ic_type&quot;, values_to = &quot;model&quot;) </code></pre>
+<pre><code>## # A tibble: 425,250 x 5
+##    name               species    datatype ic_type model         
+##    &lt;chr&gt;              &lt;chr&gt;      &lt;chr&gt;    &lt;chr&gt;   &lt;chr&gt;         
+##  1 EMGT00050000000002 Drosophila AA       AIC     Dayhoff+F+I+G4
+##  2 EMGT00050000000002 Drosophila AA       AICc    Dayhoff+F+I+G4
+##  3 EMGT00050000000002 Drosophila AA       BIC     Dayhoff+F+G4  
+##  4 EMGT00050000000002 Drosophila AA       AIC     Dayhoff+F+I+G4
+##  5 EMGT00050000000002 Drosophila AA       AICc    Dayhoff+F+I+G4
+##  6 EMGT00050000000002 Drosophila AA       BIC     Dayhoff+F+G4  
+##  7 EMGT00050000000002 Drosophila AA       AIC     JTT+F+I+G4    
+##  8 EMGT00050000000002 Drosophila AA       AICc    JTT+F+I+G4    
+##  9 EMGT00050000000002 Drosophila AA       BIC     JTT+F+G4      
+## 10 EMGT00050000000002 Drosophila AA       AIC     DCMut+F+G4    
+## # … with 425,240 more rows</code></pre>
+<p>Ok, the ic_type data is now wrangled, with one column for the ic_type and and one column as the model. Time to rank the models, so then we can start plotting!</p>
 </div>
 
 
