@@ -26,11 +26,7 @@ After reading in the data, we need to read the actual files. The code below is t
 
 ```{r,include=FALSE,echo=FALSE}
 
-file_tibble <- tibble(filename=csv_files) 
-csv_dataframe <- file_tibble %>%
-  mutate(file_contents=map(filename,
-                            ~ read_csv(file.path(csv_directory, .)))) %>%
-  unnest() 
+csv_dataframe <- read_csv("allcsvs.csv")
 
 ```
 
