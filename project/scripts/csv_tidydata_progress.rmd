@@ -55,13 +55,19 @@ Let's try to separate the .csv files into species now!
 csv_dataframe %>%
   separate (name,c("name","species","STOP"),sep="[.]") %>%
   select(-filename,-STOP) %>%
-  separate(species,c("Euteleostomi","Drosophila"),"")
+  group_by(species) %>%
+  extract(species,c("species1","species2"), "(^D), (^E)") %>%
+  ungroup()
 
 ```
 
 So what I'm currently stuck on is regular expressions! I have been learning regular expressions in my Unix class, so I have been trying to apply what I've been learning, but I haven't been able to separate my species yet.
 
+I've tried using two functions to separate the `species` column into two columns, by the two species specified. The function from dplyr `separate()` is being used to try to separate and then I tried using `extract()`. I think the main problem I'm having is using regular expressions.
 
+So, after I figure out the regular expressions, I will try to separate the .csv by the data type.
+
+Maybe I'll try this in Python? Probably not because that would be too complicated.
 
 
 
