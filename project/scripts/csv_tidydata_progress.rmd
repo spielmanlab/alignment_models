@@ -42,6 +42,38 @@ So I created a variable called `csv_dataframe` which includes all the csv files 
 ``` {r, include =TRUE}
 csv_dataframe %>%
   separate (name,c("name","species","STOP"),sep="[.]") %>%
-  select(-filename,STOP)
+  select(-filename,-STOP) 
+```
+
+So far, as of February 6th, 2020, I cleaned up the .csv by removing the variables `filename` and separating the `name` variable into `name` and `species` and deleting the transcription number that isn't needed. The ultimate goal for this .rmd is to create four separate .csv files separated by species and data type, so two Euteleostomi AA and NT and two Drosohpila AA and NT.
+
+Let's try to separate the .csv files into species now!
+
+### Specific Species CSV Files
+
+```{r,include=TRUE}
+csv_dataframe %>%
+  separate (name,c("name","species","STOP"),sep="[.]") %>%
+  select(-filename,-STOP) %>%
+  separate(species,c("Euteleostomi","Drosophila"),"")
 
 ```
+
+So what I'm currently stuck on is regular expressions! I have been learning regular expressions in my Unix class, so I have been trying to apply what I've been learning, but I haven't been able to separate my species yet.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
