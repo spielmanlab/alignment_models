@@ -30,8 +30,6 @@ csv_dataframe <- read_csv("../results/all_selectome_output_csvs.csv")
 
 ```
 
-I'm unsure of how to add the code without showing all the .csv files being processed, so I'm going to not include it, but know that it's there and is visible in the actual .rmd code.
-
 So I created a variable called `csv_dataframe` which includes all the csv files in one data frame. From here, I will be manipulating that data frame in the code below.
 
 ## Wrangle the Hell Out of this Data
@@ -46,15 +44,6 @@ So far, as of February 6th, 2020, I cleaned up the .csv by removing the variable
 
 Let's try to gather the ic_type data now!
 
-```{r,include=TRUE}
-
-csv_dataframe %>%
-  separate (name,c("name","species","STOP"),sep="[.]") %>%
-  select(-filename,-STOP) %>%
-  pivot_longer(AIC:BIC, names_to = "ic_type", values_to = "model") 
-
-```
-
 Ok, the ic_type data is now wrangled, with one column for the ic_type and and one column as the model. Time to rank the models, so then we can start plotting!
 
 
@@ -64,16 +53,25 @@ csv_dataframe %>%
   separate (name,c("name","species","STOP"),sep="[.]") %>%
   dplyr::select(-filename,-STOP) %>%
   pivot_longer(AIC:BIC, names_to = "ic_type", values_to = "model") -> selected_models
+```
 
+The data frame is now wrangled and tidied, by putting all the information criterions into its own column, and putting the corresponding model in its own column. 
+
+Now, we're going to get the percentage of the top model being selected. There should only be six rows per each name because there are three information criterion per data type. 
+
+```{r,include=TRUE}
 selected_models %>%
   group_by(name,species,datatype,ic_type) %>%
   mutate(total = n() )%>%
-  ungroup()  %>%
+  ungroup() %>%
   group_by(name,species,datatype,ic_type, model) %>%
   mutate(n = n()) %>%
-  mutate(percent_top_model = n/total) -> percent_selected_momdels 
-percent_selected_momdels
+  mutate(percent_top_model = n/total) -> percent_selected_models 
+```
   
+With the top model percentage wrangled, this data can plotted against other data properties!
+
+```{r,include=FALSE}
 ### another tibble with total number of models per ictype/datatype/name/species
 selected_models %>%
   group_by(name,species,datatype,ic_type) %>%
@@ -81,40 +79,138 @@ selected_models %>%
   group_by(ic_type,model) %>%
   tally() %>%
   ungroup()
-  mutate(percent_ic_type = ic_type/total)
-  
-
-  dplyr::select(-n) %>%
-  rename(most_common_model = model)
-  
-
+### Don't worry about this chunk yet, will work on it later
+  #dplyr::select(-n) %>%
+  ##rename(most_common_model = model)
 
   #group_by(name, number, ic_type) %>%
   #mutate(ic_rank = rank(ic_value)) %>%
   #filter(ic_rank == 1) %>%
   #ungroup() %>%
   #dplyr::select(name, number, Model, ic_type) 
+  
+```
+
+##Let's Start Plotting!
+
+###Number of Models per Dataset
+
+Alright, so I have the selected models, and the top model percentage calculated. I'm now going to start  plotting separate datasets from the `selected_models` dataet. I will try to be finding dataset names that have multiple models selected for itself. I will also be looking for a dataset name that has one model selected for it by data type. 
 
 
+```{r,include=TRUE}
 
+ex = "EMGT00050000000002"
+#variable to filter the name for just this dataset
+
+selected_models %>%
+  filter(name == ex,datatype=="NT") %>%
+  ggplot(aes(x = model)) + geom_bar(fill="red") 
+
+selected_models %>%
+  filter(name == ex,datatype=="AA") %>%
+  ggplot(aes(x = model)) + geom_bar(fill="red") 
 
 ```
 
 
+Holy cow! 10 models selected for this dataset, with 4 selected for the NT data type and 6 selected for the AA data type. 
+
+As of February 11th, I have found a dataset that has 10 models selected for it. These plots are unfinished, but show the necessary information (number of models!). Will be prettying them up soon.
+
+###Number of Models per Entire Dataset based on Species and Datatype
+
+Time to start plotting total number of models per all datasets pertaining to specific species and data type (Euteleostomi or Drosophila and AA or NT)
+
+###Drosophila AA Number of Models
+
+```{r, include =TRUE}
+selected_models %>%
+  filter(species=="Drosophila",datatype=="AA") %>%
+  group_by(name, model, ic_type,datatype) %>% 
+  tally() %>% 
+  ungroup() %>% 
+  select(-n) %>% 
+  group_by(name, ic_type) %>% 
+  tally() %>% 
+  rename(number_models = n ) %>%
+  group_by(number_models, ic_type) %>% 
+  tally() %>% 
+  rename(name = n) %>%
+  ggplot(aes(x = number_models, y = name)) + 
+    geom_col() + 
+    geom_text(aes(x = number_models, y = name + 1, label = name))+
+    facet_wrap(~ic_type) + 
+    theme_classic() 
+
+```
+
+###Drosophila NT Number of Models
+
+```{r,include=TRUE}
+selected_models %>%
+  filter(species=="Drosophila",datatype=="NT") %>%
+  group_by(name, model, ic_type,datatype) %>% 
+  tally() %>% 
+  ungroup() %>% 
+  select(-n) %>% 
+  group_by(name, ic_type) %>% 
+  tally() %>% 
+  rename(number_models = n ) %>%
+  group_by(number_models, ic_type) %>% 
+  tally() %>% 
+  rename(name = n) %>%
+  ggplot(aes(x = number_models, y = name)) + 
+    geom_col() + 
+    geom_text(aes(x = number_models, y = name + 1, label = name))+
+    facet_wrap(~ic_type) + 
+    theme_classic() 
+```
+
+###Euteleostomi AA Number of Models
+
+```{r,include=TRUE}
+selected_models %>%
+  filter(species=="Euteleostomi",datatype=="AA") %>%
+  group_by(name, model, ic_type,datatype) %>% 
+  tally() %>% 
+  ungroup() %>% 
+  select(-n) %>% 
+  group_by(name, ic_type) %>% 
+  tally() %>% 
+  rename(number_models = n ) %>%
+  group_by(number_models, ic_type) %>% 
+  tally() %>% 
+  rename(name = n) %>%
+  ggplot(aes(x = number_models, y = name)) + 
+    geom_col() + 
+    geom_text(aes(x = number_models, y = name + 1, label = name))+
+    facet_wrap(~ic_type) + 
+    theme_classic() 
+```
+
+###Euteleostomi NT Number of Models
+
+```{r,include=TRUE}
+selected_models %>%
+  filter(species=="Euteleostomi",datatype=="NT") %>%
+  group_by(name, model, ic_type,datatype) %>% 
+  tally() %>% 
+  ungroup() %>% 
+  select(-n) %>% 
+  group_by(name, ic_type) %>% 
+  tally() %>% 
+  rename(number_models = n ) %>%
+  group_by(number_models, ic_type) %>% 
+  tally() %>% 
+  rename(name = n) %>%
+  ggplot(aes(x = number_models, y = name)) + 
+    geom_col() + 
+    geom_text(aes(x = number_models, y = name + 1, label = name))+
+    facet_wrap(~ic_type) + 
+    theme_classic() 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+```
 
 
