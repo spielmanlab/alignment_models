@@ -9,7 +9,7 @@ library(tidyverse)
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-###Let's Try to Tidy `output_selectome/` Data!
+### Let's Try to Tidy `output_selectome/` Data!
 
 So, what we're trying to do first is to merge all the .csv files in `output_selectome/` into one big .csv file. 
 Then we're going to tidy that data, by tidying it by species, name, data type, and number of models. Maybe we'll add tidying parameters as we go along, but let's see!
@@ -35,6 +35,8 @@ So I created a variable called `csv_dataframe` which includes all the csv files 
 ## Wrangle the Hell Out of this Data
 
 ``` {r, include =TRUE}
+csv_dataframe
+
 csv_dataframe %>%
   separate (name,c("name","species","STOP"),sep="[.]") %>%
   select(-filename,-STOP) 
@@ -48,10 +50,12 @@ Ok, the ic_type data is now wrangled, with one column for the ic_type and and on
 
 
 ```{r,include=TRUE}
+csv_dataframe
 
 csv_dataframe %>%
   separate (name,c("name","species","STOP"),sep="[.]") %>%
   dplyr::select(-filename,-STOP) %>%
+  gather(ic_type,ic_value,AIC:BIC)
   pivot_longer(AIC:BIC, names_to = "ic_type", values_to = "model") -> selected_models
 ```
 
@@ -91,25 +95,28 @@ selected_models %>%
   
 ```
 
-##Let's Start Plotting!
+## Let's Start Plotting!
 
-###Number of Models per Dataset
+### Number of Models per Dataset
 
 Alright, so I have the selected models, and the top model percentage calculated. I'm now going to start  plotting separate datasets from the `selected_models` dataet. I will try to be finding dataset names that have multiple models selected for itself. I will also be looking for a dataset name that has one model selected for it by data type. 
 
 
 ```{r,include=TRUE}
+selected_models
 
 ex = "EMGT00050000000002"
 #variable to filter the name for just this dataset
 
 selected_models %>%
   filter(name == ex,datatype=="NT") %>%
-  ggplot(aes(x = model)) + geom_bar(fill="red") 
+  ggplot(aes(x = model)) + geom_bar(fill="red")
+  
 
 selected_models %>%
   filter(name == ex,datatype=="AA") %>%
-  ggplot(aes(x = model)) + geom_bar(fill="red") 
+  ggplot(aes(x = model)) + geom_bar(fill="red") %>%
+  facet_wrap(~ic_type)
 
 ```
 
@@ -122,7 +129,7 @@ As of February 11th, I have found a dataset that has 10 models selected for it. 
 
 Time to start plotting total number of models per all datasets pertaining to specific species and data type (Euteleostomi or Drosophila and AA or NT)
 
-###Drosophila AA Number of Models
+### Drosophila AA Number of Models
 
 ```{r, include =TRUE}
 selected_models %>%
@@ -145,7 +152,7 @@ selected_models %>%
 
 ```
 
-###Drosophila NT Number of Models
+### Drosophila NT Number of Models
 
 ```{r,include=TRUE}
 selected_models %>%
@@ -167,7 +174,7 @@ selected_models %>%
     theme_classic() 
 ```
 
-###Euteleostomi AA Number of Models
+### Euteleostomi AA Number of Models
 
 ```{r,include=TRUE}
 selected_models %>%
@@ -189,7 +196,7 @@ selected_models %>%
     theme_classic() 
 ```
 
-###Euteleostomi NT Number of Models
+### Euteleostomi NT Number of Models
 
 ```{r,include=TRUE}
 selected_models %>%
