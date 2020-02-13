@@ -50,12 +50,10 @@ Ok, the ic_type data is now wrangled, with one column for the ic_type and and on
 
 
 ```{r,include=TRUE}
-csv_dataframe
-
+csv_dataframe 
 csv_dataframe %>%
   separate (name,c("name","species","STOP"),sep="[.]") %>%
   dplyr::select(-filename,-STOP) %>%
-  gather(ic_type,ic_value,AIC:BIC)
   pivot_longer(AIC:BIC, names_to = "ic_type", values_to = "model") -> selected_models
 ```
 
@@ -106,17 +104,25 @@ Alright, so I have the selected models, and the top model percentage calculated.
 selected_models
 
 ex = "EMGT00050000000002"
-#variable to filter the name for just this dataset
+#variable to filter the name for just this dataset, Drosophila 
 
 selected_models %>%
   filter(name == ex,datatype=="NT") %>%
-  ggplot(aes(x = model)) + geom_bar(fill="red")
+  ggplot(aes(x = model)) +
+  theme_classic() +
+  geom_bar(col="black",fill="firebrick", width=0.8) +
+  facet_wrap(~ic_type) +
+  theme(axis.text=element_text(size=6),plot.title=element_text(hjust=0.5)) +
+  labs(x="Model",y="Number of Models per Alignment") +
+  ggtitle("Drosophila NT Dataset 00050000000002") +
+  scale_fill_manual(values= c("GTR+F+I+G4" = "lightblue"))
   
 
-selected_models %>%
-  filter(name == ex,datatype=="AA") %>%
-  ggplot(aes(x = model)) + geom_bar(fill="red") %>%
-  facet_wrap(~ic_type)
+selected_models %>% 
+  filter(name == ex,datatype=="AA",ic_type=="AIC") %>%
+  ggplot(aes(x = model)) +
+  geom_bar(fill="red") 
+
 
 ```
 
@@ -132,6 +138,7 @@ Time to start plotting total number of models per all datasets pertaining to spe
 ### Drosophila AA Number of Models
 
 ```{r, include =TRUE}
+
 selected_models %>%
   filter(species=="Drosophila",datatype=="AA") %>%
   group_by(name, model, ic_type,datatype) %>% 
@@ -146,9 +153,10 @@ selected_models %>%
   rename(name = n) %>%
   ggplot(aes(x = number_models, y = name)) + 
     geom_col() + 
+    scale_fill_manual(values=colors) +
     geom_text(aes(x = number_models, y = name + 1, label = name))+
-    facet_wrap(~ic_type) + 
-    theme_classic() 
+    facet_wrap(~ic_type) +
+    theme_classic()
 
 ```
 
