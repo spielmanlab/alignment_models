@@ -2,12 +2,15 @@
 title: "Tidying and Modeling Euteleostomi and Drosophila AA and NT Data"
 output: html_document
 theme: united
+editor_options: 
+  chunk_output_type: console
 ---
 
 ```{r setup, include=FALSE}
 library(tidyverse)
 library(patchwork)
 knitr::opts_chunk$set(echo = TRUE)
+#figs.height,figs.width, setup in curly braces 
 ```
 
 ### Let's Try to Tidy `output_selectome/` Data!
@@ -94,7 +97,7 @@ selected_models %>%
 Alright, so I have the selected models, and the top model percentage calculated. I'm now going to start  plotting separate datasets from the `selected_models` dataet. I will try to be finding dataset names that have multiple models selected for itself. I will also be looking for a dataset name that has one model selected for it by data type. 
 
 
-```{r,include=TRUE}
+```{r,include=FALSE}
 selected_models
 
 ex = "EMGT00050000000002"
@@ -130,7 +133,7 @@ Holy cow! 10 models selected for this dataset, with 4 selected for the NT data t
 
 As of February 11th, I have found a dataset that has 10 models selected for it. These plots are unfinished, but show the necessary information (number of models!). Will be prettying them up soon.
 
-## Two Functions for Readying and Plotting Species/Datatype Specific Data
+## How many models are selected for 
 
 Time to start plotting total number of models per all datasets pertaining to specific species and data type (Euteleostomi or Drosophila and AA or NT)
 
@@ -174,7 +177,6 @@ plot_processed_alignments <- function(ready_data)
     ylab("Number of Selected Models") +
     theme_linedraw()  +
     scale_x_continuous(breaks=seq(0,20,1))+
-    labs(title = "Number of Models Selected per Species and Datatype",hjust=.5) +
     theme(plot.title=element_text(hjust=0.5))-> plotted_data
   plotted_data
   
@@ -193,10 +195,10 @@ nuc<- "NT"
 
 ### Drosophila AA Number of Models
 
-```{r, include =TRUE}
+```{r}
 
 dros_aa <-process_ggplot_ready_data(selected_models,flies,amino)
-plot_processed_alignments(dros_aa)
+daa_plot <- plot_processed_alignments(dros_aa)
 
 ```
 
@@ -204,30 +206,57 @@ plot_processed_alignments(dros_aa)
 
 ```{r,include=TRUE}
 dros_nt <-process_ggplot_ready_data(selected_models,flies,nuc)
-plot_processed_alignments(dros_nt)
+dnt_plot <- plot_processed_alignments(dros_nt)
 ```
 
 ### Euteleostomi AA Number of Models
 
 ```{r,include=TRUE}
 eut_aa <-process_ggplot_ready_data(selected_models,bony,amino)
-plot_processed_alignments(eut_aa)
+eaa_plot <-plot_processed_alignments(eut_aa)
 ```
 
 ### Euteleostomi NT Number of Models
 
-```{r,include=TRUE}
+```{r}
 eut_nt <- process_ggplot_ready_data(selected_models,bony,nuc)
-plot_processed_alignments(eut_nt)
+ent_plot <-plot_processed_alignments(eut_nt)
 ```
 
 
+One color for aa and nt or one color for species 
+
+percentage of the time that the GIVEN was the best model out of 50. 
+do this 3x; for the 3 most common MODELS, for each criterion, for each aa/nt for each dros/eutel = 36 plots?. no more htan 6 plots in a grid. only applies when >= 3 models.
+
+how do we do?
+count( dataytpe, ictype, species, name, model)
+#count is shortcut for groupby,tally, and ungroup()
+filter for one, filter for two, filter for three
+only do this for datasets that have three models, lots of wrangling!
+start to wrangle on paper!!!!! 
 
 
+mutate a new column, determine if it is the top model, then sum by group by, tally, model, rank
+percentage of time the first one occurs
+
+```{r,fig.height=8,fig.width=16}
+
+(daa_plot|ent_plot|eaa_plot)/dnt_plot
+
+```
+
+Okay, so we're going to start doing more plotting!
+We want to show the percentage of the time that the given was the best model out of 50. Need to do this 30 times, for the 3 most common models, for each criterion, for each aa/nt for each dros/eutl. No more than 6 plots in a grid. Only applies when dataset has 3 or more models. Let's start with `selected_models`.
 
 
+```{r}
+selected_models %>%
+  count(datatype,ic_type,species,name,model) %>%
+  rename(number_of_models=n) %>%
+  filter(number_of_models>=3) %>%
+  count(number_of_models) %>%
+  tail()
+ ```
 
-
-
-
-
+filter() is a command that returns rows that match the arguments given. Note that dplyr is not yet smart enough to optimise filtering optimisation on grouped datasets that don't need grouped calculations. For this reason, filtering is often considerably faster on ungroup()ed data.
