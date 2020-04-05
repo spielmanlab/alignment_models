@@ -223,22 +223,26 @@ eut_nt <- process_ggplot_ready_data(selected_models,bony,nuc)
 ent_plot <-plot_processed_alignments(eut_nt)
 ```
 
+```{r}
+###Notes for future work
 
-One color for aa and nt or one color for species 
+#One color for aa and nt or one color for species 
 
-percentage of the time that the GIVEN was the best model out of 50. 
-do this 3x; for the 3 most common MODELS, for each criterion, for each aa/nt for each dros/eutel = 36 plots?. no more htan 6 plots in a grid. only applies when >= 3 models.
+#percentage of the time that the GIVEN was the best model out of 50. 
+#do this 3x; for the 3 most common MODELS, for each criterion, for each aa/nt for each dros/eutel = 36 plots?. no more htan 6 plots in a grid. only applies when >= 3 models.
 
-how do we do?
-count( dataytpe, ictype, species, name, model)
+#how do we do?
+#count( dataytpe, ictype, species, name, model)
 #count is shortcut for groupby,tally, and ungroup()
-filter for one, filter for two, filter for three
-only do this for datasets that have three models, lots of wrangling!
-start to wrangle on paper!!!!! 
+#3filter for one, filter for two, filter for three
+#only do this for datasets that have three models, lots of wrangling!
+##start to wrangle on paper!!!!! 
 
 
-mutate a new column, determine if it is the top model, then sum by group by, tally, model, rank
-percentage of time the first one occurs
+#mutate a new column, determine if it is the top model, then sum by group by, tally, model, rank
+#percentage of time the first one occurs
+
+```
 
 ```{r,fig.height=8,fig.width=16}
 
@@ -247,16 +251,25 @@ percentage of time the first one occurs
 ```
 
 Okay, so we're going to start doing more plotting!
-We want to show the percentage of the time that the given was the best model out of 50. Need to do this 30 times, for the 3 most common models, for each criterion, for each aa/nt for each dros/eutl. No more than 6 plots in a grid. Only applies when dataset has 3 or more models. Let's start with `selected_models`.
+We want to show the percentage of the time that the given was the best model out of 50. Need to do this 30 times, for the 3 most common models, for each criterion, for each aa/nt for each dros/eutl. No more than 6 plots in a grid. Only applies when dataset has 3 or more models. Let's start with `percent_selected_models`.
+
+`percent_selected_models` is a variable that defines a tibble of the top model selected per dataset. I  think I want to use this variable instead of selected models because it already has the known top model and the percentage it is shown in the dataset. It is April 4th, and I grouped the columns of interest together. I am trying to find a way to make a variable that counts the number of models each dataset contains. 
 
 
 ```{r}
-selected_models %>%
-  count(datatype,ic_type,species,name,model) %>%
-  rename(number_of_models=n) %>%
-  filter(number_of_models>=3) %>%
-  count(number_of_models) %>%
-  tail()
- ```
+percent_selected_models %>%
+  group_by(name,model,species,datatype,ic_type)%>%
+  tally() %>%
+  ungroup() %>%
+  select(-n) %>%
+  group_by(name,species,datatype,ic_type) %>%
+  tally() %>%
+  ungroup() %>%
+  filter(n>=3) -> temp_wrang_model
 
-filter() is a command that returns rows that match the arguments given. Note that dplyr is not yet smart enough to optimise filtering optimisation on grouped datasets that don't need grouped calculations. For this reason, filtering is often considerably faster on ungroup()ed data.
+```
+
+I think I filtered out my models to have more than 3 with the above code. It is still April 4th. I will be calling this variable `temp_wrang_model` just because it's a temporary variable that I'll be working on to wrangle.
+
+
+  
