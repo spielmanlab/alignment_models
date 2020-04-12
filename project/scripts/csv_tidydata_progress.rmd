@@ -271,5 +271,17 @@ percent_selected_models %>%
 
 I think I filtered out my models to have more than 3 with the above code. It is still April 4th. I will be calling this variable `temp_wrang_model` just because it's a temporary variable that I'll be working on to wrangle.
 
+Okay it's now April 8th, and I'm going to start working on `temp_wrang_model` again. 
+So after some thought, `temp_wrang_model` was the wrong approach. I need to get the percentage of time in where a model was the best out of 50 alignments. Let's try wrangling from where I tidied the .csv file created in a seperate script.
+
+Maybe I should work in python?
+
+```{r}
+selected_models %>%
+  count(name,model,species,datatype,ic_type) %>%
+  select(-n) %>%
+  count(name,species,datatype,ic_type)
+
+```
 
   
