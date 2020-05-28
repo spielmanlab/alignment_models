@@ -16,8 +16,7 @@ INPUT_NT_PATH=$4
 INPUT_AA_PATH=$5
 OUTPUT_PATH=$6
 #############################################################
-WDIR=/csm_data/spielman_lab/alignment_models/project/
-SCRIPTDIR=$WDIR/scripts/
+WDIR=/csm_data/spielman_lab/alignment_models/scripts
 export OMP_NUM_THREADS=$THREADS
 NBOOT=49
 BOOT_START=1
