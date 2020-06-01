@@ -1,6 +1,6 @@
-library (tidyverse)
+library(tidyverse)
 
-csv_directory <- "../output_selectome"
+csv_directory <- "../results/selected_models_output/"
 #dir() - lists all the files in a directory 
 csv_files <- dir(path=csv_directory,pattern="*.csv")
 afile_tibble <- tibble(filename=csv_files) 
@@ -9,7 +9,7 @@ csvdf <- afile_tibble %>%
                            ~ read_csv(file.path(csv_directory, .)))) %>%
   unnest() 
 
-write_csv(csvdf,path="../results/all_selectome_output_csvs.csv")
+write_csv(csvdf,path="../results/all_selected_models.csv")
 
 
 
