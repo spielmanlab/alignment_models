@@ -9,15 +9,21 @@ dir = "perturbed_alignments_Drosophila_AA/EMGT00050000000018.Drosophila.001_AA"
 slash = "/"
 fas = ".fasta"
 
-infile = open("output_fs.txt", "w+")
 infile_name = "output_fs.txt"
 outfile = open("parsed_fs_output.csv","w")
-header = "reference,estimation,datatype,sp_score,tc"+ "\n"
+header = "reference,estimation,datatype,sp_score,tc\n"
 com = ","
 outfile.write(header)
-space = " "
+space = " " 
 
 aa_ls_dir = os.listdir(dir)
+
+
+def parse_output(infile_fs):
+    file_lines = infile_fs.readlines()
+    
+
+
                                 
 for i in range(50):
     for j in range (i,50):
@@ -42,10 +48,10 @@ for i in range(50):
                     os.system(fincmd)
                     
                     ########### code below only works if its only one loop 
-                    
+                    infile = open("output_fs.txt", "r")
                     if_lines = infile.readlines()
                     file_split = file.split("_")   
-                    print(if_lines)        
+                    #print(if_lines)        
                     
                     b_SP = if_lines[0]
                     b_TC = if_lines[5]
@@ -56,12 +62,12 @@ for i in range(50):
                     nn_SP = r_SP.rstrip()
                     split_TC = b_TC.rsplit(space)
                     r_TC = split_TC[1]
-                    print(r_TC) 
+                    #print(r_TC) 
                     nn_TC = r_TC.rstrip()                   
                     
                     write_line = file + com + file2 + com + file_split[1]+ com +  nn_SP + com + nn_TC + "\n"
-                    #print(write_line)
-                    outfile.write(write_line)
+                    print(write_line)
+                    #outfile.write(write_line)
                     
                     assert(1==0)
                 
