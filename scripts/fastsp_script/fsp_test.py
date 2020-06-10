@@ -5,7 +5,8 @@ import sys
 ###remember sys.argv - can create variables using indexes with sys.argv!      
 """
 
-seq_dir = "perturbed_alignments_Drosophila_AA/EMGT00050000000018.Drosophila.001_AA"
+#seq_dir = "perturbed_alignments_Drosophila_AA/EMGT00050000000018.Drosophila.001_AA"
+overall_path = sys.argv[1]
 slash = "/"
 fas = ".fasta"
 
@@ -23,7 +24,7 @@ space = " "
 n_alignments = 50
 
 
-aa_ls_dir = [x for x in os.listdir(seq_dir) if x.endswith("fasta")]
+aa_ls_dir = [x for x in os.listdir(overall_path) if x.endswith("fasta")]
 ## Long version of above:
 #aa_ls_dir_raw = os.listdir(seq_dir)
 #for aafile in aa_ls_dir_raw:
@@ -34,7 +35,7 @@ aa_ls_dir = [x for x in os.listdir(seq_dir) if x.endswith("fasta")]
 
 for i in range(n_alignments):
     file1  = aa_ls_dir[i]
-    fasta1 = seq_dir+slash+file1
+    fasta1 = overall_path+slash+file1
     file1_split = file1.split("_")
     file1_dot = file1.split(".")
     dataset = file1_dot[0]
@@ -48,7 +49,7 @@ for i in range(n_alignments):
     for j in range (i,n_alignments):
         if i != j:
             file2 = aa_ls_dir[j] 
-            fasta2 = seq_dir+slash+file2
+            fasta2 = overall_path+slash+file2
             file2_split = file2.split("_")
             dum_est_num = file2_split[2]
             est_num = dum_est_num.split(".")[0]
