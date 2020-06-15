@@ -23,7 +23,6 @@ def parse_fastsp(if_lines, dataset, species, datatype, ref_num, est_num):
     
     #write_line = file1 + COM + file2 + COM + file1_split[1]+ COM +  nn_SP + COM + nn_TC + "\n"
     # EMGT00050000000018.Drosophila.001_AA_13.fasta,EMGT00050000000018.Drosophila.001_AA_37.fasta,AA,0.9545768433975294,0.8126888217522659
-    global write_line
     write_line = dataset + COM + species + COM + datatype + COM + ref_num + COM + est_num + COM + nn_SP + COM + nn_TC + "\n"
 
     return write_line
@@ -92,7 +91,7 @@ def main():
                         ## IT'S AUTOCLOSED OUTSIDE THE WITH BLOCK
                         if_lines = infile.readlines()
                     ## call a function here after file is closed
-                    parse_fastsp(if_lines, dataset, species, datatype, ref_num, est_num)
+                    write_line = parse_fastsp(if_lines, dataset, species, datatype, ref_num, est_num)
                     
                     #print(write_line)
     
