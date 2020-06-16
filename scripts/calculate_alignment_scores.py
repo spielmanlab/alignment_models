@@ -99,11 +99,8 @@ def main():
                     with open(outfile_name, "a") as outfile:
                         outfile.write(write_line)
                         
-    #os.system("mv " + outfile_name + "../../results")  
-    """"
-    will move outfile once script is approved bc outfile is easier to check while in current dir!
-    """ 
-    
+    os.system("mv " + outfile_name + " ../results")  
+  
                       
 main()
         
