@@ -1,17 +1,16 @@
+# Load libraries ------------------------------------------------
 library(tidyverse)
-#will start with just one .csv file and then continue with all
-path_drossaa <- "results/Drosophila_AA_alignment_scores.csv"
-dros_aa <-read_csv(path_drossaa)
 
-i<-0
-while(i<=50) {
-  dros_aa %>%
-    group_by(dataset,ref_num,est_num,sp,tc) 
-    
-}
-  
-stat_csv <- dros_aa %>%
-  select(-species,-datatype) %>%
-  group_by(dataset,ref_num,est_num,sp,tc) %>%
-  tally() %>%
-  select()
+# FYI: https://style.tidyverse.org/
+
+# Define paths and load data ------------------------------------
+dros_aa_scores_file <- "../results/Drosophila_AA_alignment_scores.csv"
+dros_aa_scores <-read_csv(dros_aa_scores_file)
+
+
+# Subset to only comparisons with dataset #50 -------------------
+dros_aa_scores %>%
+  filter(ref_num == 50 | est_num == 50) %>%
+  distinct() -> dros_aa_scores_vs50
+
+# Calculate ...--------------------------------------------------
