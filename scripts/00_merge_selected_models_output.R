@@ -1,3 +1,4 @@
+# Load Libraries ------------------------
 library(tidyverse)
 
 ## Add structure with "# stuff -----" comments
@@ -12,11 +13,14 @@ library(tidyverse)
 #### 1) number of models per dataset
 #### 2) we will want to know whether each alignment's model == / != #50's model
 
-
-
+# Define Paths --------------------------
 csv_directory <- "../results/selected_models_output/"
+csv_path <-"../results/all_selected_models_.csv"
 #dir() - lists all the files in a directory 
 csv_files <- dir(path=csv_directory,pattern="*.csv")
+
+# Create CSV ----------------------------
+
 afile_tibble <- tibble(filename=csv_files) 
 csvdf <- afile_tibble %>%
   mutate(file_contents=map(filename,
@@ -30,7 +34,16 @@ csvdf <- afile_tibble %>%
 # we want:
 #name,datatype,species,AIC,AICc,BIC
 #EMGT00050000000002,AA,Drosophila,Dayhoff+F+I+G4,Dayhoff+F+I+G4,Dayhoff+F+G4
-write_csv(csvdf,path="../results/all_selected_models.csv")
+write_csv(csvdf,path=csv_path)
+
+# Read in Newly Created CSV ---------------------
+
+csv_dataframe <- read_csv(csv_path)
+
+# Wrangle Header Data -------------------
+
+csv_dataframe %>%
+  separate(name,c("name","species","STOP"),sep="[.]")
 
 
 

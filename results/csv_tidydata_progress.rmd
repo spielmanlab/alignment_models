@@ -30,7 +30,7 @@ After reading in the data, we need to read the actual files. The code below is t
 
 ```{r}
 
-csv_dataframe <- read_csv("../results/all_selectome_output_csvs.csv")
+csv_dataframe <- read_csv("all_selected_models.csv")
 csv_dataframe
 ```
 
