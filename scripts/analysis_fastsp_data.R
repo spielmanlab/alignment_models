@@ -14,3 +14,6 @@ dros_aa_scores %>%
   distinct() -> dros_aa_scores_vs50
 
 # Calculate ...--------------------------------------------------
+dros_aa_scores %>%
+  group_by(dataset,species,datatype,sp) %>%
+  summarize(mean_sp = mean(sp,na.rm = TRUE))

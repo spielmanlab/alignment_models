@@ -9,9 +9,10 @@
 			+ Run `make_bootstrap_alignments.py` (uses `src_make_bootstrap_alignments`) to produce alignments currently stored in Google Drive
 		+ Step 2: Perform model selection
 			+ Run `run_iqtree_on_alignment_versions.py` to produce `results/selected_models_output/` which contains a single CSV file per dataset.
-			+ Run `merge_selected_models_output.R` to collate all CSV output to produce `results/all_selectome_output_csvs.csv`
+			+ Run `00_merge_selected_models_output.R` to collate all CSV output to produce `results/all_selected_models.csv`
 		+ Step 3: Score perturbed alignments
-			+ Uses FORTHCOMING SCRIPT 
+			+ Run `calculate_alignment_scores.py` to produce a CSV file per dataset containing alignment quality scores (specifically SP and TC)
+			+ Step 4: USE FORTHCOMING SCRIPT `analysis_fastp_data.R` and `01_process_selected_models.R` will be used together for alignment quality analysis
 	
 + `results/`
 	+ **TODO**: `csv_tidydata_progress.rmd` may need cleanup for presentation purposes. We will return to this.

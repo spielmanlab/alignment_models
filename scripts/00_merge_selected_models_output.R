@@ -36,14 +36,7 @@ csvdf <- afile_tibble %>%
 #EMGT00050000000002,AA,Drosophila,Dayhoff+F+I+G4,Dayhoff+F+I+G4,Dayhoff+F+G4
 write_csv(csvdf,path=csv_path)
 
-# Read in Newly Created CSV ---------------------
-
-csv_dataframe <- read_csv(csv_path)
-
-# Wrangle Header Data -------------------
-
-csv_dataframe %>%
-  separate(name,c("name","species","STOP"),sep="[.]")
+#Move on to different script!
 
 
 
