@@ -60,11 +60,14 @@ Now, we're going to get the percentage of the top model being selected. There sh
 ```{r}
 selected_models %>%
   group_by(name,species,datatype,ic_type) %>%
+  # add column `total` that is total number of alignments per dataset (it's 50)
   mutate(total = n() )%>%
   ungroup() %>%
   group_by(name,species,datatype,ic_type, model) %>%
+  # Number of times a given model occurred in the alignments for a dataset, per IC
   mutate(n = n()) %>%
-  mutate(percent_top_model = n/total) -> percent_selected_models 
+  # Convert number of occurrences to a percentage of total, per dataset per IC
+  mutate(percent_each_model = n/total) -> percent_selected_models 
 percent_selected_models
 ```
   
