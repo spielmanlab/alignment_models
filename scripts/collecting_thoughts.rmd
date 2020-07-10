@@ -1,0 +1,84 @@
+---
+title: "Collecting Thoughts - Building Analyses from Euteleostomi and Drosophila AA and NT Data"
+output: html_document
+theme: united
+editor_options:  
+chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+library(tidyverse)
+library(patchwork)
+knitr::opts_chunk$set(echo = TRUE)
+#figs.height,figs.width, setup in curly braces 
+```
+
+## Let's Remember What We're Doing!
+
+Alright, it's been awhile since we've touched this data, and R more or less. However, with this document, we'll be able to recollect our thoughts, with new notes and comments, inspired by a previous R Markdown! It is now July 9th, 2020, and on February 4th, 2020, a script for merging all the `.csv` files from the directory `../results/selected_models_output` into one CSV file, named `00_merge_selected_models_output.R` was created. I will be running that script again, as there was a typo (too many underscores), as pointed out from a comment on a pull request created 8 days ago. 
+
+After running that script again, I will read in the newly created CSV file, and we will be collecting our thoughts, and hopefully be producing a script and a plot for each task at hand!
+
+Ok, it's been ran! Time to read it in! The script lives in the `../results` directory, and is called `all_selected_models.csv`
+
+### Reading in Output Selectome Merged CSV File
+```{r}
+# Define Path ----------------------------------
+csv_path <- "../results/all_selected_models.csv"
+# Read in CSV ---------------------------------
+csv_dataframe<- read_csv(csv_path)
+csv_dataframe
+```
+
+### Process Data by Ultimately Calculating Percentage of Most Common Model!
+
+So, this is not the best looking `.csv` file I've seen, so let's clean it up! Several scripts will be produced to process the data by creating some new rows and columns, and also calculating an alignment's percentage seen of its most common model. That will be the $\underline{ultimate}$ result, as of now, July 10th, 2020. We will be building analyses on top of the calculated percentage the top model appears that we create with these scripts
+
+## Calculating How Many Times Does a Model Occur in Alignments For a Dataset
+
+```{r}
+# Wrangle Header Data -----------------
+csv_dataframe %>%
+  # Separates the name column by a "." and creates two new column names
+  separate (name,c("name","species","STOP"),sep="[.]") %>%
+  # Removes unneeded column, filename
+  dplyr::select(-filename,-STOP) -> processed_00_models
+  processed_00_models
+  
+# How many times does a model occur in alignments for a dataset, per IC? --------------------
+  
+processed_00_models %>%
+  pivot_longer(AIC:BIC, names_to = "ic_type", values_to = "model") %>%
+  group_by(name,species,datatype,ic_type) %>%
+  # add column `total` that is total number of alignments per dataset (it's 50)
+  mutate(total = n() )%>%
+  ungroup() %>%
+  group_by(name,species,datatype,ic_type, model) %>%
+  # Number of times a given model occurred in the alignments for a dataset, per IC
+  mutate(n = n()) -> processed_01_models
+  
+  processed_01_models
+
+```
+
+## Plot Processed_01_Models Meaningfully
+
+We have some tidied data! Now let's try to plot it! It's July 10th, and it's been awhile since I've used ggplot, but we have Google! 
+
+``` {r}
+ processed_00_models %>%
+    pivot_longer(AIC:BIC, names_to = "ic_type", values_to = "model") %>%
+    filter(species=="Drosophila",datatype=="AA")%>%
+    group_by(name,model,ic_type,datatype) %>%
+    tally() %>%
+    ungroup() %>%
+    select(-n) %>%
+    group_by(name,ic_type) %>%
+    tally() %>% 
+    rename(number_datasets = n ) %>%
+    group_by(number_datasets, ic_type) %>% 
+    tally() %>% 
+    rename(number_of_models = n) 
+```
+GOAL FOR END OF FRIDAY (July 10th, 2020)
+Comment out what the stuff above is actually doing! Then plot out this "stuff"!

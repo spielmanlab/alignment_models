@@ -15,7 +15,7 @@ library(tidyverse)
 
 # Define Paths --------------------------
 csv_directory <- "../results/selected_models_output/"
-csv_path <-"../results/all_selected_models_.csv"
+csv_path <-"../results/all_selected_models.csv"
 #dir() - lists all the files in a directory 
 csv_files <- dir(path=csv_directory,pattern="*.csv")
 
