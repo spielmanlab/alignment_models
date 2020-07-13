@@ -47,27 +47,30 @@ csv_dataframe %>%
   
 # How many times does a model occur in alignments for a dataset, per IC? --------------------
   
-processed_00_models %>%
-  pivot_longer(AIC:BIC, names_to = "ic_type", values_to = "model") %>%
-  group_by(name,species,datatype,ic_type) %>%
-  # add column `total` that is total number of alignments per dataset (it's 50)
-  mutate(total = n() )%>%
-  ungroup() %>%
-  group_by(name,species,datatype,ic_type, model) %>%
-  # Number of times a given model occurred in the alignments for a dataset, per IC
-  mutate(n = n()) -> processed_01_models
-  
-  processed_01_models
-
+#processed_00_models %>%
+#  pivot_longer(AIC:BIC, names_to = "ic_type", values_to = "model") %>%
+#  group_by(name,species,datatype,ic_type) %>%
+#  # add column `total` that is total number of alignments per dataset (it's 50)
+#  mutate(total = n() )%>%
+#  ungroup() %>%
+#  group_by(name,species,datatype,ic_type, model) %>%
+#  # Number of times a given model occurred in the alignments for a dataset, per IC
+#  mutate(n = n()) -> processed_01_models
+#  
+#  processed_01_models
+#
 ```
 
-## Plot Processed_01_Models Meaningfully
+Above comment code doesn't make sense, am only using the var `processed_00_models` as of now (July 12th, 2020)
 
-We have some tidied data! Now let's try to plot it! It's July 10th, and it's been awhile since I've used ggplot, but we have Google! 
+## Calculating How Many Times Does a Model Occur in Alignments For a Dataset
 
+We have some tidied data! Now let's try to find how many models are given per alignment in a given dataset.
 ``` {r}
  processed_00_models %>%
+    # this is taking the columns AIC, AICc, and BIC to just one column, matching the values with the model
     pivot_longer(AIC:BIC, names_to = "ic_type", values_to = "model") %>%
+    # only going to be working with Drosophila and the datatype AA
     filter(species=="Drosophila",datatype=="AA")%>%
     group_by(name,model,ic_type,datatype) %>%
     tally() %>%
@@ -78,7 +81,91 @@ We have some tidied data! Now let's try to plot it! It's July 10th, and it's bee
     rename(number_datasets = n ) %>%
     group_by(number_datasets, ic_type) %>% 
     tally() %>% 
-    rename(number_of_models = n) 
+    rename(number_of_models = n) -> processed_02_models
 ```
 GOAL FOR END OF FRIDAY (July 10th, 2020)
 Comment out what the stuff above is actually doing! Then plot out this "stuff"!
+
+Ok, so it's 10:36 PM on July 10th. I don't really understand the above code! I don't know why we keep tallying so many times and I don't really know what I'm actually counting. Need to review. However, this code above is from a previous .RMD, and I know it can be plotted. 
+
+Let's turn the above into a function. 
+
+```{r}
+
+process_ready_data <- function(dataset,a_species,a_datatype)
+{
+  dataset %>%
+    filter(species==a_species,datatype==a_datatype)%>%
+    group_by(name,model,ic_type,datatype) %>%
+    tally() %>%
+    ungroup() %>%
+    select(-n) %>%
+    group_by(name,ic_type) %>%
+    tally() %>% 
+    rename(number_datasets = n ) %>%
+    group_by(number_datasets, ic_type) %>% 
+    tally() %>% 
+    rename(number_of_models = n) -> ready_data
+  ready_data
+  
+}  
+
+```
+
+##### Sidenote
+
+So it's 11:46 PM on July 11th, (somehow fell asleep at 1pm) and will be working on plotting. But before that, I'm going to create a new script, and rename the script called `01_process_selected_models.R` into something involving finding the number of selected model per dataset. The second script will find the percentage of the most common model. The second script is called `02_calculate_most_common_model_percentage.R`. Exciting!
+
+## Plot Processed Data Meaningfully 
+
+Below is code from the previous R Markdown. I'm going to also try to comment out some of the code to break it down into human terms. 
+
+```{r}
+
+  processed_02_models %>%
+  # call ggplot, address vars 
+  ggplot(aes(x=number_datasets,y=number_of_models,width=.86)) +
+  #bar plot!
+    geom_col() + 
+  # add axis labels
+    geom_text(aes(x = number_datasets, y = number_of_models + 1, label = number_of_models),size=3,hjust=.5,vjust=.01)+
+  # separate by ic_type
+    facet_wrap(~ic_type) + 
+    xlab("Number of Datasets") +
+    ylab("Number of Selected Models") +
+    theme_linedraw()  +
+    scale_x_continuous(breaks=seq(0,20,1))+
+    theme(plot.title=element_text(hjust=0.5))-> plotted_data
+  plotted_data
+  
+
+```
+
+Update! I have renamed the `01` script to, `01_calculate_models_per_datsets.R`. Yay!
+Another update! This plot has actually helped me a lot with understanding what I just did to my data. I just have to plug in two parameters (species and dataset) and then will have the amount of models per dataset. 
+
+
+## Let's Try to Calculate Top Model Percentage
+
+```{r}
+processed_00_models %>%
+  pivot_longer(AIC:BIC, names_to = "ic_type", values_to = "model") %>%
+  group_by(name,species,datatype,ic_type) %>%
+  # add column `total` that is total number of alignments per dataset (it's 50)
+  mutate(total = n() )%>%
+  ungroup() %>%
+  group_by(name,species,datatype,ic_type, model) %>%
+  # Number of times a given model occurred in the alignments for a dataset, per IC
+  mutate(n = n()) %>%
+  # Convert number of occurrences to a percentage of total, per dataset per IC
+  mutate(percent_each_model = n/total) %>%
+  ungroup() -> percent_selected_models 
+
+percent_selected_models %>%
+  # group data together only by what we're interested in
+  group_by(ic_type,model) %>%
+  # create new column that contains the max percent seen in both ic_type and model
+  mutate(max_percent = max(percent_each_model)) %>%
+  ungroup() 
+```
+Currently trying to filter out columns, based on the max_percent column just created. I'm getting some weird errors when I do try to mutate a column using filter. Still confused on this.
