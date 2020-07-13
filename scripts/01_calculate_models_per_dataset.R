@@ -2,13 +2,52 @@
 library(tidyverse)
 
 # Define Paths and Constants ----------------------
-
 csv_path <- "../results/all_selected_models.csv"
 
 flies = "Drosophila"
 vert = "Euteleostomi"
 amino = "AA"
 nuc = "NT"
+
+# Define functions -----------------------------------
+
+
+# Read in and tidy data ---------------------------
+
+
+# Calculate number of models for each dataset/IC combination -----------------
+
+
+## (save to a SINGLE CSV)
+
+
+# Determine which model is the most common for each dataset/IC combination ----------------
+
+## (save to a SINGLE CSV)
+
+
+# Plot the number of models for each dataset/IC combination ----------------------------
+
+## (at top, define the output plot path as `../plots/` and be sure to create that directory.
+
+#############################################################################################
+#############################################################################################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 # Read in All Selected Models CSV --------------
@@ -26,7 +65,11 @@ csv_dataframe %>%
 
 process_ready_data <- function(dataset,a_species,a_datatype)
 {
+  ## takes three arguments: shusdfuohuohwefu
+  ## returns: wqihjflhiqwelih
+  
   dataset %>%
+    # subset to only the species, datatype of interest
     filter(species==a_species,datatype==a_datatype)%>%
     group_by(name,model,ic_type,datatype) %>%
     tally() %>%

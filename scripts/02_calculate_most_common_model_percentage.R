@@ -48,7 +48,6 @@ percent_selected_models %>%
   mutate(largest_percent = max(percent_each_model)) %>% 
   filter(percent_each_model == largest_percent)
 ################################################################
-
 # 
 # percent_selected_models %>%
 #   # group data together only by what we're interested in
