@@ -12,6 +12,7 @@ import filecmp
 
 source = "src_make_bootstrap_alignments/"
 sys.path.append(source)
+sys.path.append("scripts/" + source) # depends on path where called from
 
 from aligner import *
 from treebuilder import *

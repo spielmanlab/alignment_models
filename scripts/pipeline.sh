@@ -25,9 +25,6 @@ BOOT_END=50
 NT_FAS=${NAME}.nt.fas
 AA_FAS=${NAME}.aa.fas
 
-
-cd $WDIR
-
 NODUPLICATES=true
 BADFILE=bad.out
 COMPLETED=true
@@ -52,7 +49,8 @@ if [ -f ${INPUT_NT_PATH}/${NT_FAS} ] && [ -f ${INPUT_AA_PATH}/${AA_FAS} ]; then
         BOOTDIR=${OUTNAME}/
         
         ## Skip if already run
-        if [ -d ${OUTPUT_PATH}/${BOOTDIR} ]; then
+        if [ -f ${OUTPUT_PATH}/${OUTNAME}_bestmodels.csv ]; then
+            echo "Already run ${OUTNAME}_bestmodels.csv"
             continue
         else     
             ############### Run the pipeline ###########
@@ -68,7 +66,7 @@ if [ -f ${INPUT_NT_PATH}/${NT_FAS} ] && [ -f ${INPUT_AA_PATH}/${AA_FAS} ]; then
             fi          
             
             echo "====================== RUNNING ${DATATYPE} MODEL SELECTION ========================"
-            python3 scripts/run_iqtree_on_alignment_versions.py $NAME $BOOTDIR ${BOOT_START} ${BOOT_END} $DATATYPE $THREADS
+            python3 scripts/run_iqtree_on_alignment_versions.py $NAME $BOOTDIR ${BOOT_START} ${BOOT_END} $DATATYPE 10 ## only use 10 threads for iqtree
             
             ###### If the type is AA, we also need to run CODON
             ### THIS TAKES FOREVERRRRRR. May come back to it later.
@@ -98,7 +96,7 @@ fi
 
 if [ $COMPLETED == true ]; then
    mv ${NAME}_*/*csv $OUTPUT_PATH
-   mv ${NAME}_* $OUTPUT_PATH
+   mv ${NAME}_* $OUTPUT_PATH/..
 fi
 
 
