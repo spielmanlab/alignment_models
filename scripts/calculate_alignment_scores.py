@@ -49,10 +49,11 @@ def main():
         file_path = os.path.join(overall_path,aln_dir[counter])
         fas_files = [x for x in os.listdir(file_path) if x.endswith(FAS)]  
         outfile_name = aln_dir[counter].replace("/","") + "_alignment_scores.csv"
-    
-        if os.path.exists(outfile_name):
-            continue
-    
+        counter += 1
+
+        if os.path.exists(output_path + outfile_name) and os.path.getsize(output_path + outfile_name) > 0:
+            continue 
+
         header = "dataset,species,datatype,ref_num,est_num,sp,tc\n"
         with open(outfile_name,"w") as outfile:
             outfile.write(header)
@@ -122,7 +123,6 @@ def main():
                 outfile.write(write_line)
                 
         os.system("mv " + outfile_name + " " + output_path)  
-        counter +=1
         #assert 1==4
   
                       
