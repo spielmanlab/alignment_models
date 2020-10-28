@@ -1,12 +1,12 @@
 # Libraries -----------------------
 library(tidyverse)
 library(patchwork)
+library(cowplot)
 theme_set(theme_light() + 
           theme(strip.text = element_text(color = "black")))
 
 # Useful variables,functions -------------------------
 total_reps <- 50
-
 
 percent_best_histogram <- function(df, ic, x, xlabel)
 {
@@ -18,16 +18,11 @@ percent_best_histogram <- function(df, ic, x, xlabel)
     facet_grid(dataset ~ datatype, scales = "free") + 
     scale_fill_brewer(palette = "Set1") +
     scale_x_reverse() +
-    geom_vline(xintercept = 0.5, color = "grey40") +
+    geom_vline(xintercept = 0.5, color = "grey30") +
     xlab(xlabel) + 
     ggtitle(paste("Model selection by", ic)) +
     theme(legend.position = "none")
 }
-
-
-
-
-
 
 nmodels_histogram <- function(df, ic, x, xlabel)
 {
@@ -41,6 +36,35 @@ nmodels_histogram <- function(df, ic, x, xlabel)
     ggtitle(paste("Model selection by", ic)) +
     theme(legend.position = "none")
 }
+
+reference_matches_common <- function(df, keep, trash, scale_label)
+{
+  models %>%
+    filter(num == 50) %>%
+    select(-num, -{{trash}}) %>%
+    rename(ref_msa = {{keep}}) -> ref_msa
+  
+  models %>%
+    select(-{{trash}}) %>%
+    left_join(ref_msa) %>%
+    # we just need one row, doesn't matter which
+    filter(num==1) %>%
+    mutate(best_is_ref = ref_msa == {{keep}}) %>%
+    #   filter(is.na(best_is_ref)) # DONE no NA's :)
+    count(dataset, datatype, ic_type, best_is_ref) %>%
+    left_join(number_of_datasets) %>%
+    mutate(percent = n/total) %>%
+    ggplot(aes(x = ic_type, y = percent, fill = best_is_ref)) + 
+    geom_col(position = position_dodge(), color = "black", size = 0.25) + 
+    geom_text(aes(label = round(percent,2), y = percent + 0.06), position = position_dodge(0.9), size = 3)+
+    facet_grid(dataset~datatype, scales = "free") + 
+    scale_fill_brewer(palette = "Set1", name = scale_label) + 
+    xlab("Information theoretic criterion") + 
+    ylab("Percent of alignment groups") +
+    theme(legend.position = "bottom",
+          panel.grid = element_blank()) 
+}
+
 
 
 # Load and clean data -----------------------
@@ -68,8 +92,14 @@ scores_raw %>%
          est_num = ref_num) %>%
   rename(ref_num = est) -> scores
 
+# How many datasets are there? 1000 for each selectome and 236 PANDIT
+models %>% 
+  filter(ic_type == "AIC", num == 1) %>% 
+  count(dataset, datatype, name = "total") -> number_of_datasets
 
-# Analysis: How many models per alignment?
+
+
+## Analysis: How many models per alignment? How many matrices per alignment? ----------------------------------------
 models %>%
   group_by(id, datatype, dataset, ic_type) %>%
   count(best_model) %>%
@@ -82,14 +112,14 @@ plot_grid(nmodels_histogram(how_many_models, "AIC", n_models, "Number of best-fi
           nmodels_histogram(how_many_models, "BIC", n_models, "Number of best-fitting models"), 
           labels = "auto", nrow = 1) -> nmodels_histograms
 
-# Analysis: How many MATRICES per alignment?
 models %>%
   group_by(id, datatype, dataset, ic_type) %>%
   count(best_matrix) %>%
   ungroup() %>%
   count(id, datatype, dataset, ic_type, name = "n_matrices") -> how_many_matrices
 
-# todo has bad labeling since function
+
+
 plot_grid(nmodels_histogram(how_many_matrices, "AIC", n_matrices, "Number of best-fitting model matrices"), 
           nmodels_histogram(how_many_matrices, "AICc", n_matrices, "Number of best-fitting model matrices"), 
           nmodels_histogram(how_many_matrices, "BIC", n_matrices, "Number of best-fitting model matrices"), 
@@ -97,7 +127,7 @@ plot_grid(nmodels_histogram(how_many_matrices, "AIC", n_matrices, "Number of bes
 
 
 
-# Analysis: For situations with >1 model, how common is the most common model?
+## Analysis: For situations with >1 model, how common is the most common model? For matrices? ----------------------------------------
 models %>%
   group_by(id, datatype, dataset, ic_type) %>%
   count(best_model) %>%
@@ -111,8 +141,6 @@ plot_grid(percent_best_histogram(percent_top_models, "AIC", top_model_percent,"P
           percent_best_histogram(percent_top_models, "BIC", top_model_percent,"Percentage of reps choosing the most common best-fitting model"), 
           labels = "auto", nrow = 1) -> percent_best_model_histograms
 
-
-# Analysis: For situations with >1 MATRICES, how common is the most common MATRIX?
 models %>%
   group_by(id, datatype, dataset, ic_type) %>%
   count(best_matrix) %>%
@@ -131,21 +159,17 @@ save_plot("percent_best_model_histograms.png", percent_best_model_histograms, ba
 save_plot("percent_best_matrix_histograms.png", percent_best_matrix_histograms, base_width = 14)
 
 
-# Analysis: Among IC, do we see same or different number of models?
 
+# Analysis: Among IC, do we see same or different number of models? -------------------------------
 
-# How many datasets are there? 1000 for each selectome and 236 PANDIT
-models %>% 
-  filter(ic_type == "AIC", num == 1) %>% 
-  count(dataset, datatype, name = "total") -> number_of_datasets
+# todo: matrices?
+
 
 how_many_models %>%
   mutate(number_models = case_when(n_models <= 4 ~ n_models, 
                                    n_models >= 4 ~ as.integer(5))) %>%
   select(-n_models) %>%
   pivot_wider(names_from = "ic_type", values_from = "number_models") -> how_many_models_wide_ic
-
-
 
 how_many_models_wide_ic %>%
   select(-BIC) %>%
@@ -174,14 +198,27 @@ how_many_models_wide_ic %>%
                      labels=c("1", "2", "3", "4", "5+")) 
   
 
-# Analysis: Among IC, are model "deviations" from ref the same or different alignment replicates?
+## Analysis: How many times was the "top model" also the reference alignment model? Matrix? ---------
+# THIS IS A CRUX FIGURE!!!
+# This figure shows: for AA, roughly 80-90% of the time we are consistent with a reference. For NT, we are 75-80% consistent with reference. There is therefore substantial potential that the best-fitting model selected by any criterion would change if the alignment were different. 
+# For matrix, we are about half of that, but more consistency for AA than for NT. 
+
+reference_matches_common(models, 
+                         best_model, 
+                         best_matrix, 
+                         "Most common matrix matches reference MSA model") -> ref_match_model_plot
+
+reference_matches_common(models, 
+                         best_matrix, 
+                         best_model, 
+                         "Most common model matches reference MSA model") -> ref_match_matrix_plot
+plot_grid(ref_match_model_plot, ref_match_matrix_plot, nrow=1, labels = "auto", scale = 0.95) -> ref_plot
+save_plot("reference_model_matches.png", ref_plot, base_width = 12, base_height = 5)
+  
 
 
 
-
-
-
-# Analysis: For situations 1 model, how do the scores compare?
+# Analysis: For alignment groups with 1 model, how do the SP/TC scores compare?
 
 how_many_models %>%
   mutate(number_models = case_when(n_models == 1 ~ "1", 
@@ -238,3 +275,19 @@ models_vs_rep50 %>%
     ylab("MSA scores")
     
   
+
+
+# Plot: scatterplot of percent model vs percent matrix. Not sure that this communicates well.
+
+percent_top_matrices %>% 
+  left_join(percent_top_models) %>% 
+  filter(ic_type == "AIC") %>%
+  ggplot(aes(x = top_model_percent, y = top_matrix_percent, color = dataset)) + 
+  geom_point(alpha = 0.5) + 
+  facet_grid(datatype~dataset) + 
+  xlim(0.1, 1) + ylim(0.1,1) + 
+  scale_color_brewer(palette = "Set1")
+# top vertical line: a bunch of models, same matrix
+# diagonal line: top model is a distinct matrix
+# 
+
