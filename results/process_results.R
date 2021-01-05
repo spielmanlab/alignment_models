@@ -1,125 +1,43 @@
 # Libraries -----------------------
 library(tidyverse)
-#library(patchwork)
 library(cowplot)
+library(ggtext)
+
 theme_set(theme_light() + 
           theme(strip.text = element_text(color = "black")))
+source("utils.R")
 
 # Useful variables,functions -------------------------
 total_reps <- 50
 output_path <- "figures/"
 
 
-
-percent_best_histogram <- function(df, ic, x, xlabel)
-{
-  df %>%
-    filter(ic_type == ic, 
-           {{x}} < 1) %>%
-    ggplot(aes(x = {{x}}, fill = dataset)) + 
-    geom_histogram(binwidth = 0.1, color = "black") + 
-    facet_grid(dataset ~ datatype, scales = "free") + 
-    scale_fill_brewer(palette = "Set1") +
-    scale_x_reverse(breaks=rev(seq(0, 1, 0.2))) +
-    xlab(xlabel) + 
-    ggtitle(paste("Model selection by", ic)) +
-    theme(legend.position = "none")
-    
-}
-
-nmodels_histogram <- function(df, ic, x, xlabel)
-{
-  df %>%
-    filter(ic_type == ic) %>%
-    ggplot(aes(x = {{x}}, fill = dataset)) + 
-    geom_histogram(binwidth = 1, color = "black") + 
-    facet_grid(dataset ~ datatype, scales = "free") + 
-    scale_fill_brewer(palette = "Set1") +
-    scale_x_continuous(breaks=1:10) +
-    xlab(xlabel) + 
-    ggtitle(paste("Model selection by", ic)) +
-    theme(legend.position = "none")
-}
-
-reference_matches_common <- function(df, keep, trash, scale_label)
-{
-  models %>%
-    filter(num == 50) %>%
-    select(-num, -{{trash}}) %>%
-    rename(ref_msa = {{keep}}) -> ref_msa
-  
-  models %>%
-    select(-{{trash}}) %>%
-    left_join(ref_msa) %>%
-    filter(num==1) %>%
-    mutate(best_is_ref = ref_msa == {{keep}}) %>%
-    #   filter(is.na(best_is_ref)) # DONE no NA's :)
-    count(dataset, datatype, ic_type, best_is_ref) %>%
-    left_join(number_of_datasets) %>%
-    mutate(percent = n/total) %>%
-    ggplot(aes(x = ic_type, y = percent, fill = best_is_ref)) + 
-    geom_col(position = position_dodge(), color = "black", size = 0.25) + 
-    geom_text(aes(label = round(percent,2), y = percent + 0.06), position = position_dodge(0.9), size = 3)+
-    facet_grid(dataset~datatype, scales = "free") + 
-    scale_fill_brewer(palette = "Set1", name = scale_label) + 
-    xlab("Information theoretic criterion") + 
-    ylab("Percent of alignment groups") +
-    theme(legend.position = "bottom",
-          panel.grid = element_blank()) 
-}
-
-
-boxplot_score_rep50 <- function(df, title, legend_position){
-  df %>%
-    ggplot(aes(x = score_type, y = mean_score, fill = fct_relevel(same_as_rep50_char, "Same as reference MSA model"))) + 
-    geom_boxplot(color = "black", outlier.size = 0.3, size = 0.2) +
-    facet_grid(ic_type~dataset) + 
-    scale_fill_brewer(palette = "Set2", name = "Selected model") + 
-    xlab("MSA score measurement") + 
-    ylab("Mean MSA scores") + 
-    ggtitle(title) +
-    theme(legend.position = legend_position)
-}
-
-
 # Load and clean data -----------------------
-models_raw <- read_csv("all_selected_models.csv") 
+models <- read_csv("all_selected_models.csv") %>% process_raw_models() # note: this has a warning and it's fine
 scores <- read_csv("all_alignment_scores.csv")
 
-models_raw %>%
-  separate(name, into=c("id", "dataset", "trash"), sep = "\\.") %>%
-  replace_na(list(dataset = "PANDIT"))  %>%
-  select(-trash, -filename) %>%
-  group_by(id, datatype) %>%
-  mutate(num = 1:n()) %>% 
-  ungroup() %>%
-  pivot_longer(AIC:BIC, 
-               names_to = "ic_type", 
-               values_to = "best_model") %>%
-  mutate(best_matrix = str_replace(best_model, "\\+.+", "")) -> models
 
-# How many datasets are there? 1000 for each selectome and 236 PANDIT
+## Create summary data frames ---------------------------------------------
+# How many datasets are there? 1000 for each selectome and 236 PANDIT - yup!
 models %>% 
   filter(ic_type == "AIC", num == 1) %>% 
   count(dataset, datatype, name = "total") -> number_of_datasets
 
-
-
-## How many models per dataset?  
+# How many models per dataset?  
 models %>%
   group_by(id, datatype, dataset, ic_type) %>%
   count(best_model) %>%
   ungroup() %>%
   count(id, datatype, dataset, ic_type, name = "n_models") -> how_many_models
 
-## How many matrices per dataset?
+# How many matrices per dataset?
 models %>%
   group_by(id, datatype, dataset, ic_type) %>%
   count(best_matrix) %>%
   ungroup() %>%
   count(id, datatype, dataset, ic_type, name = "n_matrices") -> how_many_matrices
   
-## Percent of dataset variants with top model?
+# Percent of dataset variants with top model?
 models %>%
   group_by(id, datatype, dataset, ic_type) %>%
   count(best_model) %>%
@@ -128,7 +46,7 @@ models %>%
   summarize(top_model_percent = max(n)/total_reps) %>%
   ungroup()-> percent_top_models
 
-## Percent of dataset variants with top matrix?
+# Percent of dataset variants with top matrix?
 models %>%
   group_by(id, datatype, dataset, ic_type) %>%
   count(best_matrix) %>%
@@ -136,6 +54,90 @@ models %>%
   group_by(id, datatype, dataset, ic_type) %>%
   summarize(top_matrix_percent = max(n)/total_reps) %>%
   ungroup()-> percent_top_matrices
+
+
+
+## Figures --------------------------------------------------------------
+
+
+# Barplot of stability counts
+how_many_models %>%
+  mutate(stability = ifelse(n_models == 1, "Stable", "Unstable")) %>%
+  group_by(datatype, dataset, ic_type) %>%
+  count(stability) %>%
+  ggplot(aes(x = stability, fill = ic_type, y = n)) + 
+    geom_col(position = position_dodge(), color = "black", size = 0.3) + 
+    geom_text(aes(label = n, y = n+37), position = position_dodge(width = 1), size=2.5) +
+    facet_grid(datatype ~ dataset) + 
+    scale_fill_brewer(name = "", palette = "Dark2") +
+    labs(x = "Dataset stability", y = "Number of datasets") + 
+    scale_y_continuous(limits=c(0,800)) +
+    theme(legend.position = "bottom") -> stability_bar
+ggsave(file.path(output_path, "stability_bar.pdf"), stability_bar, width = 8, height = 4)
+
+
+
+# Histogram of the total number of models -----------------------------
+how_many_models %>%
+  filter(n_models >1, ic_type == "AIC") %>%
+  mutate(n_models = ifelse(n_models <=5, n_models, ">5")) %>%
+  mutate(n_models = factor(n_models, levels=c(1:5, ">5"))) %>%
+  # have to count for a geom_text
+  count(dataset, datatype, n_models) %>%
+  ggplot(aes(x = n_models, y = n, fill = dataset)) + 
+  geom_col(color = "black", size = 0.3) + 
+  geom_text(aes(label = n, y = n+15), size = 2.5)+
+  facet_grid(datatype ~ dataset, scales = "free") + 
+  scale_fill_brewer(palette = "Set1") +
+  xlab("Unique selected models per dataset") +
+  ylab("Number of datasets") + 
+  theme(legend.position = "none") -> howmanymodels_aic_bar
+
+percent_top_models %>%
+  filter(top_model_percent < 1, ic_type == "AIC") %>%
+  ggplot(aes(x = top_model_percent, fill = dataset)) + 
+  geom_histogram(bins = 20, color = "black", size = 0.3) +
+  facet_grid(datatype~dataset, scales = "free") + 
+  scale_fill_brewer(palette = "Set1") +
+  scale_x_reverse(breaks=rev(seq(0, 1, 0.2))) +
+  theme() +
+  xlab("Percentage of MSA variants selecting the M<sup>0</sup> model")+
+  ylab("Number of datasets") +
+  theme(legend.position = "none", 
+        axis.title.x = element_textbox()) -> percentage_m0_model
+
+
+plot_grid(howmanymodels_aic_bar, 
+          percentage_m0_model,
+          nrow=1, labels = "auto", scale = 0.95) -> nmodels_percentm0
+ggsave(file.path(output_path, "nmodels_percentm0.pdf"), nmodels_percentm0, width = 12, height = 4)
+
+
+
+
+full_join(how_many_models, how_many_matrices) %>%
+  filter(n_models > 1, ic_type == "AIC") %>%
+  mutate(qstability = ifelse(n_matrices == 1, "Same Q matrix", "Different Q matrices")) %>%
+  # have to count for a geom_text
+  count(dataset, datatype, qstability) %>%
+  mutate(fudge = ifelse(datatype == "NT", n+30, n+15)) %>%
+  ggplot(aes(x = dataset, y = n, fill = qstability)) + 
+  geom_col(color = "black", size = 0.3, position = position_dodge()) + 
+  geom_text(aes(label = n, y = fudge), size = 2.5, position = position_dodge(width = 1))+
+  facet_wrap(vars(datatype), scales = "free_y") + 
+  scale_fill_brewer(palette = "Dark2", name = "") +
+  xlab("Dataset source") +
+  ylab("Number of datasets") + 
+  theme(legend.position = "bottom") ->qstability
+ggsave(file.path(output_path, "qstability.pdf"), qstability, width = 8, height = 3)
+
+
+
+#####################################################################
+#####################################################################
+
+
+
 
 nmodels_histogram(how_many_models, "AIC", n_models, "Number of best-fitting models") -> topleft 
 nmodels_histogram(how_many_matrices, "AIC", n_matrices, "Number of best-fitting Q matrices") -> topright
