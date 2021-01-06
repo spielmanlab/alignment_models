@@ -17,12 +17,18 @@ def hamming_on_pairwise(file):
 def main():
 
     path_to_alignments = sys.argv[1]
-    dataset            = sys.argv[2]
-    datatype           = sys.argv[3]
+    #dataset            = sys.argv[2]
+    #datatype           = sys.argv[3]
     
     if not path_to_alignments.endswith("/"):
         path_to_alignments += "/"
     
+    split_path = path_to_alignments.rstrip("/").split("/")[-1]
+    dataset = split_path.split("_")[2]
+    datatype =  split_path.split("_")[3]
+    #print(dataset, datatype)
+    #assert 1==2
+
     inmafft = dataset+datatype+"-in.fasta"
     outmafft = dataset+datatype+"-out.fasta"
     
@@ -44,7 +50,6 @@ def main():
         
         vals = [statistics.mean(distances),statistics.median(distances),statistics.stdev(distances)]
         outstring += dataset + "," + datatype + "," + ",".join([ str(x) for x in vals ]) + "\n"
-        break
         
     with open(outfile, "w") as f:
         f.write(outstring.strip())
