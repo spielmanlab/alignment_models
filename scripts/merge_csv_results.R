@@ -1,7 +1,13 @@
-# Modifed by SJS code by MM 
+# Modifed by SJS and originally written by MM (see her original at bottom)
+# Merge a bunch of CSVs
+
+### Run twice:
+##### Rscript merge_csv_results.R ../results/selected_models_output/ ../results/all_selected_models.csv
+##### Rscript merge_csv_results.R ../results/pairwise_distances/ ../results/pairwise_hamming_distances.csv
 
 library(tidyverse)
 args <- commandArgs(trailingOnly=TRUE)
+
 csv_directory <- args[1]
 output_file   <- args[2]
 
@@ -9,7 +15,8 @@ csv_files <- dir(path=csv_directory,pattern="*.csv")
 tibble(filename=csv_files) %>%
   mutate(file_contents=map(filename,
                            ~ read_csv(file.path(csv_directory, .)))) %>%
-  unnest(cols = c(file_contents)) -> csvdf
+  unnest(cols = c(file_contents)) %>%
+  select(-filename) -> csvdf
 write_csv(csvdf,output_file)
 
 

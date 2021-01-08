@@ -1,5 +1,3 @@
-Drosophila_NT_alignment_scores.csv
-Euteleostomi_NT_alignment_scores.csv
-Drosophila_AA_alignment_scores.csv
-Euteleostomi_AA_alignment_scores.csv
-
+selected_models_output/
+pairwise_distances/
+alignments_scores/
