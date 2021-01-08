@@ -4,7 +4,7 @@ process_raw_models <- function(df)
   df %>%
     separate(name, into=c("id", "dataset", "trash"), sep = "\\.") %>%
     replace_na(list(dataset = "PANDIT"))  %>%
-    select(-trash, -filename) %>%
+    select(-trash) %>%
     group_by(id, datatype) %>%
     mutate(num = 1:n()) %>% 
     ungroup() %>%
