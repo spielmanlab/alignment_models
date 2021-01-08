@@ -16,47 +16,47 @@ def hamming_on_pairwise(file):
 
 def main():
 
-    path_to_alignments = sys.argv[1]
-    #dataset            = sys.argv[2]
-    #datatype           = sys.argv[3]
+    fasta_file         = sys.argv[1]
+    path_to_alignments = sys.argv[2]
+    output_path        = sys.argv[3]
     
-    if not path_to_alignments.endswith("/"):
-        path_to_alignments += "/"
+    rawname = fasta_file.replace("_50.fasta","")
+    print(rawname)
+    if "PF" in rawname:
+        sp = rawname.split("_")
+        dataname = sp[0]
+        datatype = sp[1]
+        dataset = "PANDIT"
+    else:
+        sp = rawname.split("_")
+        rawname2 = sp[0].split(".")
+        datatype = sp[1]
+        dataname = rawname2[0]
+        dataset = rawname2[1]
     
-    split_path = path_to_alignments.rstrip("/").split("/")[-1]
-    dataset = split_path.split("_")[2]
-    datatype =  split_path.split("_")[3]
-    #print(dataset, datatype)
-    #assert 1==2
-
-    inmafft = dataset+datatype+"-in.fasta"
-    outmafft = dataset+datatype+"-out.fasta"
+    inmafft = rawname + "-inmafft.txt"
+    outmafft = rawname + "-outmafft.txt"
     
-    outfile = "pairwise_hamming_" + dataset + "_" + datatype + ".csv"
-    outstring = "dataset,datatype,mean_hamming,median_hamming,sd_hamming\n"
-    all_aln_dir = [x for x in os.listdir(path_to_alignments) if os.path.isdir(os.path.join(path_to_alignments,x))]
-    for aln_dir in all_aln_dir:
-        print(aln_dir)
-        reference = path_to_alignments + aln_dir+"/" + aln_dir + "_50.fasta"
-        align = AlignIO.read(reference, "fasta")
-        record_pairs = list(itertools.combinations(align, 2))
-        distances = []
-        for pair in record_pairs:
-            with open(inmafft, "w") as f:
-                f.write(">" + str(pair[0].id) + "\n" + str(pair[0].seq) + "\n" + ">" + str(pair[1].id) + "\n" + str(pair[1].seq))
-            diditmafft = os.system("mafft --quiet " + inmafft + " > " + outmafft)             
-            assert(diditmafft == 0)
-            distances.append(hamming_on_pairwise(inmafft))
-        
-        vals = [statistics.mean(distances),statistics.median(distances),statistics.stdev(distances)]
-        outstring += dataset + "," + datatype + "," + ",".join([ str(x) for x in vals ]) + "\n"
-        
+    outfile = output_path + "pairwise_hamming_" + rawname + ".csv"
+    outstring = "dataname,dataset,datatype,mean_hamming,median_hamming,sd_hamming\n"
+    
+    align = AlignIO.read(path_to_alignments + "/" + fasta_file, "fasta")
+    record_pairs = list(itertools.combinations(align, 2))
+    distances = []
+    for pair in record_pairs:
+        with open(inmafft, "w") as f:
+            f.write(">" + str(pair[0].id) + "\n" + str(pair[0].seq).replace("-", "") + "\n" + ">" + str(pair[1].id) + "\n" + str(pair[1].seq).replace("-", ""))
+        diditmafft = os.system("mafft --quiet " + inmafft + " > " + outmafft)             
+        assert(diditmafft == 0)
+        distances.append(hamming_on_pairwise(outmafft)) 
+    
+    vals = [statistics.mean(distances),statistics.median(distances),statistics.stdev(distances)]
     with open(outfile, "w") as f:
-        f.write(outstring.strip())
-        
+        f.write("dataname,dataset,datatype,mean_hamming,median_hamming,sd_hamming\n")
+        f.write(dataname + "," + dataset + "," + datatype + "," + ",".join([ str(x) for x in vals ]))
+            
     # cleanup
     os.remove(inmafft)
     os.remove(outmafft)
-        
     
 main()
