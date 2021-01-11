@@ -7,7 +7,7 @@ path_to_data = sys.argv[1]
 if not path_to_data.endswith("/"):
     path_to_data += "/"
 
-outstring = "dataset,name,datatype,nseq,mean_nsites\n"
+outstring = "dataset,name,datatype,nseq,mean_nsites,sd_nsites\n"
 subdirs = [x for x in os.listdir(path_to_data) if os.path.exists(path_to_data + x) and "Icon" not in x]
 #print(subdirs)
 for subdir in subdirs:
@@ -24,11 +24,13 @@ for subdir in subdirs:
         #print(dataset_dir)
         full_path = path_to_data + "/" + subdir + "/" + dataset_dir + "/"
         fasta_file = [x for x in os.listdir(full_path) if x.endswith("fasta")][1]
-        print(full_path+fasta_file)
+        #print(full_path+fasta_file)
         
         records = list(SeqIO.parse(full_path + fasta_file, "fasta"))
         nseq = str(len(records))
-        mean_nsites = str(statistics.mean([len( str(x.seq).replace("-","")) for x in records]))
+        nsites = [len( str(x.seq).replace("-","")) for x in records]
+        mean_nsites = str(statistics.mean(nsites))
+        sd_nsites = str(statistics.stdev(nsites))
         
         rawname = fasta_file.replace(".fasta", "")
         if dataset == "PANDIT":
@@ -38,7 +40,7 @@ for subdir in subdirs:
             name = rawname.split(".")[0] 
             dtype = rawname.split(".")[2].split("_")[1]
         
-        outstring += ",".join( [dataset, name, dtype, nseq, mean_nsites]  ) + "\n"
+        outstring += ",".join( [dataset, name, dtype, nseq, mean_nsites, sd_nsites]  ) + "\n"
         #print(outstring)
         
 with open("../results/nsites_nseqs.csv", "w") as f:
