@@ -1,8 +1,8 @@
 
-models <- read_csv("all_selected_models.csv")  
-scores <- read_csv("all_alignment_scores.csv")
-hamming <- read_csv("pairwise_hamming_distances.csv") %>% rename(id = dataname)
-data_info <- read_csv("nsites_nseqs.csv") %>% rename(id = name)
+models <- read_csv("../results/all_selected_models.csv")  
+scores <- read_csv("../results/all_alignment_scores.csv")
+hamming <- read_csv("../results/pairwise_hamming_distances.csv") %>% rename(id = dataname)
+data_info <- read_csv("../results/nsites_nseqs.csv") %>% rename(id = name)
 
 ## Create summary data frames ---------------------------------------------
 
