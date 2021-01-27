@@ -235,11 +235,13 @@ stable_matrices_coefficients %>%
             aes(label = paste("AUC = ", auc))) +
   theme(legend.position = "none") -> logit_matrix_plot
 
-plot_grid(lm_model_plot + ggtitle("Linear regression to predict number of models for a dataset"), logit_model_plot + ggtitle("Logistic regression to predict dataset selected model stability"), nrow=1, labels = "auto", scale=0.95) -> model_grid
-save_plot(file.path(output_path, "grid_nmodels_modelstability.pdf"),model_grid, base_height = 6, base_width=15 )
+plot_grid(lm_model_plot, logit_model_plot, nrow=1, labels = "auto", scale=0.95) -> model_grid
+save_plot(file.path(output_path, "grid_nmodels_modelstability.pdf"),model_grid, base_height = 4, base_width=15 )
 
-plot_grid(lm_matrix_plot + ggtitle("Linear regression to predict number of matrices for a dataset"), logit_matrix_plot + ggtitle("Logistic regression to predict dataset selected matrix stability"), nrow=1, labels = "auto", scale=0.95) -> matrix_grid
-save_plot(file.path("grid_nmatrices_matrixstability.pdf"),matrix_grid, base_height = 6, base_width=15 )
+
+
+#plot_grid(lm_matrix_plot + ggtitle("Linear regression to predict number of matrices for a dataset"), logit_matrix_plot + ggtitle("Logistic regression to predict dataset selected matrix stability"), nrow=1, labels = "auto", scale=0.95) -> matrix_grid
+#save_plot(file.path("grid_nmatrices_matrixstability.pdf"),matrix_grid, base_height = 6, base_width=15 )
 
 
 
