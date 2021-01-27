@@ -1,18 +1,47 @@
 
 ## Modeling the TC and SP scores -----------------------------------------------
+
 models %>%
   filter(num == 50) %>%
-  rename(rep50_model = best_model,
-         rep50_matrix = best_matrix) %>%
+  rename(rep50_model = best_model) %>%
   select(-num) %>%
   right_join(models) %>%
   filter(num!=50) %>%
   # ivrit makes the factors in the right order. anglit fail.
-  mutate(same_model_rep50 = ifelse(rep50_model == best_model, "cen", "lo"),
-         same_matrix_rep50 = ifelse(rep50_matrix == best_matrix, "cen", "lo")) %>%
-  select(-rep50_model, -best_model, -best_matrix) %>%
+  mutate(same_model_rep50 = ifelse(rep50_model == best_model, "cen", "lo")) %>%
+  select(-rep50_model, -best_model) %>%
   #filter(num!=50) %>%
-  select(same_model_rep50, same_matrix_rep50, everything())-> same_as_rep50
+  select(same_model_rep50, everything())-> same_as_rep50
+
+# stable
+same_as_rep50 %>%
+  filter(same_model_rep50 == "cen") %>%
+  count(same_model_rep50, id, datatype, ic_type, name = "count_model_sameas_rep50") %>%
+  filter(count_model_sameas_rep50 == 49) %>%
+  inner_join(scores) %>%
+  select(-same_model_rep50, -ref_num, -est_num) %>%
+  group_by(id, datatype, ic_type) %>%
+  summarize(mean_sp = mean(sp), mean_tc = mean(tc))%>%
+  pivot_longer(mean_sp:mean_tc,names_to = "score_type", values_to = "mean_score") %>%
+  mutate(same_model_rep50 = "allsame")-> stable_mean_scores
+
+# unstable
+same_as_rep50 %>%
+  filter(same_model_rep50 == "cen") %>%
+  count(same_model_rep50, id, datatype, ic_type, name = "count_model_sameas_rep50") %>%
+  # Need at least THREE observations per group. 
+  # THere are 49 comparisons. Need something between 4-46 (since 47, 48, 49)
+  filter(between(count_model_sameas_rep50, 3, 46)) %>%
+  select(id, datatype, ic_type) %>%
+  inner_join(same_as_rep50) %>%
+  ungroup() -> unstable_mean_scores
+
+# Check number observations are >=3. YES - this has 0 rows.
+unstable_mean_scores %>%
+  count(id, datatype, ic_type, same_model_rep50) %>%
+  filter(n < 3) %>%
+  nrow() -> bad_rows
+stopifnot(bad_rows == 0)
 
 
 

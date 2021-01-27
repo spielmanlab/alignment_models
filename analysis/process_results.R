@@ -8,14 +8,17 @@ library(ungeviz) # wilkelab/unggeviz
 library(pROC)
 
 theme_set(theme_light() + 
-          theme(strip.text = element_text(color = "black"),
-                legend.position = "bottom"
-               )
-          )
+            theme(strip.text = element_text(color = "black"),
+                  legend.position = "bottom"
+            )
+)
 
 
 # Useful variables,functions ---------------------------------------------------
 total_reps <- 50
+reference_msa_num <- 50
+lb_score_group <- 3
+ub_score_group <- 46
 output_path <- "figures/"
 
 # Load and clean data ----------------------------------------------------------
@@ -33,14 +36,14 @@ how_many_models %>%
   full_join(number_of_datasets) %>%
   mutate(n = round(n/total, 2)) %>%
   ggplot(aes(x = stability, fill = ic_type, y = n)) + 
-    geom_col(position = position_dodge(), color = "black", size = 0.3) + 
-    geom_text(aes(label = n, y = n+.05), position = position_dodge(width = 1), size=2.5) +
-    facet_grid(datatype ~ dataset) + 
-    scale_fill_brewer(name = "", palette = "Dark2") +
-    labs(x = "Dataset stability", y = "Percent of datasets") + 
-    scale_y_continuous(limits=c(0,1)) +
-    theme(legend.position = "bottom", 
-          panel.grid.minor.y = element_blank()) -> stability_bar
+  geom_col(position = position_dodge(), color = "black", size = 0.3) + 
+  geom_text(aes(label = n, y = n+.05), position = position_dodge(width = 1), size=2.5) +
+  facet_grid(datatype ~ dataset) + 
+  scale_fill_brewer(name = "", palette = "Dark2") +
+  labs(x = "Dataset stability", y = "Percent of datasets") + 
+  scale_y_continuous(limits=c(0,1)) +
+  theme(legend.position = "bottom", 
+        panel.grid.minor.y = element_blank()) -> stability_bar
 ggsave(file.path(output_path, "stability_bar.pdf"), stability_bar, width = 8, height = 4)
 
 
@@ -123,125 +126,110 @@ ggsave(file.path(output_path, "nmodels_percentm0.pdf"),
        nmodels_percentm0, width = 12, height = 4)
 
 
-# Reference MSA vs perturbed MSA: representative dataset SP/TC scores ----------
-
-# Scores where same as rep50 vs different from rep50 (don't care what other model)
-models %>%
-  filter(num == 50) %>%
-  rename(rep50_model = best_model) %>%
-  select(-num, -best_matrix) %>%
-  right_join(models) %>%
-  filter(num!=50) %>%
-  mutate(same_as_rep50 = rep50_model == best_model) %>%
-  select(-rep50_model, -best_model, -best_matrix) %>%
-  filter(num!=50) -> models_vs_rep50
-
-models_vs_rep50 %>%
-  #filter(ic_type == "AIC") %>%
-  group_by(id, ic_type, dataset, datatype) %>% 
-  tally(same_as_rep50, name = "n_same_rep50_model") -> n_models_same_as_rep50
-
-models_vs_rep50 %>%
-  left_join(scores %>% select(-ref_num) %>% rename(num = est_num)) %>%
-  distinct() -> n_models_same_as_rep50_scores
-
-# representative
-representative <- "PF02311"
-n_models_same_as_rep50_scores %>%
-  filter(id == representative) %>%
-  rename(SP = sp, TC = tc) %>%
-  pivot_longer(SP:TC, names_to = "score_type", values_to = "score") %>%
-  mutate(same_as_rep50 = ifelse(same_as_rep50 == TRUE, "Yes", "No")) %>%
-  ggplot(aes(x = score_type, y = score, fill = same_as_rep50)) + 
-    geom_jitter(pch = 21, position = position_jitterdodge(dodge.width = 0.8), alpha=0.8) + 
-    facet_grid(cols = vars(datatype),
-               rows = vars(ic_type)) +
-    scale_fill_brewer(palette = "Set2", 
-                      name = "Pertubed MSA model matches reference MSA model") +
-    labs(x = "MSA score type", 
-         y = "Score of a single perturbed MSA") +
-    theme(legend.position = "bottom") -> sp_tc_representative_jitter
-save_plot(file.path(output_path, "sp_tc_representative_jitter.pdf"), sp_tc_representative_jitter, base_width = 8, base_height = 4)
-  
 # Boxplot of mean SP and TC scores for perturbed MSAs --------------------------
 models %>%
-  filter(num == 50) %>%
-  rename(rep50_model = best_model,
-         rep50_matrix = best_matrix) %>%
-  select(-num) %>%
-  right_join(models) %>%
+  filter(num == reference_msa_num) %>%
+  select(-num, -best_matrix) %>%
+  rename(ref_msa_model = best_model)-> ref_msa_models
+
+
+how_many_models %>%
+  mutate(stability = ifelse(n_models == 1, T, F)) -> stability_models
+stability_models %>%
+  filter(stability == T) %>%
+  select(id, datatype, dataset, ic_type) %>%
+  distinct() -> stable_ids
+stability_models %>%
+  filter(stability == F) %>%
+  select(id, datatype, dataset, ic_type) %>%
+  distinct() -> unstable_ids
+
+
+models %>%
   filter(num!=50) %>%
-  # ivrit makes the factors in the right order. anglit fail.
-  mutate(same_model_rep50 = ifelse(rep50_model == best_model, "cen", "lo"),
-         same_matrix_rep50 = ifelse(rep50_matrix == best_matrix, "cen", "lo")) %>%
-  select(-rep50_model, -best_model, -best_matrix) %>%
-  #filter(num!=50) %>%
-  select(same_model_rep50, same_matrix_rep50, everything())-> same_as_rep50
-
-
-
-# What about where ALL are rep50?
-same_as_rep50 %>%
-  select(-same_matrix_rep50) %>%
-  filter(same_model_rep50 == "cen") %>%
-  count(same_model_rep50, id, datatype, ic_type, name = "count_model_sameas_rep50") %>%
-  filter(count_model_sameas_rep50 == 49) %>%
+  left_join(ref_msa_models) %>%
+  select(-best_matrix) %>%
+  rename(est_num = num) %>%
+  inner_join(unstable_ids) %>%
   inner_join(scores) %>%
-  select(-same_model_rep50, -ref_num, -est_num) %>%
-  group_by(id, datatype, ic_type) %>%
-  summarize(mean_sp = mean(sp), mean_tc = mean(tc))%>%
-  pivot_longer(mean_sp:mean_tc,names_to = "score_type", values_to = "mean_score") %>%
-  mutate(same_as_rep50 = "allsame") -> mean_scores_all_same
+  select(-ref_num) %>%
+  mutate(group = ifelse(ref_msa_model == best_model, "matches", "differs")) %>%
+  select(-best_model, -ref_msa_model) -> unstable_group_scores
 
-n_models_same_as_rep50_scores %>%
-  group_by(id, ic_type, dataset, datatype, same_as_rep50) %>%
+unstable_group_scores %>%
+  count(id, dataset, datatype, ic_type, group) %>%
+  filter(between(n, lb_score_group, ub_score_group)) %>%
+  inner_join(unstable_group_scores) %>%
+  group_by(id, dataset, datatype, ic_type, group) %>%
+  summarize(mean_sp = mean(sp),
+            mean_tc = mean(tc)) %>%
+  ungroup() -> unstable_mean_scores
+
+# stable ids
+same_as_rep50 %>%
+  right_join(stable_ids) %>%
+  # confirmed, no rows removed:
+  filter(same_model_rep50 =="cen") %>%
+  select(-num, -same_model_rep50, -best_model) %>%
+  left_join(scores) %>%
+  select(-ref_num, -est_num) %>%
+  group_by(id, dataset, datatype, ic_type) %>%
   summarize(mean_sp = mean(sp), 
             mean_tc = mean(tc)) %>%
-  ungroup()%>% 
-  pivot_longer(mean_sp:mean_tc, names_to = "score_type", values_to = "mean_score") %>%
-  mutate(same_as_rep50 = ifelse(same_as_rep50, "yes", "no")) %>%
-  full_join(mean_scores_all_same) -> scores_plot_data
+  mutate(group = "stable") %>%
+  ungroup()-> stable_mean_scores
 
-fill_levels <- c("All variant MSAs select the same model", 
-                 "Perturbed MSA model matches reference MSA model", 
-                 "Perturbed MSA model differs from reference MSA model")
+
+fill_levels <- c("Stable dataset", 
+                 "Matches M<sub>ref</sub>", 
+                 "Differs from M<sub>ref</sub>")
+
+bind_rows(unstable_mean_scores, stable_mean_scores) %>%
+  pivot_longer(mean_sp:mean_tc, names_to = "score_type", values_to = "mean_score") %>%
+  mutate(group_levels = case_when(
+    group == "stable" ~ fill_levels[1],
+    group == "matches" ~ fill_levels[2],
+    group == "differs" ~ fill_levels[3]),
+    score_type = ifelse(score_type == "mean_sp", "SP", "TC")
+  ) -> scores_plot_data
+
 scores_plot_data %>%
-  mutate(same_as_rep50 = case_when(
-            same_as_rep50 == "allsame" ~ fill_levels[1],
-            same_as_rep50 == "yes" ~ fill_levels[2],
-            same_as_rep50 == "no" ~ fill_levels[3]),
-         score_type = ifelse(score_type == "mean_sp", "SP", "TC")
-  ) %>%
+  # all IC are statistically same
+  filter(ic_type == "AIC") %>%
   ggplot(aes(x = score_type, 
              y = mean_score, 
-             fill = fct_relevel(same_as_rep50, fill_levels))) + 
-    geom_boxplot(outlier.size = 0.2, size=0.3) + 
-    facet_grid(cols = vars(datatype), 
-               rows = vars(ic_type)) +
-    scale_fill_brewer(palette = "Set2", name = "") + 
-    xlab("MSA score measurement") + 
-    ylab("Mean perturbed MSA scores") + 
-    theme(axis.text.y = element_text(size = rel(0.8)),
-          legend.position = "bottom", 
-          legend.text = element_text(size = rel(0.62))) +
-    guides(fill = guide_legend( nrow=1 ))-> scores_boxplot
+             fill = fct_relevel(group_levels, fill_levels))) + 
+  geom_boxplot(outlier.size = 0.1, size=0.3) + 
+  facet_wrap(vars(datatype)) +
+  scale_fill_brewer(palette = "Set2", name = "") + 
+  xlab("MSA score measurement") + 
+  ylab("Mean scores") + 
+  theme(axis.text.y = element_text(size = rel(0.9)),
+        legend.position = "bottom", 
+        legend.text = element_textbox()) +
+  guides(fill = guide_legend( nrow=1 )) -> scores_boxplot
 
-
-save_plot(file.path(output_path, "scores_boxplot.png"), scores_boxplot, base_width = 8, base_height = 4)
+save_plot(file.path(output_path, "scores_boxplot.png"), scores_boxplot, base_width = 7, base_height = 3)
 
 
 
-## Model the scores:
-scores_plot_data %>% filter(score_type == "mean_sp") -> sp_means
+## Model the scores with some tukeying
+### ALL ic NS
+### ALL differs/matches NS
+### ALL stable significantly higher than both differs and matches
+scores_plot_data %>% 
+  filter(ic_type == "AIC") %>%
+  mutate(group = factor(group, levels=c("matches", "differs", "stable"))) -> modelme
+modelme %>% filter(score_type == "SP") -> sp_means
 sp_means %>% filter(datatype == "AA") -> spaa
 sp_means %>% filter(datatype == "NT") -> spnt
-summary(lm( mean_score ~ same_as_rep50, data = spaa ))
-summary(lm( mean_score ~  same_as_rep50, data = spnt ))
+TukeyHSD(aov(mean_score ~ group, data = spaa )) %>% broom::tidy()
+TukeyHSD(aov( mean_score ~  group, data = spnt )) %>% broom::tidy()
 
 
-scores_plot_data %>% filter(score_type == "mean_tc") -> tc_means
+modelme %>% filter(score_type == "TC") -> tc_means
 tc_means %>% filter(datatype == "AA") -> tcaa
 tc_means %>% filter(datatype == "NT") -> tcnt
-summary(lm( mean_score ~ same_as_rep50, data = tcaa ))
-summary(lm( mean_score ~  same_as_rep50, data = tcnt ))
+TukeyHSD(aov( mean_score ~ group, data = tcaa )) %>% broom::tidy()
+TukeyHSD(aov( mean_score ~  group, data = tcnt )) %>% broom::tidy()
 

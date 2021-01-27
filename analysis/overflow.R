@@ -330,3 +330,49 @@ how_many_models_wide_ic %>%
   scale_y_continuous(expand=c(0.1,0.1),
                      breaks = 1:5, 
                      labels=c("1", "2", "3", "4", "5+")) 
+
+################
+
+
+
+
+
+# Reference MSA vs perturbed MSA: representative dataset SP/TC scores ----------
+
+# Scores where same as rep50 vs different from rep50 (don't care what other model)
+models %>%
+  filter(num == 50) %>%
+  rename(rep50_model = best_model) %>%
+  select(-num, -best_matrix) %>%
+  right_join(models) %>%
+  filter(num!=50) %>%
+  mutate(same_as_rep50 = rep50_model == best_model) %>%
+  select(-rep50_model, -best_model, -best_matrix) %>%
+  filter(num!=50) -> models_vs_rep50
+
+models_vs_rep50 %>%
+  #filter(ic_type == "AIC") %>%
+  group_by(id, ic_type, dataset, datatype) %>% 
+  tally(same_as_rep50, name = "n_same_rep50_model") -> n_models_same_as_rep50
+
+models_vs_rep50 %>%
+  left_join(scores %>% select(-ref_num) %>% rename(num = est_num)) %>%
+  distinct() -> n_models_same_as_rep50_scores
+
+# representative
+representative <- "PF02311"
+n_models_same_as_rep50_scores %>%
+  filter(id == representative) %>%
+  rename(SP = sp, TC = tc) %>%
+  pivot_longer(SP:TC, names_to = "score_type", values_to = "score") %>%
+  mutate(same_as_rep50 = ifelse(same_as_rep50 == TRUE, "Yes", "No")) %>%
+  ggplot(aes(x = score_type, y = score, fill = same_as_rep50)) + 
+  geom_jitter(pch = 21, position = position_jitterdodge(dodge.width = 0.8), alpha=0.8) + 
+  facet_grid(cols = vars(datatype),
+             rows = vars(ic_type)) +
+  scale_fill_brewer(palette = "Set2", 
+                    name = "Pertubed MSA model matches reference MSA model") +
+  labs(x = "MSA score type", 
+       y = "Score of a single perturbed MSA") +
+  theme(legend.position = "bottom") -> sp_tc_representative_jitter
+save_plot(file.path(output_path, "sp_tc_representative_jitter.pdf"), sp_tc_representative_jitter, base_width = 8, base_height = 4)
