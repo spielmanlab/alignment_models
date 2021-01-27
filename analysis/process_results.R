@@ -209,7 +209,7 @@ scores_plot_data %>%
         legend.text = element_textbox()) +
   guides(fill = guide_legend( nrow=1 )) -> scores_boxplot
 
-save_plot(file.path(output_path, "scores_boxplot.png"), scores_boxplot, base_width = 7, base_height = 3)
+save_plot(file.path(output_path, "scores_boxplot.png"), scores_boxplot, base_width = 5, base_height = 3)
 
 
 
