@@ -23,9 +23,7 @@ output_path <- "figures/"
 
 # Load and clean data ----------------------------------------------------------
 source("load_prepare_data.R")
-
-# Build and visualize the GLMs -------------------------------------------------
-source("build_plot_glms.R") 
+source("plot_functions.R") # Functions to make different IC versions of certain plots
 
 
 # Barplot of model stability counts --------------------------------------------
@@ -44,7 +42,7 @@ how_many_models %>%
   scale_y_continuous(limits=c(0,1)) +
   theme(legend.position = "bottom", 
         panel.grid.minor.y = element_blank()) -> stability_bar
-ggsave(file.path(output_path, "stability_bar.pdf"), stability_bar, width = 8, height = 4)
+ggsave(file.path(output_path, "stability_bar.png"), stability_bar, width = 8, height = 4)
 
 
 # Barplot of matrix stability for n_models >1 with AIC -------------------------
@@ -67,7 +65,7 @@ full_join(how_many_models, how_many_matrices) %>%
   ylab("Percent of unstable datasets") + 
   theme(legend.position = "bottom",
         panel.grid.minor.y = element_blank()) -> qstability
-ggsave(file.path(output_path, "qstability.pdf"), qstability, width = 8, height = 3)
+ggsave(file.path(output_path, "qstability.png"), qstability, width = 8, height = 3)
 
 # Barplot of matrix stability for n_models >1 with AICc and BIC for SI ---------
 full_join(how_many_models, how_many_matrices) %>%
@@ -85,65 +83,59 @@ full_join(how_many_models, how_many_matrices) %>%
   facet_grid(ic_type ~ datatype) + 
   scale_fill_brewer(palette = "Dark2", name = "") +
   xlab("Dataset source") +
-  ylab("Number of datasets") + 
+  ylab("Percent of unstable datasets") + 
   theme(legend.position = "bottom") -> si_qstability
-ggsave(file.path(output_path, "si_qstability.pdf"), si_qstability, width = 8, height = 4)
+ggsave(file.path(output_path, "si_qstability.png"), si_qstability, width = 8, height = 4)
 
 # Histograms: how many models and percentage top model -------------------------
 how_many_models %>%
-  filter(n_models >1, ic_type == "AIC") %>%
+  filter(n_models >1) %>%
   mutate(n_models = ifelse(n_models <=5, n_models, ">5")) %>%
   mutate(n_models = factor(n_models, levels=c(1:5, ">5"))) %>%
   # have to count for a geom_text
-  count(dataset, datatype, n_models) %>%
-  ggplot(aes(x = n_models, y = n, fill = dataset)) + 
-  geom_col(color = "black", size = 0.3) + 
-  geom_text(aes(label = n, y = n+15), size = 2.5)+
-  facet_grid(datatype ~ dataset, scales = "free") + 
-  scale_fill_brewer(palette = "Set1") +
-  xlab("Unique selected models per dataset") +
-  ylab("Number of datasets") + 
-  theme(legend.position = "none") -> howmanymodels_aic_bar
+  count(dataset, datatype, n_models, ic_type, name = "n_datasets") %>%
+  group_by(dataset, ic_type, datatype) %>%
+  mutate(total = sum(n_datasets)) %>%
+  ungroup() %>%
+  mutate(percent = round(n_datasets/total,3)) -> howmanymodels_plot_data
 
-percent_top_models %>%
-  filter(top_model_percent < 1, ic_type == "AIC") %>%
-  ggplot(aes(x = top_model_percent, fill = dataset)) + 
-  geom_histogram(bins = 20, color = "black", size = 0.3) +
-  facet_grid(datatype~dataset, scales = "free") + 
-  scale_fill_brewer(palette = "Set1") +
-  scale_x_reverse(breaks=rev(seq(0, 1, 0.2))) +
-  theme() +
-  xlab("Percentage of MSA variants selecting the M<sup>0</sup> model")+
-  ylab("Number of datasets") +
-  theme(legend.position = "none", 
-        axis.title.x = element_textbox()) -> percentage_m0_model
+plot_howmanymodels(howmanymodels_plot_data, "AIC") -> bar_howmanymodels_aic
+plot_percentm0(percent_top_models, "AIC") -> percentm0_aic
+
+plot_howmanymodels(howmanymodels_plot_data, "BIC") -> bar_howmanymodels_bic
+plot_percentm0(percent_top_models, "BIC") -> percentm0_bic
+
+plot_howmanymodels(howmanymodels_plot_data, "AICc") -> bar_howmanymodels_aicc
+plot_percentm0(percent_top_models, "AICc") -> percentm0_aicc
 
 
-plot_grid(howmanymodels_aic_bar, 
-          percentage_m0_model,
-          nrow=1, labels = "auto", scale = 0.95) -> nmodels_percentm0
-ggsave(file.path(output_path, "nmodels_percentm0.pdf"), 
-       nmodels_percentm0, width = 12, height = 4)
+plot_grid(bar_howmanymodels_aic, 
+          percentm0_aic,
+          nrow=1, labels = "auto", scale = 0.95) -> nmodels_percentm0_aic
+ggsave(file.path(output_path, "nmodels_percentm0_aic.png"), 
+       nmodels_percentm0_aic, width = 12, height = 4)
 
+plot_grid(bar_howmanymodels_bic, 
+          percentm0_bic,
+          nrow=1, labels = "auto", scale = 0.95) -> nmodels_percentm0_bic
+ggsave(file.path(output_path, "si_nmodels_percentm0_bic.png"), 
+       nmodels_percentm0_bic, width = 12, height = 4)
+
+plot_grid(bar_howmanymodels_aicc, 
+          percentm0_aicc,
+          nrow=1, labels = "auto", scale = 0.95) -> nmodels_percentm0_aicc
+ggsave(file.path(output_path, "si_nmodels_percentm0_aicc.png"), 
+       nmodels_percentm0_aicc, width = 12, height = 4)
+
+
+# Build and visualize the GLMs -------------------------------------------------
+source("build_plot_glms.R") 
 
 # Boxplot of mean SP and TC scores for perturbed MSAs --------------------------
 models %>%
   filter(num == reference_msa_num) %>%
   select(-num, -best_matrix) %>%
   rename(ref_msa_model = best_model)-> ref_msa_models
-
-
-how_many_models %>%
-  mutate(stability = ifelse(n_models == 1, T, F)) -> stability_models
-stability_models %>%
-  filter(stability == T) %>%
-  select(id, datatype, dataset, ic_type) %>%
-  distinct() -> stable_ids
-stability_models %>%
-  filter(stability == F) %>%
-  select(id, datatype, dataset, ic_type) %>%
-  distinct() -> unstable_ids
-
 
 models %>%
   filter(num!=50) %>%
@@ -166,12 +158,12 @@ unstable_group_scores %>%
   ungroup() -> unstable_mean_scores
 
 # stable ids
-same_as_rep50 %>%
+ref_msa_models %>%
   right_join(stable_ids) %>%
   # confirmed, no rows removed:
-  filter(same_model_rep50 =="cen") %>%
-  select(-num, -same_model_rep50, -best_model) %>%
-  left_join(scores) %>%
+  filter(ref_msa_model !="cen") %>%
+  select(-ref_msa_model) %>%
+  left_join(scores) %>% 
   select(-ref_num, -est_num) %>%
   group_by(id, dataset, datatype, ic_type) %>%
   summarize(mean_sp = mean(sp), 
@@ -193,23 +185,16 @@ bind_rows(unstable_mean_scores, stable_mean_scores) %>%
     score_type = ifelse(score_type == "mean_sp", "SP", "TC")
   ) -> scores_plot_data
 
-scores_plot_data %>%
-  # all IC are statistically same
-  filter(ic_type == "AIC") %>%
-  ggplot(aes(x = score_type, 
-             y = mean_score, 
-             fill = fct_relevel(group_levels, fill_levels))) + 
-  geom_boxplot(outlier.size = 0.1, size=0.3) + 
-  facet_wrap(vars(datatype)) +
-  scale_fill_brewer(palette = "Set2", name = "") + 
-  xlab("MSA score measurement") + 
-  ylab("Mean scores") + 
-  theme(axis.text.y = element_text(size = rel(0.9)),
-        legend.position = "bottom", 
-        legend.text = element_textbox()) +
-  guides(fill = guide_legend( nrow=1 )) -> scores_boxplot
+plot_scores_boxplot(scores_plot_data, "AIC") -> scores_boxplot_aic
+plot_scores_boxplot(scores_plot_data, "BIC") -> scores_boxplot_bic
+plot_scores_boxplot(scores_plot_data, "AICc") -> scores_boxplot_aicc
+save_plot(file.path(output_path, "scores_boxplot.png"), scores_boxplot_aic, base_width = 5, base_height = 3)
 
-save_plot(file.path(output_path, "scores_boxplot.png"), scores_boxplot, base_width = 5, base_height = 3)
+scores_boxplot_si <- plot_grid(plot_scores_boxplot(scores_plot_data, "BIC") + ggtitle("BIC"), 
+                               plot_scores_boxplot(scores_plot_data, "AICc") + ggtitle("AICc"), 
+                               nrow = 1, 
+                               scale = 0.97)
+save_plot(file.path(output_path, "si_scores_boxplot.png"), scores_boxplot_si, base_width = 9, base_height = 3)
 
 
 

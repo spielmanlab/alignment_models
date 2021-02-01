@@ -57,3 +57,17 @@ models %>%
   group_by(id, datatype, dataset, ic_type) %>%
   summarize(top_matrix_percent = max(n)/total_reps) %>%
   ungroup()-> percent_top_matrices
+
+# Who is stable vs unstable?
+how_many_models %>%
+  mutate(stability = ifelse(n_models == 1, T, F)) -> stability_models
+
+stability_models %>%
+  filter(stability == T) %>%
+  select(id, datatype, dataset, ic_type) %>%
+  distinct() -> stable_ids
+
+stability_models %>%
+  filter(stability == F) %>%
+  select(id, datatype, dataset, ic_type) %>%
+  distinct() -> unstable_ids
