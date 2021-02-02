@@ -1,0 +1,198 @@
+---
+title: "Supplementary Information: Manuscript title whatever it is"
+author: "Stephanie J. Spielman* and Molly Miraglia"
+date: "*Corresponding author: spielman@rowan.edu"
+output: 
+  html_document:
+    theme: readable
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo    = FALSE, 
+                      include = TRUE, 
+                      message = FALSE, 
+                      warning = FALSE)
+library(gt)
+source("setup.R")
+source("load_prepare_data.R")
+source("plot_functions.R")
+
+clean_tukey <- function(tukey_output, datatype, scoretype)
+{
+  tukey_output %>%
+    broom::tidy() %>%
+    mutate(Datatype = datatype,
+           `Score type` = scoretype) %>%
+    rowwise() %>%
+    mutate(estimate = glue::glue(round(estimate, 3),
+                                 " (", 
+                                 round(conf.low, 3),
+                                 ", ", 
+                                 round(conf.high, 3),
+                                 ")")) %>%
+    mutate(adj.p.value = round(adj.p.value, 3)) %>%
+    select(-term, -null.value, -conf.high, -conf.low) %>% 
+    select(Datatype,
+           `Score type`, 
+           Comparison = contrast, 
+           `Effect size (95% CI)` = estimate, 
+           `Adjusted P-value` = adj.p.value)
+}
+
+gtify <- function(df, ic)
+{
+  df %>%
+    gt::gt() %>%
+    gt::cols_align(
+      align = "left"
+    ) %>%
+    tab_header(
+      title = "SP and TC scores comparisons among groups",
+      subtitle = glue::glue("Model selection with ", ic)
+    ) %>%
+     tab_style(
+      style = cell_text(weight = "bold"),
+      locations = cells_body(
+        columns = vars(Datatype, Comparison, `Score type`, `Effect size (95% CI)`, `Adjusted P-value`),
+        rows = `Adjusted P-value` <= 0.05)
+    )
+}
+```
+
+<br><br><br>
+
+# Supplementary Figures
+
+<br>
+
+## Figure S1
+
+<br>
+
+```{r, fig.width = 13, fig.height = 8}
+
+plot_howmanymodels(howmanymodels_plot_data, "BIC") + 
+  ggtitle("Model selection with BIC")-> bar_howmanymodels_bic 
+plot_percentm0(percent_top_models, "BIC") + 
+  ggtitle("Model selection with BIC")-> percentm0_bic
+
+plot_howmanymodels(howmanymodels_plot_data, "AICc") +
+  ggtitle("Model selection with AICc") -> bar_howmanymodels_aicc 
+plot_percentm0(percent_top_models, "AICc") +
+  ggtitle("Model selection with AICc") -> percentm0_aicc 
+
+
+plot_grid(bar_howmanymodels_bic, 
+          percentm0_bic,
+          nrow=1, labels = "auto", scale = 0.95, label_size = 18) -> ab
+
+plot_grid(bar_howmanymodels_aicc, 
+          percentm0_aicc,
+          nrow=1, labels = c("c", "d"), scale = 0.95, label_size = 20) -> cd
+
+plot_grid(ab, cd, nrow = 2)
+```
+
+<br><br>
+
+## Figure S2
+
+<br>
+
+
+```{r, fig.width = 8, fig.height = 4}
+# Barplot of matrix stability for n_models >1 with AICc and BIC
+full_join(how_many_models, how_many_matrices) %>%
+  filter(n_models > 1, ic_type != "AIC") %>%
+  mutate(qstability = ifelse(n_matrices == 1, "Same Q matrix", "Different Q matrices")) %>%
+  # have to count for a geom_text
+  count(dataset, datatype, qstability, ic_type) %>%
+  group_by(dataset, datatype, ic_type) %>%
+  mutate(total = sum(n)) %>%
+  ungroup() %>%
+  mutate(p = round(n/total, 2)) %>%
+  ggplot(aes(x = dataset, y = p, fill = qstability)) + 
+  geom_col(color = "black", size = 0.3, position = position_dodge()) + 
+  geom_text(aes(label = p, y = p+0.055), size = 2.5, position = position_dodge(width = 1))+
+  facet_grid(ic_type ~ datatype) + 
+  scale_fill_brewer(palette = "Dark2", name = "") +
+  xlab("Dataset source") +
+  ylab("Percent of unstable datasets") + 
+  theme(legend.position = "bottom")
+```
+
+<br><br>
+
+## Figure S3
+
+<br>
+
+```{r, fig.width = 10, fig.height = 3.5}
+plot_scores_boxplot(scores_plot_data, "BIC") + 
+  ggtitle("Model selection with BIC")  -> scores_boxplot_bic
+plot_scores_boxplot(scores_plot_data, "AICc") + 
+  ggtitle("Model selection with AICc") + 
+  theme(legend.position = "none") -> scores_boxplot_aicc
+
+shared_legend <- get_legend(scores_boxplot_bic)
+
+plot_grid(
+  scores_boxplot_bic + theme(legend.position = "none") ,
+  scores_boxplot_aicc,
+  nrow = 1, 
+  scale = 0.97,
+  labels = "auto") -> part1
+
+plot_grid(part1, shared_legend, nrow = 2, rel_heights = c(1, 0.3))
+```
+
+# Supplementary Tables
+
+<br>
+
+## Table S1
+
+```{r}
+scores_plot_data %>% 
+  filter(ic_type == "BIC") %>%
+  mutate(group = factor(group, levels=c("matches", "differs", "stable"))) -> modelme_bic
+modelme_bic %>% filter(score_type == "SP") -> sp_means
+sp_means %>% filter(datatype == "AA") -> spaa
+sp_means %>% filter(datatype == "NT") -> spnt
+TukeyHSD(aov(mean_score ~ group, data = spaa )) %>% clean_tukey("AA", "SP") -> bic_aa_sp
+TukeyHSD(aov( mean_score ~  group, data = spnt )) %>% clean_tukey("NT", "SP") -> bic_nt_sp
+
+modelme_bic %>% filter(score_type == "TC") -> tc_means
+sp_means %>% filter(datatype == "AA") -> tcaa
+sp_means %>% filter(datatype == "NT") -> tcnt
+TukeyHSD(aov(mean_score ~ group, data = spaa )) %>% clean_tukey("AA", "TC") -> bic_aa_tc
+TukeyHSD(aov( mean_score ~  group, data = spnt )) %>% clean_tukey("NT", "TC") -> bic_nt_tc
+
+bind_rows(bic_aa_sp, bic_nt_sp) %>% 
+  bind_rows(bic_aa_tc, bic_nt_tc) %>% 
+  gtify("BIC")
+
+```
+<br>
+
+## Table S2
+```{r}
+scores_plot_data %>% 
+  filter(ic_type == "AICc") %>%
+  mutate(group = factor(group, levels=c("matches", "differs", "stable"))) -> modelme_aicc
+modelme_aicc %>% filter(score_type == "SP") -> sp_means
+sp_means %>% filter(datatype == "AA") -> spaa
+sp_means %>% filter(datatype == "NT") -> spnt
+TukeyHSD(aov(mean_score ~ group, data = spaa )) %>% clean_tukey("AA", "SP") -> aicc_aa_sp
+TukeyHSD(aov( mean_score ~  group, data = spnt )) %>% clean_tukey("NT", "SP") -> aicc_nt_sp
+
+modelme_aicc %>% filter(score_type == "TC") -> tc_means
+sp_means %>% filter(datatype == "AA") -> tcaa
+sp_means %>% filter(datatype == "NT") -> tcnt
+TukeyHSD(aov(mean_score ~ group, data = spaa )) %>% clean_tukey("AA", "TC") -> aicc_aa_tc
+TukeyHSD(aov( mean_score ~  group, data = spnt )) %>% clean_tukey("NT", "TC") -> aicc_nt_tc
+
+bind_rows(aicc_aa_sp, aicc_nt_sp) %>% 
+  bind_rows(aicc_aa_tc, aicc_nt_tc) %>% 
+  gtify("AICc")
+```
