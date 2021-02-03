@@ -3,6 +3,22 @@ models <- read_csv("../results/all_selected_models.csv")
 scores <- read_csv("../results/all_alignment_scores.csv")
 hamming <- read_csv("../results/pairwise_hamming_distances.csv") %>% rename(id = dataname)
 data_info <- read_csv("../results/nsites_nseqs.csv") %>% rename(id = name)
+guidance_raw <- read_csv("../results/final_guidance_scores.csv")
+
+# clean the guidance csv
+guidance_raw %>%
+  separate(fullid, into=c("id", "dataset", "datatype"), sep = "\\.") %>%
+  replace_na(list(dataset = "PANDIT")) -> guidance_raw2
+guidance_raw2 %>%
+  filter(dataset == "PANDIT") %>%
+  separate(id, into=c("id", "datatype"), sep = "_") -> guidance_pandit
+
+guidance_raw2 %>%
+  filter(dataset != "PANDIT") %>%
+  mutate(datatype = str_replace(datatype, "001_", "")) %>%
+  bind_rows(guidance_pandit) -> guidance
+
+data_info <- full_join(data_info, guidance)
 
 
 # Process raw models
