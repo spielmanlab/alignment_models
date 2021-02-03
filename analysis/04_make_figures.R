@@ -1,8 +1,6 @@
-source("setup.R")
-# Load and clean data ----------------------------------------------------------
-source("load_prepare_data.R")
-source("plot_functions.R") # Functions to make different IC versions of certain plots
-
+source("01_setup.R")
+source("02_load_prepare_data.R")
+source("03_build_glms.R")
 
 # Barplot of model stability counts --------------------------------------------
 how_many_models %>%

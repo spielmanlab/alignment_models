@@ -1,10 +1,8 @@
 ---
-title: "Supplementary Information: Manuscript title whatever it is"
+title: "Supplementary Information: *Relative model selection is sensitive to multiple sequence alignment uncertainty*"
 author: "Stephanie J. Spielman* and Molly Miraglia"
 date: "*Corresponding author: spielman@rowan.edu"
-output: 
-  html_document:
-    theme: readable
+output: html_document
 ---
 
 ```{r setup, include=FALSE}
@@ -13,9 +11,9 @@ knitr::opts_chunk$set(echo    = FALSE,
                       message = FALSE, 
                       warning = FALSE)
 library(gt)
-source("setup.R")
-source("load_prepare_data.R")
-source("plot_functions.R")
+source("01_setup.R")
+source("02_load_prepare_data.R")
+source("03_build_glms.R")
 
 clean_tukey <- function(tukey_output, datatype, scoretype)
 {
@@ -65,7 +63,7 @@ gtify <- function(df, ic)
 
 <br>
 
-## Figure S1
+### Figure S1
 
 <br>
 
@@ -95,7 +93,7 @@ plot_grid(ab, cd, nrow = 2)
 
 <br><br>
 
-## Figure S2
+### Figure S2
 
 <br>
 
@@ -123,7 +121,7 @@ full_join(how_many_models, how_many_matrices) %>%
 
 <br><br>
 
-## Figure S3
+### Figure S3
 
 <br>
 
@@ -150,7 +148,7 @@ plot_grid(part1, shared_legend, nrow = 2, rel_heights = c(1, 0.3))
 
 <br>
 
-## Table S1
+### Table S1
 
 ```{r}
 scores_plot_data %>% 
@@ -175,7 +173,7 @@ bind_rows(bic_aa_sp, bic_nt_sp) %>%
 ```
 <br>
 
-## Table S2
+### Table S2
 ```{r}
 scores_plot_data %>% 
   filter(ic_type == "AICc") %>%
