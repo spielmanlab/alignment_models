@@ -11,32 +11,6 @@ knitr::opts_chunk$set(echo    = FALSE,
                       message = FALSE, 
                       warning = FALSE)
 library(gt)
-source("01_setup.R")
-source("02_load_prepare_data.R")
-source("03_build_glms.R")
-
-clean_tukey <- function(tukey_output, datatype, scoretype)
-{
-  tukey_output %>%
-    broom::tidy() %>%
-    mutate(Datatype = datatype,
-           `Score type` = scoretype) %>%
-    rowwise() %>%
-    mutate(estimate = glue::glue(round(estimate, 3),
-                                 " (", 
-                                 round(conf.low, 3),
-                                 ", ", 
-                                 round(conf.high, 3),
-                                 ")")) %>%
-    mutate(adj.p.value = round(adj.p.value, 3)) %>%
-    select(-term, -null.value, -conf.high, -conf.low) %>% 
-    select(Datatype,
-           `Score type`, 
-           Comparison = contrast, 
-           `Effect size (95% CI)` = estimate, 
-           `Adjusted P-value` = adj.p.value)
-}
-
 gtify <- function(df, ic)
 {
   df %>%
@@ -51,7 +25,7 @@ gtify <- function(df, ic)
      tab_style(
       style = cell_text(weight = "bold"),
       locations = cells_body(
-        columns = vars(Datatype, Comparison, `Score type`, `Effect size (95% CI)`, `Adjusted P-value`),
+        columns = vars(Datatype, Comparison, `Score type`, `Effect size (99% CI)`, `Adjusted P-value`),
         rows = `Adjusted P-value` <= 0.05)
     )
 }
@@ -151,46 +125,17 @@ plot_grid(part1, shared_legend, nrow = 2, rel_heights = c(1, 0.3))
 ### Table S1
 
 ```{r}
-scores_plot_data %>% 
+modeled_scores_table %>%
   filter(ic_type == "BIC") %>%
-  mutate(group = factor(group, levels=c("matches", "differs", "stable"))) -> modelme_bic
-modelme_bic %>% filter(score_type == "SP") -> sp_means
-sp_means %>% filter(datatype == "AA") -> spaa
-sp_means %>% filter(datatype == "NT") -> spnt
-TukeyHSD(aov(mean_score ~ group, data = spaa )) %>% clean_tukey("AA", "SP") -> bic_aa_sp
-TukeyHSD(aov( mean_score ~  group, data = spnt )) %>% clean_tukey("NT", "SP") -> bic_nt_sp
-
-modelme_bic %>% filter(score_type == "TC") -> tc_means
-sp_means %>% filter(datatype == "AA") -> tcaa
-sp_means %>% filter(datatype == "NT") -> tcnt
-TukeyHSD(aov(mean_score ~ group, data = spaa )) %>% clean_tukey("AA", "TC") -> bic_aa_tc
-TukeyHSD(aov( mean_score ~  group, data = spnt )) %>% clean_tukey("NT", "TC") -> bic_nt_tc
-
-bind_rows(bic_aa_sp, bic_nt_sp) %>% 
-  bind_rows(bic_aa_tc, bic_nt_tc) %>% 
+  select(-ic_type) %>%
   gtify("BIC")
-
 ```
 <br>
 
 ### Table S2
 ```{r}
-scores_plot_data %>% 
+modeled_scores_table %>%
   filter(ic_type == "AICc") %>%
-  mutate(group = factor(group, levels=c("matches", "differs", "stable"))) -> modelme_aicc
-modelme_aicc %>% filter(score_type == "SP") -> sp_means
-sp_means %>% filter(datatype == "AA") -> spaa
-sp_means %>% filter(datatype == "NT") -> spnt
-TukeyHSD(aov(mean_score ~ group, data = spaa )) %>% clean_tukey("AA", "SP") -> aicc_aa_sp
-TukeyHSD(aov( mean_score ~  group, data = spnt )) %>% clean_tukey("NT", "SP") -> aicc_nt_sp
-
-modelme_aicc %>% filter(score_type == "TC") -> tc_means
-sp_means %>% filter(datatype == "AA") -> tcaa
-sp_means %>% filter(datatype == "NT") -> tcnt
-TukeyHSD(aov(mean_score ~ group, data = spaa )) %>% clean_tukey("AA", "TC") -> aicc_aa_tc
-TukeyHSD(aov( mean_score ~  group, data = spnt )) %>% clean_tukey("NT", "TC") -> aicc_nt_tc
-
-bind_rows(aicc_aa_sp, aicc_nt_sp) %>% 
-  bind_rows(aicc_aa_tc, aicc_nt_tc) %>% 
+  select(-ic_type) %>%
   gtify("AICc")
 ```

@@ -153,3 +153,41 @@ bind_rows(unstable_mean_scores, stable_mean_scores) %>%
     group == "differs" ~ fill_levels[3]),
     score_type = ifelse(score_type == "mean_sp", "SP", "TC")
   ) -> scores_plot_data
+
+
+# function for modeling sp and tc scores -------------------
+tukey_sp_tc <- function(df)
+{
+  TukeyHSD(aov(mean_score ~ group, data = df), conf.level = conf_level) %>%
+    broom::tidy()
+}
+
+
+clean_tukey <- function(tukey_output, datatype, scoretype)
+{
+  tukey_output %>%
+    rowwise() %>%
+    mutate(estimate = glue::glue(round(estimate, 3),
+                                 " (", 
+                                 round(conf.low, 3),
+                                 ", ", 
+                                 round(conf.high, 3),
+                                 ")")) %>%
+    select(-term, -null.value, -conf.high, -conf.low) %>% 
+    select(Datatype = datatype,
+           `Score type` = score_type, 
+           Comparison = contrast, 
+           `Effect size (99% CI)` = estimate, 
+           `Adjusted P-value` = adj.p.value)
+}
+
+## Functions for modeling number of models/stability----------------------------
+logit_stability <- function(df)
+{
+  glm(stable ~  mean_hamming + mean_guidance_score + nseq + mean_nsites, data = df, family = "binomial")
+}
+
+tidyci <- function(fit)
+{
+  broom::tidy(fit, conf.level = conf_level, conf.int = TRUE) # uses 95 CI
+}

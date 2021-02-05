@@ -1,6 +1,6 @@
-source("01_setup.R")
-source("02_load_prepare_data.R")
-source("03_build_glms.R")
+#source("01_setup.R")
+#source("02_load_prepare_data.R")
+#source("03_build_glms.R")
 
 # Barplot of model stability counts --------------------------------------------
 how_many_models %>%
@@ -56,40 +56,8 @@ ggsave(file.path(output_path, "nmodels_percentm0_aic.png"),
 
 
 
-# Build and visualize the GLMs -------------------------------------------------
-source("build_plot_glms.R") 
-
 # Boxplot of mean SP and TC scores for perturbed MSAs --------------------------
 
 plot_scores_boxplot(scores_plot_data, "AIC") -> scores_boxplot_aic
 save_plot(file.path(output_path, "scores_boxplot.png"), scores_boxplot_aic, base_width = 5, base_height = 3)
-
-
-
-
-
-## Model the scores with some tukeying
-### ALL ic NS
-### ALL differs/matches NS
-### ALL stable significantly higher than both differs and matches
-scores_plot_data %>% 
-  filter(ic_type == "AIC") %>%
-  mutate(group = factor(group, levels=c("matches", "differs", "stable"))) -> modelme
-modelme %>% filter(score_type == "SP") -> sp_means
-sp_means %>% filter(datatype == "AA") -> spaa
-sp_means %>% filter(datatype == "NT") -> spnt
-TukeyHSD(aov(mean_score ~ group, data = spaa )) %>% 
-  broom::tidy() %>%
-  
-
-
-
-TukeyHSD(aov( mean_score ~  group, data = spnt )) %>% broom::tidy()
-
-
-modelme %>% filter(score_type == "TC") -> tc_means
-tc_means %>% filter(datatype == "AA") -> tcaa
-tc_means %>% filter(datatype == "NT") -> tcnt
-TukeyHSD(aov( mean_score ~ group, data = tcaa )) %>% broom::tidy()
-TukeyHSD(aov( mean_score ~  group, data = tcnt )) %>% broom::tidy()
 

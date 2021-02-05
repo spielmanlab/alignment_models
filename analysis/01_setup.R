@@ -16,11 +16,10 @@ reference_msa_num <- 50
 lb_score_group <- 3
 ub_score_group <- 46
 output_path <- "figures/"
+p_threshold <- 0.01
+conf_level <- 0.99
 
-
-# Functions
-
-
+# Plotting functions ----------------------------
 plot_howmanymodels <- function(df, ic)
 {
   df %>%
