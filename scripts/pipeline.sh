@@ -55,7 +55,7 @@ if [ -f ${INPUT_NT_PATH}/${NT_FAS} ] && [ -f ${INPUT_AA_PATH}/${AA_FAS} ]; then
         else     
             ############### Run the pipeline ###########
             echo "====================== PERTURBING ${DATATYPE} ALIGNMENTS =========================="
-            python3 scripts/make_bootstrap_alignments.py ${INPUT_DATA_PATH}/$FASFILE $OUTNAME $BOOTDIR $DATATYPE $NBOOT $THREADS $BADFILE
+            python3 make_bootstrap_alignments.py ${INPUT_DATA_PATH}/$FASFILE $OUTNAME $BOOTDIR $DATATYPE $NBOOT $THREADS $BADFILE
 
             ### If the perturbation failed due to duplicates, a file will have been created and we stop analyzing this $NAME
             if [ -f ${BOOTDIR}/${BADFILE} ]; then
@@ -66,21 +66,7 @@ if [ -f ${INPUT_NT_PATH}/${NT_FAS} ] && [ -f ${INPUT_AA_PATH}/${AA_FAS} ]; then
             fi          
             
             echo "====================== RUNNING ${DATATYPE} MODEL SELECTION ========================"
-            python3 scripts/run_iqtree_on_alignment_versions.py $NAME $BOOTDIR ${BOOT_START} ${BOOT_END} $DATATYPE 10 ## only use 10 threads for iqtree
-            
-            ###### If the type is AA, we also need to run CODON
-            ### THIS TAKES FOREVERRRRRR. May come back to it later.
-            #echo "========================== PROCESSING CODON =============================="
-            #if [ $DATATYPE == "AA" ]; then
-            #    OUTNAME_CODON=${NAME}_CODON
-            #    BOOTDIR_CODON=${OUTNAME_CODON}/
-            #    cp -r ${BOOTDIR} ${BOOTDIR_CODON}
-            #    python3 backtranslate_perturbed_alignments.py ${BOOTDIR} ${INPUT_NT_PATH}/${NT_FAS} ${BOOTDIR_CODON}     
-            #    rm ${BOOTDIR_CODON}/*_AA_* ## fasta and csv
-            #    
-            #    echo "====================== RUNNING CODON MODEL SELECTION ========================"
-            #    python3 run_iqtree_on_alignment_versions.py $NAME ${BOOTDIR_CODON} ${BOOT_START} ${BOOT_END} CODON $THREADS
-            #fi
+            python3 run_iqtree_on_alignment_versions.py $NAME $BOOTDIR ${BOOT_START} ${BOOT_END} $DATATYPE 10 ## only use 10 threads for iqtree
 
         fi
         

@@ -1,9 +1,10 @@
 # Modifed by SJS and originally written by MM (see her original at bottom)
 # Merge a bunch of CSVs
 
-### Run twice:
+### Run at various points in pipeline:
 ##### Rscript merge_csv_results.R ../results/selected_models_output/ ../results/all_selected_models.csv
 ##### Rscript merge_csv_results.R ../results/pairwise_distances/ ../results/pairwise_hamming_distances.csv
+##### Rscript merge_csv_results.R ../results/alignment_scores/ ../results/all_alignment_scores.csv
 
 library(tidyverse)
 args <- commandArgs(trailingOnly=TRUE)

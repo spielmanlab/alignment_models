@@ -48,7 +48,7 @@ def main():
     reference_number = 50
     ref_num = str(reference_number)
     
-    output_path = "../results/alignment_scores_again/"
+    output_path = "../results/alignment_scores/"
     all_aln_dir = [x for x in os.listdir(path_to_alignments) if os.path.isdir(os.path.join(path_to_alignments,x))]
     
     for aln_dir in all_aln_dir:
