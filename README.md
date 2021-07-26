@@ -1,4 +1,4 @@
-## Evaluating the robustness of relative model selection to MSA quality
+Repository associated with the manuscript, **Relative model selection can be sensitive to multiple sequence alignment uncertainty**
 
 + `selectome/` contains Drosophila and Euteleostomi *unaligned* orthologs from Selectome, specifically only transcripts labeled as "001"
 	+ `selectome/obtain_unalign_selectome.sh` is used to populate this directory
