@@ -11,5 +11,5 @@ print("Making main text figures")
 source("04_make_figures.R")
 
 print("Rendering SI")
-rmarkdown::render("supplementary_information.Rmd")
+pagedown::chrome_print("supplementary_information.Rmd")
 

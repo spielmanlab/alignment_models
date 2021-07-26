@@ -25,7 +25,7 @@ gtify <- function(df, ic)
      tab_style(
       style = cell_text(weight = "bold"),
       locations = cells_body(
-        columns = vars(Datatype, Comparison, `Score type`, `Effect size (99% CI)`, `Adjusted P-value`),
+        columns = c(Datatype, Comparison, `Score type`, `Effect size (99% CI)`, `Adjusted P-value`),
         rows = `Adjusted P-value` <= 0.05)
     )
 }
@@ -118,6 +118,8 @@ plot_grid(
 plot_grid(part1, shared_legend, nrow = 2, rel_heights = c(1, 0.3))
 ```
 
+\newpage
+
 # Supplementary Tables
 
 <br>
@@ -131,6 +133,8 @@ modeled_scores_table %>%
   gtify("BIC")
 ```
 <br>
+
+\newpage
 
 ### Table S2
 ```{r}
