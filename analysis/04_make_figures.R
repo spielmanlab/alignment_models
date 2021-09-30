@@ -9,16 +9,19 @@ how_many_models %>%
   count(stability) %>%
   full_join(number_of_datasets) %>%
   mutate(n = round(n/total, 2)) %>%
-  ggplot(aes(x = stability, fill = ic_type, y = n)) + 
+  filter(stability == "Stable") %>%
+  ggplot(aes(x = datatype, fill = ic_type, y = n)) + 
   geom_col(position = position_dodge(), color = "black", size = 0.3) + 
-  geom_text(aes(label = n, y = n+.05), position = position_dodge(width = 1), size=2.5) +
-  facet_grid(datatype ~ dataset) + 
-  scale_fill_brewer(name = "", palette = "Dark2") +
-  labs(x = "Dataset stability", y = "Percent of datasets") + 
+  geom_text(aes(label = n, y = n+.03), position = position_dodge(width = 1), size=2.25) +
+  facet_grid(~ dataset) + 
+  scale_fill_viridis_d(name = "") +
+  labs(x = "Data type", y = "Percent of datasets that are stable") + 
   scale_y_continuous(limits=c(0,1)) +
   theme(legend.position = "bottom", 
-        panel.grid.minor.y = element_blank()) -> stability_bar
-ggsave(file.path(output_path, "stability_bar.png"), stability_bar, width = 8, height = 4)
+        panel.grid.minor.y = element_blank(), 
+        axis.title.y = element_text(size = rel(0.8)),
+        legend.key.size = unit(0.4, "cm")) -> stability_bar
+ggsave(file.path(output_path, "stability_bar.png"), stability_bar, width = 6, height = 3)
 
 
 # Barplot of matrix stability for n_models >1 with AIC -------------------------
@@ -30,18 +33,20 @@ full_join(how_many_models, how_many_matrices) %>%
   group_by(dataset, datatype) %>%
   mutate(total = sum(n)) %>%
   ungroup() %>%
+  filter(qstability == "Same Q matrix") %>%
   mutate(p = round(n/total, 2)) %>%
-  mutate(fudge = ifelse(datatype == "NT", p+0.04, p+0.03)) %>%
-  ggplot(aes(x = dataset, y = p, fill = qstability)) + 
+  mutate(fudge = p+0.02) %>%
+  ggplot(aes(x = datatype, y = p, fill = dataset)) + 
   geom_col(color = "black", size = 0.3, position = position_dodge()) + 
   geom_text(aes(label = p, y = fudge), size = 2.5, position = position_dodge(width = 1))+
-  facet_wrap(vars(datatype), scales = "free_y") + 
-  scale_fill_brewer(palette = "Dark2", name = "") +
-  xlab("Dataset source") +
-  ylab("Percent of unstable datasets") + 
+  scale_fill_viridis_d(name = "", option = "magma") +
+  xlab("Data Type") +
+  ylab("Percent of unstable datasets\nwith a stable Q matrix") + 
   theme(legend.position = "bottom",
-        panel.grid.minor.y = element_blank()) -> qstability
-ggsave(file.path(output_path, "qstability.png"), qstability, width = 8, height = 3)
+        axis.title.y = element_text(size = rel(0.8)),
+        panel.grid.minor.y = element_blank(),
+        legend.key.size = unit(0.4, "cm")) -> qstability
+ggsave(file.path(output_path, "qstability.png"), qstability, width = 4, height = 3)
 
 
 # Histograms: how many models and percentage top model -------------------------

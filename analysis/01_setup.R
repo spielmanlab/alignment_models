@@ -60,9 +60,9 @@ plot_scores_boxplot <- function(df, ic)
     ggplot(aes(x = score_type, 
                y = mean_score, 
                fill = fct_relevel(group_levels, fill_levels))) + 
-    geom_boxplot(outlier.size = 0.1, size=0.3) + 
+    geom_boxplot(outlier.size = 0.1, size=0.3, alpha = 0.6) + 
     facet_wrap(vars(datatype)) +
-    scale_fill_brewer(palette = "Set2", name = "") + 
+    scale_fill_viridis_d(option = "plasma", name = "") + 
     xlab("MSA score measurement") + 
     ylab("Mean scores") + 
     theme(axis.text.y = element_text(size = rel(0.9)),
