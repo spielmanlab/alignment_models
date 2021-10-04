@@ -1,5 +1,5 @@
 ---
-title: "Supplementary Information: *Relative model selection is sensitive to multiple sequence alignment uncertainty*"
+title: "Supplementary Information: *Relative model selection of evolutionary substitution models is sensitive to multiple sequence alignment uncertainty*"
 author: "Stephanie J. Spielman* and Molly Miraglia"
 date: "*Corresponding author: spielman@rowan.edu"
 output: html_document
@@ -72,25 +72,29 @@ plot_grid(ab, cd, nrow = 2)
 <br>
 
 
-```{r, fig.width = 8, fig.height = 4}
+```{r, fig.width = 6, fig.height = 3}
 # Barplot of matrix stability for n_models >1 with AICc and BIC
 full_join(how_many_models, how_many_matrices) %>%
   filter(n_models > 1, ic_type != "AIC") %>%
   mutate(qstability = ifelse(n_matrices == 1, "Same Q matrix", "Different Q matrices")) %>%
   # have to count for a geom_text
-  count(dataset, datatype, qstability, ic_type) %>%
-  group_by(dataset, datatype, ic_type) %>%
+  count(dataset, datatype, qstability) %>%
+  group_by(dataset, datatype) %>%
   mutate(total = sum(n)) %>%
   ungroup() %>%
+  filter(qstability == "Same Q matrix") %>%
   mutate(p = round(n/total, 2)) %>%
-  ggplot(aes(x = dataset, y = p, fill = qstability)) + 
+  mutate(fudge = p+0.02) %>%
+  ggplot(aes(x = datatype, y = p, fill = dataset)) + 
   geom_col(color = "black", size = 0.3, position = position_dodge()) + 
-  geom_text(aes(label = p, y = p+0.055), size = 2.5, position = position_dodge(width = 1))+
-  facet_grid(ic_type ~ datatype) + 
-  scale_fill_brewer(palette = "Dark2", name = "") +
-  xlab("Dataset source") +
-  ylab("Percent of unstable datasets") + 
-  theme(legend.position = "bottom")
+  geom_text(aes(label = p, y = fudge), size = 3, position = position_dodge(width = 1))+
+  scale_fill_viridis_d(name = "", option = "magma") +
+  xlab("Data Type") +
+  ylab("Proportion of unstable datasets\nwith a stable Q matrix") + 
+  theme(legend.position = "bottom",
+        axis.title.y = element_text(size = rel(0.8)),
+        panel.grid.minor.y = element_blank(),
+        legend.key.size = unit(0.4, "cm")) 
 ```
 
 <br><br>

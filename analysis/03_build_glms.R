@@ -1,14 +1,58 @@
 ## Logistic regression to explain stability ------------------------------------
 
+## Functions for modeling number of models/stability ----
+logit_stability <- function(df)
+{
+  glm(stable ~  mean_hamming + mean_guidance_score + nseq + mean_nsites, data = df, family = "binomial")
+}
+
+tidyci <- function(fit)
+{
+  broom::tidy(fit, conf.level = conf_level, conf.int = TRUE) # uses 95 CI
+}
+
+
+# Functions for modeling sp and tc scores -------------------
+tukey_sp_tc <- function(df)
+{
+  TukeyHSD(aov(mean_score ~ group, data = df), conf.level = conf_level) %>%
+    broom::tidy()
+}
+
+
+clean_tukey <- function(tukey_output, datatype, scoretype)
+{
+  tukey_output %>%
+    rowwise() %>%
+    mutate(estimate = glue::glue(round(estimate, 3),
+                                 " (", 
+                                 round(conf.low, 3),
+                                 ", ", 
+                                 round(conf.high, 3),
+                                 ")")) %>%
+    select(-term, -null.value, -conf.high, -conf.low) %>% 
+    select(Datatype = datatype,
+           `Score type` = score_type, 
+           Comparison = contrast, 
+           `Effect size (99% CI)` = estimate, 
+           `Adjusted P-value` = adj.p.value)
+}
+
+
+
 ## Prep data ---------------------------
 coeff_levels <- rev(c("mean_guidance_score", "mean_hamming", "mean_nsites", "nseq"))
-coeff_labels <- rev(c("Mean guidance score",  "Mean edit distance",  "Mean number of sites", "Number of sequences"))
+coeff_labels <- rev(c("Mean GUIDANCE score",  "Mean edit distance",  "Mean number of sites", "Number of sequences"))
 
 how_many_models %>% 
   full_join(hamming) %>% 
   full_join(data_info) %>%
   group_by(ic_type, datatype) %>%
-  mutate(stable = ifelse(n_models ==1, 1, 0)) %>%
+  mutate(stable = ifelse(n_models ==1, 1, 0)) -> data_for_logit
+
+
+## Perform logistic, yes I know below says logit, it's not. ---
+data_for_logit %>%
   nest() %>%
   mutate(logit_fit = map(data, logit_stability)) -> fitted_logit
   
@@ -64,7 +108,7 @@ logit_coefficients %>%
   facet_grid(ic_type ~ datatype) + 
   scale_fill_manual(values = c("firebrick", "white")) +
   xlim(c(-4,7)) + 
-  labs(x = "Coefficient estimate ± 95% CI", 
+  labs(x = "Effect size ± 95% CI", 
        y = "Fitted model coefficient") +
   geom_text(data = logit_auc, 
             x = -2.75, 
@@ -73,7 +117,35 @@ logit_coefficients %>%
             aes(label = paste("AUC = ", auc))) +
   theme(legend.position = "none") -> logit_model_plot
 
-save_plot(file.path(output_path, "logit_glms.png"), logit_model_plot, base_height = 4, base_width=7)
+
+
+## Figure of logistic predictors -------------
+data_for_logit %>%
+  select(id, datatype, dataset, mean_hamming, mean_nsites, nseq, mean_guidance_score) %>%
+  pivot_longer(mean_hamming:mean_guidance_score,
+               names_to = "predictor", 
+               values_to = "value") %>%
+  mutate(predictor = case_when(
+    predictor == "mean_hamming" ~ "Mean edit\ndistance",
+    predictor == "mean_guidance_score" ~ "Mean GUIDANCE\nscore",
+    predictor == "mean_nsites" ~ "Mean number\nof sites",
+    predictor == "nseq" ~ "Number of\nsequences")) %>%
+  mutate(predictor = fct_relevel(predictor, "Mean GUIDANCE\nscore")) %>%
+  ggplot() + 
+    aes(x = dataset, y = value, color = dataset) + 
+    ggforce::geom_sina(size = 0.1) +
+    geom_violin(alpha = 0, color = "black", size = 0.25) +
+    facet_grid(predictor~datatype, scales = "free_y") + 
+    theme(legend.position = "none",
+          strip.text = element_text(size = rel(0.75))) +
+    scale_color_viridis_d() + 
+    labs(x = "Dataset source", y = "Values of predictor variables") -> logit_pred_violins
+
+## save logit a/b fig --------------------------
+logit_grid <- plot_grid(logit_model_plot, logit_pred_violins, labels = "auto", nrow = 2, scale = 0.98)
+save_plot(file.path(output_path, "logit_glms.png"), logit_grid, base_height = 10, base_width=7)
+
+
 
 
 ## Tukey for SP and TC -------------------------------------

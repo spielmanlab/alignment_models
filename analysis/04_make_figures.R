@@ -15,7 +15,7 @@ how_many_models %>%
   geom_text(aes(label = n, y = n+.03), position = position_dodge(width = 1), size=2.25) +
   facet_grid(~ dataset) + 
   scale_fill_viridis_d(name = "") +
-  labs(x = "Data type", y = "Percent of datasets that are stable") + 
+  labs(x = "Data type", y = "Proportion of datasets that are stable") + 
   scale_y_continuous(limits=c(0,1)) +
   theme(legend.position = "bottom", 
         panel.grid.minor.y = element_blank(), 
@@ -41,7 +41,7 @@ full_join(how_many_models, how_many_matrices) %>%
   geom_text(aes(label = p, y = fudge), size = 2.5, position = position_dodge(width = 1))+
   scale_fill_viridis_d(name = "", option = "magma") +
   xlab("Data Type") +
-  ylab("Percent of unstable datasets\nwith a stable Q matrix") + 
+  ylab("Proportion of unstable datasets\nwith a stable Q matrix") + 
   theme(legend.position = "bottom",
         axis.title.y = element_text(size = rel(0.8)),
         panel.grid.minor.y = element_blank(),

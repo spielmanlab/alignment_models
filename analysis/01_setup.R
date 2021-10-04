@@ -30,7 +30,7 @@ plot_howmanymodels <- function(df, ic)
     facet_grid(datatype ~ dataset, scales = "free") + 
     scale_fill_brewer(palette = "Set1") +
     xlab("Unique selected models per dataset") +
-    ylab("Percent of unstable datasets") + 
+    ylab("Proportion of unstable datasets") + 
     theme(legend.position = "none")
 }
 
@@ -44,9 +44,9 @@ plot_percentm0 <- function(df, ic)
     geom_histogram(bins = 20, color = "black", size = 0.3) +
     facet_grid(datatype~dataset, scales = "free") + 
     scale_fill_brewer(palette = "Set1") +
-    scale_x_reverse(breaks=rev(seq(0, 1, 0.2))) +
+    scale_x_continuous(breaks=rev(seq(0, 1, 0.2))) +
     theme() +
-    xlab("Percentage of MSA variants selecting the M<sub>0</sub> model")+
+    xlab("Proportion of MSA variants selecting the M<sub>0</sub> model")+
     ylab("Number of datasets") +
     theme(legend.position = "none", 
           axis.title.x = element_textbox()) 
