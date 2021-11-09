@@ -33,7 +33,7 @@ gtify <- function(df, ic)
 
 <br><br><br>
 
-# Supplementary Figures
+# Additional Figures
 
 <br>
 
@@ -124,7 +124,7 @@ plot_grid(part1, shared_legend, nrow = 2, rel_heights = c(1, 0.3))
 
 \newpage
 
-# Supplementary Tables
+# Additional Tables
 
 <br>
 
