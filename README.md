@@ -1,12 +1,12 @@
-Repository associated with the manuscript, **Relative model selection of evolutionary substitution models can be sensitive to multiple sequence alignment uncertainty**
+Repository associated with the manuscript, [**Relative model selection of evolutionary substitution models can be sensitive to multiple sequence alignment uncertainty**](https://bmcecolevol.biomedcentral.com/articles/10.1186/s12862-021-01931-5#Sec9)
 + Stephanie J. Spielman (corresponding)
 + Molly Miraglia
 
 
 ## Repository Contents
 
-> All variant MSAs data currently lives [here](https://drive.google.com/drive/folders/1Jtt3ulZJj-AKeDlWSxdswlfwoglqVDcv?usp=sharing). When this manuscript is published, data will be archived in a stable open repository.
-
+> All variant MSA data is available from this [FigShare repository](https://doi.org/10.6084/m9.figshare.16955257)
+> 
 + `prepare_orthologs/` contains scripts to obtain orthologs from PANDIT and Selectome databases, in respective subdirectories. Each respective subdirectory also contains _unaligned_ sets of orthologs obtained. 
 
 + [`scripts/`](https://github.com/spielmanlab/alignment_models/tree/main/scripts) contains analysis scripts to generate data which are generally saved into [`results/`](https://github.com/spielmanlab/alignment_models/tree/main/results)
