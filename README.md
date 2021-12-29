@@ -7,7 +7,7 @@ Repository associated with the manuscript, [**Relative model selection of evolut
 
 > All variant MSA data is available from this [FigShare repository](https://doi.org/10.6084/m9.figshare.16955257)
 > 
-+ `prepare_orthologs/` contains scripts to obtain orthologs from PANDIT and Selectome databases, in respective subdirectories. Each respective subdirectory also contains _unaligned_ sets of orthologs obtained. 
++ [`prepare_orthologs/`](https://github.com/spielmanlab/alignment_models/tree/main/prepare_orthologs) contains scripts to obtain orthologs from PANDIT and Selectome databases, in respective subdirectories. Each respective subdirectory also contains _unaligned_ sets of orthologs obtained. 
 
 + [`scripts/`](https://github.com/spielmanlab/alignment_models/tree/main/scripts) contains analysis scripts to generate data which are generally saved into [`results/`](https://github.com/spielmanlab/alignment_models/tree/main/results)
   + [`batch_scripts/`](https://github.com/spielmanlab/alignment_models/tree/main/scripts/batch_scripts) contains scripts needed to run analyses on _local_ HPC
