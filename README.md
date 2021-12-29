@@ -1,4 +1,4 @@
-Repository associated with the manuscript, [**Relative model selection of evolutionary substitution models can be sensitive to multiple sequence alignment uncertainty**](https://bmcecolevol.biomedcentral.com/articles/10.1186/s12862-021-01931-5#Sec9)
+Repository associated with the manuscript, [**Relative model selection of evolutionary substitution models can be sensitive to multiple sequence alignment uncertainty**](https://bmcecolevol.biomedcentral.com/articles/10.1186/s12862-021-01931-5)
 + Stephanie J. Spielman (corresponding)
 + Molly Miraglia
 
